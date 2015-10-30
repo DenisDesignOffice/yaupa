@@ -1,0 +1,88 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+.input
+{
+color:black;
+font-size:16px;
+line-height:22px;
+background-color:#fbfbfb;
+padding: 13px 13px 13px 35px;
+margin-bottom:10px;
+
+border:3px solid rgba(0,0,0,0);
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+-o-box-sizing:border-box;
+box-sizing:border-box;
+}
+
+.input-state
+{
+color:black;
+font-size:16px;
+line-height:22px;
+background-color:#fbfbfb;
+padding: 13px 13px 13px 13px;
+margin-bottom:10px;
+
+border:3px solid rgba(0,0,0,0);
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+-o-box-sizing:border-box;
+box-sizing:border-box;
+}
+
+
+.input-state:focus, .input:focus
+{
+background: #fff;
+	box-shadow: 0;
+	border: 3px solid #FF3300;
+	color: #18243C;
+	outline: none;
+  
+
+
+line-height:22px;
+transition:0.s ease-in;
+}
+
+
+.input-text
+{
+color:white;
+font-size:22px;
+
+}
+
+.search-text
+{
+color:#e74c3c;
+font-size:20px;
+line-height:22px;
+font-weight:600;
+background-color:#fbfbfb;
+padding: 13px 13px 13px 13px;
+margin-bottom:10px;
+
+}
+
+.search-text:hover
+{
+background:#e74c3c;
+color:white;
+border:3px solid white;
+transition:0.2s ease-out;
+}
+
+@media screen and (max-width: 38em) {
+	.input
+{
+text-align:center;
+font-size:1.2em;
+}
+
+.input-state
+{
+text-align:center;
+font-size:1.2em;
+}
