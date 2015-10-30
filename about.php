@@ -21,7 +21,7 @@
 
 <div class="ha-header-front">
 
-<h1><a href="home.php">Travelin</a></h1>
+<h1><a href="home.php">Yaupa</a></h1>
 
 <nav>
 
