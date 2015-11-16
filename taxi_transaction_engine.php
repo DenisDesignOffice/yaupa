@@ -5,7 +5,7 @@
 
 if(!isset($_GET['selected_option_id']))
 {
-header("location:home.php");
+header("location:index.php");
 }
 
 require_once "connection.php";

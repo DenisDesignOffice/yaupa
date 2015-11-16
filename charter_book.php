@@ -5,7 +5,7 @@ require_once "connection.php";
 
 if(!isset($_GET['selected_option_id']))
 {
-header("location:home.php");
+header("location:index.php");
 }
 
 ?>
@@ -38,7 +38,7 @@ header("location:home.php");
 
 <div class="ha-header-front">
 
-<h1><a href="home.php">Travelin</a></h1>
+<h1><a href="index.php">Yaupa</a></h1>
 
 <nav>
 
@@ -112,7 +112,7 @@ Address
 
 <div class="col-4">
 <label>
-Traveling Date
+Yaupag Date
 <input placeholder="dd-mm-yy" id="date" name="date" tabindex="6" required />
 </label>
 </div>

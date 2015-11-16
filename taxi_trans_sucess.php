@@ -3,7 +3,7 @@ session_start();
 
 if(!isset($_GET['selected_option_id']))
 {
-header("location:home.php");
+header("location:index.php");
 }
 
 ?>
@@ -39,7 +39,7 @@ header("location:home.php");
 
 <div class="ha-header-front">
 
-<h1><a href="home.php">Travelin</a></h1>
+<h1><a href="index.php">Yaupa</a></h1>
 
 <nav>
 

@@ -5,7 +5,7 @@ require_once "connection.php";
 
 if(!isset($_GET['selected_option_id']))
 {
-header("location:home.php");
+header("location:index.php");
 }
 
 ?>
@@ -35,7 +35,7 @@ header("location:home.php");
 
 <div class="ha-header-front">
 
-<h1><a href="home.php">Travelin</a></h1>
+<h1><a href="index.php">Yaupa</a></h1>
 
 <nav>
 
@@ -166,35 +166,4 @@ $_SESSION['destination']=$to;
   </div>
  
  
- 
- <section class="footer">
-<div class="text column">About Us  </div>
-<div class="text column">Careers</div>
-<div class="text column">Contact</div><p>
-<div class="column copyright"><i class="fa fa-copyright"></i>&nbsp; All Rights Reserved</div>
-</section>
- 
- 
-
- 
-</body>
-<script src="js/jquery-2.1.3.js"></script>
-		<script src="js/waypoints.min.js"></script>
-		<script>
-			var $head = $( '#ha-header' );
-			$( '.ha-waypoint' ).each( function(i) {
-				var $el = $( this ),
-					animClassDown = $el.data( 'animateDown' ),
-					animClassUp = $el.data( 'animateUp' );
-
-				$el.waypoint( function( direction ) {
-					if( direction === 'down' && animClassDown ) {
-						$head.attr('class', 'ha-header ' + animClassDown);
-					}
-					else if( direction === 'up' && animClassUp ){
-						$head.attr('class', 'ha-header ' + animClassUp);
-					}
-				}, { offset: '100%' } );
-			} );
-		</script>
-</html>
+<?php require_once "footer.php";?>

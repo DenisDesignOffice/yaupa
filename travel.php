@@ -28,7 +28,7 @@ require_once "connection.php";
 
 <div class="ha-header-front">
 
-<h1><a href="home.php">Travelin</a></h1>
+<h1><a href="index.php">Yaupa</a></h1>
 
 <nav>
 
@@ -177,35 +177,5 @@ $processing=$row["processing_fee"];
  </section>
 
  
- 
- <section class="footer">
-<div class="text column"><a href="about.php">About Us</div>
-<div class="text column"><a href="career.php">Careers</a></div>
-<div class="text column">Contact</div><p>
-<div class="column copyright"><i class="fa fa-copyright"></i>&nbsp;All Rights Reserved</div>
-</section>
- 
- 
-
- 
-></body>
-<script src="js/jquery-2.1.3.js"></script>
-		<script src="js/waypoints.min.js"></script>
-		<script>
-			var $head = $( '#ha-header' );
-			$( '.ha-waypoint' ).each( function(i) {
-				var $el = $( this ),
-					animClassDown = $el.data( 'animateDown' ),
-					animClassUp = $el.data( 'animateUp' );
-
-				$el.waypoint( function( direction ) {
-					if( direction === 'down' && animClassDown ) {
-						$head.attr('class', 'ha-header ' + animClassDown);
-					}
-					else if( direction === 'up' && animClassUp ){
-						$head.attr('class', 'ha-header ' + animClassUp);
-					}
-				}, { offset: '100%' } );
-			} );
-		</script>
-</html>
+ //including footer page
+ <?php require_once "footer.php"?>

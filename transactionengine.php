@@ -4,7 +4,7 @@
 <?php
 if(!isset($_GET['selected_option_id']))
 {
-header("location:home.php");
+header("location:index.php");
 }
 require_once "connection.php";
 require_once "pin_generator.php";
@@ -99,7 +99,7 @@ $serial=random_generate($deposit, 6);
 
 
 
-$put="INSERT INTO booking_records (firstname,lastname, email, phone, traveling_date, next_of_kin, mode_of_payment, reg_pin, serial, transport_company, amount_paid, destination, bank_slip_no, bank_of_payment, name_of_depositor, date_of_deposition, address) VALUES('$firstname','$lastname', '$email', '$phone', '$date', '$next_of_kin', '$payment_option','$pin1', '$serial', '$company_name', '$cost', '$town - $toward', '$slip_no', '$bank', '$firstname2 $lastname2', '$date2', '$location')";
+$put="INSERT INTO booking_records (firstname,lastname, email, phone, Yaupag_date, next_of_kin, mode_of_payment, reg_pin, serial, transport_company, amount_paid, destination, bank_slip_no, bank_of_payment, name_of_depositor, date_of_deposition, address) VALUES('$firstname','$lastname', '$email', '$phone', '$date', '$next_of_kin', '$payment_option','$pin1', '$serial', '$company_name', '$cost', '$town - $toward', '$slip_no', '$bank', '$firstname2 $lastname2', '$date2', '$location')";
 
 
 $query=mysql_query($put);

@@ -3,7 +3,7 @@
 
 if(!isset($_GET['selected_option_id']))
 {
-header("location:home.php");
+header("location:index.php");
 }
 
 require_once "connection.php";
@@ -60,7 +60,7 @@ header("location:taxi_deposit_form.php");
 
 else
 {
-header("location:home.php");
+header("location:index.php");
 }
 ?>
 

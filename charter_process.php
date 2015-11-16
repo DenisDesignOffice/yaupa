@@ -4,7 +4,7 @@ require_once "connection.php";
 
 if(!isset($_GET['selected_option_id']))
 {
-header("location:home.php");
+header("location:index.php");
 }
 
 ?>
@@ -59,7 +59,7 @@ header("location:charter_bank_deposit.php");
 
 else
 {
-header("location:home.php");
+header("location:index.php");
 }
 ?>
 
