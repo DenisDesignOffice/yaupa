@@ -2,56 +2,49 @@
 
 <?php
 
-include "../../util/connection.php";
+include_once  "../../util/connection.php";
 
 $response = '';
 
- $type = strtolower(htmlspecialchars($_POST['type']));
- $state = strtolower(htmlspecialchars($_POST['location']));
- $dest = strtolower(htmlspecialchars($_POST['dest']));
- $to = strtolower(htmlspecialchars($_POST['to']));
- $from = strtolower(htmlspecialchars($_POST['from']));
-
-if (isset($_POST['type']) != "Select Vehicle Type" || isset($_POST['location']) == "Current State" ||
-        isset($_POST['to']) != "" || isset($_POST['from']) != "" ) {//check if relevant form entries were made
-    
-    $response = "Please fill all fields";
-    echo $response;
-    
-} else {
-    
-    //all fields were filled, lets process
-    $result = mysql_query("SELECT * FROM charter WHERE vehicle_type='$type' AND location_state='$state' ");
-
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        if (mysql_num_rows($result) == 0) {
-            $response = "Sorry there is no available transport company for your destination currently. please check back soon";
-        } else {
-            while ($row = mysql_fetch_assoc($result)) {
-                $value = $row["company_id"];
-
-                $name = mysql_query("SELECT * FROM transport_companies WHERE id='$value'");
-                $ro = mysql_fetch_assoc($name);
-                $company_name = $ro['company_name'];
-
-                $name = mysql_query("SELECT * FROM company_address WHERE id='$value'");
-                $run = mysql_fetch_assoc($name);
-                $address = $run['address'];
-
-                $id = $row['id'];
-                $to_cost = $row["to_cost"];
-                $location = $row["location"];
-                $destination = $row["destination"];
-                $location_state = $row["location_state"];
-                $destination_state = $row["destination_state"];
-                $to_and_fro_cost = $row["to_and_fro_cost"];
-                $type = $row["vehicle_type"];
-                $processing_fee = $row["processing_fee"];
-                $duration = $row["duration"];
-                $service_hours = $row["service_hours"];
+$type = strtolower(htmlspecialchars($_POST['type']));
+$state = strtolower(htmlspecialchars($_POST['location']));
+$dest = strtolower(htmlspecialchars($_POST['dest']));
+$to = strtolower(htmlspecialchars($_POST['to']));
+$from = strtolower(htmlspecialchars($_POST['from']));
 
 
-                $response += '
+//all fields were filled, lets process
+$result = mysql_query("SELECT * FROM charter WHERE vehicle_type='$type' AND location_state='$state' ");
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if (mysql_num_rows($result) == 0) {
+        $response = "Sorry there is no available transport company for your destination currently. please check back soon";
+    } else {
+        while ($row = mysql_fetch_assoc($result)) {
+            $value = $row["company_id"];
+
+            $name = mysql_query("SELECT * FROM transport_companies WHERE id='$value'");
+            $ro = mysql_fetch_assoc($name);
+            $company_name = $ro['company_name'];
+
+            $name = mysql_query("SELECT * FROM company_address WHERE id='$value'");
+            $run = mysql_fetch_assoc($name);
+            $address = $run['address'];
+
+            $id = $row['id'];
+            $to_cost = $row["to_cost"];
+            $location = $row["location"];
+            $destination = $row["destination"];
+            $location_state = $row["location_state"];
+            $destination_state = $row["destination_state"];
+            $to_and_fro_cost = $row["to_and_fro_cost"];
+            $type = $row["vehicle_type"];
+            $processing_fee = $row["processing_fee"];
+            $duration = $row["duration"];
+            $service_hours = $row["service_hours"];
+
+
+            $response .= '
                         <div  class="item">
                         <img src="../../static/images/banner-casa.jpg">
                         <h2>' . $company_name . '</h2>
@@ -84,11 +77,13 @@ if (isset($_POST['type']) != "Select Vehicle Type" || isset($_POST['location']) 
                         </table>
 
                         </div>';
-            }
         }
     }
-    echo $response;
 }
+
+
+
+echo $response;
 ?>
 
 

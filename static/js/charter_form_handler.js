@@ -6,19 +6,19 @@
  */
 
 $(document).ready(function () {
-    
+
     $('#charter_form').submit(function (event) {
 
         var data = $('#charter_form').serialize();//get all the form the data
 
         $.ajax({
             type: 'POST',
-            url: 'charter_form_handler.php',
+            url: './charter_form_handler.php',
             dataType: 'html',
             data: data,
-        }).done(function (data) {
-            $("#appendage").html(data);
-            alert(data);
+            success: function (data) {
+                $("#appendage").html(data);
+            }
         });
         
         return false;
