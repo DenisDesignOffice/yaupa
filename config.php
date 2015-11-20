@@ -1,0 +1,8 @@
+<?php
+ 
+$SEPARATOR = "/";
+$PROJECT_BASE = "yaupa";
+
+$URL_CHARTER = $_SERVER['DOCUMENT_ROOT'] . $SEPARATOR . $PROJECT_BASE . $SEPARATOR ."charter";
+ 
+?>
