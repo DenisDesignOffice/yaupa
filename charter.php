@@ -165,7 +165,7 @@ require_once "connection.php";
   <div class="masonry">
   
   
-  
+ </body> 
   
   <!-- Query database for search result -->
 
