@@ -2,7 +2,7 @@
 <?php require_once "header.php";?>
 
 <!--including css for the text and page color-->
-<link rel="stylesheet" type="text/css" href="css/career.css"/>
+<link rel="stylesheet" type="text/css" href="../static/css/career.css"/>
 
 
  <section class="ha-waypoint" data-animate-down="ha-header-small" data-animate-up="ha-header-large">

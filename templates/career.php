@@ -2,8 +2,8 @@
 <!--including header page-->
 <?php require_once "header.php";?>
 
-<!--including css file for text format and page color-->
-<link rel="stylesheet" type="text/css" href="css/career.css"/>
+<!--including css for the text and page color-->
+<link rel="stylesheet" type="text/css" href="../static/css/career.css"/>
 
 
 
