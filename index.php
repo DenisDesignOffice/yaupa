@@ -27,7 +27,7 @@
 
 
 <section class="col-3" >
-<video autoplay loop muted poster="vid-first-frame.jpg" id="video-bg"> 
+<video autoplay loop muted poster="static/vids/capture.jpg" id="video-bg"> 
 <source src="static/vids/front.webm" type="video/webm">
 <source src="static/vids/front.mp4" type="video/mp4">
 <p>does not support this browser</p>
