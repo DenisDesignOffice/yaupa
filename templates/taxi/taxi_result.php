@@ -1,11 +1,11 @@
 
 <!-- Connect to database -->
 <?php
-require_once "connection.php";
+require_once "../../util/connection.php";
 
 if(!isset($_GET['selected_option_id']))
 {
-header("location:index.php");
+header("location:../../index.php");
 }
 
 ?>

@@ -1,17 +1,17 @@
+<!-- Connect to database -->
+<?php
+require_once "../../util/connection.php";
+?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
         <title>Charter</title>
-
-        <link rel="stylesheet" type="text/css" href="../../static/css/rotate.css"/>
         <link rel="stylesheet" type="text/css" href="../../static/font-awesome-4.3.0/css/font-awesome.min.css"/>
         <link rel="stylesheet" type="text/css" href="../../static/css/normalize.css" />
         <link rel="stylesheet" type="text/css" href="../../static/css/form.css"/>
-        <link rel="stylesheet" type="text/css" href="../../static/css/icon.css"/>
-        <link rel="stylesheet" type="text/css" href="../../static/css/vid.css"/>
-
+        <link rel="stylesheet" type="text/css" href="../../static/css/charter.css"/>
         <script src="../../static/js/modernizr.custom.js"></script>
         <script src="../../static/js/jquery-2.1.3.js"></script>
         
@@ -75,4 +75,24 @@
 
         <?php require_once "../../templates/footer.php"; ?>
 
-                                    
+                                    </body>
+<script src="../../static/js/jquery-2.1.3.js"></script>
+<script src="../../static/js/waypoints.min.js"></script>
+<script>
+    var $head = $('#ha-header');
+    $('.ha-waypoint').each(function (i) {
+        var $el = $(this),
+                animClassDown = $el.data('animateDown'),
+                animClassUp = $el.data('animateUp');
+
+        $el.waypoint(function (direction) {
+            if (direction === 'down' && animClassDown) {
+                $head.attr('class', 'ha-header ' + animClassDown);
+            }
+            else if (direction === 'up' && animClassUp) {
+                $head.attr('class', 'ha-header ' + animClassUp);
+            }
+        }, {offset: '100%'});
+    });
+</script>
+</html>

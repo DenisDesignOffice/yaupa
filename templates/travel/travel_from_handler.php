@@ -1,3 +1,8 @@
+
+<!-- Connect to database -->
+<?php
+require_once "../../util/connection.php";
+?>
 <?php
 
 $from = $_POST['from1'];
