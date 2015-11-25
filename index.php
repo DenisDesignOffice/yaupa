@@ -24,7 +24,7 @@
     <body>
 
         <!--including the header file-->
-        <?php require_once "templates/header.php"; ?>
+        <?php require_once "templates/header.php";?>
 
         <section class="col-3" >
             <video autoplay loop muted poster="static/vids/capture.jpg" id="video-bg"> 

@@ -4,11 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Ticket</title>
 
-<<<<<<< HEAD
-        <link rel="stylesheet" type="text/css" href="/yaupa/static/css/ticketcss.css">
-=======
         <link rel="stylesheet" type="text/css" href="ticketcss.css"/>
->>>>>>> 83e0a2d8bbb80b120db9c8fa22db01ed8a095255
 
     </head>
 

@@ -12,7 +12,9 @@ $from = strtolower(htmlspecialchars($_POST['from']));
 
 
 if ($type == "select vehicle type" || $state == "current state") {
-    $response = '<h1>Please fill all relevant fields</h1>';
+    $response = "<h1>Please fill all relevant fields</h1>";
+    echo $response;
+    exit();
 } else {
 
 //all fields were filled, lets process
@@ -21,6 +23,7 @@ if ($type == "select vehicle type" || $state == "current state") {
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (mysql_num_rows($result) == 0) {
             $response = "Sorry there is no available transport company for your destination currently. please check back soon";
+            echo $response;
         } else {
             while ($row = mysql_fetch_assoc($result)) {
                 $value = $row["company_id"];
@@ -71,27 +74,25 @@ if ($type == "select vehicle type" || $state == "current state") {
                         <tr>
                         <td><i class="fa fa-building"></i>&nbsp;&nbsp;Car Park</td><td>' . $address . '</td>
                         </tr>
-
-
-                       <!-- <tr>
-                        <td class="submit"><a href="charter_book.php?selected_option_id=' . $value . '">Book Now</a></td>
-                        </tr> -->
-
+						
+						
                         <tr>
                         <td class="submit"><a href="charter_book.php?selected_option_id=' . $value . '">Book Now</a></td>
-                        </tr>
-
+                        </tr> 
+						
 
                         </table>
 
                         </div>';
             }
+            echo $response;
         }
+        
     }
 }
 
 
-echo $response;
+
 ?>
 
 

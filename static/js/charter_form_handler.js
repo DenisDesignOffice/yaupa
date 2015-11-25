@@ -11,17 +11,14 @@ $(document).ready(function () {
 
         var data = $('#charter_form').serialize();//get all the form the data
 
-        $.ajax({
-            type: 'POST',
-            url: './charter_form_handler.php',
-            dataType: 'html',
-            data: data,
-            success: function (data) {
-                $("#appendage").html(data);
-            }
-        });
-        
+        $.post('./charter_form_handler.php', data, processResponce);
+
         return false;
     });
+    
+    function processResponce(data,status){
+        $("#appendage").html(data);
+    }
+    
 });
 

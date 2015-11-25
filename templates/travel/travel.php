@@ -1,9 +1,4 @@
 
-<!-- Connect to database -->
-<?php
-require_once "../../util/connection.php";
-?>
-
 <!DOCTYPE html> 
 
 <head>
@@ -75,4 +70,3 @@ require_once "../../util/connection.php";
         }, {offset: '100%'});
     });
 </script>
-</html>

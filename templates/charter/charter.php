@@ -1,8 +1,6 @@
-<!-- Connect to database -->
-<?php
-require_once "../../util/connection.php";
-?>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html> 
+
+
 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -65,9 +63,10 @@ require_once "../../util/connection.php";
         <section class="ha-waypoint" data-animate-down="ha-header-small" data-animate-up="ha-header-large"></section>
         
         <!-- display search result here -->
+        
         <div class="wrapper">
              <div class="masonry">
-                                    
+                      <div style="background: white; width: 100%"> </div>              
                     <div id="appendage"></div><!-- search results will be put in this div -->
                     
              </div>
@@ -95,4 +94,3 @@ require_once "../../util/connection.php";
         }, {offset: '100%'});
     });
 </script>
-</html>

@@ -32,11 +32,7 @@
 <section class="career">
 <h1>Career</h1>
 <div>
-<<<<<<< HEAD
-We are committed to adding value to the life of every individual through our product. Our team is small, which makes it easy to know ourselves. We also share a unique culture of love and happiness; we strive for excellence, innovation and creativity. And as such we do not really care about qualification or working experience but keen in developing and making our members become the best in any choosen field. If you feel talented enough, passionate and enthusiastic about making an impact or proving yourself, please don't hesitate to send your resume to christian@yaupa.com.
-=======
 We are committed to adding value to the life of every individual through our product. Our team is small, which makes it easy to know ourselves. We also share a unique culture of love and happiness; we strive for excellence, innovation and creativity. And as such we do not really care about qualification or working experience but keen in developing and making our members become the best in any choosen field. If you feel talented enough, passionate and enthusiastic about making an impact or proving yourself, please don't hesitate to send us your resume.
->>>>>>> 83e0a2d8bbb80b120db9c8fa22db01ed8a095255
 </div>
 <p><br/>
 <h2>Vacancies</h2>
