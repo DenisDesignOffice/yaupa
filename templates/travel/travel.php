@@ -14,10 +14,9 @@ require_once "../../util/connection.php";
     <link rel="stylesheet" type="text/css" href="../../static/font-awesome-4.3.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" type="text/css" media="all" href="../../static/css/form.css">
     <link rel="stylesheet" type="text/css" media="all" href="../../static/css/travellist.css"
+    
     <script src="../../static/js/modernizr.custom.js"></script>
-   
-    
-    
+    <script src="../../static/js/jquery-2.1.3.js"></script>
     <!-- call the travel form processor -->
     <script type="text/javascript" src="../../static/js/travel_form_handler.js"></script>
 
@@ -30,7 +29,7 @@ require_once "../../util/connection.php";
     <br/><br/>
     <!--search form-->
     <section class="form">
-        <form method="post" id="travel_form" action="../../static/js/travel_form_handler.js">
+        <form method="post" id="travel_form" action="./travel.php">
             <input type="text" name="from1" value="" placeholder="From ?  e.g Ibadan, Warri" class="input"></td>
             <input type="text" name="to1" value="" placeholder="To ?  e.g Aba, Lagos" class="input"></td>
             <input type="submit" value="Search" class="input search-text"></td>
