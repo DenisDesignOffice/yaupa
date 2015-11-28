@@ -4,7 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Ticket</title>
 
-        <link rel="stylesheet" type="text/css" href="ticketcss.css"/>
+        <link rel="stylesheet" type="text/css" href="/yaupa/static/css/ticketcss.css">
 
     </head>
 

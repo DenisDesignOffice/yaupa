@@ -1,0 +1,42 @@
+div 
+{
+width:18em;
+padding:25px;
+border: 3px solid black;
+margin-left:30%;
+font-size:0.8em;
+text-align:center;
+}
+
+h1
+{
+text-align:center;
+font-size:2.5em;
+
+}
+
+table, tr
+{
+height:50px;
+}
+
+table ,td
+{
+
+border-bottom:3px solid grey ;
+text-align:left;
+padding:0;
+font-size:14px;
+
+}
+
+#label
+{
+font-weight:bold;
+font-size:1em;
+}
+
+#data
+{
+padding-left:1em;
+}
