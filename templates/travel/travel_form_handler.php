@@ -78,11 +78,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </tr>
                         <tr>
                             <td><i class="fa fa-money"></i>&nbsp;&nbsp;Processing fee</td><td>' . $processing . '</td>
+<<<<<<< HEAD
                         </tr>
 						
 						<!-- <tr>
                             <td class="submit"><a href="book.php?selected_option_id=' . $value . '">Book Now</a></td>
                         </tr> -->
+=======
+                        </tr><tr>
+                            <td class="submit"><a href="book.php?selected_option_id=' . $value . '">Book Now</a></td>
+                        </tr>
+>>>>>>> 83e0a2d8bbb80b120db9c8fa22db01ed8a095255
                     </table>
   
                 </div>';
