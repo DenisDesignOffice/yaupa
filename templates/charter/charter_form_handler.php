@@ -72,15 +72,15 @@ if ($type == "select vehicle type" || $state == "current state") {
                         <td><i class="fa fa-building"></i>&nbsp;&nbsp;Car Park</td><td>' . $address . '</td>
                         </tr>
 
-<<<<<<< HEAD
+
                        <!-- <tr>
                         <td class="submit"><a href="charter_book.php?selected_option_id=' . $value . '">Book Now</a></td>
                         </tr> -->
-=======
+
                         <tr>
                         <td class="submit"><a href="charter_book.php?selected_option_id=' . $value . '">Book Now</a></td>
                         </tr>
->>>>>>> 83e0a2d8bbb80b120db9c8fa22db01ed8a095255
+
 
                         </table>
 
