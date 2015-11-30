@@ -76,9 +76,9 @@ if ($type == "select vehicle type" || $state == "current state") {
                         </tr>
 						
 						
-                        <tr>
+                        <!-- <tr>
                         <td class="submit"><a href="charter_book.php?selected_option_id=' . $value . '">Book Now</a></td>
-                        </tr> 
+                        </tr> -->
 						
 
                         </table>
