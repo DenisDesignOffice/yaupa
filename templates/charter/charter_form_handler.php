@@ -10,6 +10,12 @@ $dest = strtolower(htmlspecialchars($_POST['dest']));
 $to = strtolower(htmlspecialchars($_POST['to']));
 $from = strtolower(htmlspecialchars($_POST['from']));
 
+$_SESSION['type'] = $type;
+$_SESSION['state'] = $state;
+$_SESSION['dest'] = $dest;
+$_SESSION['to'] = $to;
+$_SESSION['from'] = $from;
+
 
 if ($type == "select vehicle type" || $state == "current state") {
     $response = "<h1>Please fill all relevant fields</h1>";
@@ -49,10 +55,10 @@ if ($type == "select vehicle type" || $state == "current state") {
                 $service_hours = $row["service_hours"];
 
 
-                $response .= '
+                $response .= '<form id="book_form" name="book_form" method="post" action="./charter_book.php">
                         <div  class="item">
                         <img src="../../static/images/banner-casa.jpg">
-                        <h2>' . $company_name . '</h2>
+                        <h2 >' . $company_name . '</h2>
 
                         <table>
 
@@ -60,26 +66,34 @@ if ($type == "select vehicle type" || $state == "current state") {
                         <td><i class="fa fa-bus"></i>&nbsp;&nbsp;Type:</td><td>' . $type . '</td>
                         </tr>
                         <tr>
-                        <td><i class="fa fa-money"></i>&nbsp;&nbsp;Price:</td><td>' . $to_cost . '</td>
+                        <td><i class="fa fa-money"></i>&nbsp;&nbsp;Price:</td><td id="to_cost" name="to_cost">' . $to_cost . '</td>
                         </tr>
 
                         <tr>
-                        <td><i class="fa fa-money"></i>&nbsp;&nbsp;To & Fro Price:</td><td>' . $to_and_fro_cost . '</td>
+                        <td><i class="fa fa-money"></i>&nbsp;&nbsp;To & Fro Price:</td><td id="to_and_fro_cost" name="to_and_fro_cost">' . $to_and_fro_cost . '</td>
                         </tr>
 
                         <tr>
-                        <td><i class="fa fa-money"></i>&nbsp;&nbsp;Processing Fee:</td><td>' . $processing_fee . '</td>
+                        <td><i class="fa fa-money"></i>&nbsp;&nbsp;Processing Fee:</td><td id="processing_fee" name="processing_fee">' . $processing_fee . '</td>
                         </tr>
 
                         <tr>
-                        <td><i class="fa fa-building"></i>&nbsp;&nbsp;Car Park</td><td>' . $address . '</td>
+                        <td><i class="fa fa-building"></i>&nbsp;&nbsp;Car Park</td><td id="company_address" name="company_address">' . $address . '</td>
                         </tr>
 						
-						
                         <tr>
-                        <td class="submit"><a href="charter_book.php?selected_option_id=' . $value . '">Book Now</a></td>
+                        <td class="submit"><input type="submit" value="Book"/></td>
                         </tr> 
-						
+                        
+                        <input type="text" id="selected_item_id" name="selected_item_id" value=' . $value . ' hidden="true"/>
+                        <input type="text" id="company_name" name="company_name" value=' . $company_name . ' hidden="true"/>
+                        <input type="text" id="type" name="type" value=' . $type . ' hidden="true"/>    
+                        <input type="text" id="to_cost" name="to_cost" value=' . $to_cost . ' hidden="true"/>
+                        <input type="text" id="to_and_fro_cost" name="to_and_fro_cost" value=' . $to_and_fro_cost . ' hidden="true"/>
+                        <input type="text" id="address" name="address" value=' . $address . ' hidden="true"/>
+                        <input type="text" id="processing_fee" name="processing_fee" value=' . $processing_fee . ' hidden="true"/>
+			
+                        </form>			
 
                         </table>
 
@@ -87,12 +101,8 @@ if ($type == "select vehicle type" || $state == "current state") {
             }
             echo $response;
         }
-        
     }
 }
-
-
-
 ?>
 
 

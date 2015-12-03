@@ -16,8 +16,23 @@ $(document).ready(function () {
         return false;
     });
     
+    $('#book_form').submit(function (event) {
+
+        var data = $('#book_form').serialize();//get all the form the data
+
+        var company_name = jQuery('input[name="company_name"]').val();
+        
+        alert(company_name);
+
+        return true;
+    });
+    
     function processResponce(data,status){
         $("#appendage").html(data);
+    }
+    
+    function processResponce2(data,status){
+        window.location = "./charter_book.php";
     }
     
 });

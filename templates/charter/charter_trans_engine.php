@@ -54,6 +54,7 @@ $company_name=$ro['company_name'];
 
 
 $result= mysql_query("SELECT * FROM charter WHERE company_id='$value' ");
+
 while($row=mysql_fetch_assoc($result))
 {
 
