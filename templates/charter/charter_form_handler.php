@@ -81,6 +81,7 @@ if ($type == "select vehicle type" || $state == "current state") {
                         <td><i class="fa fa-building"></i>&nbsp;&nbsp;Car Park</td><td id="company_address" name="company_address">' . $address . '</td>
                         </tr>
 						
+<<<<<<< HEAD
                         <tr>
                         <td class="submit"><input type="submit" value="Book"/></td>
                         </tr> 
@@ -94,6 +95,13 @@ if ($type == "select vehicle type" || $state == "current state") {
                         <input type="text" id="processing_fee" name="processing_fee" value=' . $processing_fee . ' hidden="true"/>
 			
                         </form>			
+=======
+						
+                        <!-- <tr>
+                        <td class="submit"><a href="charter_book.php?selected_option_id=' . $value . '">Book Now</a></td>
+                        </tr> -->
+						
+>>>>>>> 59690b1d8ae3de9c7a780c9730829bd2079c1363
 
                         </table>
 
