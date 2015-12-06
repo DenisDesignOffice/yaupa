@@ -1,7 +1,7 @@
 
 <?php 
 
-require_once "connection.php";
+require_once "../../util/connection.php";
 
 ?>
 
@@ -11,7 +11,7 @@ require_once "connection.php";
 <htm>
 <head>
 <title>Add Travel</title>
-<link rel="stylesheet" type="text/css" href="css/add_travel.css"/>
+<link rel="stylesheet" type="text/css" href="../../static/css/add_travel.css"/>
 </head>
 <body>
 <div class="header">
@@ -149,11 +149,10 @@ if(!$query)
 {
 die("connection failed".mysql_error());
 }
-echo "Details Added Successfully";
-}
-else{
+    echo "Details Added Successfully";
+}else{
 
-echo "Details Already Exist";
+    echo "Details Already Exist";
 }
 
 }

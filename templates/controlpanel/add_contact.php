@@ -1,7 +1,7 @@
 
 <?php 
 
-require_once "connection.php";
+require_once "../../util/connection.php";
 
 ?>
 
@@ -11,7 +11,7 @@ require_once "connection.php";
 <htm>
 <head>
 <title>Add Contact Address</title>
-<link rel="stylesheet" type="text/css" href="css/add_travel.css"/>
+<link rel="stylesheet" type="text/css" href="../../static/css/add_travel.css"/>
 </head>
 <body>
 <div class="header">
@@ -81,6 +81,7 @@ if($_SERVER['REQUEST_METHOD']=="POST")
 $location=$_POST['location'];
 $address=$_POST['address'];
 $phone=$_POST['phone'];
+$name = $_POST['company'];
 
 
 $check=mysql_query("SELECT id FROM transport_companies WHERE company_name='{$name}';");

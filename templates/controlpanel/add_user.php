@@ -1,7 +1,7 @@
 
 <?php 
 
-require_once "connection.php";
+require_once "../../util/connection.php";
 
 ?>
 
@@ -11,7 +11,7 @@ require_once "connection.php";
 <htm>
 <head>
 <title>Add User</title>
-<link rel="stylesheet" type="text/css" href="css/add_travel.css"/>
+<link rel="stylesheet" type="text/css" href="../../static/css/add_travel.css"/>
 </head>
 <body>
 <div class="header">

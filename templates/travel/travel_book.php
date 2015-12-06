@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 
 <?php
-If(!isset($_POST['stoppage']) || !isset($_POST['address']) || !isset($_POST['type'])){
+If (!isset($_POST['stoppage']) || !isset($_POST['address']) || !isset($_POST['type'])) {
     header("location: /yaupa.com/index.php");
 }
 
@@ -12,7 +12,7 @@ $_SESSION['processing_fee'] = strtolower(htmlspecialchars($_POST['processing_fee
 $_SESSION['aircondition'] = strtolower(htmlspecialchars($_POST['aircondition']));
 $_SESSION['departure'] = strtolower(htmlspecialchars($_POST['departure']));
 $_SESSION['cost'] = strtolower(htmlspecialchars($_POST['cost']));
-
+$_SESSION['company_name'] = strtolower(htmlspecialchars($_POST['company_name']));
 ?>
 
 <!DOCTYPE html> 
@@ -124,18 +124,68 @@ $_SESSION['cost'] = strtolower(htmlspecialchars($_POST['cost']));
 
             <div class="col-4">
                 <label>
-                    How do You want to Charter?
-                    <select tabindex="7" id="charter_option" name="charter_option" >
-                        <option> - </option>
-                        <option>To and Fro</option>
-                        <option>To alone</option>
-
-                    </select>
+                    Next of Kin
+                    <input placeholder="Name or phone number of next of kin" id="next_of_kin" name="next_of_kin" tabindex="9" />
+                </label>
+            </div>
+            <div class="col-5">
+                <label>
+                    <i class="fa fa-user"></i>&nbsp;&nbsp;Company:&nbsp;&nbsp;<?php echo $_SESSION['company_name']; ?>
+                    <hidden value="<?php echo $company; ?>" id="company" name="company" tabindex="10" />
                 </label>
             </div>
 
 
+            <div class="col-5">
+                <label>
+                    <i class="fa fa-money"></i>&nbsp;&nbsp;Processing fee:&nbsp;&nbsp;<?php echo $_SESSION['processing_fee']; ?>
+                    <hidden id="company" name="processing_fee" tabindex="11" />
+                </label>
+            </div>
 
+            <div class="col-5">
+                <label>
+                    <i class="fa fa-clock-o"></i>&nbsp;&nbsp;Time of Departure:&nbsp;&nbsp;<?php echo $_SESSION['departure']; ?>
+                    <type hidden id="next_of_kin" name="departure_time" tabindex="12" />
+                </label>
+            </div>
+
+
+            <div class="col-5">
+                <label>
+                    <i class="fa fa-building"></i>&nbsp;&nbsp;Stoppage Points:&nbsp;&nbsp;<?php echo $_SESSION['stoppage']; ?>
+                    <type hidden id="next_of_kin" name="stoppage_points" tabindex="13" />
+                </label>
+            </div>
+
+
+            <div class="col-5">
+                <label>
+                    <i class="fa fa-user"></i>&nbsp;&nbsp;A C:&nbsp;&nbsp;<?php echo $_SESSION['aircondition']; ?>
+                    <type hidden id="air_condition" name="air_condition" tabindex="14" />
+                </label>
+            </div>
+
+            <div class="col-5">
+                <label>
+                    <i class="fa fa-building"></i>&nbsp;&nbsp;Park Address:&nbsp;&nbsp;<?php echo $_SESSION['address']; ?>
+                    <type hidden id="address" name="address" tabindex="15" />
+                </label>
+            </div>
+
+            <div class="col-5">
+                <label>
+                    <i class="fa fa-money"></i>&nbsp;&nbsp;Price:&nbsp;&nbsp;<?php echo $_SESSION['cost']; ?>
+                    <type hidden id="cost" name="cost" tabindex="16" />
+                </label>
+            </div>
+
+            <div class="col-5">
+                <label>
+                    <i class="fa fa-bus"></i>&nbsp;&nbsp;Type:&nbsp;&nbsp;<?php echo $_SESSION['type']; ?>
+                    <type hidden id="type" name="type" tabindex="17" />
+                </label>
+            </div>
             <input type="hidden"  name="selected_option_id"  value="<?php echo $value; ?>" /> 
 
             <div class="col-submit">

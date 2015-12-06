@@ -1,7 +1,7 @@
 
 <?php 
 
-require_once "connection.php";
+require_once "../../util/connection.php";
 
 ?>
 
@@ -11,7 +11,7 @@ require_once "connection.php";
 <htm>
 <head>
 <title>Add Travel</title>
-<link rel="stylesheet" type="text/css" href="css/add_travel.css"/>
+<link rel="stylesheet" type="text/css" href="../../static/css/add_travel.css"/>
 </head>
 <body>
 <div class="header">
@@ -52,58 +52,58 @@ echo "<option>".$row['company_name']."</option>";
 
 <tr>
 <td>From</td>
-<td><input type="text" name="from" class="input"></td>
+<td><input type="text" name="from" class="input" /required></td>
 </tr>
 
 <tr>
 <td>
 To</td>
-<td><input type="text" name="to" class="input"></td>
+<td><input type="text" name="to" class="input" /required></td>
 </tr>
 
 <tr>
 <td>Cost</td>
-<td><input type="text" name="cost" class="input"></td>
+<td><input type="text" name="cost" class="input" /required></td>
 </tr>
 
 <tr>
 <td>Air Condition</td>
-<td><input type="text" name="aircondition" class="input"></td>
+<td><input type="text" name="aircondition" class="input" /required></td>
 </tr>
 
 <tr>
 <td>Stopage Point</td>
-<td><input type="text" name="stopage_point" class="input"></td>
+<td><input type="text" name="stopage_point" class="input" /required></td>
 </tr>
 
 <tr>
 <td>Speed Limit</td>
-<td><input type="text" name="speed_limit" class="input"></td>
+<td><input type="text" name="speed_limit" class="input" /required></td>
 </tr>
 
 <tr>
 <td>Last Bus Stop</td>
-<td><input type="text" name="last_bus_stop" class="input"></td>
+<td><input type="text" name="last_bus_stop" class="input" /required></td>
 </tr>
 
 <tr>
 <td>Duration</td>
-<td><input type="text" name="duration" class="input"></td>
+<td><input type="text" name="duration" class="input" /required></td>
 </tr>
 
 <tr>
 <td>Departure Time</td>
-<td><input type="text" name="departure_time" class="input"></td>
+<td><input type="text" name="departure_time" class="input" /required></td>
 </tr>
 
 <tr>
 <td>Vehicle Type</td>
-<td><input type="text" name="vehicle_type" class="input"></td>
+<td><input type="text" name="vehicle_type" class="input" /required></td>
 </tr>
 
 <tr><td>
 <label>Processing Fee</td>
-<td><input type="text" name="processing_fee" class="input"></td>
+<td><input type="text" name="processing_fee" class="input" /required></td>
 </label>
 </tr>
 <tr>

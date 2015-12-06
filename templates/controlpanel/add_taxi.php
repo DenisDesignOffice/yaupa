@@ -1,7 +1,7 @@
 
 <?php 
 
-require_once "connection.php";
+require_once "../../util/connection.php";
 
 ?>
 
@@ -11,7 +11,7 @@ require_once "connection.php";
 <htm>
 <head>
 <title>Add Taxi</title>
-<link rel="stylesheet" type="text/css" href="css/add_travel.css"/>
+<link rel="stylesheet" type="text/css" href="../../static/css/add_travel.css"/>
 </head>
 <body>
 <div class="header">
@@ -52,39 +52,39 @@ echo "<option>".$row['company_name']."</option>";
 
 <tr>
 <td>Coverage State</td>
-<td><input type="text" name="coverage_state" class="input" required></td>
+<td><input type="text" name="coverage_state" class="input" /required></td>
 </tr>
 
 <tr>
 <td>
 Amount Per Hour</td>
-<td><input type="text" name="amount_per_hour" class="input" required></td>
+<td><input type="text" name="amount_per_hour" class="input" /required></td>
 </tr>
 
 <tr>
 <td>Amount Half Day</td>
-<td><input type="text" name="amount_half_day" class="input" required></td>
+<td><input type="text" name="amount_half_day" class="input" /required></td>
 </tr>
 
 <tr>
 <td>Amount Full Day</td>
-<td><input type="text" name="amount_full_day" class="input" required></td>
+<td><input type="text" name="amount_full_day" class="input" /required></td>
 </tr>
 
 <tr>
 <td>Location</td>
-<td><input type="text" name="processing" class="input" required></td>
+<td><input type="text" name="processing" class="input" /required></td>
 </tr>
 
 <tr>
 <td>Coverage Distance</td>
-<td><input type="text" name="coverage_distance" class="input" required></td>
+<td><input type="text" name="coverage_distance" class="input" /required></td>
 </tr>
 
 
 <tr>
 <td>Processing Fee</td>
-<td><input type="text" name="processing" class="input" required></td>
+<td><input type="text" name="processing" class="input" /required></td>
 </tr>
 
 

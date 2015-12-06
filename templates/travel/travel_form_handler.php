@@ -86,7 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <td class="submit"><a href="book.php?selected_option_id=' . $value . '">Book Now</a></td>
                         </tr>
 						-->
-                                                
+                            <input hidden="true" type="text" id="company_name" name="company_name" value='.$company_name.'  />                   
                             <input hidden="true" type="text" id="departure" name="departure" value='.$departure.'  />
                             <input hidden="true" type="text" id="aircondition" name="aircondition" value=' . $aircondition . ' />
                             <input hidden="true" type="text" id="type" name="type" value='.$type.'  />    
