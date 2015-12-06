@@ -27,17 +27,13 @@ $_SESSION['charter_option'] = $charter_option;
 $_SESSION['selected_option_id'] = $selected_option_id;
 
 if($charter_option == 'to alone'){
-    $price = (int)$_SESSION['to_cost'] + (int)$_SESSION['processing_fee'];
+    $price = (int)$_SESSION['cost'] + (int)$_SESSION['processing'];
     $_SESSION['amount_to_pay'] = $price . '00';
-    $_SESSION['amount_to_pay2'] = $price . ''; 
-}else{
-    $price = (int)$_SESSION['to_and_fro_cost'] + (int)$_SESSION['processing_fee'];
-    $_SESSION['amount_to_pay'] = $price . '00';
-    $_SESSION['amount_to_pay2'] = $price . '';
+    $_SESSION['amount_to_pay2'] = $price . ''  ; 
 }
 
 if($payment_option == 'bank_deposit'){
-    header("location: ./charter_bank_deposit.php");
+    header("location: ./travel_bank_deposit.php");
 }
 
 
@@ -93,7 +89,7 @@ if($payment_option == 'bank_deposit'){
     <section>
         <h1>Confirm Payment</h1>
 
-        <form name="form1" method="post" action="./charter_process.php">
+        <form name="form1" method="post" action="./travel_process.php">
             <div class="col-2">
                 <label>COMPANY:
                     <h6 style="size: 20px"><?php echo $_SESSION['company_name']; ?></h4>
@@ -101,14 +97,7 @@ if($payment_option == 'bank_deposit'){
                 <label>Price:
                     <h6 style="size: 20px"><?php echo $_SESSION['amount_to_pay2']; ?></h4>
                 </label>
-                <label>
-                    TICKET QUANTITY
-                    <select tabindex="7" id="payment_option" name="payment_option" />
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    </select>
-                </label>
+                
                 <label><input type="submit" value="PROCEED"/></label>
             </div>
             

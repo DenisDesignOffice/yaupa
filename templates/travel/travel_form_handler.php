@@ -55,29 +55,30 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $response .= '<div class="item">  
                     <img src="/yaupa.com/static/images/banner-casa.jpg">
+                    <form method="post" action="./travel_book.php">
                     <h2>' . $company_name . '</h2>
   
                     <table>
                         <tr>
-                            <td><i class="fa fa-bus"></i>&nbsp;&nbsp;Type:</td><td>' . $type . '</td>
+                            <td><i class="fa fa-bus"></i>&nbsp;&nbsp;Type:</td><td id="type" name="type">' . $type . '</td>
                         </tr>
                         <tr>
-                            <td><i class="fa fa-money"></i>&nbsp;&nbsp;Price:</td><td>' . $cost . '</td>
+                            <td><i class="fa fa-money"></i>&nbsp;&nbsp;Price:</td><td id="cost" name="cost">' . $cost . '</td>
                         </tr>
                         <tr>
-                            <td><i class="fa fa-building"></i>&nbsp;&nbsp;Park Address:</td><td>' . $address . '</td>
+                            <td><i class="fa fa-building"></i>&nbsp;&nbsp;Park Address:</td><td id="company_address" name="company_address">' . $address . '</td>
                         </tr>
                         <tr>
-                            <td><i class="fa fa-user"></i>&nbsp;&nbsp;Airconditioning:</td><td>' . $aircondition . '</td>
+                            <td><i class="fa fa-user"></i>&nbsp;&nbsp;Airconditioning:</td><td id="aircondition" name="aircondition">' . $aircondition . '</td>
                         </tr>
                         <tr>
-                            <td><i class="fa fa-building"></i>&nbsp;&nbsp;Stoppage Points:</td><td>' . $stoppage . '</td>
+                            <td><i class="fa fa-building"></i>&nbsp;&nbsp;Stoppage Points:</td><td id="stoppage" name="stoppage">' . $stoppage . '</td>
                         </tr>
                         <tr>
-                            <td><i class="fa fa-clock-o"></i>&nbsp;&nbsp;Time of Departure:</td><td>' . $departure . '</td>
+                            <td><i class="fa fa-clock-o"></i>&nbsp;&nbsp;Time of Departure:</td><td id="departure" name="departure">' . $departure . '</td>
                         </tr>
                         <tr>
-                            <td><i class="fa fa-money"></i>&nbsp;&nbsp;Processing fee</td><td>' . $processing . '</td>
+                            <td><i class="fa fa-money"></i>&nbsp;&nbsp;Processing fee</td><td id="processing" name="processing">' . $processing . '</td>
                         </tr>
 						
 						<!--
@@ -85,7 +86,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <td class="submit"><a href="book.php?selected_option_id=' . $value . '">Book Now</a></td>
                         </tr>
 						-->
+                                                
+                             <input type="text" id="departure" name="departure" value=' . $departure . ' hidden="true"/>
+                            <input type="text" id="aircondition" name="aircondition" value=' . $aircondition . ' hidden="true"/>
+                            <input type="text" id="type" name="type" value=' . $type . ' hidden="true"/>    
+                            <input type="text" id="cost" name="cost" value=' . $cost . ' hidden="true"/>
+                            <input type="text" id="stoppage" name="stoppage" value=' . $stoppage . ' hidden="true"/>
+                            <input type="text" id="address" name="address" value=' . $address . ' hidden="true"/>
+                            <input type="text" id="processing_fee" name="processing_fee" value=' . $processing . ' hidden="true"/>
+                                                
+
+                             <tr>
+                        <td class="submit"><input type="submit" value="Book Now"/></td>
+                        </tr> 
                     </table>
+                    </form>
   
                 </div>';
         }
