@@ -12,8 +12,6 @@ require_once "pin_generator.php";
 ?>
 
 
-
-
 <?php
 
 $value=$_SESSION['selected_option_id'];

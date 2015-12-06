@@ -9,6 +9,7 @@
 <body>
 
 <?php
+    include_once "./connection.php";
     $param = array();
     $param['productid'] = 6205;
     $param['transactionreference'] = $_SESSION['trans_ref'];
@@ -38,8 +39,11 @@
 <?php
     if((string)$xml->ResponseCode == 00){
         echo "Your Transaction was successful";
-    }
-    else{
+        
+        $sql = "UPDATE charter_booking_records SET status='success' WHERE reg_pin='" . $_SESSION['trans_ref'] ."'";
+        mysql_query($sql);
+        
+    }else{
         echo "Transaction failed. Reason: ".(string)$xml->ResponseDescription;
     }
     echo "<p><b>Response Code:</b>".(string)$xml->ResponseCode."</p>";

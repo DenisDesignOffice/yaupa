@@ -20,4 +20,5 @@ $query = mysql_select_db($database, $connect);
 if (!$query) {
     die("connection failed" . mysql_error());
 }
+
 ?>
