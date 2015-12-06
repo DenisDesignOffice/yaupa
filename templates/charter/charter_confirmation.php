@@ -6,6 +6,10 @@
  */
 session_start(); 
 
+If(!isset($_POST['firstname']) || !isset($_POST['lastname']) || !isset($_POST['phone'])){
+    header("location: /yaupa.com/index.php");
+}
+
 $firstname = strtolower(htmlspecialchars($_POST['firstname']));
 $lastname = strtolower(htmlspecialchars($_POST['lastname']));
 $phone = strtolower(htmlspecialchars($_POST['phone']));

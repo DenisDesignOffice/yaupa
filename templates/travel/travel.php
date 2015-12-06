@@ -1,4 +1,5 @@
-<?php session_unset() ?>
+<?php session_unset() 
+?>
 <!DOCTYPE html> 
 
 <head>
@@ -17,23 +18,23 @@
 
 </head>
 
-<body>
+<body >
     
     <?php require_once "../header.php"; ?>
 
     <br/><br/>
     <!--search form-->
     <section class="form">
-        <form method="post" id="travel_form" action="./travel.php">
-            <input type="text" name="from1" value="" placeholder="From ?  e.g Ibadan, Warri" class="input"></td>
-            <input type="text" name="to1" value="" placeholder="To ?  e.g Aba, Lagos" class="input"></td>
+        <form method="post" name="travel_form" id="travel_form" action="./travel.php">
+            <input type="text" name="from1" value="<?php if(isset($_POST['from_home'])) echo $_POST['from_home'] ; ?>" placeholder="From ?  e.g Ibadan, Warri" class="input"></td>
+            <input type="text" name="to1" value="<?php if(isset($_POST['from_home'])) echo $_POST['to_home'] ; ?>" placeholder="To ?  e.g Aba, Lagos" class="input"></td>
             <input type="submit" value="Search" class="input search-text"></td>
         </form>
 
     </section>
 
     <!--search result code-->
-    <div class="wrapper">
+    <div  class="wrapper">
         <div class="masonry">
 
             <!-- Query database for search result -->
@@ -70,3 +71,4 @@
         }, {offset: '100%'});
     });
 </script>
+

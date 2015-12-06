@@ -3,7 +3,7 @@
 <htm>
     <head>
         <title>Control Panel</title>
-        <link rel="stylesheet" type="text/css" href="css/controlpanel.css"/>
+        <link rel="stylesheet" type="text/css" href="../../static/css/controlpanel.css"/>
     </head>
     <body>
         <div class="header">
@@ -20,15 +20,15 @@
         <div id="container">
 
             <div class="item">
-                <a href="add_company.php">Add Company</a>
+                <a href="./add_company.php">Add Company</a>
             </div>
 
             <div class="item">
-                <a href="add_charter.php">Add Charter Service</a>
+                <a href="./add_charter.php">Add Charter Service</a>
             </div>
 
             <div class="item">
-                <a href="add_travel.php">Add Travel Service</a>
+                <a href="./add_travel.php">Add Travel Service</a>
             </div>
 
             <div class="item">
@@ -36,38 +36,38 @@
             </div>
 
             <div class="item">
-                <a href="add_contact.php">Add Contact Details</a>
+                <a href="./add_contact.php">Add Contact Details</a>
             </div>
 
             <div class="item">
-                <a href="add_user.php">Add User</a>
+                <a href="./add_user.php">Add User</a>
             </div>
 
             <div class="item">
-                <a href="edit_travel.php">Edit Travel</a>
+                <a href="./edit_travel.php">Edit Travel</a>
             </div>
 
             <div class="item">
-                <a href="add_travel.php">Edit Taxi</a>
+                <a href="./add_travel.php">Edit Taxi</a>
             </div>
             <div class="item">
-                <a href="add_travel.php">Edit Charter</a>
-            </div>
-
-            <div class="item">
-                <a href="add_travel.php">Edit Contact Details</a>
+                <a href="./add_travel.php">Edit Charter</a>
             </div>
 
             <div class="item">
-                <a href="add_travel.php">Check Booked Travels</a>
+                <a href="./add_travel.php">Edit Contact Details</a>
             </div>
 
             <div class="item">
-                <a href="add_travel.php">Check Booked Charter</a>
+                <a href="./add_travel.php">Check Booked Travels</a>
             </div>
 
             <div class="item">
-                <a href="add_travel.php">Check Booked Taxi</a>
+                <a href="./add_travel.php">Check Booked Charter</a>
+            </div>
+
+            <div class="item">
+                <a href="./add_travel.php">Check Booked Taxi</a>
             </div>
 
 

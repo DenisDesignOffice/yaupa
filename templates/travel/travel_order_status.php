@@ -10,6 +10,7 @@
 
 <?php
     include_once "../../util/connection.php";
+
     $param = array();
     $param['productid'] = 6205;
     $param['transactionreference'] = $_SESSION['trans_ref'];

@@ -83,13 +83,13 @@ if ($type == "select vehicle type" || $state == "current state") {
                         <td><i class="fa fa-building"></i>&nbsp;&nbsp;Car Park</td><td id="company_address" name="company_address">' . $address . '</td>
                         </tr>
 			
-                        <input type="text" id="selected_item_id" name="selected_item_id" value=' . $value . ' hidden="true"/>
-                            <input type="text" id="company_name" name="company_name" value=' . $company_name . ' hidden="true"/>
-                            <input type="text" id="type" name="type" value=' . $type . ' hidden="true"/>    
-                            <input type="text" id="to_cost" name="to_cost" value=' . $to_cost . ' hidden="true"/>
-                            <input type="text" id="to_and_fro_cost" name="to_and_fro_cost" value=' . $to_and_fro_cost . ' hidden="true"/>
-                            <input type="text" id="address" name="address" value=' . $address . ' hidden="true"/>
-                            <input type="text" id="processing_fee" name="processing_fee" value=' . $processing_fee . ' hidden="true"/>
+                        <input hidden="true" type="text" id="selected_item_id" name="selected_item_id" value=' . $value . ' />
+                            <input hidden="true" type="text" id="company_name" name="company_name" value=' . $company_name . ' />
+                            <input hidden="true" type="text" id="type" name="type" value=' . $type . ' />    
+                            <input hidden="true" type="text" id="to_cost" name="to_cost" value=' . $to_cost . ' />
+                            <input hidden="true" type="text" id="to_and_fro_cost" name="to_and_fro_cost" value=' . $to_and_fro_cost . ' />
+                            <input hidden="true" type="text" id="address" name="address" value=' . $address . ' />
+                            <input hidden="true" type="text" id="processing_fee" name="processing_fee" value=' . $processing_fee . ' />
 
                         <tr>
                         <td class="submit"><input type="submit" value="Book"/></td>

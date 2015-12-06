@@ -87,13 +87,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </tr>
 						-->
                                                 
-                             <input type="text" id="departure" name="departure" value=' . $departure . ' hidden="true"/>
-                            <input type="text" id="aircondition" name="aircondition" value=' . $aircondition . ' hidden="true"/>
-                            <input type="text" id="type" name="type" value=' . $type . ' hidden="true"/>    
-                            <input type="text" id="cost" name="cost" value=' . $cost . ' hidden="true"/>
-                            <input type="text" id="stoppage" name="stoppage" value=' . $stoppage . ' hidden="true"/>
-                            <input type="text" id="address" name="address" value=' . $address . ' hidden="true"/>
-                            <input type="text" id="processing_fee" name="processing_fee" value=' . $processing . ' hidden="true"/>
+                            <input hidden="true" type="text" id="departure" name="departure" value='.$departure.'  />
+                            <input hidden="true" type="text" id="aircondition" name="aircondition" value=' . $aircondition . ' />
+                            <input hidden="true" type="text" id="type" name="type" value='.$type.'  />    
+                            <input hidden="true" type="text" id="cost" name="cost" value='.$cost.' />
+                            <input hidden="true" type="text" id="stoppage" name="stoppage" value='.$stoppage.'  />
+                            <input hidden="true" type="text" id="address" name="address" value='.$address. ' />
+                            <input hidden="true" type="text" id="processing_fee" name="processing_fee" value='.$processing.'  />
                                                 
 
                              <tr>

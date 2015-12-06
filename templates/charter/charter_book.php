@@ -1,6 +1,11 @@
 <?php session_start(); ?>
 
 <?php
+
+if(!isset($_POST['company_name']) || !isset($_POST['address']) || !isset($_POST['type'])){
+    header("location: /yaupa.com/index.php");
+}
+
 $_SESSION['company_name'] = strtolower(htmlspecialchars($_POST['company_name']));
 $_SESSION['company_address'] = strtolower(htmlspecialchars($_POST['address']));
 $_SESSION['type'] = strtolower(htmlspecialchars($_POST['type']));

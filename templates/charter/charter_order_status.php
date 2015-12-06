@@ -9,6 +9,10 @@
 <body>
 
 <?php
+    if(!isset($_SESSION['trans_ref']) || !isset($_SESSION['amount_to_pay']) || !isset($_SESSION['type'])){
+    header("location: /yaupa.com/index.php");
+}
+
     include_once "../../util/connection.php";
     $param = array();
     $param['productid'] = 6205;

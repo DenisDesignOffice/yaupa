@@ -1,7 +1,7 @@
 
 <?php 
 
-require_once "connection.php";
+require_once "../../util/connection.php";
 
 ?>
 
@@ -11,7 +11,7 @@ require_once "connection.php";
 <htm>
 <head>
 <title>Add Charter</title>
-<link rel="stylesheet" type="text/css" href="css/add_travel.css"/>
+<link rel="stylesheet" type="text/css" href="../../static/css/add_travel.css"/>
 </head>
 <body>
 <div class="header">
@@ -106,7 +106,7 @@ $to_and_fro=$_POST['to_and_fro'];
 $processing=$_POST['processing'];
 $service_hours=$_POST['service_hours'];
 $vehicle_type=$_POST['vehicle_type'];
-
+$name = $_POST['company'];
 
 
 $check=mysql_query("SELECT id FROM transport_companies WHERE company_name='{$name}';");

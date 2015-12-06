@@ -1,6 +1,10 @@
 <?php session_start(); ?>
 
 <?php
+If(!isset($_POST['stoppage']) || !isset($_POST['address']) || !isset($_POST['type'])){
+    header("location: /yaupa.com/index.php");
+}
+
 $_SESSION['stoppage'] = strtolower(htmlspecialchars($_POST['stoppage']));
 $_SESSION['address'] = strtolower(htmlspecialchars($_POST['address']));
 $_SESSION['type'] = strtolower(htmlspecialchars($_POST['type']));

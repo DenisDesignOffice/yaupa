@@ -1,7 +1,7 @@
 
 <?php 
 
-require_once "connection.php";
+require_once "../../util/connection.php";
 
 ?>
 
@@ -11,7 +11,7 @@ require_once "connection.php";
 <htm>
 <head>
 <title>Add Company</title>
-<link rel="stylesheet" type="text/css" href="css/add_company.css"/>
+<link rel="stylesheet" type="text/css" href="../../static/css/add_company.css"/>
 </head>
 <body>
 <div class="header">

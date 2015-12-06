@@ -2,6 +2,10 @@
 session_start();
 require_once "../../util/pin_generator.php";
 
+If(!isset($_SESSION['company_name']) || !isset($_SESSION['address']) || !isset($_SESSION['type'])){
+    header("location: /yaupa.com/index.php");
+}
+
 $generate_random_cust_id = mt_rand(111, 999);
 $generate_random_trans_ref = mt_rand(1111111111, 9999999999);
 $mac_key = "D3D1D05AFE42AD50818167EAC73C109168A0F108F32645C8B59E897FA930DA44F9230910DAC9E20641823799A107A02068F7BC0F4CC41D2952E249552255710F";
@@ -66,9 +70,6 @@ mysql_close($connect);
         <h1>Please wait...Redirecting...</h1>
         <p>Click the proceed button if your browser fails to redirect</p>
         <form name="submit_form" method="post" action="https://stageserv.interswitchng.com/test_paydirect/pay">
-
-
-
 
             <td colspan="4"><div align="center">
                     <input name="product_id" type="hidden" value="<?php echo $product_id; ?>" />
