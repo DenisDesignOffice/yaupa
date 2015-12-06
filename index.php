@@ -16,7 +16,6 @@
         
          <script src="static/js/jquery-2.1.3.js"></script>
         <!-- call the travel form processor -->
-        <script type="text/javascript" src="static/js/travel_form_handler.js"></script>
 
 
     </head>
@@ -54,7 +53,7 @@
 
 
 
-                                                        <form method="post" id="travel_form_home" action="./index.php">
+                                                        <form method="post" id="travel_form_home" action="templates/travel/travel.php">
 
 
                                                             <input type="text" Name="from_home" value="" placeholder="From? e.g Benin, Owerri" class="input" required>
@@ -124,3 +123,4 @@
                                                                                                                     });
                                                                                                                 </script>
                                                                                                                 </html>
+
