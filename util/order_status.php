@@ -10,9 +10,9 @@
 
 <?php
     $param = array();
-	$param['productid'] = 6205;
+    $param['productid'] = 6205;
     $param['transactionreference'] = $_SESSION['trans_ref'];
-    $param['amount'] = $_SESSION['amount'];
+    $param['amount'] = $_SESSION['amount_to_pay'];
 
 	$mac_key = "D3D1D05AFE42AD50818167EAC73C109168A0F108F32645C8B59E897FA930DA44F9230910DAC9E20641823799A107A02068F7BC0F4CC41D2952E249552255710F";
 	$raw_value = $param['productid'].$param['transactionreference'].$mac_key;

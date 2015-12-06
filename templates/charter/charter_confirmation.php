@@ -4,6 +4,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+session_start(); 
 
 $firstname = strtolower(htmlspecialchars($_POST['firstname']));
 $lastname = strtolower(htmlspecialchars($_POST['lastname']));
@@ -25,9 +26,17 @@ $_SESSION['payment_option'] = $payment_option;
 $_SESSION['charter_option'] = $charter_option;
 $_SESSION['selected_option_id'] = $selected_option_id;
 
-if($charter_option == 'bank deposit'){
+if($charter_option == 'to alone'){
+    $_SESSION['amount_to_pay'] = $_SESSION['to_cost'] . '00';
+}else{
+    $_SESSION['amount_to_pay'] = $_SESSION['to_and_fro_cost'] . '00';
+}
+
+if($payment_option == 'bank_deposit'){
     header("location: ./charter_bank_deposit.php");
 }
+
+
 ?>
 
 <!DOCTYPE html> 
@@ -82,10 +91,10 @@ if($charter_option == 'bank deposit'){
         <form name="form1" method="post" action="./charter_process.php">
             <div class="col-2">
                 <label>COMPANY:
-                    <h6 style="size: 20px"><?php echo $_SESSION['company_name'] ?></h4>
+                    <h6 style="size: 20px"><?php echo $_SESSION['company_name']; ?></h4>
                 </label>
                 <label>Price:
-                    <h6 style="size: 20px"><?php echo $_SESSION['to_cost'] ?></h4>
+                    <h6 style="size: 20px"><?php echo $_SESSION['amount_to_pay']; ?></h4>
                 </label>
                 <label>
                     TICKET QUANTITY

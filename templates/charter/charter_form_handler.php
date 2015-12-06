@@ -1,5 +1,7 @@
 <?php
 
+session_start(); 
+
 include_once "../../util/connection.php";
 
 $response = '';
@@ -80,29 +82,27 @@ if ($type == "select vehicle type" || $state == "current state") {
                         <tr>
                         <td><i class="fa fa-building"></i>&nbsp;&nbsp;Car Park</td><td id="company_address" name="company_address">' . $address . '</td>
                         </tr>
-						
-<<<<<<< HEAD
+			
+                        <input type="text" id="selected_item_id" name="selected_item_id" value=' . $value . ' hidden="true"/>
+                            <input type="text" id="company_name" name="company_name" value=' . $company_name . ' hidden="true"/>
+                            <input type="text" id="type" name="type" value=' . $type . ' hidden="true"/>    
+                            <input type="text" id="to_cost" name="to_cost" value=' . $to_cost . ' hidden="true"/>
+                            <input type="text" id="to_and_fro_cost" name="to_and_fro_cost" value=' . $to_and_fro_cost . ' hidden="true"/>
+                            <input type="text" id="address" name="address" value=' . $address . ' hidden="true"/>
+                            <input type="text" id="processing_fee" name="processing_fee" value=' . $processing_fee . ' hidden="true"/>
+
                         <tr>
                         <td class="submit"><input type="submit" value="Book"/></td>
                         </tr> 
                         
-                        <input type="text" id="selected_item_id" name="selected_item_id" value=' . $value . ' hidden="true"/>
-                        <input type="text" id="company_name" name="company_name" value=' . $company_name . ' hidden="true"/>
-                        <input type="text" id="type" name="type" value=' . $type . ' hidden="true"/>    
-                        <input type="text" id="to_cost" name="to_cost" value=' . $to_cost . ' hidden="true"/>
-                        <input type="text" id="to_and_fro_cost" name="to_and_fro_cost" value=' . $to_and_fro_cost . ' hidden="true"/>
-                        <input type="text" id="address" name="address" value=' . $address . ' hidden="true"/>
-                        <input type="text" id="processing_fee" name="processing_fee" value=' . $processing_fee . ' hidden="true"/>
+                            
 			
                         </form>			
-=======
-						
+					
                         <!-- <tr>
                         <td class="submit"><a href="charter_book.php?selected_option_id=' . $value . '">Book Now</a></td>
                         </tr> -->
 						
->>>>>>> 59690b1d8ae3de9c7a780c9730829bd2079c1363
-
                         </table>
 
                         </div>';

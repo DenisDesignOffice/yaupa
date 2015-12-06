@@ -1,6 +1,9 @@
+
 <?php
-if (!isset($_GET['selected_option_id'])) {
-    header("location:index.php");
+session_start(); 
+
+if (!isset($_SESSION['selected_option_id'])) {
+    header("location: /yaupa.com/index.php");
 }
 ?>
 
