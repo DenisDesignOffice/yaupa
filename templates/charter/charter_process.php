@@ -1,5 +1,7 @@
 <?php 
-session_start(); 
+session_start();
+require_once "../../util/pin_generator.php";
+
 $generate_random_cust_id = mt_rand(111, 999);
 $generate_random_trans_ref = mt_rand(1111111111, 9999999999);
 $mac_key = "D3D1D05AFE42AD50818167EAC73C109168A0F108F32645C8B59E897FA930DA44F9230910DAC9E20641823799A107A02068F7BC0F4CC41D2952E249552255710F";
@@ -8,7 +10,7 @@ $product_id = "6205";
 $pay_item_id = "101";
 
 $_SESSION['trans_ref'] = $generate_random_trans_ref;
-
+$_SESSION['pin'] = mt_rand(1111111111, 9999999999);
 
 require_once "../../util/connection.php";
 
@@ -31,6 +33,7 @@ $destination = $_SESSION['to'];
 $location = $_SESSION['from'];
 $destination_state = $_SESSION['dest'];
 
+    
 $put="INSERT INTO charter_booking_records (firstname,lastname, email, phone,"
         . " address, vehicle_type, location, location_state, destination, "
         . "destination_state, to_cost, to_and_fro_cost, processing_fee, "

@@ -28,8 +28,10 @@ $_SESSION['selected_option_id'] = $selected_option_id;
 
 if($charter_option == 'to alone'){
     $_SESSION['amount_to_pay'] = $_SESSION['to_cost'] . '00';
+    $_SESSION['amount_to_pay2'] = $_SESSION['to_cost']; 
 }else{
     $_SESSION['amount_to_pay'] = $_SESSION['to_and_fro_cost'] . '00';
+    $_SESSION['amount_to_pay2'] = $_SESSION['to_and_fro_cost'];
 }
 
 if($payment_option == 'bank_deposit'){
@@ -95,7 +97,7 @@ if($payment_option == 'bank_deposit'){
                     <h6 style="size: 20px"><?php echo $_SESSION['company_name']; ?></h4>
                 </label>
                 <label>Price:
-                    <h6 style="size: 20px"><?php echo $_SESSION['amount_to_pay']; ?></h4>
+                    <h6 style="size: 20px"><?php echo $_SESSION['amount_to_pay2']; ?></h4>
                 </label>
                 <label>
                     TICKET QUANTITY

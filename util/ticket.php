@@ -4,7 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Ticket</title>
 
-        <link rel="stylesheet" type="text/css" href="ticketcss.css"/>
+        <link rel="stylesheet" type="text/css" href="../static/css/ticketcss.css"/>
 
     </head>
 
@@ -22,20 +22,20 @@
             <table>
 
                 <tr>
-                    <td id="label">Name</td>  <td id="data">Christian Okpakpo</td>
+                    <td id="label">Name</td>  <td id="data"><?php echo $_SESSION['lastname'] .  ' ' .$_SESSION['firstname'] ; ?></td>
                 </tr>
 
 
                 <tr>
-                    <td id="label">Ticket No</td>   <td id="data">A128743743KK</td>
+                    <td id="label">Ticket No</td>   <td id="data"><?php echo $_SESSION['pin']; ?></td>
                 </tr>
 
                 <tr>
-                    <td id="label">Ref ID</td>  <td id="data">KK2345643</td>
+                    <td id="label">Ref ID</td>  <td id="data"><?php echo $_SESSION['trans_ref']; ?></td>
                 </tr>
 
                 <tr>
-                    <td id="label">Date</td> <td id="data">27/11/2015</td>
+                    <td id="label">Date</td> <td id="data"><?php echo $_SESSION['date']; ?></td>
                 </tr>
 
                 <tr>
@@ -43,11 +43,11 @@
                 </tr>
 
                 <tr>
-                    <td id="label">Destination</td>  <td id="data">Lagos</td>
+                    <td id="label">Destination</td>  <td id="data"><?php echo $_SESSION['dest']; ?></td>
                 </tr>
 
                 <tr>
-                    <td id="label">Park Address</td>  <td id="data">No 1 Imgbi Road Amarata Yenagoa, Bayelsa State</td>
+                    <td id="label">Park Address</td>  <td id="data"><?php echo $_SESSION['company_address']; ?></td>
                 </tr>
 
 

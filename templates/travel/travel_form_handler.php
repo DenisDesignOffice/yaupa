@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $departure = $row["departure_time"];
 
             $response .= '<div class="item">  
-                    <img src="/yaupa/static/images/banner-casa.jpg">
+                    <img src="/yaupa.com/static/images/banner-casa.jpg">
                     <h2>' . $company_name . '</h2>
   
                     <table>
