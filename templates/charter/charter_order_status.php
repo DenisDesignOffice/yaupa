@@ -48,6 +48,7 @@
         $sql = "UPDATE charter_bookings SET status='success' WHERE reg_pin='" . $_SESSION['trans_ref'] ."'";
         mysql_query($sql);
         
+        include '../../util/sms_handler.php';
         include './charter_ticket.php';
         
     }else{

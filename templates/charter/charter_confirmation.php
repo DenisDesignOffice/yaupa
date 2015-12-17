@@ -19,9 +19,11 @@ $date = strtolower(htmlspecialchars($_POST['date']));
 $payment_option = strtolower(htmlspecialchars($_POST['payment_option']));
 $charter_option = strtolower(htmlspecialchars($_POST['charter_option']));
 $selected_option_id = strtolower(htmlspecialchars($_POST['selected_option_id']));
+$sms_reminder  = strtolower(htmlspecialchars($_POST['sms_reminder']));
 
 $_SESSION['firstname'] = $firstname;
-$_SESSION['lastname'] = $lastname;
+$_SESSION['sms_reminder'] = $sms_reminder;
+$_SESSION['firstname'] = $firstname;
 $_SESSION['phone'] = $phone;
 $_SESSION['email'] = $email;
 $_SESSION['address'] = $address;
