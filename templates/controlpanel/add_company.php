@@ -1,66 +1,76 @@
 
-<?php 
-
+<?php
 require_once "../../util/connection.php";
-
 ?>
 
 
 
 <!DOCTYPE html>
 <htm>
-<head>
-<title>Add Company</title>
-<link rel="stylesheet" type="text/css" href="../../static/css/add_company.css"/>
-</head>
-<body>
-<div class="header">
+    <head>
+        <title>Add Company</title>
+        <link rel="stylesheet" type="text/css" href="../../static/css/add_company.css"/>
+    </head>
+    <body>
+        <div class="header">
 
-<h1><a href="controlpanel.php">Yaupa Control Panel</a></h1>
-<nav>
-<a>Hi! User</a>
-<a>Logout</a>
-</nav>
+            <h1><a href="controlpanel.php">Yaupa Control Panel</a></h1>
+            <nav>
+                <a>Hi! User</a>
+                <a>Logout</a>
+            </nav>
 
-</div>
+        </div>
 
 
-<div id="container">
-<form name="add_company" method="post" action="add_company.php">
-<label>Add New Company
-<input class="input" type="text" name="company" required>
-</label>
-<input class="submit" type="submit" value="Submit">
-</form>
+        <div id="container">
+            <form name="add_company" method="post" action="add_company.php">
+                <label>Company Name
+                    <input class="input" type="text" name="name" /required>
+                </label><br>
+                <label>Tag
+                    <input class="input" placeholder="e.g. GAM for G. Agofure Motors" type="text" name="tag" /required>
+                </label><br>
+                <label>Email
+                    <input class="input" placeholder="e.g. abc123@yourmail.com" type="email" name="email" /required>
+                </label><br>
+                <label>Phone
+                    <input class="input" placeholder="e.g. 08011122233" type="text" name="phone" /required>
+                </label><br>
+                <label>Logo
+                    <input class="input" type="file" name="logo" >
+                </label><br>
 
-<?php 
-$error="";
-if($_SERVER['REQUEST_METHOD']=="POST")
-{
-$name=$_POST['company'];
+                <input class="submit" type="submit" value="Submit">
+            </form>
 
-$check=mysql_query("SELECT company_name FROM transport_companies WHERE company_name='{$name}';");
+<?php
+$error = "";
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    $name = $_POST['name'];
+    $tag = $_POST['tag'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $logo = $_POST['logo'];
 
-if(mysql_num_rows($check)==0){
-$action="INSERT INTO transport_companies(company_name) VALUE('$name')";
-$query=mysql_query($action);
+    $check = mysql_query("SELECT name FROM transport_companies WHERE name='{$name}';");
 
-if(!$query)
-{
-die("connection failed".mysql_error());
+    if (mysql_num_rows($check) == 0) {
+        $action = "INSERT INTO transport_companies(name,tag,email,phone,logo) VALUE('$name','$tag','$email', '$phone', '$logo')";
+        $query = mysql_query($action);
+
+        if (!$query) {
+            die("connection failed" . mysql_error());
+        }
+        $error = "Name has been added Successfully";
+    } else {
+        $error = "Name Already Exist";
+    }
 }
-$error="Name has been added Successfully";
-}
-else
-{
-$error="Name Already Exist";
-}
-}
 
-echo "<br/>".$error;
-
+echo "<br/>" . $error;
 ?>
-</div>
+        </div>
 
-</body>
+    </body>
 </html>

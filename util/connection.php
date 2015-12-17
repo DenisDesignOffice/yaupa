@@ -1,9 +1,7 @@
-
-
 <?php
 
 $server = "127.0.0.1";
-$database = "travelin";
+$database = "yaupadb";
 $username = "root";
 $password = "";
 

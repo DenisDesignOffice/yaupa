@@ -52,7 +52,7 @@ echo "<option>".$row['company_name']."</option>";
 
 <tr>
 <td>From</td>
-<td><input type="text" name="from" class="input"></td>
+<td><input type="text" name="from" class="input" /re></td>
 </tr>
 
 <tr>
@@ -142,7 +142,7 @@ $check=mysql_query("SELECT * FROM travel_details WHERE company_id='{$id}' AND fr
 
 if(mysql_num_rows($check)==0){
 
-$action="INSERT INTO travel_details(company_id, fromplace, toplace, cost, aircondition, stopage_point, speed_limit, last_bus_stop, duration, departure_time, vehicle_type, processing_fee) VALUES('$id', '$from', '$to', '$cost', '$aircondition', '$stopage_point', '$speed', '$last_stop', '$duration', '$departure', '$vehicle', '$processing')";
+$action="UPDATE travel_details SET(fromplace, toplace, cost, aircondition, stopage_point, speed_limit, last_bus_stop, duration, departure_time, vehicle_type, processing_fee) VALUES($from', '$to', '$cost', '$aircondition', '$stopage_point', '$speed', '$last_stop', '$duration', '$departure', '$vehicle', '$processing') WHERE company_id='{$id}' AND fromplace='{$from}' AND toplace='{$to}'";
 $query=mysql_query($action);
 
 if(!$query)
@@ -153,9 +153,7 @@ die("connection failed".mysql_error());
 }else{
 
     echo "Details Already Exist";
-}
-
-}
+}}
 
 ?>
 </div>
