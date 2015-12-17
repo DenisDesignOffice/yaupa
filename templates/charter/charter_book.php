@@ -10,9 +10,9 @@ $_SESSION['company_name'] = strtolower(htmlspecialchars($_POST['company_name']))
 $_SESSION['company_address'] = strtolower(htmlspecialchars($_POST['address']));
 $_SESSION['type'] = strtolower(htmlspecialchars($_POST['type']));
 $_SESSION['processing_fee'] = strtolower(htmlspecialchars($_POST['processing_fee']));
-$_SESSION['selected_option_id'] = strtolower(htmlspecialchars($_POST['selected_item_id']));
 $_SESSION['to_and_fro_cost'] = strtolower(htmlspecialchars($_POST['to_and_fro_cost']));
 $_SESSION['to_cost'] = strtolower(htmlspecialchars($_POST['to_cost']));
+$_SESSION['service_provider'] = strtolower(htmlspecialchars($_POST['tag']));
 
 ?>
 

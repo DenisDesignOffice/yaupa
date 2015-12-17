@@ -6,27 +6,28 @@ include_once "../../util/connection.php";
 
 $response = '';
 
-$type = strtolower(htmlspecialchars($_POST['type']));
-$state = strtolower(htmlspecialchars($_POST['location']));
-$dest = strtolower(htmlspecialchars($_POST['dest']));
+$vehicle_type = strtolower(htmlspecialchars($_POST['vehicle_type']));
+$from_state = strtolower(htmlspecialchars($_POST['from_state']));
+$to_state = strtolower(htmlspecialchars($_POST['to_state']));
 $to = strtolower(htmlspecialchars($_POST['to']));
 $from = strtolower(htmlspecialchars($_POST['from']));
 
-$_SESSION['type'] = $type;
-$_SESSION['state'] = $state;
-$_SESSION['dest'] = $dest;
+$_SESSION['vehicle_type'] = $vehicle_type;
+$_SESSION['from_state'] = $from_state;
+$_SESSION['to_state'] = $to_state;
 $_SESSION['to'] = $to;
 $_SESSION['from'] = $from;
 
 
-if ($type == "select vehicle type" || $state == "current state") {
+if ($vehicle_type == "select vehicle type" || $from_state == "current state") {
     $response = "<h1>Please fill all relevant fields</h1>";
     echo $response;
     exit();
 } else {
 
 //all fields were filled, lets process
-    $result = mysql_query("SELECT * FROM charter WHERE vehicle_type='$type' AND location_state='$state' ");
+    $result = mysql_query("SELECT * FROM charter_services, terminals"
+            . " WHERE vehicle_type='$vehicle_type' AND from_state='$from_state' AND service_provider=tag ");
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (mysql_num_rows($result) == 0) {
@@ -34,27 +35,18 @@ if ($type == "select vehicle type" || $state == "current state") {
             echo $response;
         } else {
             while ($row = mysql_fetch_assoc($result)) {
-                $value = $row["company_id"];
-
-                $name = mysql_query("SELECT * FROM transport_companies WHERE id='$value'");
-                $ro = mysql_fetch_assoc($name);
-                $company_name = $ro['company_name'];
-
-                $name = mysql_query("SELECT * FROM company_address WHERE id='$value'");
-                $run = mysql_fetch_assoc($name);
-                $address = $run['address'];
-
-                $id = $row['id'];
+                $company_name = $row['company'];
+                $address = $row['address'];
                 $to_cost = $row["to_cost"];
-                $location = $row["location"];
-                $destination = $row["destination"];
-                $location_state = $row["location_state"];
-                $destination_state = $row["destination_state"];
+                $to_state = $row["to_state"];
+                $from_state = $row["from_state"];
+                $to = $row["to_town"];
+                $from = $row["from_town"];
                 $to_and_fro_cost = $row["to_and_fro_cost"];
-                $type = $row["vehicle_type"];
+                $vehicle_type = $row["vehicle_type"];
                 $processing_fee = $row["processing_fee"];
                 $duration = $row["duration"];
-                $service_hours = $row["service_hours"];
+                $tag = $row["tag"];
 
 
                 $response .= '<form id="book_form" name="book_form" method="post" action="./charter_book.php">
@@ -65,7 +57,7 @@ if ($type == "select vehicle type" || $state == "current state") {
                         <table>
 
                         <tr>
-                        <td><i class="fa fa-bus"></i>&nbsp;&nbsp;Type:</td><td>' . $type . '</td>
+                        <td><i class="fa fa-bus"></i>&nbsp;&nbsp;Type:</td><td>' . $vehicle_type . '</td>
                         </tr>
                         <tr>
                         <td><i class="fa fa-money"></i>&nbsp;&nbsp;Price:</td><td id="to_cost" name="to_cost">' . $to_cost . '</td>
@@ -83,13 +75,13 @@ if ($type == "select vehicle type" || $state == "current state") {
                         <td><i class="fa fa-building"></i>&nbsp;&nbsp;Car Park</td><td id="company_address" name="company_address">' . $address . '</td>
                         </tr>
 			
-                        <input hidden="true" type="text" id="selected_item_id" name="selected_item_id" value=' . $value . ' />
                             <input hidden="true" type="text" id="company_name" name="company_name" value=' . $company_name . ' />
-                            <input hidden="true" type="text" id="type" name="type" value=' . $type . ' />    
+                            <input hidden="true" type="text" id="type" name="type" value=' . $vehicle_type . ' />    
                             <input hidden="true" type="text" id="to_cost" name="to_cost" value=' . $to_cost . ' />
                             <input hidden="true" type="text" id="to_and_fro_cost" name="to_and_fro_cost" value=' . $to_and_fro_cost . ' />
                             <input hidden="true" type="text" id="address" name="address" value=' . $address . ' />
                             <input hidden="true" type="text" id="processing_fee" name="processing_fee" value=' . $processing_fee . ' />
+                            <input hidden="true" type="text" id="service_provider" name="service_provider" value=' . $tag. ' />
 
                         <tr>
                         <td class="submit"><input type="submit" value="Book"/></td>
@@ -98,11 +90,6 @@ if ($type == "select vehicle type" || $state == "current state") {
                             
 			
                         </form>			
-					
-                        <!-- <tr>
-                        <td class="submit"><a href="charter_book.php?selected_option_id=' . $value . '">Book Now</a></td>
-                        </tr> 
-                        -->
 						
                         </table>
 

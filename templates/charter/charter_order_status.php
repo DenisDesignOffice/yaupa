@@ -45,7 +45,7 @@
 <?php
     if((string)$xml->ResponseCode == 00){
         
-        $sql = "UPDATE charter_booking_records SET status='success' WHERE reg_pin='" . $_SESSION['trans_ref'] ."'";
+        $sql = "UPDATE charter_bookings SET status='success' WHERE reg_pin='" . $_SESSION['trans_ref'] ."'";
         mysql_query($sql);
         
         include './charter_ticket.php';

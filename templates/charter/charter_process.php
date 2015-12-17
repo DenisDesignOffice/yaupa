@@ -6,7 +6,7 @@ If(!isset($_SESSION['company_name']) || !isset($_SESSION['address']) || !isset($
     header("location: /yaupa.com/index.php");
 }
 
-$generate_random_cust_id = mt_rand(111, 999);
+$generate_random_cust_id = mt_rand(1111, 9999);
 $generate_random_trans_ref = mt_rand(1111111111, 9999999999);
 $mac_key = "D3D1D05AFE42AD50818167EAC73C109168A0F108F32645C8B59E897FA930DA44F9230910DAC9E20641823799A107A02068F7BC0F4CC41D2952E249552255710F";
 $url = "http://localhost/yaupa.com/templates/charter/charter_order_status.php";
@@ -27,26 +27,27 @@ $date = $_SESSION['date'];
 $payment_option = $_SESSION['payment_option'];
 $charter_option = $_SESSION['charter_option'];
 $company_name = $_SESSION['company_name'];
-$type = $_SESSION['type'];
+$type = $_SESSION['vehicle_type'];
 $processing_fee = $_SESSION['processing_fee'];
 $to_and_fro_cost = $_SESSION['to_and_fro_cost'];
 $to_cost = $_SESSION['to_cost'];
 $amount = $_SESSION['amount_to_pay'];
-$location_state = $_SESSION['state'];
+$amount2 = $_SESSION['amount_to_pay2'];
+$location_state = $_SESSION['from_state'];
 $destination = $_SESSION['to'];
 $location = $_SESSION['from'];
-$destination_state = $_SESSION['dest'];
+$destination_state = $_SESSION['to_state'];
+$service_provider = $_SESSION['service_provider'];
 
     
-$put="INSERT INTO charter_booking_records (firstname,lastname, email, phone,"
-        . " address, vehicle_type, location, location_state, destination, "
-        . "destination_state, to_cost, to_and_fro_cost, processing_fee, "
-        . "amount_paid, payment_date, bank_deposit_no, debit_no, name_of_depositor,"
-        . " company_name, reg_pin, serial)"
+$put="INSERT INTO charter_bookings (firstname,lastname, email, phone,"
+        . " address, vehicle_type, from_town, from_state, to_town, "
+        . "to_state, cost, service_option, service_providers, payment_type, "
+        . "amount_paid, payment_date, reg_pin, serial, bank_deposit_no, depositor)"
         . " VALUES('$firstname','$lastname', '$email', '$phone', '$address', "
-        . " '$type', '$location','$location_state', '$destination', '$destination_state',"
-        . " '$to_cost', '$to_and_fro_cost', '$processing_fee', '$amount', '$date', "
-        . " '', '','',  '$company_name', '$generate_random_trans_ref', '$generate_random_cust_id')";
+        . " '$type', '$location','$location_state', '$destination', '$destination_state', "
+        . " '$amount2', '$charter_option', '$service_provider', '$payment_option', '$amount2', '$date', "
+        . " '$generate_random_trans_ref', '$generate_random_cust_id', '', '')";
 
 
 $results = mysql_query($put);

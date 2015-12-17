@@ -43,7 +43,7 @@
                 </tr>
 
                 <tr>
-                    <td id="label">Destination</td>  <td id="data"><?php echo $_SESSION['dest']; ?></td>
+                    <td id="label">Destination</td>  <td id="data"><?php echo $_SESSION['to_state']; ?></td>
                 </tr>
 
                 <tr>

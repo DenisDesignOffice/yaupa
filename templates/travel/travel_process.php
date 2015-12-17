@@ -32,10 +32,8 @@ $processing_fee = $_SESSION['processing_fee'];
 //$to_and_fro_cost = $_SESSION['to_and_fro_cost'];
 //$to_cost = $_SESSION['to_cost'];
 $amount = $_SESSION['amount_to_pay'];
-$location_state = $_SESSION['state'];
-$destination = $_SESSION['to'];
-$location = $_SESSION['from'];
-$destination_state = $_SESSION['dest'];
+$location_state = $_SESSION['from_state'];
+$destination_state = $_SESSION['to_state'];
 
     
 //$put="INSERT INTO charter_booking_records (firstname,lastname, email, phone,"
@@ -66,7 +64,7 @@ mysql_close($connect);
         <title>booking</title>
     </head>
 
-    <body onload="document.submit_form.submit()">
+    <body onload="document.travel_form.submit()">
         <h1>Please wait...Redirecting...</h1>
         <p>Click the proceed button if your browser fails to redirect</p>
         <form name="submit_form" method="post" action="https://stageserv.interswitchng.com/test_paydirect/pay">

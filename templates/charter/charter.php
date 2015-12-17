@@ -32,7 +32,7 @@
                 
                 <!-- vehicle selector w -->
                 <label > <i class="fa fa-bus"></i>
-                    <select id="type" name="type" class="input-state" >
+                    <select id="type" name="vehicle_type" class="input-state" >
                         <?php include_once '../../util/constants/vehicles.html'; ?>
                     </select>
                 </label>
@@ -40,7 +40,7 @@
                 <input type="text" id="from"   name="from" value="" placeholder="From?  Pickup point" class="input">
                     
                 <!-- current state selector -->
-                <select type="select" id="location" name="location" placeholder="State" class="input-state">
+                <select type="select" id="location" name="from_state" placeholder="State" class="input-state">
                       <option>Current State</option>
                        <?php include '../../util/constants/states.html'; ?>
                 </select>
@@ -48,7 +48,7 @@
                 <input type="text" id="to" name="to" value="" placeholder="To?  Desired destination" class="input"></td>
 
                 <!-- destination state selector -->
-                <select type="select" id="dest" name="dest" value="" placeholder="State" class="input-state">
+                <select type="select" id="dest" name="to_state" value="" placeholder="State" class="input-state">
                        <option>Destination State</option>
                        <?php include '../../util/constants/states.html'; ?>
                 </select>

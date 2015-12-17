@@ -13,6 +13,8 @@ $_SESSION['aircondition'] = strtolower(htmlspecialchars($_POST['aircondition']))
 $_SESSION['departure'] = strtolower(htmlspecialchars($_POST['departure']));
 $_SESSION['cost'] = strtolower(htmlspecialchars($_POST['cost']));
 $_SESSION['company_name'] = strtolower(htmlspecialchars($_POST['company_name']));
+$_SESSION['from_state'] = strtolower(htmlspecialchars($_POST['from_state']));
+$_SESSION['to_state'] = strtolower(htmlspecialchars($_POST['to_state']));
 ?>
 
 <!DOCTYPE html> 

@@ -14,10 +14,10 @@ if (!isset($_SESSION['selected_option_id'])) {
     <title>Bank Deposit Form</title>
 
 
-    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="css/book.css"/>
-    <link rel="stylesheet" type="text/css" media="all" href="css/switchery.min.css">
-    <script type="text/javascript" src="js/switchery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../static/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../../static/css/book.css"/>
+    <link rel="stylesheet" type="text/css" media="all" href="../../static/css/switchery.min.css">
+    <script type="text/javascript" src="../../static/js/switchery.min.js"></script>
 
 
     <script src="js/modernizr.custom.js"></script>
