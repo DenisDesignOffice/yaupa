@@ -30,10 +30,15 @@ $_SESSION['payment_option'] = $payment_option;
 $_SESSION['charter_option'] = $charter_option;
 $_SESSION['selected_option_id'] = $selected_option_id;
 
+
 if($charter_option == 'to alone'){
-    $price = (int)$_SESSION['cost'] + (int)$_SESSION['processing'];
+    $price = (int)$_SESSION['to_cost'] + (int)$_SESSION['processing_fee'];
     $_SESSION['amount_to_pay'] = $price . '00';
-    $_SESSION['amount_to_pay2'] = $price . ''  ; 
+    $_SESSION['amount_to_pay2'] = $price . ''; 
+}else{
+    $price = (int)$_SESSION['to_and_fro_cost'] + (int)$_SESSION['processing_fee'];
+    $_SESSION['amount_to_pay'] = $price . '00';
+    $_SESSION['amount_to_pay2'] = $price . '';
 }
 
 if($payment_option == 'bank_deposit'){
@@ -114,4 +119,3 @@ if($payment_option == 'bank_deposit'){
     <script src="../../static/js/jquery.js"></script>
     <?php require_once "../../templates/footer.php";
     ?>
-

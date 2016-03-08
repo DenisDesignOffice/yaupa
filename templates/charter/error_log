@@ -1,0 +1,25 @@
+[07-Mar-2016 18:00:43 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[07-Mar-2016 18:00:43 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
+[07-Mar-2016 18:23:30 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[07-Mar-2016 18:23:30 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
+[07-Mar-2016 18:24:47 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'yaupbhei_root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[07-Mar-2016 18:24:47 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
+[07-Mar-2016 18:24:53 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'yaupbhei_root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[07-Mar-2016 18:24:53 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
+[07-Mar-2016 18:24:56 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'yaupbhei_root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[07-Mar-2016 18:24:56 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
+[07-Mar-2016 18:25:02 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'yaupbhei_root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[07-Mar-2016 18:25:02 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
+[07-Mar-2016 18:25:09 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'yaupbhei_root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[07-Mar-2016 18:25:09 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
+[07-Mar-2016 18:25:39 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'yaupbhei_root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[07-Mar-2016 18:25:39 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
+[07-Mar-2016 18:25:40 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'yaupbhei_root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[07-Mar-2016 18:25:40 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
+[07-Mar-2016 18:26:00 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'yaupbhei_root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[07-Mar-2016 18:26:00 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
+[07-Mar-2016 20:01:06 America/New_York] PHP Warning:  include_once(/util/connection.php): failed to open stream: No such file or directory in /home/yaupbhei/public_html/templates/charter/charter_form_handler.php on line 5
+[07-Mar-2016 20:01:06 America/New_York] PHP Warning:  include_once(): Failed opening '/util/connection.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/yaupbhei/public_html/templates/charter/charter_form_handler.php on line 5
+[07-Mar-2016 20:01:06 America/New_York] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/yaupbhei/public_html/templates/charter/charter_form_handler.php on line 30
+[07-Mar-2016 20:01:06 America/New_York] PHP Warning:  mysql_query(): A link to the server could not be established in /home/yaupbhei/public_html/templates/charter/charter_form_handler.php on line 30
+[07-Mar-2016 20:01:06 America/New_York] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/yaupbhei/public_html/templates/charter/charter_form_handler.php on line 33

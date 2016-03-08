@@ -1,9 +1,8 @@
-
 <?php
 session_start(); 
 
 if (!isset($_SESSION['selected_option_id'])) {
-    header("location: /yaupa.com/index.php");
+    header("location: /index.php");
 }
 ?>
 

@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             
 
             $response .= '<div class="item">  
-                    <img src="/yaupa.com/static/images/banner-casa.jpg">
+                    <img src="/static/images/banner-casa.jpg">
                     <form method="post" action="./travel_book.php">
                     <h2>' . $company_name . '</h2>
   
