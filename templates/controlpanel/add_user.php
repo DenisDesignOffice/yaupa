@@ -1,6 +1,10 @@
 
 <?php 
 
+session_start(); 
+
+
+
 require_once "../../util/connection.php";
 
 ?>
@@ -55,27 +59,27 @@ Password</td>
 if($_SERVER['REQUEST_METHOD']=="POST")
 {
 $username=$_POST['username'];
-$password=$_POST['password'];
+$password= crypt($_POST['password']);
 
 
 
+$stuff = "SELECT * FROM users WHERE username='{$username}' AND password='{$password}'";
+$check =  mysql_num_rows($stuff);
 
-$check=mysql_query("SELECT * FROM user WHERE username='{$username}' AND password='{$password}';");
+if($check == 0){
 
-if(mysql_num_rows($check)==0){
+    $action="INSERT INTO users(username, password) VALUES('$username', '$password')";
+    $query=mysql_query($action);
 
-$action="INSERT INTO user(username, password) VALUES('$username', '$password')";
-$query=mysql_query($action);
-
-if(!$query)
-{
-die("connection failed".mysql_error());
-}
-echo "Details Added Successfully";
-}
+    if(!$query)
+    {
+    die("connection failed".mysql_error());
+    }
+    echo "Details Added Successfully";
+    }
 else{
 
-echo "Username or Password Already Exist";
+    echo $check;
 }
 
 }
