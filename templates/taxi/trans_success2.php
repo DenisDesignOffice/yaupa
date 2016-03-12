@@ -17,7 +17,7 @@ header("location:index.php");
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Success</title>
 
-
+<link rel="shortcut icon" href="/static/images/favicon.ico">
 <link rel="stylesheet" type="text/css" href="css/normalize.css" />
 <link rel="stylesheet" type="text/css" href="css/ticket.css" />
 <link rel="stylesheet" type="text/css" href="css/book.css"/>
