@@ -10,6 +10,8 @@
 <link rel="stylesheet" type="text/css" href="../static/css/normalize.css" />
 <link rel="stylesheet" type="text/css" href="../static/css/form.css"/>
 
+<link rel="shortcut icon" href="/static/images/favicon.ico">
+
 
 <script src="../static/js/modernizr.custom.js"></script>
 <link rel="stylesheet" type="text/css" href="../static/css/career.css"/>

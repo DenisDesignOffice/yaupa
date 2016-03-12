@@ -10,6 +10,7 @@ require_once "../../util/connection.php";
     <head>
         <title>Add Charter</title>
         <link rel="stylesheet" type="text/css" href="../../static/css/add_travel.css"/>
+        <link rel="shortcut icon" href="/static/images/favicon.ico">
     </head>
     <body>
         <div class="header">

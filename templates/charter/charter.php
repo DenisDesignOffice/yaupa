@@ -12,6 +12,8 @@
         <script src="../../static/js/modernizr.custom.js"></script>
         <script src="../../static/js/jquery-2.1.3.js"></script>
         
+        <link rel="shortcut icon" href="/static/images/favicon.ico">
+        
         <!-- call the charter form processor -->
         <script type="text/javascript" src="../../static/js/charter_form_handler.js"></script>
         

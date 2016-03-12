@@ -11,6 +11,8 @@
         <link rel="stylesheet" type="text/css" href="static/css/form.css"/>
         <link rel="stylesheet" type="text/css" href="static/css/icon.css"/>
         <link rel="stylesheet" type="text/css" href="static/css/vid.css"/>
+        
+        <link rel="shortcut icon" href="/static/images/favicon.ico">
 
         <script src="static/js/modernizr.custom.js"></script>
         

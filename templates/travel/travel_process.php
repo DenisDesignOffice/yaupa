@@ -61,6 +61,7 @@ mysql_close($connect);
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="shortcut icon" href="/static/images/favicon.ico">
         <title>booking</title>
     </head>
 

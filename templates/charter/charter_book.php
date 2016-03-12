@@ -28,6 +28,8 @@ $_SESSION['service_provider'] = strtolower(htmlspecialchars($_POST['tag']));
     <link rel="stylesheet" type="text/css" href="../../static/css/book.css"/>
     <link rel="stylesheet" type="text/css" media="all" href="../../static/css/switchery.min.css">
     <script type="text/javascript" src="../../static/js/switchery.min.js"></script>
+    
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
 
 
     <script src="../../static/js/modernizr.custom.js"></script>

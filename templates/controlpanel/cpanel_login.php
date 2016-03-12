@@ -29,6 +29,7 @@
 <title>Control Panel Login </title>
 
 <link rel="stylesheet" type="text/css" href="../../static/css/cpanel_login.css">
+<link rel="shortcut icon" href="/static/images/favicon.ico">
 
         <!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 lt8"> <![endif]-->
         <!--[if IE 7 ]>    <html lang="en" class="no-js ie7 lt8"> <![endif]-->

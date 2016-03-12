@@ -8,6 +8,10 @@
 <script src="../static/js/modernizr.custom.js"></script>
 <link rel="stylesheet" type="text/css" href="../static/css/career.css"/>
 
+<link rel="shortcut icon" href="/static/images/favicon.ico">
+    
+ <link rel="shortcut icon" href="/static/images/favicon.ico">
+
 </head>
 
 <body>

@@ -23,7 +23,8 @@ $_SESSION['to_state'] = strtolower(htmlspecialchars($_POST['to_state']));
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Booking Form</title>
 
-
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
+    
     <link rel="stylesheet" type="text/css" href="../../static/css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="../../static/font-awesome-4.3.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" type="text/css" href="../../static/css/book.css"/>

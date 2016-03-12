@@ -16,8 +16,11 @@ if (!isset($_SESSION['selected_option_id'])) {
     <link rel="stylesheet" type="text/css" href="../../static/css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="../../static/css/book.css"/>
     <link rel="stylesheet" type="text/css" media="all" href="../../static/css/switchery.min.css">
+    
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
+    
     <script type="text/javascript" src="../../static/js/switchery.min.js"></script>
-
+    
 
     <script src="js/modernizr.custom.js"></script>
 

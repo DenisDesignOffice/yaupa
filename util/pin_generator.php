@@ -1,8 +1,5 @@
 <?php
 
-
-
-
 function random_number($value)
 {
 $length=strlen($value);

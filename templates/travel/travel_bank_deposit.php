@@ -12,7 +12,8 @@ if (!isset($_SESSION['selected_option_id'])) {
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Bank Deposit Form</title>
 
-
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
+    
     <link rel="stylesheet" type="text/css" href="../../static/css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="../../static/css/book.css"/>
     <link rel="stylesheet" type="text/css" media="all" href="../../static/css/switchery.min.css">

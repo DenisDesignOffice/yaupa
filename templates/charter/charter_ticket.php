@@ -5,6 +5,8 @@
         <title>Ticket</title>
 
         <link rel="stylesheet" type="text/css" href="../../static/css/ticketcss.css"/>
+        
+        <link rel="shortcut icon" href="/static/images/favicon.ico">
 
     </head>
 

@@ -3,6 +3,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Ticket</title>
+        
+     <link rel="shortcut icon" href="/static/images/favicon.ico">
 
         <link rel="stylesheet" type="text/css" href="../static/css/ticketcss.css"/>
 

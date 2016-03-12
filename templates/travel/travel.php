@@ -9,7 +9,9 @@
     <link rel="stylesheet" type="text/css" href="../../static/css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="../../static/font-awesome-4.3.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" type="text/css" media="all" href="../../static/css/form.css">
-    <link rel="stylesheet" type="text/css" media="all" href="../../static/css/travellist.css"
+    <link rel="stylesheet" type="text/css" media="all" href="../../static/css/travellist.css"/>
+    
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
     
     <script src="../../static/js/modernizr.custom.js"></script>
     <script src="../../static/js/jquery-2.1.3.js"></script>
