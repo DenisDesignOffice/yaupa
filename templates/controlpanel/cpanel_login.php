@@ -1,20 +1,22 @@
-<?php
+<?php       session_start();
+            session_set_cookie_params(0);
+       
             require_once "../../util/connection.php";
             
             if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 $username = $_POST['username'];
                 $password = $_POST['password'];
-                $hashed_password = crypt($password);
+                $hashed_password = crypt($password, '$2a$07$usesomesillystringforsalt$');
 
-                $check = "SELECT * FROM users WHERE username='$username' AND password='$hashed_password' ";
-
+                $check = "SELECT * FROM users WHERE username='$username' AND password='$password' ";
+                echo $username . " " . $hashed_password . " ";
                 $query1 = mysql_query($check);
-
-                if ($query1) {
+                echo mysql_num_rows($query1);
+                if (mysql_num_rows($query1) != 0) {
                     $_SESSION['user'] = $username;
-                    header("location: /templates/controlpanel/controlpanel.php");
+                    header("location: /templates/controlpanel/cpanel_dashboard.php");
                 } else {
-                    echo "record does not exist";
+                    echo "record does not exist" . mysql_num_rows($query1) ;
                 }
                 
             }

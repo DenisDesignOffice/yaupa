@@ -59,12 +59,13 @@ Password</td>
 if($_SERVER['REQUEST_METHOD']=="POST")
 {
 $username=$_POST['username'];
-$password= crypt($_POST['password']);
+$password= crypt($_POST['password'], '$2a$07$usesomesillystringforsalt$');
 
 
 
 $stuff = "SELECT * FROM users WHERE username='{$username}' AND password='{$password}'";
-$check =  mysql_num_rows($stuff);
+$do = mysql_query($stuff);
+$check =  mysql_num_rows($do);
 
 if($check == 0){
 

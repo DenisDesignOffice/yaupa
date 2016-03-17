@@ -11,7 +11,7 @@ require_once "connection.php";
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Booking Form</title>
-
+<link rel="shortcut icon" href="/static/images/favicon.ico">
 
 <link rel="stylesheet" type="text/css" href="css/normalize.css" />
 <link rel="stylesheet" type="text/css" href="font-awesome-4.3.0/css/font-awesome.min.css"/>
