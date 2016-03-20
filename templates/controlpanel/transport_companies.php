@@ -7,8 +7,11 @@
                             <h5>Transport Companies</h5>
                             
                         </div>
-                        <form style="margin-bottom: 10px;">
-                                <i class="fa fa-search"><input style="width:20%; height: 30px" type="text" classname="search"  Placeholder="Search"></i>
+                        <form style="margin-bottom: 10px;" name="myform1" method="get" action="./cpanel_dashboard.php"  >
+            <i class="fa fa-search"><input name="search"  style="width:20%; height: 30px" type="text"  classname="search"  Placeholder="Search by tag">
+            <input value="search" style="width:5%; height: 30px; margin-top: 2dp " type="submit" classname="search"  Placeholder="Search"></i>
+                                <i class="fa fa-search"><input name="view" value="transport_companies" style="width:20%; height: 30px; visibility: hidden" type="text" classname="search"  Placeholder="Search"></i>
+                                <i class="fa fa-search"></i>
                         </form>
                         <div class="modal-body">
                             
@@ -25,7 +28,14 @@
                                     </tr>
                                     <?php
                     /* Get total number of records */
-                    $sql = "SELECT * FROM transport_companies";
+                    $sql = "";
+                    if (isset($_GET{'search'})) {
+                        $search = strtolower(htmlspecialchars($_GET{'search'}));
+//                        $sql = "SELECT FROM transport_companies WHERE * LIKE " . '%$search%';
+                        $sql = "SELECT * FROM `transport_companies` WHERE `tag` LIKE '%$search%'";
+                    }else{
+                        $sql = "SELECT * FROM transport_companies";
+                    }
                     $retval = mysql_query($sql);
                     $rec_limit = 10;
                     $rec_count = mysql_num_rows($retval);
@@ -41,18 +51,22 @@
 
                     if (isset($_GET{'page'})) {
                         $page = $_GET{'page'};
-                        if ($page > 1) {
+                        if ($page >= 1) {
                             $offset = $rec_limit + $page;
                         } else {
-                            $offset = 1;
+                            $offset = 0;
                         }
                     } else {
                         $page = 1;
-                        $offset = 1;
+                        $offset = 0;
                     }
 
                     $left_rec = $rec_count - ($page * $rec_limit);
-                    $sql = "SELECT * FROM transport_companies " . "LIMIT  $rec_limit OFFSET $offset";
+                    if (isset($_GET{'search'})) {
+                        $sql = "SELECT * FROM transport_companies WHERE tag LIKE '%$search%' " . "LIMIT  $rec_limit OFFSET $offset";
+                    }else{
+                        $sql = "SELECT * FROM transport_companies " . "LIMIT  $rec_limit OFFSET 0";
+                    }
 
                     $retval = mysql_query($sql);
 

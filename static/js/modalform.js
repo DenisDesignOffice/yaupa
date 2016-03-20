@@ -21,6 +21,12 @@ var span = document.getElementsByClassName("close")[0];
 //    transportCompaniesDiv.style.display = "none";
 //}
 
+function DoSubmit(){
+  document.myform1.search.value = '';
+  window.location.href = "?view=travel_services";
+  return true;
+}
+
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
