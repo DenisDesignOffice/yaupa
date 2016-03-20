@@ -27,6 +27,24 @@ $(document).ready(function () {
         return true;
     });
     
+    $('#editTcForm').submit(function (event) {
+
+        var data = $('#editTcForm').serialize();//get all the form the data
+
+        $.post('./edit_form_handler.php', data, processResponce);
+
+        return true;
+    });
+    
+    $('#addTcForm').submit(function (event) {
+
+        var data = $('#editTcForm').serialize();//get all the form the data
+
+        $.post('./edit_form_handler.php', data, processResponce);
+
+        return true;
+    });
+    
     function processResponce(data,status){
         $("#appendage").html(data);
     }

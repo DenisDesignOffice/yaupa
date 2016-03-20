@@ -22,6 +22,7 @@ require_once "../../util/connection.php";
         <link rel="shortcut icon" href="/static/images/favicon.ico">
 
         <script src="/static/js/jquery-2.1.3.js"></script>
+        <!--<script src="/static/js/charter_form_handler.js"></script>-->
     </head>
 
     <body>
@@ -96,51 +97,19 @@ require_once "../../util/connection.php";
                             include './terminals.php';
                         }else if ($view == 'users'){
                             include './users.php';
+                        }else if ($view == 'add_charter'){
+                            include './cpanel_add_charter.php';
+                        }else if ($view == 'add_company'){
+                            include './cpanel_add_companies.php';
                         }
                     }else{
                        include './transport_companies.php'; 
                     }
 ?>
-                
-                
-
-
-                <!--                <div id="box-container">
-                
-                                    <div class="slide-box">
-                                        <div class="slide-title">Travel Bookings Update</div>
-                                    </div>
-                                    <div class="slide-box">
-                                        <div class="slide-title">Taxi booking Updates  </div>
-                                    </div>
-                                    <div class="slide-box">
-                                        <div class="slide-title">Charter Booking Update</div>
-                                    </div>
-                                    <div class="slide-box">
-                                        <div class="slide-title">Terminal Update </div>
-                                    </div>
-                
-                                    <div class="slide-box">
-                                        <div class="slide-title">Newly Added Companies</div>
-                                    </div>
-                
-                                    <div class="slide-box">
-                                        <div class="slide-title">Booking Company</div>
-                                    </div>
-                
-                                    <div class="slide-box">
-                                        <div class="slide-title">Booking & Update Statistics</div>
-                                    </div>
-                                    <div class="slide-box">
-                                        <div class="slide-title">Manager Upload Activities</div>
-                                    </div>
-                
-                                </div>-->
-
 
             </div>
 
-
+            <h5 id="appendage"></h5>
         </div>
         <script src="/static/js/modalform.js"></script>
     </body>
