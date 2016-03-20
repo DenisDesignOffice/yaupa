@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+
 if (!isset($_SESSION['user'])) {
     header("location: /templates/controlpanel/cpanel_login.php");
 }
@@ -51,16 +52,16 @@ require_once "../../util/connection.php";
             <!-- Left navigation menu -->
             <div class="leftmenu">
                 <ul>
-                    <li id="transportCompaniesBt"><i class="fa fa-building"></i> <a href="#">Transport Companies</a></li>
-                    <li id="charterServiceBt"><i class="fa fa-bus"></i> <a href="#">Charter Service</a></li>
-                    <li id="myBtn"> <i class="fa fa-book"></i><a href="#"> Charter Bookings</a></li>
-                    <li id="myBtn"><i class="fa fa-car"></i><a href="#"> Travel Service</a> </li>
-                    <li id="myBtn"><i class="fa fa-book"></i><a href="#"> Travel Bookings</a></li>
-                    <li id="myBtn"><i class="fa fa-cab"></i> <a href="#">Taxi Service</a></li>
-                    <li id="myBtn"><i class="fa fa-book"> </i> <a href="#">Taxi Bookings</a></li>
-                    <li id="myBtn"><i class="fa fa-home"> </i> <a href="#">Terminals</a></li>
+                    <li id="transportCompaniesBt"><i class="fa fa-building"></i> <a href="?view=transport_companies">Transport Companies</a></li>
+                    <li id="charterServiceBt"><i class="fa fa-bus"></i> <a href="?view=charter_services">Charter Service</a></li>
+                    <li id="myBtn"> <i class="fa fa-book"></i><a href="?view=charter_bookings"> Charter Bookings</a></li>
+                    <li id="myBtn"><i class="fa fa-car"></i><a href="?view=travel_services"> Travel Service</a> </li>
+                    <li id="myBtn"><i class="fa fa-book"></i><a href="?view=travel_bookings"> Travel Bookings</a></li>
+                    <li id="myBtn"><i class="fa fa-cab"></i> <a href="?view=taxi_services">Taxi Service</a></li>
+                    <li id="myBtn"><i class="fa fa-book"> </i> <a href="?view=taxi_bookings">Taxi Bookings</a></li>
+                    <li id="myBtn"><i class="fa fa-home"> </i> <a href="?view=terminals">Terminals</a></li>
                     <li id="myBtn"> <i class="fa fa-database"></i><a href="#"> Statistics </a></li>
-                    <li id="myBtn"><i class="fa fa-user"></i><a href="#"> Users</a></li>
+                    <li id="myBtn"><i class="fa fa-user"></i><a href="?view=users"> Users</a></li>
                 </ul>
             </div>
 
@@ -74,10 +75,34 @@ require_once "../../util/connection.php";
 
 
                 <!-- Transport companies -->
-                <?php include './transport_companies.php';?>
+                <?php 
+                    if (isset($_GET{'view'})) {
+                        $view = strtolower(htmlspecialchars($_GET{'view'}));
+                        if ($view == 'transport_companies') {
+                            include './transport_companies.php';
+                        }else if ($view == 'charter_services'){
+                            include './charter_services.php';
+                        }else if ($view == 'charter_bookings'){
+                            include './charter_bookings.php';
+                        }else if ($view == 'travel_services'){
+                            include './travel_services.php';
+                        }else if ($view == 'taxi_services'){
+                            include './taxi_services.php';
+                        }else if ($view == 'travel_bookings'){
+                            include './travel_bookings.php';
+                        }else if ($view == 'taxi_bookings'){
+                            include './taxi_bookings.php';
+                        }else if ($view == 'terminals'){
+                            include './terminals.php';
+                        }else if ($view == 'users'){
+                            include './users.php';
+                        }
+                    }else{
+                       include './transport_companies.php'; 
+                    }
+?>
                 
-                <!-- Transport companies -->
-                <?php include './charter_services.php';?>
+                
 
 
                 <!--                <div id="box-container">

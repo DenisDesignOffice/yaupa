@@ -5,7 +5,7 @@
     <div class="modal-content">
         <div class="modal-header">
 
-            <h5>Charter Services</h5>
+            <h5>Travel Services</h5>
 
         </div>
         <form style="margin-bottom: 10px;">
@@ -16,22 +16,23 @@
             <div>
                 <table>
                     <tr>
-                        <th>Service Provider</th>
-                        <th>Vehicle Type</th>
-                        <th>From State</th>
-                        <th>To State</th>
-                        <th>From Town</th>
-                        <th>To Town</th>
-                        <th>Cost(To)</th>
-                        <th>Cost(And fro)</th>
-                        <th>Processing fee</th>
+                        <th>Service provider</th>
+                        <th>Vehicle type</th>
+                        <th>From state</th>
+                        <th>To state</th>
+                        <th>Cost</th>
+                        <th>Stoppage point</th>
+                        <th>Speed limit</th>
+                        <th>Bus stop</th>
                         <th>Duration</th>
-                        
+                        <th>Departure time</th>
+                        <th>Processing fee</th>
+                        <th>Air condition</th>
 
                     </tr>
                     <?php
                     /* Get total number of records */
-                    $sql = "SELECT * FROM charter_services";
+                    $sql = "SELECT * FROM travel_services";
                     $retval = mysql_query($sql);
                     $rec_limit = 10;
                     $rec_count = mysql_num_rows($retval);
@@ -58,7 +59,7 @@
                     }
 
                     $left_rec = $rec_count - ($page * $rec_limit);
-                    $sql = "SELECT * FROM charter_services " . "LIMIT  $rec_limit OFFSET $offset";
+                    $sql = "SELECT * FROM travel_services " . "LIMIT  $rec_limit OFFSET $offset";
 
                     $retval = mysql_query($sql);
 
@@ -72,12 +73,14 @@
                                                     <td>" . $row['vehicle_type'] . "</td>
                                                     <td>" . $row['from_state'] . "</td>
                                                     <td>" . $row['to_state'] . "</td>
-                                                    <td>" . $row['from_town'] . "</td>
-                                                    <td>" . $row['to_town'] . "</td>
-                                                    <td>" . $row['to_cost'] . "</td>
-                                                    <td>" . $row['to_and_fro_cost'] . "</td>
-                                                    <td>" . $row['processing_fee'] . "</td>
+                                                    <td>" . $row['cost'] . "</td>
+                                                    <td>" . $row['stoppage_point'] . "</td>
+                                                    <td>" . $row['speed_limit'] . "</td>
+                                                    <td>" . $row['last_bus_stop'] . "</td>
                                                     <td>" . $row['duration'] . "</td>
+                                                    <td>" . $row['departure_time'] . "</td>
+                                                    <td>" . $row['processing_fee'] . "</td>
+                                                    <td>" . $row['aircondition'] . "</td>
                                                     <td> <span class='f-button'>edit</span> </td>
                                                     <td> <span class='f-button'>delete</span> </td> 
                                                   </tr>";
@@ -102,27 +105,27 @@
 
                     if ($pages > 1 && $pages > 10) {
                         if($prev > 0){
-                            echo '<li><a href="?view=charter_services&page=' . $prev .'"><<</a></li>';
+                            echo '<li><a href="?view=travel_services&page=' . $prev .'"><<</a></li>';
                         }
                         
                         $count = $pages;
                         $i = 1;
 
                         while ($count > 1 ) {
-                            echo '<li><a href="?view=charter_services&page=' . $i . '">' . $i . '</a></li>';
+                            echo '<li><a href="?view=travel_services&page=' . $i . '">' . $i . '</a></li>';
                             $count = $count - 1;
                             $i++;
                         }
                         
                         if($next < $pages){
-                            echo '<li><a href="?view=charter_services&page='  . $next  . '">>></a></li>';
+                            echo '<li><a href="?view=travel_services&page='  . $next  . '">>></a></li>';
                         }
                     }else  {
                         $count = $pages;
                         $i = 1;
 
                         while ($count > 1 ) {
-                            echo '<li><a href="?view=charter_services&page=' . $i . '">' . $i . '</a></li>';
+                            echo '<li><a href="?view=travel_services&page=' . $i . '">' . $i . '</a></li>';
                             $count = $count - 1;
                             $i++;
                         }

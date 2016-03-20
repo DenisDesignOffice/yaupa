@@ -1,5 +1,3 @@
-
-
 *
 {
     box-sizing:border-box;
@@ -92,7 +90,7 @@ li a:visited
 /* positions the logo on the header */
 #logo
 {
-    background-image:url(../image/Logo%202.png);
+    background-image:url(/static/images/Logo%202.png);
     height:50px;
     width:150px;
     background-repeat:no-repeat;

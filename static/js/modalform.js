@@ -10,16 +10,16 @@ var charterServiceBt = document.getElementById("charterServiceBt");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
-transportCompaniesBt.onclick = function() {
-    transportCompaniesDiv.style.display = "block";
-    charterServiceDiv.style.display = "none";
-}
-
-// When the user clicks on <span> (x), close the modal
-charterServiceBt.onclick = function() {
-    charterServiceDiv.style.display = "block";
-    transportCompaniesDiv.style.display = "none";
-}
+//transportCompaniesBt.onclick = function() {
+//    transportCompaniesDiv.style.display = "block";
+//    charterServiceDiv.style.display = "none";
+//}
+//
+//// When the user clicks on <span> (x), close the modal
+//charterServiceBt.onclick = function() {
+//    charterServiceDiv.style.display = "block";
+//    transportCompaniesDiv.style.display = "none";
+//}
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
@@ -27,3 +27,4 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+

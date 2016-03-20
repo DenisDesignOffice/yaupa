@@ -4,7 +4,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             
-                            <h5>Transport Companies</h5>
+                            <h5>Taxi Bookings</h5>
                             
                         </div>
                         <form style="margin-bottom: 10px;">
@@ -15,17 +15,22 @@
                             <div>
                                 <table>
                                     <tr>
-                                        <th>Company Name</th>
-                                        <th>Tag</th>
-                                        <th>Email</th>
-                                        <th>Phone1</th>
-                                        <th>Phone2</th>
-                                        <th>Head Office</th>
+                                        <th>Date</th>
+                                        <th>Status</th>
+                                        <th>Customer</th>
+                                        <th>Service provider</th>
+                                        <th>Pickup point</th>
+                                        <th>Stoppage point</th>
+                                        <th>Pickup date</th>
+                                        <th>Pickup time</th>
+                                        <th>Amount paid</th>
+                                        <th>Pin</th>
+                                        <th>Serial</th>
                                         
                                     </tr>
                                     <?php
                     /* Get total number of records */
-                    $sql = "SELECT * FROM transport_companies";
+                    $sql = "SELECT * FROM taxi_bookings";
                     $retval = mysql_query($sql);
                     $rec_limit = 10;
                     $rec_count = mysql_num_rows($retval);
@@ -52,7 +57,7 @@
                     }
 
                     $left_rec = $rec_count - ($page * $rec_limit);
-                    $sql = "SELECT * FROM transport_companies " . "LIMIT  $rec_limit OFFSET $offset";
+                    $sql = "SELECT * FROM taxi_bookings " . "LIMIT  $rec_limit OFFSET $offset";
 
                     $retval = mysql_query($sql);
 
@@ -62,12 +67,18 @@
 
                     while ($row = mysql_fetch_array($retval, MYSQL_ASSOC)) {
                         echo "<tr>
-                                                    <td>" . $row['name'] . "</td>
-                                                    <td>" . $row['tag'] . "</td>
-                                                    <td>" . $row['email'] . "</td>
-                                                    <td>" . $row['phone'] . "</td>
-                                                    <td>" . $row['phone'] . "</td>
-                                                    <td>" . $row['head_office'] . "</td>
+                                                    <td>" . $row['date_of_payment'] . "</td>
+                                                    <td>" . $row['status'] . "</td>
+                                                    <td>" . $row['lastname'] . " " . $row['firstname']  . "</td>
+                                                    <td>" . $row['service_provider'] . "</td>
+                                                    <td>" . $row['pickup_point'] . "</td>
+                                                    <td>" . $row['stoppage_point'] . "</td>
+                                                    <td>" . $row['pickup_date'] . "</td>
+                                                    <td>" . $row['pickup_time'] . "</td>
+                                                    <td>" . $row['amount_paid'] . "</td>
+                                                    <td>" . $row['pin'] . "</td>
+                                                    <td>" . $row['serial'] . "</td>
+                                                    <td> <span class='f-button'>more</span> </td>
                                                     <td> <span class='f-button'>edit</span> </td>
                                                     <td> <span class='f-button'>delete</span> </td> 
                                                   </tr>";
@@ -90,27 +101,27 @@
 
                     if ($pages > 1 && $pages > 10) {
                         if($prev > 0){
-                            echo '<li><a href="?view=transport_companies&page=' . $prev .'"><<</a></li>';
+                            echo '<li><a href="?view=taxi_bookings&page=' . $prev .'"><<</a></li>';
                         }
 
                         $count = $pages;
                         $i = 1;
 
                         while ($count > 1 ) {
-                            echo '<li><a href="?view=transport_companies&page=' . $i . '">' . $i . '</a></li>';
+                            echo '<li><a href="?view=taxi_bookings&page=' . $i . '">' . $i . '</a></li>';
                             $count = $count - 1;
                             $i++;
                         }
 
                         if($next < $pages){
-                            echo '<li><a href="?view=charter_services&page='  . $next  . '">>></a></li>';
+                            echo '<li><a href="?view=taxi_bookings&page='  . $next  . '">>></a></li>';
                         }
                     }else  {
                         $count = $pages;
                         $i = 1;
 
                         while ($count > 1 ) {
-                            echo '<li><a href="?view=transport_companies&page=' . $i . '">' . $i . '</a></li>';
+                            echo '<li><a href="?view=taxi_bookings&page=' . $i . '">' . $i . '</a></li>';
                             $count = $count - 1;
                             $i++;
                         }
@@ -125,10 +136,10 @@
                         </div>
                         <br/>
 
-                        <div class="modal-footer">
+<!--                        <div class="modal-footer">
                             <span class="f-button">Add New</span>
                             
-                        </div>
+                        </div>-->
 
                     </div>
 
