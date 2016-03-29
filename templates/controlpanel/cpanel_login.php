@@ -1,4 +1,5 @@
-<?php       session_start();
+<?php       ob_start();
+	    session_start();
             session_set_cookie_params(0);
        
             require_once "../../util/connection.php";
@@ -21,10 +22,7 @@
                 
             }
                 
-?>
-
-
-<!DOCTYPE html">
+?><!DOCTYPE html">
 
 <head>
 
