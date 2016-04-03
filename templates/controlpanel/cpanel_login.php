@@ -10,14 +10,14 @@
                 $hashed_password = crypt($password, '$2a$07$usesomesillystringforsalt$');
 
                 $check = "SELECT * FROM users WHERE username='$username' AND password='$password' ";
-                echo $username . " " . $hashed_password . " ";
+//                echo $username . " " . $hashed_password . " ";
                 $query1 = mysql_query($check);
-                echo mysql_num_rows($query1);
+//                echo mysql_num_rows($query1);
                 if (mysql_num_rows($query1) != 0) {
                     $_SESSION['user'] = $username;
                     header("location: /templates/controlpanel/cpanel_dashboard.php");
                 } else {
-                    echo "record does not exist" . mysql_num_rows($query1) ;
+                    echo "<center><h3 style='color:red'>user credentials not found</h3></center>" ;
                 }
                 
             }

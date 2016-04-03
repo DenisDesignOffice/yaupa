@@ -24,6 +24,15 @@ require_once "../../util/connection.php";
 
         <script src="/static/js/jquery-2.1.3.js"></script>
         <!--<script src="/static/js/charter_form_handler.js"></script>-->
+
+        <script type="text/javascript">
+            // function : show_confirm()
+            function delete_Charter() {
+                // build the confirm box
+                var c = confirm("Are you sure you wish to delete?");
+                return c;
+            }
+        </script>
     </head>
 
     <body>
@@ -77,36 +86,50 @@ require_once "../../util/connection.php";
 
 
                 <!-- Transport companies -->
-                <?php 
-                    if (isset($_GET{'view'})) {
-                        $view = strtolower(htmlspecialchars($_GET{'view'}));
-                        if ($view == 'transport_companies') {
-                            include './transport_companies.php';
-                        }else if ($view == 'charter_services'){
-                            include './charter_services.php';
-                        }else if ($view == 'charter_bookings'){
-                            include './charter_bookings.php';
-                        }else if ($view == 'travel_services'){
-                            include './travel_services.php';
-                        }else if ($view == 'taxi_services'){
-                            include './taxi_services.php';
-                        }else if ($view == 'travel_bookings'){
-                            include './travel_bookings.php';
-                        }else if ($view == 'taxi_bookings'){
-                            include './taxi_bookings.php';
-                        }else if ($view == 'terminals'){
-                            include './terminals.php';
-                        }else if ($view == 'users'){
-                            include './users.php';
-                        }else if ($view == 'add_charter'){
-                            include './cpanel_add_charter.php';
-                        }else if ($view == 'add_company'){
-                            include './cpanel_add_companies.php';
-                        }
-                    }else{
-                       include './transport_companies.php'; 
+                <?php
+                if (isset($_GET{'view'})) {
+                    $view = strtolower(htmlspecialchars($_GET{'view'}));
+                    if ($view == 'transport_companies') {
+                        include './transport_companies.php';
+                    } else if ($view == 'charter_services') {
+                        include './charter_services.php';
+                    } else if ($view == 'charter_bookings') {
+                        include './charter_bookings.php';
+                    } else if ($view == 'travel_services') {
+                        include './travel_services.php';
+                    } else if ($view == 'taxi_services') {
+                        include './taxi_services.php';
+                    } else if ($view == 'travel_bookings') {
+                        include './travel_bookings.php';
+                    } else if ($view == 'taxi_bookings') {
+                        include './taxi_bookings.php';
+                    } else if ($view == 'terminals') {
+                        include './terminals.php';
+                    } else if ($view == 'users') {
+                        include './users.php';
+                    } else if ($view == 'add_charter') {
+                        include './cpanel_modify_charter.php';
+                    } else if ($view == 'add_company') {
+                        include './cpanel_modify_companies.php';
+                    }else if ($view == 'add_travels') {
+                        include './cpanel_modify_travels.php';
+                    }else if ($view == 'add_taxi') {
+                        include './cpanel_modify_taxi.php';
+                    }else if ($view == 'add_terminals') {
+                        include './cpanel_modify_terminals.php';
+                    }else if ($view == 'add_users') {
+                        include './cpanel_modify_users.php';
+                    }else if ($view == 'add_charterbookings') {
+                        include './cpanel_modify_charterbookings.php';
+                    }else if ($view == 'add_travelbookings') {
+                        include './cpanel_modify_travelbookings.php';
+                    }else if ($view == 'add_taxibookings') {
+                        include './cpanel_modify_taxibookings.php';
                     }
-?>
+                } else {
+                    include './transport_companies.php';
+                }
+                ?>
 
             </div>
 

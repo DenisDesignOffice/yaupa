@@ -57,7 +57,7 @@
                     if (isset($_GET{'page'})) {
                         $page = $_GET{'page'};
                         if ($page > 1) {
-                            $offset = $rec_limit + $page;
+                            $offset = $rec_limit * $page - 10;
                         } else {
                             $offset = 0;
                         }
@@ -70,7 +70,7 @@
                     if (isset($_GET{'search'})) {
                         $sql = "SELECT * FROM charter_bookings WHERE reg_pin LIKE '%$search%' " . "LIMIT  $rec_limit OFFSET $offset";
                     }else{
-                        $sql = "SELECT * FROM charter_bookings " . "LIMIT  $rec_limit OFFSET 0";
+                        $sql = "SELECT * FROM charter_bookings " . "LIMIT  $rec_limit OFFSET $offset";
                     }
 
                     $retval = mysql_query($sql);
@@ -91,10 +91,10 @@
                                                     <td>" . $row['to_state'] . "</td>
                                                     <td>" . $row['amount_paid'] . "</td>
                                                     <td>" . $row['reg_pin'] . "</td>
-                                                    <td>" . $row['serial'] . "</td>
-                                                    <td> <span class='f-button'>edit</span> </td>
-                                                    <td> <span class='f-button'>delete</span> </td> 
-                                                  </tr>";
+                                                    <td>" . $row['serial'] . '</td>
+                                                    <td><a href="?view=add_charterbookings&purpose=status&id=' . $row["id"] . '"> <span class="f-button">change status</span></a> </td>
+                                                    <td><a onclick="delete_Travel('. "this" .');" href="?view=add_charterbookings&purpose=delete&id=' . $row["id"] . '"> <span class="f-button">delete</span> </a></td> 
+                                                  </tr>';
                     }
                     ?>
                                 </table>
@@ -139,8 +139,6 @@
                             $i++;
                         }
                     }
-                    
-                    
                     ?>
                                 </ul>
                             </div> 
