@@ -54,9 +54,9 @@
             include './charter_ticket.php';
             
         } else {
-            echo "<h4>Your transaction was not succesful.</h4>"
+            echo "<div class='trans_failure'><h4>Your transaction was not succesful.</h4>"
             . "<h4> Reason: " . (string) $xml->ResponseDescription . "</h4>"
-            . "<h4>Transaction reference:" . $param['transactionreference'] . "</h4>";
+            . "<h4>Transaction reference:" . $param['transactionreference'] . "</h4></div>";
         }
         ?>
         <a href="/index.php"><h4>return to home page</h4></a>
