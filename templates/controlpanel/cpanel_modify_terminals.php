@@ -4,15 +4,13 @@
     <div class="modal-content">
         <div class="modal-header">
             <?php
-//            session_start();
+            //            session_start();
             if (isset($_GET{'purpose'})) {
                 $view = strtolower(htmlspecialchars($_GET{'purpose'}));
 
                 if ($view == 'delete') {
                     echo '<h5>Delete Terminal</h5>';
-                } else if ($view == 'add') {
-                    echo '<h5>Add Terminals</h5>';
-                } else {
+                }else {
                     echo '<h5>Edit Terminals</h5>';
                 }
             }
@@ -33,7 +31,6 @@
             <i class="fa fa-search">
                 <input name="company" value="' . $row["company"] . '" style="width:20%; height: 30px" type="text"  classname="search"  Placeholder="Company">
                
-                <input name="tag" value="' . $row["tag"] . '" style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag">
                 
                 <input name="phone" value="' . $row["phone"] . '" style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Phone">
                 <br/>
@@ -52,8 +49,7 @@
                 <input name="id"  value="' . $row["id"] . '"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
                 <input name="view"  value="add_terminals"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
 
-</i>
-
+            </i>
             
         </form>';
             }
@@ -69,7 +65,6 @@
             header("location: /templates/controlpanel/cpanel_dashboard.php?view=terminals");
         } else if ($view == 'update') {
             $company =  strtolower(htmlspecialchars($_GET{'company'}));
-            $tag =  strtolower(htmlspecialchars($_GET{'tag'}));
             $address =  strtolower(htmlspecialchars($_GET{'address'}));
             $phone =  strtolower(htmlspecialchars($_GET{'phone'}));
             $email =  strtolower(htmlspecialchars($_GET{'email'}));
@@ -77,7 +72,7 @@
             $state =  strtolower(htmlspecialchars($_GET{'state'}));
             $id =  strtolower(htmlspecialchars($_GET{'id'}));
 
-            $action = "UPDATE terminals SET company='$company', tag='$tag', address='$address', "
+            $action = "UPDATE terminals SET company='$company',  address='$address', "
                     . "phone='$phone', email='$email', town='$town', state='$state'"
                     . "WHERE id=$id";
 
@@ -90,57 +85,8 @@
                 echo "Edited Successfully";
                 header("location: /templates/controlpanel/cpanel_dashboard.php?view=terminals");
             }
-        } else if ($view == 'addnew') {
-
-            $company =  strtolower(htmlspecialchars($_GET{'company'}));
-            $tag =  strtolower(htmlspecialchars($_GET{'tag'}));
-            $address =  strtolower(htmlspecialchars($_GET{'address'}));
-            $phone =  strtolower(htmlspecialchars($_GET{'phone'}));
-            $email =  strtolower(htmlspecialchars($_GET{'email'}));
-            $town =  strtolower(htmlspecialchars($_GET{'town'}));
-            $state =  strtolower(htmlspecialchars($_GET{'state'}));
-
-            $sql = "INSERT INTO terminals(company, tag, address, phone, "
-                    . "email, town, state) "
-                    . "VALUES ('$company','$tag', '$address', '$phone', "
-                    . "'$email', '$town', '$state')";
-
-            $query = mysql_query($sql);
-
-            if (!$query) {
-                die("connection failed" . mysql_error());
-                header("location: /templates/controlpanel/cpanel_dashboard.php?view=add_terminals&purpose=add&message=failure");
-            } else {
-                header("location: /templates/controlpanel/cpanel_dashboard.php?view=add_terminals&purpose=add&message=success");
-            }
-        } else {
-            echo '<form style="margin-bottom: 10px;" name="
-                    editTxsForm" id="editTxsForm" method="get" action="./cpanel_dashboard.php"  >
-            <i class="fa fa-search">
-                <input name="company" style="width:20%; height: 30px" type="text"  classname="search"  Placeholder="Company">
-               
-                <input name="tag" style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag">
-                
-                <input name="phone"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Phone">
-                <br/>
-                <input name="address"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Address">
-               
-                <input name="email"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Email">
-               
-                <input name="town"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Town">
-                <br/>
-                <input name="state"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="State">
-                <br/>
-                
-                <input value="Add" style="width:20%; margin-top: 30px; height: 30px; margin-top: 2dp " type="submit" classname="search"  >
-                <br/>
-                <input name="purpose"  value="addnew"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
-                <input name="view"  value="add_terminals"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
-
-</i>
-
+        }else {
             
-        </form>';
             if (isset($_GET{'message'})) {
                 $message = strtolower(htmlspecialchars($_GET{'message'}));
 

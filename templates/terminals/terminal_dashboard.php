@@ -4,7 +4,7 @@ session_start();
 
 
 if (!isset($_SESSION['user'])) {
-    header("location: /templates/controlpanel/cpanel_login.php");
+    header("location: /templates/terminals/terminal_login.php");
 }
 
 require_once "../../util/connection.php";
@@ -54,7 +54,7 @@ require_once "../../util/connection.php";
 
                     <span id="username">hi <?php echo $_SESSION['user']; ?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-                    <a href="./cpanel_login.php" ><span id="logout">Logout</span></a>
+                    <span id="logout">Logout</span>
                 </div>
 
             </div>
@@ -125,17 +125,9 @@ require_once "../../util/connection.php";
                         include './cpanel_modify_travelbookings.php';
                     }else if ($view == 'add_taxibookings') {
                         include './cpanel_modify_taxibookings.php';
-                    }else if($view == 'addplus_terminals') {
-                        include './cpanel_add_terminal.php';
-                    }else if($view == 'addplus_charter') {
-                        include './cpanel_add_charter.php';
-                    }else if($view == 'addplus_travel') {
-                        include './cpanel_add_travel.php';
-                    }else if($view == 'addplus_taxi') {
-                        include './cpanel_add_taxi.php';
                     }
                 } else {
-                    include './transport_companies.php';
+                    include './terminal_charter.php';
                 }
                 ?>
 

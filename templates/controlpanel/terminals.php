@@ -142,7 +142,7 @@
         <br/>
 
         <div class="modal-footer">
-            <a href="?view=add_terminals&purpose=add"><span class="f-button">Add New</span></a>
+            <a href="?view=addplus_terminals&purpose=add"><span class="f-button">Add New</span></a>
 
         </div>
 

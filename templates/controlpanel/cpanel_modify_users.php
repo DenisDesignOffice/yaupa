@@ -23,7 +23,7 @@
         <?php
         if ($view == 'edit') {
             $id = strtolower(htmlspecialchars($_GET{'id'}));
-            $query = 'SELECT * FROM users where id=' . $id ;
+            $query = 'SELECT * FROM users where id=' . $id;
             $view = strtolower(htmlspecialchars($_GET{'purpose'}));
             $retval = mysql_query($query);
 
@@ -51,31 +51,28 @@
                 <input name="purpose"  value="update"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
                 <input name="id"  value="' . $row["id"] . '"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
                 <input name="view"  value="add_users"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
-
-</i>
-
-            
+            </i>
         </form>';
             }
-        } else if ($view == 'delete') {
-            
+        } else if ($view == 'delete'){
+
             $id = strtolower(htmlspecialchars($_GET{'id'}));
             $query = "DELETE FROM users where id='" . $id . "'";
-            
-                if ($_POST['confirm'] !== 1) {
+
+            if ($_POST['confirm'] !== 1) {
                 mysql_query($query, $connect);
-                }
+            }
 
             header("location: /templates/controlpanel/cpanel_dashboard.php?view=users");
         } else if ($view == 'update') {
-            $username =  strtolower(htmlspecialchars($_GET{'username'}));
-            $firstname =  strtolower(htmlspecialchars($_GET{'firstname'}));
-            $lastname =  strtolower(htmlspecialchars($_GET{'lastname'}));
-            $phone =  strtolower(htmlspecialchars($_GET{'phone'}));
-            $email =  strtolower(htmlspecialchars($_GET{'email'}));
-            $access_level =  strtolower(htmlspecialchars($_GET{'access_level'}));
-            $status =  strtolower(htmlspecialchars($_GET{'status'}));
-            $id =  strtolower(htmlspecialchars($_GET{'id'}));
+            $username = strtolower(htmlspecialchars($_GET{'username'}));
+            $firstname = strtolower(htmlspecialchars($_GET{'firstname'}));
+            $lastname = strtolower(htmlspecialchars($_GET{'lastname'}));
+            $phone = strtolower(htmlspecialchars($_GET{'phone'}));
+            $email = strtolower(htmlspecialchars($_GET{'email'}));
+            $access_level = strtolower(htmlspecialchars($_GET{'access_level'}));
+            $status = strtolower(htmlspecialchars($_GET{'status'}));
+            $id = strtolower(htmlspecialchars($_GET{'id'}));
 
             $action = "UPDATE users SET username='$username', firstname='$firstname', lastname='$lastname', "
                     . "phone='$phone', email='$email', access_level='$access_level', status='$status'"
@@ -92,18 +89,19 @@
             }
         } else if ($view == 'addnew') {
 
-            $username =  strtolower(htmlspecialchars($_GET{'username'}));
-            $firstname =  strtolower(htmlspecialchars($_GET{'firstname'}));
-            $lastname =  strtolower(htmlspecialchars($_GET{'lastname'}));
-            $phone =  strtolower(htmlspecialchars($_GET{'phone'}));
-            $email =  strtolower(htmlspecialchars($_GET{'email'}));
-            $access_level =  strtolower(htmlspecialchars($_GET{'access_level'}));
-            $status =  strtolower(htmlspecialchars($_GET{'status'}));
+            $username = strtolower(htmlspecialchars($_GET{'username'}));
+            $firstname = strtolower(htmlspecialchars($_GET{'firstname'}));
+            $lastname = strtolower(htmlspecialchars($_GET{'lastname'}));
+            $phone = strtolower(htmlspecialchars($_GET{'phone'}));
+            $email = strtolower(htmlspecialchars($_GET{'email'}));
+            $access_level = strtolower(htmlspecialchars($_GET{'access_level'}));
+            $status = strtolower(htmlspecialchars($_GET{'status'}));
+            $password = $lastname.$firstname;
 
             $sql = "INSERT INTO users(username, firstname, lastname, phone, "
-                    . "email, access_level, status) "
+                    . "email, access_level, status, password) "
                     . "VALUES ('$username', '$firstname' , '$lastname',  '$phone', "
-                    . "'$email', '$access_level', '$status')";
+                    . "'$email', '$access_level', '$status', '$password')";
 
             $query = mysql_query($sql);
 
@@ -114,7 +112,7 @@
                 header("location: /templates/controlpanel/cpanel_dashboard.php?view=add_users&purpose=add&message=success");
             }
         } else {
-             echo '<form style="margin-bottom: 10px;" name="
+            echo '<form style="margin-bottom: 10px;" name="
                     editTxsForm" id="editTxsForm" method="get" action="./cpanel_dashboard.php"  >
             <i class="fa fa-search">
                 <input name="username"  style="width:20%; height: 30px" type="text"  classname="search"  Placeholder="Username">

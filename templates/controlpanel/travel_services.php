@@ -158,7 +158,7 @@
         <br/>
 
         <div class="modal-footer">
-            <a href="?view=add_travels&purpose=add"><span class="f-button">Add New</span></a>
+            <a href="?view=addplus_travel&purpose=add"><span class="f-button">Add New</span></a>
 
         </div>
 

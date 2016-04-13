@@ -4,10 +4,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-session_start(); 
+session_start();
 
-If(!isset($_POST['firstname']) || !isset($_POST['lastname']) || !isset($_POST['phone'])){
-    header("location: /yaupa.com/index.php");
+If (!isset($_POST['firstname']) || !isset($_POST['lastname']) || !isset($_POST['phone'])) {
+    header("location: /index.php");
 }
 
 $firstname = strtolower(htmlspecialchars($_POST['firstname']));
@@ -31,22 +31,15 @@ $_SESSION['charter_option'] = $charter_option;
 $_SESSION['selected_option_id'] = $selected_option_id;
 
 
-if($charter_option == 'to alone'){
-    $price = (int)$_SESSION['to_cost'] + (int)$_SESSION['processing_fee'];
-    $_SESSION['amount_to_pay'] = $price . '00';
-    $_SESSION['amount_to_pay2'] = $price . ''; 
-}else{
-    $price = (int)$_SESSION['to_and_fro_cost'] + (int)$_SESSION['processing_fee'];
-    $_SESSION['amount_to_pay'] = $price . '00';
-    $_SESSION['amount_to_pay2'] = $price . '';
-}
 
-if($payment_option == 'bank_deposit'){
+$price = (int) $_SESSION['cost'] + (int) $_SESSION['processing_fee'];
+$_SESSION['amount_to_pay'] = $price . '00';
+$_SESSION['amount_to_pay2'] = $price . '';
+
+
+if ($payment_option == 'bank_deposit') {
     header("location: ./travel_bank_deposit.php");
 }
-
-
-
 ?>
 
 <!DOCTYPE html> 
@@ -61,7 +54,7 @@ if($payment_option == 'bank_deposit'){
     <link rel="stylesheet" type="text/css" href="../../static/css/book.css"/>
     <link rel="stylesheet" type="text/css" media="all" href="../../static/css/switchery.min.css">
     <script type="text/javascript" src="../../static/js/switchery.min.js"></script>
-    
+
     <link rel="shortcut icon" href="/static/images/favicon.ico">
 
 
@@ -72,7 +65,7 @@ if($payment_option == 'bank_deposit'){
 
 <body>
 
-    <?php require_once "../../templates/header.php"; ?>
+<?php require_once "../../templates/header.php"; ?>
 
 
     <section class="ha-waypoint" data-animate-down="ha-header-small" data-animate-up="ha-header-large">
@@ -108,10 +101,14 @@ if($payment_option == 'bank_deposit'){
                 <label>Price:
                     <h6 style="size: 20px"><?php echo $_SESSION['amount_to_pay2']; ?></h4>
                 </label>
-                
+                <label>TXN REF.:
+                    <h6 style="size: 20px"><?php  $ref = mt_rand(1111111111, 9999999999);
+                                                    echo $_SESSION['transaction_ref'] = "YAP" . $ref  ?></h4>
+                </label>
+
                 <label><input type="submit" value="PROCEED"/></label>
             </div>
-            
+
         </form>
 
     </section>
@@ -119,5 +116,5 @@ if($payment_option == 'bank_deposit'){
 
     <script src="../../static/js/jquery.simplemodal.js"></script>
     <script src="../../static/js/jquery.js"></script>
-    <?php require_once "../../templates/footer.php";
-    ?>
+<?php require_once "../../templates/footer.php";
+?>
