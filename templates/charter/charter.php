@@ -12,14 +12,6 @@
     <link rel="shortcut icon" href="/static/images/favicon.ico">
      <script src="../../static/js/modernizr.custom.js"></script>
 
-    
-  
-
-
-    
-
-
-
 </head>
 
 <body>
@@ -84,10 +76,9 @@
 
 </body>
 <!-- call the charter form processor -->
+<script src="../../static/js/jquery-2.1.3.js"></script>
 <script type="text/javascript" src="../../static/js/charter_form_handler.js"></script>
-
-    <script src="../../static/js/jquery-2.1.3.js"></script>
-      <script src="../../static/js/waypoints.min.js"></script>
+<script src="../../static/js/waypoints.min.js"></script>
    
     
 
