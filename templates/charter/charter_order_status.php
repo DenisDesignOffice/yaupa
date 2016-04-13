@@ -11,9 +11,9 @@
     <body>
 
         <?php
-        if (!isset($_SESSION['trans_ref']) || !isset($_SESSION['amount_to_pay']) || !isset($_SESSION['type'])) {
-            header("location: /yaupa.com/index.php");
-        }
+//        if (!isset($_SESSION['trans_ref']) || !isset($_SESSION['amount_to_pay']) || !isset($_SESSION['type'])) {
+//            header("location: /index.php");
+//        }
 
         include_once "../../util/connection.php";
         $param = array();
@@ -47,13 +47,14 @@
         <?php
         if ((string) $xml->ResponseCode == 00) {
 
-            $sql = "UPDATE charter_bookings SET status='success' WHERE reg_pin='" . $_SESSION['trans_ref'] . "'";
+            $sql = "UPDATE charter_bookings SET status='success' WHERE reg_pin='" . $_SESSION['pin'] . "'";
             mysql_query($sql);
 
             include '../../util/sms_handler.php';
             include './charter_ticket.php';
             
         } else {
+            include './charter_ticket.php';
             echo "<div class='trans_failure'><h4>Your transaction was not succesful.</h4>"
             . "<h4> Reason: " . (string) $xml->ResponseDescription . "</h4>"
             . "<h4>Transaction reference:" . $param['transactionreference'] . "</h4></div>";

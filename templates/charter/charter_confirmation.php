@@ -23,7 +23,7 @@ $sms_reminder = strtolower(htmlspecialchars($_POST['sms_reminder']));
 
 $_SESSION['firstname'] = $firstname;
 $_SESSION['sms_reminder'] = $sms_reminder;
-$_SESSION['lastname'] = $lasttname;
+$_SESSION['lastname'] = $lastname;
 $_SESSION['phone'] = $phone;
 $_SESSION['email'] = $email;
 $_SESSION['address'] = $address;
@@ -109,16 +109,15 @@ if ($payment_option == 'bank_deposit') {
 
     </section>
 
-    <p>
+    
 
 
 <?php require_once "../../templates/footer.php"; ?>
 
 </body>
-
+<script src="../../static/js/jquery-2.1.3.js"></script>
 <script src="../../static/js/jquery.simplemodal.js"></script>
-
-<script type="text/javascript" src="../../static/js/switchery.min.js"></script>
+<script type="text/javascript" src="/static/js/switchery.min.js"></script>
 <script src="../../static/js/jquery-2.1.3.js"></script>
 <script src="../../static/js/waypoints.min.js"></script>
 <script>
@@ -139,30 +138,6 @@ if ($payment_option == 'bank_deposit') {
     });
 </script>
 
-<!--<section>
-        <h1>Confirm Payment</h1>
 
-        <form name="form1" method="post" action="./charter_process.php">
-            <div class="col-2">
-                <label>COMPANY:
-                    <h6 style="size: 20px"><?php echo $_SESSION['company_name']; ?></h4>
-                </label>
-                <label>Price:
-                    <h6 style="size: 20px"><?php echo $_SESSION['amount_to_pay2']; ?></h4>
-                </label>
-                <label>
-                    TICKET QUANTITY
-                    <select tabindex="7" id="payment_option" name="payment_option" />
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    </select>
-                </label>
-                <label><input type="submit" value="PROCEED"/></label>
-            </div>
-            
-        </form>
-
-    </section>-->
 
 </html>
