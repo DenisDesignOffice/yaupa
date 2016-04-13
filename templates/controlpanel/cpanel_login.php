@@ -2,7 +2,6 @@
 ob_start();
 
 session_start();
-session_destroy();
 session_set_cookie_params(0);
 
 require_once "../../util/connection.php";
@@ -45,49 +44,59 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <link rel="stylesheet" type="text/css" href="../../static/css/demo.css" />
     <link rel="stylesheet" type="text/css" href="../../static/css/style.css" />
     <link rel="stylesheet" type="text/css" href="../../static/css/animate-custom.css" />
+    
+    <title>Control Panel Login </title>
+
+<link rel="stylesheet" type="text/css" href="../../static/css/cpanel_login.css">
 
 </head>
-<body>
-
-    <div class="container">
-
-        <section>				
-
-            <div id="wrapper">
-                <div id="login" class="animate form">
-                    <!-- the form action enters here -->
-
-                    <form  name= "login_form"  action="./cpanel_login.php" method="post" autocomplete="on"> 
-
-                        <h1><img src="../../static/images/Logo 2.png" alt="yaupa"></h1> 
-
-                        <p> 
-                            <label for="username" class="uname" data-icon="" > Username </label>
-                            <input id="username" name="username" required="required" type="text" placeholder="obama@yahoo.com"/>
-                        </p>
-
-                        <p> 
-                            <label for="password" class="youpasswd" data-icon=""> Password </label>
-                            <input id="password" name="password" required="required" type="password" placeholder="man$2hattan!" /> 
-                        </p>
-
-                        <p class="keeplogin"> 
-                            <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
-                            <label for="loginkeeping">Keep me logged in</label>
-                        </p>
-
-                        <p class="login button"> 
-                            <input type="submit" value="Login" /> 
-                        </p>
-
-                    </form>
-
-                </div>
-            </div>
-
-        </section>
 
 
-    </div>
-</body>
+
+       
+        
+ <body>
+    
+        <div class="container">
+            
+            <section>				
+               
+                    <div id="wrapper">
+                        <div id="login" class="animate form">
+                        <!-- the form action enters here -->
+                        
+                        <form  name= "login_form"  action="./cpanel_login.php" method="post" autocomplete="on"> 
+                            
+                                <h1><img src="../../static/images/Logo 2.png" alt="yaupa"></h1> 
+                                
+                                <p> 
+                                    <label for="username" class="uname" data-icon="" > Username </label>
+                                    <input id="username" name="username" required="required" type="text" placeholder="obama@yahoo.com"/>
+                                </p>
+                                
+                                <p> 
+                                    <label for="password" class="youpasswd" data-icon=""> Password </label>
+                                    <input id="password" name="password" required="required" type="password" placeholder="man$2hattan!" /> 
+                                </p>
+                                
+                                <p class="keeplogin"> 
+                                    <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
+                                    <label for="loginkeeping">Keep me logged in</label>
+				</p>
+                                
+                                <p class="login button"> 
+                                    <input type="submit" value="Login" /> 
+				</p>
+                                
+                            </form>
+                        
+                        </div>
+                    </div>
+                
+            </section>
+            
+            
+        </div>
+    </body>
+
 </html>
