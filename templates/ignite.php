@@ -31,6 +31,7 @@
  </section>
  
  <section class="careerimg">
+ <h1>Living for Tomorrow</h1>
  </section>
 <section class="career">
 <h1>Yaupa Ignite</h1>
