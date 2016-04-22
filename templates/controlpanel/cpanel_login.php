@@ -29,19 +29,7 @@
 <title>Control Panel Login </title>
 
 <link rel="stylesheet" type="text/css" href="../../static/css/cpanel_login.css">
-<link rel="shortcut icon" href="/static/images/favicon.ico">
-
-        <!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 lt8"> <![endif]-->
-        <!--[if IE 7 ]>    <html lang="en" class="no-js ie7 lt8"> <![endif]-->
-        <!--[if IE 8 ]>    <html lang="en" class="no-js ie8 lt8"> <![endif]-->
-        <!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
-        <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
-    
        
-        <link rel="shortcut icon" href="../favicon.ico"> 
-        <link rel="stylesheet" type="text/css" href="../../static/css/demo.css" />
-        <link rel="stylesheet" type="text/css" href="../../static/css/style.css" />
-        <link rel="stylesheet" type="text/css" href="../../static/css/animate-custom.css" />
         
     </head>
     <body>

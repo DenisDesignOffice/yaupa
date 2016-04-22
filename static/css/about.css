@@ -1,0 +1,362 @@
+
+*, *:before, *:after
+{
+
+ -webkit-box-sizing:border-box;
+ -moz-box-sizing:border-box;
+ -o-box-sizing:border-box;
+  box-sizing:border-box;
+
+}
+
+
+body
+{
+overflow-x:hidden;
+background:#18243C;
+padding:100px 0 0 0;
+font-weight:400;
+font-family:'Lato',Arial, san-serif;
+}
+
+
+
+section 
+{
+padding:1.3em 10%;
+color:#ecf0f1;
+font-size:1.8em;
+width:100%;
+}
+
+section h2
+{
+margin:0;
+padding:0;
+font-size:2em;
+font-weight:600;
+text-align:center;
+}
+
+.aboutimg
+{
+
+position:absolute;
+left:0;
+top:0;
+background-image:url(../images/why.jpg);
+background-size:100%;
+background-repeat:no-repeat;
+height:500px;
+
+}
+
+.career
+{
+padding:25em 15em;
+text-align:left;
+font-size:15px;
+position:relative;
+line-height:1.5em;
+}
+
+.career h1
+{
+text-align:left;
+font-size:2em;
+font-weight:800;
+line-height:0.3em;
+
+}
+
+
+.career h2
+{
+text-align:left;
+font-size:1.5em;
+font-weight:800;
+padding:0;
+line-height:1em;
+}
+
+
+
+
+
+.footer
+{
+
+left:0;
+background:white;
+color:#18243C;
+width:100%;
+bottom:0;
+padding:7em;
+padding-top:3em;
+position:relative;
+height:17em;
+text-align:center;
+}
+
+.footer h2
+{
+text-align:left;
+font-size:13px;
+line-height:2.6em;
+padding:0;
+
+}
+
+.footer .text 
+{
+font-size:12px;
+line-height:1.6em;
+text-align:left;
+}
+
+.footer a
+{
+text-decoration:none;
+color:#18243C;
+}
+
+.text a:hover
+{
+
+border-bottom:1px solid #18243C;
+cursor:pointer;
+transition:0.1s ease-in;
+
+}
+
+.footer  .copyright
+{
+font-size:11px;
+position:absolute;
+bottom:30px;
+margin-left:30%;
+
+}
+
+
+.row_1
+{
+float:left;
+position:relative;
+width:22%;
+display:inline-block;
+vertical-align:top;
+padding-bottom:1.5em;
+}
+
+
+
+.ha-header
+{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:50;
+}
+
+
+
+.ha-header-perspective > div
+{
+padding:0 4%;
+}
+
+
+
+.ha-header h1, .ha-header h1::before, .ha-header h1 span, .ha-header nav, .ha-header nav::before
+{
+display:inline-block;
+content:'';
+}
+
+.ha-header h1
+{
+position:absolute;
+top:0;
+background-image:url(../images/Logo.png);
+background-repeat:no-repeat;
+width:200px;
+cursor:default;
+z-index:1;
+}
+
+.ha-header h1 a
+{
+text-decoration:none;
+color:white;
+
+}
+
+.ha-header nav 
+{
+position:absolute;
+top:1.5em;
+margin-left:70%;
+}
+
+
+
+.ha-header nav a
+{
+display:inline-block;
+letter-spacing:1px;
+padding:0.4em;
+font-size:16px;
+cursor:pointer;
+color:#fff;
+outline:none;
+text-decoration:none;
+}
+
+
+.ha-header nav a:hover
+{
+color:#bc3c2f;
+border:1px solid #e74c3c;
+-webkit-transition:0.1s ease-in;
+-moz-transition:0.1s ease-out;
+-o-transition:0.1s ease-out;
+-ms-transition:0.1s ease-out;
+transition:0.1s ease-out;
+}
+
+
+
+
+.ha-header-small
+{
+
+height:50px;
+background:#fff;
+-webkit-transition:0.5s ease-in;
+-moz-transition:0.5s ease-in;
+-o-transition:0.5s ease-in;
+-ms-transition:0.5s ease-in;
+transition:0.5s ease-in;
+}
+
+
+.ha-header-small nav 
+{
+position:absolute;
+top:0.3em;
+margin-left:70%;
+-webkit-transition:0.5s ease-in;
+-moz-transition:0.5s ease-in;
+-o-transition:0.5s ease-in;
+-ms-transition:0.5s ease-in;
+transition:0.5s ease-in;
+color: #bc3c2f;
+}
+
+.ha-header-small nav a
+{
+color: #bc3c2f;
+}
+
+
+.ha-header-small h1
+{
+top:-0.5em;
+background-size:50%;
+cursor:pointer;
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 700px) {
+    .masonry {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .masonry {
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .masonry {
+        -moz-column-count: 4;
+        -webkit-column-count: 4;
+        column-count: 4;
+    }
+}
+
+
+@media only screen and (min-width: 1280px) {
+    .wrapper {
+        width: 1260px;
+		
+    }
+}
+
+
+@media screen and (max-width: 60em) {
+
+
+	.ha-header-perspective > div,
+	.ha-header nav {text-align: center;}
+
+	.ha-header h1 {padding: 10px 0;height: 60%;}
+
+	.ha-header .ha-header-bottom nav {	padding: 40px 0px;}
+
+	.ha-header nav {display: block;height: auto;}
+
+  
+
+}
+
+
+@media screen and (max-width: 38em) {
+	
+
+	.ha-header h1 {	font-size: 1.5em;}
+
+	.ha-header nav {font-size: 60%;}
+	
+	.column h2{font-size:1em;}
+	
+	
+.career
+{
+padding:3.5em 2em 2em 2em;
+text-align:justify;
+font-size:0.7em;
+
+}
+
+
+
+	
+ .footer .text {font-size:10px;}
+ 
+ .footer .copyright{font-size:9px;padding:6em;}
+ 
+}
+
+
+
+
+
+
+

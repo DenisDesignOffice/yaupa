@@ -5,30 +5,30 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
         <title>Charter</title>
-        <link rel="stylesheet" type="text/css" href="../../static/font-awesome-4.3.0/css/font-awesome.min.css"/>
+         <link rel="stylesheet" type="text/css" href="../../static/css/charter.css"/>
+        <link rel="stylesheet" type="text/css" href="../../static/font-awesome-4.3.0/css/font-awesome.css"/>
         <link rel="stylesheet" type="text/css" href="../../static/css/normalize.css" />
         <link rel="stylesheet" type="text/css" href="../../static/css/form.css"/>
-        <link rel="stylesheet" type="text/css" href="../../static/css/charter.css"/>
+       
         <script src="../../static/js/modernizr.custom.js"></script>
-        <script src="../../static/js/jquery-2.1.3.js"></script>
+        
         
         <link rel="shortcut icon" href="/static/images/favicon.ico">
         
-        <!-- call the charter form processor -->
-        <script type="text/javascript" src="../../static/js/charter_form_handler.js"></script>
+     
         
     </head>
 
     <body>
 
-        <?php require_once "../../templates/header.php"; ?>
+        <?php require_once "../header.php";?>
 
-        <section class="charter">
+        <div class="charter">
             <h1>Search and Charter</h1>
-        </section>
+        </div>
 
         <!-- Charter form -->
-        <section class="form">
+        <div class="form">
             
             <form method="post" id="charter_form" action="./charter.php">
                 
@@ -59,9 +59,9 @@
 
             </form>
             
-        </section>
+        </div>
 
-        <section class="ha-waypoint" data-animate-down="ha-header-small" data-animate-up="ha-header-large"></section>
+   
         
         <!-- display search result here -->
         
@@ -72,12 +72,18 @@
                     
              </div>
         </div>
+<section class="ha-waypoint" data-animate-down="ha-header-small" data-animate-up="ha-header-large">
+    </section>
 
         <?php require_once "../../templates/footer.php"; ?>
 
                                     </body>
+                                       <!-- call the charter form processor -->
+        <script type="text/javascript" src="../../static/js/charter_form_handler.js"></script>
 <script src="../../static/js/jquery-2.1.3.js"></script>
 <script src="../../static/js/waypoints.min.js"></script>
+
+
 <script>
     var $head = $('#ha-header');
     $('.ha-waypoint').each(function (i) {

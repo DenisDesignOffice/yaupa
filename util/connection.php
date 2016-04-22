@@ -1,7 +1,7 @@
 <?php
 
 $server = "127.0.0.1";
-$database = "yaupbhei_yaupadb2";
+$database = "yaupbhei";
 $username = "yaupbhei_root";
 $password = "JAc4@3%@To7r";
 

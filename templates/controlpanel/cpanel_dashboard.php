@@ -18,7 +18,8 @@ require_once "../../util/connection.php";
         <link rel="stylesheet" type="text/css" href="/static/css/dashboard.css" />
         <link rel="stylesheet" type="text/css" href="/static/css/modalform.css"/>
         <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" type="text/css" href="font-awesome-4.3.0/css/font-awesome.min.css"/>
+        <link rel="stylesheet" type="text/css" href="/static/font-awesome-4.3.0/css/font-awesome.min.css"/>
+        
 
         <link rel="shortcut icon" href="/static/images/favicon.ico">
 

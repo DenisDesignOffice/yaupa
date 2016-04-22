@@ -4,13 +4,14 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Taxi</title>
-
+    
+     <link rel="stylesheet" type="text/css" href="../../static/css/taxi.css"/>
     <link rel="stylesheet" type="text/css" href="../../static/css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="../../static/font-awesome-4.3.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" type="text/css" href="../../static/css/taxi.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/font-awesome-4.3.0/css/font-awesome.css"/>
+  
     <link rel="stylesheet" type="text/css" media="all" href="css/switchery.min.css">
     <link rel="shortcut icon" href="/static/images/favicon.ico">
-    <script type="text/javascript" src="../../static/js/switchery.min.js"></script>
+   
     <script src="../../static/js/modernizr.custom.js"></script>
 
 </head>
@@ -19,25 +20,6 @@
     <?php require_once "../header.php"; ?>
 
     <section class="ha-waypoint" data-animate-down="ha-header-small" data-animate-up="ha-header-large">
-        <script src="../../static/js/jquery-2.1.3.js"></script>
-        <script src="../../static/js/waypoints.min.js"></script>
-        <script>
-            var $head = $('#ha-header');
-            $('.ha-waypoint').each(function (i) {
-                var $el = $(this),
-                        animClassDown = $el.data('animateDown'),
-                        animClassUp = $el.data('animateUp');
-
-                $el.waypoint(function (direction) {
-                    if (direction === 'down' && animClassDown) {
-                        $head.attr('class', 'ha-header ' + animClassDown);
-                    }
-                    else if (direction === 'up' && animClassUp) {
-                        $head.attr('class', 'ha-header ' + animClassUp);
-                    }
-                }, {offset: '100%'});
-            });
-        </script>
     </section>
 
     <section>
@@ -120,7 +102,24 @@
     </section>
 
 
+<body>
+<script src="../../static/js/jquery-2.1.3.js"></script>
+        <script src="../../static/js/waypoints.min.js"></script>
+        <script>
+            var $head = $('#ha-header');
+            $('.ha-waypoint').each(function (i) {
+                var $el = $(this),
+                        animClassDown = $el.data('animateDown'),
+                        animClassUp = $el.data('animateUp');
 
-
-
-    <?php require_once "../footer.php"; ?>
+                $el.waypoint(function (direction) {
+                    if (direction === 'down' && animClassDown) {
+                        $head.attr('class', 'ha-header ' + animClassDown);
+                    }
+                    else if (direction === 'up' && animClassUp) {
+                        $head.attr('class', 'ha-header ' + animClassUp);
+                    }
+                }, {offset: '100%'});
+            });
+			 </script>
+</html>
