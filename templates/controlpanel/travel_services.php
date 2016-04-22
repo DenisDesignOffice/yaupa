@@ -9,11 +9,13 @@
 
         </div>
         <form style="margin-bottom: 10px;" name="myform1" method="get" action="./cpanel_dashboard.php"  >
-            <i class="fa fa-search"><input name="search"  style="width:20%; height: 30px" type="text"  classname="search"  Placeholder="Search by service provider">
-            <input value="search" style="width:5%; height: 30px; margin-top: 2dp " type="submit" classname="search"  Placeholder="Search"></i>
-                                <i class="fa fa-search"><input name="view" value="travel_services" style="width:20%; height: 30px; visibility: hidden" type="text" classname="search"  Placeholder="Search"></i>
-                                <i class="fa fa-search"></i>
-                        </form>
+            <i class="fa fa-search">
+                <input name="search"  style="width:20%; height: 30px" type="text"  classname="search"  Placeholder="Search by service provider">
+                <input value="search" style="width:5%; height: 30px; margin-top: 2dp " type="submit" classname="search"  Placeholder="Search">
+            </i>
+                <i class="fa fa-search"><input name="view" value="travel_services" style="width:20%; height: 30px; visibility: hidden" type="text" classname="search"  Placeholder="Search"></i>
+                <i class="fa fa-search"></i>
+        </form>
         <div class="modal-body">
 
             <div>
@@ -59,7 +61,7 @@
                     if (isset($_GET{'page'})) {
                         $page = $_GET{'page'};
                         if ($page > 1) {
-                            $offset = $rec_limit + $page;
+                            $offset = $rec_limit * $page - 10;
                         } else {
                             $offset = 0;
                         }
@@ -72,7 +74,7 @@
                     if (isset($_GET{'search'})) {
                         $sql = "SELECT * FROM travel_services WHERE service_provider LIKE '%$search%' " . "LIMIT  $rec_limit OFFSET $offset";
                     }else{
-                        $sql = "SELECT * FROM travel_services " . "LIMIT  $rec_limit OFFSET 0";
+                        $sql = "SELECT * FROM travel_services " . "LIMIT  $rec_limit OFFSET $offset";
                     }
 
                     $retval = mysql_query($sql);
@@ -94,10 +96,11 @@
                                                     <td>" . $row['duration'] . "</td>
                                                     <td>" . $row['departure_time'] . "</td>
                                                     <td>" . $row['processing_fee'] . "</td>
-                                                    <td>" . $row['aircondition'] . "</td>
-                                                    <td> <span class='f-button'>edit</span> </td>
-                                                    <td> <span class='f-button'>delete</span> </td> 
-                                                  </tr>";
+                                                    <td>" . $row['aircondition'] . '</td>
+                                                    <td><a href="?view=add_travels&purpose=edit&id=' . $row["id"] . '"> <span class="f-button">edit</span></a> </td>
+                                                    <td><a onclick="delete_Travel('. "this" .');" href="?view=add_travels&purpose=delete&id=' . $row["id"] . '"> <span class="f-button">delete</span> </a></td> 
+                                                  
+                                                  </tr>';
                     }
                     ?>
 
@@ -155,7 +158,7 @@
         <br/>
 
         <div class="modal-footer">
-            <span class="f-button">Add New</span>
+            <a href="?view=add_travels&purpose=add"><span class="f-button">Add New</span></a>
 
         </div>
 
