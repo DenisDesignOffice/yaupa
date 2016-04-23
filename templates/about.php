@@ -2,9 +2,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>About</title>
-
+        <meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>About Us</title>
+		<meta name="description" content="Yaupa is an internet company that connects people to transportation companies" />
+		<meta name="keywords" content="book online, Charter, Bus, Car, Tow Van, Truck, ambulance " />
+		<meta name="author" content="Yaupa" />
 
 <link rel="stylesheet" type="text/css" href="../static/css/about.css"/>
 <link rel="stylesheet" type="text/css" href="../../static/font-awesome-4.3.0/css/font-awesome.css"/>

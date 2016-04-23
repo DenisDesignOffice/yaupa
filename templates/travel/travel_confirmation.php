@@ -6,9 +6,9 @@
  */
 session_start(); 
 
-If(!isset($_POST['firstname']) || !isset($_POST['lastname']) || !isset($_POST['phone'])){
-    header("location: /yaupa.com/index.php");
-}
+//If(!isset($_POST['firstname']) || !isset($_POST['lastname']) || !isset($_POST['phone'])){
+  //  header("location: /yaupa.com/index.php");
+//}
 
 $firstname = strtolower(htmlspecialchars($_POST['firstname']));
 $lastname = strtolower(htmlspecialchars($_POST['lastname']));
@@ -55,14 +55,12 @@ if($payment_option == 'bank_deposit'){
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Confirm Payment</title>
 
-
+    <link rel="stylesheet" type="text/css" href="../../static/css/book.css"/>
     <link rel="stylesheet" type="text/css" href="../../static/css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="../../static/font-awesome-4.3.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" type="text/css" href="../../static/css/book.css"/>
-    <link rel="stylesheet" type="text/css" media="all" href="../../static/css/switchery.min.css">
-    <script type="text/javascript" src="../../static/js/switchery.min.js"></script>
     
-    <link rel="shortcut icon" href="/static/images/favicon.ico">
+   
+    
 
 
     <script src="../../static/js/modernizr.custom.js"></script>
@@ -76,6 +74,39 @@ if($payment_option == 'bank_deposit'){
 
 
     <section class="ha-waypoint" data-animate-down="ha-header-small" data-animate-up="ha-header-large">
+        
+    </section>
+
+
+
+    <section class="confirm">
+        
+    <h3>Please review your order, then click on proceed to payment</h3>
+    <div>
+    
+     <table>
+  <tr>
+    <td class="name">Name</td>
+    <td class="value">Christian Okpakpo</td>
+    </tr>
+    <tr>
+    <td class="name">Ref Number</td>
+    <td class="value">67890987654</td>
+  </tr>
+  <tr>
+    <td class="name">Amount N</td>
+    <td class="value"> 098767893</td>
+  </tr>
+  
+</table>
+
+    
+    </section>
+    
+    <p>
+     <?php require_once "../../templates/footer.php";?>
+    </body>
+
         <script src="../../static/js/jquery-2.1.3.js"></script>
         <script src="../../static/js/waypoints.min.js"></script>
         <script>
@@ -95,29 +126,8 @@ if($payment_option == 'bank_deposit'){
                 }, {offset: '100%'});
             });
         </script>
-    </section>
-
-    <section>
-        <h1>Confirm Payment</h1>
-
-        <form name="form1" method="post" action="./travel_process.php">
-            <div class="col-2">
-                <label>COMPANY:
-                    <h6 style="size: 20px"><?php echo $_SESSION['company_name']; ?></h4>
-                </label>
-                <label>Price:
-                    <h6 style="size: 20px"><?php echo $_SESSION['amount_to_pay2']; ?></h4>
-                </label>
-                
-                <label><input type="submit" value="PROCEED"/></label>
-            </div>
-            
-        </form>
-
-    </section>
-
-
-    <script src="../../static/js/jquery.simplemodal.js"></script>
-    <script src="../../static/js/jquery.js"></script>
-    <?php require_once "../../templates/footer.php";
-    ?>
+    
+    
+    
+   
+</html>

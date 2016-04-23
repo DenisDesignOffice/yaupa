@@ -2,8 +2,14 @@
 
 <head>
 
-<title>Home</title>
 
+<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Careers</title>
+		<meta name="description" content="find a Job, share our colaborative workspace" />
+		<meta name="keywords" content=" Mobile, Marketing, sales, Web Developer, Java, PHP " />
+		<meta name="author" content="Yaupa" />
 
 
 <link rel="stylesheet" type="text/css" href="../static/css/career.css"/>

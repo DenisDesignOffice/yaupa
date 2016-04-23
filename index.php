@@ -3,7 +3,15 @@
 <html>
     <head>
         
-        <title>Home</title>
+        
+        <meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Yaupa home</title>
+		<meta name="description" content="Book for bus ticket online, charter any vehicle across Nigeria and Order for Taxi" />
+		<meta name="keywords" content="ambulance, King Koko Express, Lagos, Abuja, Port-hacourt, Charter, Travel, Taxi, online booking, Agofure, God is Good, GNL, Muyi Line, Prince Line, Rahony Express " />
+		<meta name="author" content="Yaupa" />
+        
         <link rel="stylesheet" type="text/css" href="static/css/style.css"/>
         <link rel="stylesheet" type="text/css" href="static/css/rotate.css"/>
         <link rel="stylesheet" type="text/css" href="static/css/normalize.css" />
