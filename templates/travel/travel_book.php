@@ -99,7 +99,7 @@ $_SESSION['to_state'] = strtolower(htmlspecialchars($_POST['to_state']));
 
             <div class="col-4">
                 <label>
-                    Yaupag Date
+                    Travel Date
                     <input placeholder="dd-mm-yy" id="date" name="date" tabindex="6"  />
                 </label>
             </div>
@@ -192,7 +192,7 @@ $_SESSION['to_state'] = strtolower(htmlspecialchars($_POST['to_state']));
             <input type="hidden"  name="selected_option_id"  value="<?php echo $value; ?>" /> 
 
             <div class="col-submit">
-                <input type="submit" id="submitbt" class="submit" value="Proceed to Payment"/>
+                <input type="submit" id="submitbt" class="submit" value="Confirm Transaction"/>
             </div>
         </form>
 

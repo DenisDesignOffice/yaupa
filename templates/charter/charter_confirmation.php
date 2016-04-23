@@ -100,33 +100,35 @@ if($payment_option == 'bank_deposit'){
     </section>
 
     <section>
-        <h1>Confirm Payment</h1>
-
-        <form name="form1" method="post" action="./charter_process.php">
-            <div class="col-2">
-                <label>COMPANY:
-                    <h6 style="size: 20px"><?php echo $_SESSION['company_name']; ?></h4>
-                </label>
-                <label>Price:
-                    <h6 style="size: 20px"><?php echo $_SESSION['amount_to_pay']; ?></h4>
-                </label>
-                <label>Txn REf:
-                    <h6 style="size: 20px"><?php  $ref = mt_rand(1111111111, 9999999999);
-                                                    echo $_SESSION['transaction_ref'] = "YAP" . $ref  ?></h4>
-                </label>
-                <label>
-                    TICKET QUANTITY
-                    <select tabindex="7" id="payment_option" name="payment_option" />
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    </select>
-                </label>
-                <label><input type="submit" value="PROCEED"/></label>
-            </div>
-            
-        </form>
-
+        <section class="confirm">
+        
+    <h1>Review your order</h1>
+    <div>
+    <h3>Copy or print your Ref Number, then click on proceed to payment</h3>
+    </div>
+    
+    <div>
+    
+     <table>
+  <tr>
+    <td class="name">Name</td>
+    <td class="value">Christian Okpakpo</td>
+    </tr>
+    <tr>
+    <td class="name">Ref Number</td>
+    <td class="value">67890987654</td>
+  </tr>
+  <tr>
+    <td class="name">Amount N</td>
+    <td class="value"> 098767893</td>
+  </tr>
+  
+</table>
+<form>
+<input type="submit" value="Proceed to Payment" class="submit">
+</form>
+    </div>
+    </section>
     </section>
 
 
