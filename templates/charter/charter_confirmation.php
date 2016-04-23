@@ -6,9 +6,9 @@
  */
 session_start(); 
 
-If(!isset($_POST['firstname']) || !isset($_POST['lastname']) || !isset($_POST['phone'])){
-    header("location: /yaupa.com/index.php");
-}
+//If(!isset($_POST['firstname']) || !isset($_POST['lastname']) || !isset($_POST['phone'])){
+//    header("location: /yaupa.com/index.php");
+//}
 
 $firstname = strtolower(htmlspecialchars($_POST['firstname']));
 $lastname = strtolower(htmlspecialchars($_POST['lastname']));
@@ -56,17 +56,11 @@ if($payment_option == 'bank_deposit'){
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Confirm Payment</title>
 
-
+    <link rel="stylesheet" type="text/css" href="../../static/css/travel_confirm.css"/>
     <link rel="stylesheet" type="text/css" href="../../static/css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="../../static/font-awesome-4.3.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" type="text/css" href="../../static/css/book.css"/>
     <link rel="stylesheet" type="text/css" media="all" href="../../static/css/switchery.min.css">
-    
-    <link rel="shortcut icon" href="/static/images/favicon.ico">
-    
-    <script type="text/javascript" src="../../static/js/switchery.min.js"></script>
-
-
+   
     <script src="../../static/js/modernizr.custom.js"></script>
 
 
@@ -78,28 +72,11 @@ if($payment_option == 'bank_deposit'){
 
 
     <section class="ha-waypoint" data-animate-down="ha-header-small" data-animate-up="ha-header-large">
-        <script src="../../static/js/jquery-2.1.3.js"></script>
-        <script src="../../static/js/waypoints.min.js"></script>
-        <script>
-            var $head = $('#ha-header');
-            $('.ha-waypoint').each(function (i) {
-                var $el = $(this),
-                        animClassDown = $el.data('animateDown'),
-                        animClassUp = $el.data('animateUp');
-
-                $el.waypoint(function (direction) {
-                    if (direction === 'down' && animClassDown) {
-                        $head.attr('class', 'ha-header ' + animClassDown);
-                    }
-                    else if (direction === 'up' && animClassUp) {
-                        $head.attr('class', 'ha-header ' + animClassUp);
-                    }
-                }, {offset: '100%'});
-            });
-        </script>
     </section>
+       
+   
 
-    <section>
+    
         <section class="confirm">
         
     <h1>Review your order</h1>
@@ -128,12 +105,37 @@ if($payment_option == 'bank_deposit'){
 <input type="submit" value="Proceed to Payment" class="submit">
 </form>
     </div>
+ 
     </section>
-    </section>
+    
+   <p>
 
+    
+    <?php require_once "../../templates/footer.php";?>
 
-    <script src="../../static/js/jquery.simplemodal.js"></script>
-    <script src="../../static/js/jquery.js"></script>
-    <?php require_once "../../templates/footer.php";
-    ?>
+</body>
 
+<script src="../../static/js/jquery.simplemodal.js"></script>
+    
+    <script type="text/javascript" src="../../static/js/switchery.min.js"></script>
+     <script src="../../static/js/jquery-2.1.3.js"></script>
+        <script src="../../static/js/waypoints.min.js"></script>
+        <script>
+            var $head = $('#ha-header');
+            $('.ha-waypoint').each(function (i) {
+                var $el = $(this),
+                        animClassDown = $el.data('animateDown'),
+                        animClassUp = $el.data('animateUp');
+
+                $el.waypoint(function (direction) {
+                    if (direction === 'down' && animClassDown) {
+                        $head.attr('class', 'ha-header ' + animClassDown);
+                    }
+                    else if (direction === 'up' && animClassUp) {
+                        $head.attr('class', 'ha-header ' + animClassUp);
+                    }
+                }, {offset: '100%'});
+            });
+        </script>
+    
+</html>
