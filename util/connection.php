@@ -1,9 +1,9 @@
 <?php
 
 $server = "127.0.0.1";
-$database = "yaupbhei";
-$username = "yaupbhei_root";
-$password = "JAc4@3%@To7r";
+$database = "yaupadb";
+$username = "root";
+$password = "";
 
 //Create connection
 $connect = mysql_connect($server, $username, $password);

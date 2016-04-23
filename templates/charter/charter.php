@@ -1,87 +1,89 @@
 <?php session_unset() ?>
 <!DOCTYPE html> 
 
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-        <title>Charter</title>
-         <link rel="stylesheet" type="text/css" href="../../static/css/charter.css"/>
-        <link rel="stylesheet" type="text/css" href="../../static/font-awesome-4.3.0/css/font-awesome.css"/>
-        <link rel="stylesheet" type="text/css" href="../../static/css/normalize.css" />
-        <link rel="stylesheet" type="text/css" href="../../static/css/form.css"/>
-       
-        <script src="../../static/js/modernizr.custom.js"></script>
-        
-        
-        <link rel="shortcut icon" href="/static/images/favicon.ico">
-        
-     
-        
-    </head>
+    <title>Charter</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/charter.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/font-awesome-4.3.0/css/font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../../static/css/form.css"/>
+    
 
-    <body>
+    
+    <script src="../../static/js/waypoints.min.js"></script>
 
-        <?php require_once "../header.php";?>
 
-        <div class="charter">
-            <h1>Search and Charter</h1>
-        </div>
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
 
-        <!-- Charter form -->
-        <div class="form">
-            
-            <form method="post" id="charter_form" action="./charter.php">
-                
-                <!-- vehicle selector w -->
-                <label > <i class="fa fa-bus"></i>
-                    <select id="type" name="vehicle_type" class="input-state" >
-                        <?php include_once '../../util/constants/vehicles.html'; ?>
-                    </select>
-                </label>
-                
-                <input type="text" id="from"   name="from" value="" placeholder="From?  Pickup point" class="input">
-                    
-                <!-- current state selector -->
-                <select type="select" id="location" name="from_state" placeholder="State" class="input-state">
-                      <option>Current State</option>
-                       <?php include '../../util/constants/states.html'; ?>
+
+
+</head>
+
+<body>
+
+    <?php require_once "../header.php"; ?>
+
+    <div class="charter">
+        <h1>Search and Charter</h1>
+    </div>
+
+    <!-- Charter form -->
+    <div class="form">
+
+        <form method="post" id="charter_form" action="./charter.php">
+
+            <!-- vehicle selector w -->
+            <label > <i class="fa fa-bus"></i>
+                <select id="type" name="vehicle_type" class="input-state" >
+                    <?php include_once '../../util/constants/vehicles.html'; ?>
                 </select>
+            </label>
 
-                <input type="text" id="to" name="to" value="" placeholder="To?  Desired destination" class="input"></td>
+            <input type="text" id="from"   name="from" value="" placeholder="From?  Pickup point" class="input">
 
-                <!-- destination state selector -->
-                <select type="select" id="dest" name="to_state" value="" placeholder="State" class="input-state">
-                       <option>Destination State</option>
-                       <?php include '../../util/constants/states.html'; ?>
-                </select>
+            <!-- current state selector -->
+            <select type="select" id="location" name="from_state" placeholder="State" class="input-state">
+                <option>Current State</option>
+                <?php include '../../util/constants/states.html'; ?>
+            </select>
 
-                <input type="submit" value="Search" class="input search-text">
+            <input type="text" id="to" name="to" value="" placeholder="To?  Desired destination" class="input"></td>
 
-            </form>
-            
+            <!-- destination state selector -->
+            <select type="select" id="dest" name="to_state" value="" placeholder="State" class="input-state">
+                <option>Destination State</option>
+                <?php include '../../util/constants/states.html'; ?>
+            </select>
+
+            <input type="submit" value="Search" class="input search-text">
+
+        </form>
+
+    </div>
+
+
+
+    <!-- display search result here -->
+
+    <div class="wrapper">
+        <div class="masonry">
+            <div style="background: white; width: 100%"> </div>              
+            <div id="appendage"></div><!-- search results will be put in this div -->
+
         </div>
-
-   
-        
-        <!-- display search result here -->
-        
-        <div class="wrapper">
-             <div class="masonry">
-                      <div style="background: white; width: 100%"> </div>              
-                    <div id="appendage"></div><!-- search results will be put in this div -->
-                    
-             </div>
-        </div>
-<section class="ha-waypoint" data-animate-down="ha-header-small" data-animate-up="ha-header-large">
+    </div>
+    <section class="ha-waypoint" data-animate-down="ha-header-small" data-animate-up="ha-header-large">
     </section>
 
-        <?php require_once "../../templates/footer.php"; ?>
+    <?php require_once "../../templates/footer.php"; ?>
 
-                                    </body>
-                                       <!-- call the charter form processor -->
-        <script type="text/javascript" src="../../static/js/charter_form_handler.js"></script>
-<script src="../../static/js/jquery-2.1.3.js"></script>
-<script src="../../static/js/waypoints.min.js"></script>
+</body>
+<!-- call the charter form processor -->
+    <script src="../../static/js/jquery-2.1.3.js"></script>
+    <script src="../../static/js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="../../static/js/charter_form_handler.js"></script>
 
 
 <script>

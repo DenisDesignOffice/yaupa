@@ -1,38 +1,61 @@
-<?php       ob_start();
-	    session_start();
-            session_set_cookie_params(0);
-       
-            require_once "../../util/connection.php";
-            
-            if ($_SERVER['REQUEST_METHOD'] == "POST") {
-                $username = $_POST['username'];
-                $password = $_POST['password'];
-                $hashed_password = crypt($password, '$2a$07$usesomesillystringforsalt$');
+<?php
+ob_start();
 
-                $check = "SELECT * FROM users WHERE username='$username' AND password='$password' ";
+session_start();
+session_set_cookie_params(0);
+
+require_once "../../util/connection.php";
+
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $hashed_password = crypt($password, '$2a$07$usesomesillystringforsalt$');
+
+    $check = "SELECT * FROM users WHERE username='$username' AND password='$password' ";
 //                echo $username . " " . $hashed_password . " ";
-                $query1 = mysql_query($check);
+    $query1 = mysql_query($check);
 //                echo mysql_num_rows($query1);
-                if (mysql_num_rows($query1) != 0) {
-                    $_SESSION['user'] = $username;
-                    header("location: /templates/controlpanel/cpanel_dashboard.php");
-                } else {
-                    echo "<center><h3 style='color:red'>user credentials not found</h3></center>" ;
-                }
-                
-            }
-                
-?><!DOCTYPE html">
+    if (mysql_num_rows($query1) != 0) {
+        $_SESSION['user'] = $username;
+        header("location: /templates/controlpanel/cpanel_dashboard.php");
+    } else {
+        echo "<center><h3 style='color:red'>user credentials not found</h3></center>";
+    }
+}
+?>
+
+<!DOCTYPE html">
 
 <head>
 
-<title>Control Panel Login </title>
+    <title>Control Panel Login </title>
+
+    <link rel="stylesheet" type="text/css" href="../../static/css/cpanel_login.css">
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
+
+    <!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 lt8"> <![endif]-->
+    <!--[if IE 7 ]>    <html lang="en" class="no-js ie7 lt8"> <![endif]-->
+    <!--[if IE 8 ]>    <html lang="en" class="no-js ie8 lt8"> <![endif]-->
+    <!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+    <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+
+
+    <link rel="shortcut icon" href="../favicon.ico"> 
+    <link rel="stylesheet" type="text/css" href="../../static/css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="../../static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../static/css/animate-custom.css" />
+    
+    <title>Control Panel Login </title>
 
 <link rel="stylesheet" type="text/css" href="../../static/css/cpanel_login.css">
+
+</head>
+
+
+
        
         
-    </head>
-    <body>
+ <body>
     
         <div class="container">
             
@@ -75,4 +98,5 @@
             
         </div>
     </body>
+
 </html>

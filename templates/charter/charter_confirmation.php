@@ -108,7 +108,11 @@ if($payment_option == 'bank_deposit'){
                     <h6 style="size: 20px"><?php echo $_SESSION['company_name']; ?></h4>
                 </label>
                 <label>Price:
-                    <h6 style="size: 20px"><?php echo $_SESSION['amount_to_pay2']; ?></h4>
+                    <h6 style="size: 20px"><?php echo $_SESSION['amount_to_pay']; ?></h4>
+                </label>
+                <label>Txn REf:
+                    <h6 style="size: 20px"><?php  $ref = mt_rand(1111111111, 9999999999);
+                                                    echo $_SESSION['transaction_ref'] = "YAP" . $ref  ?></h4>
                 </label>
                 <label>
                     TICKET QUANTITY
