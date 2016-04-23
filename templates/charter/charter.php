@@ -9,13 +9,13 @@
     <link rel="stylesheet" type="text/css" href="../../static/font-awesome-4.3.0/css/font-awesome.css"/>
     <link rel="stylesheet" type="text/css" href="../../static/css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="../../static/css/form.css"/>
-    
+     <script src="../../static/js/modernizr.custom.js"></script>
 
     
-    <script src="../../static/js/waypoints.min.js"></script>
+  
 
 
-    <link rel="shortcut icon" href="/static/images/favicon.ico">
+    
 
 
 
@@ -24,11 +24,15 @@
 <body>
 
     <?php require_once "../header.php"; ?>
+<section class="ha-waypoint" data-animate-down="ha-header-small" data-animate-up="ha-header-large">     
+    </section>
 
     <div class="charter">
         <h1>Search and Charter</h1>
     </div>
 
+
+<section class="content">
     <!-- Charter form -->
     <div class="form">
 
@@ -62,7 +66,7 @@
         </form>
 
     </div>
-
+</section>
 
 
     <!-- display search result here -->
@@ -74,17 +78,17 @@
 
         </div>
     </div>
-    <section class="ha-waypoint" data-animate-down="ha-header-small" data-animate-up="ha-header-large">
-    </section>
-
+   
     <?php require_once "../../templates/footer.php"; ?>
 
 </body>
 <!-- call the charter form processor -->
-    <script src="../../static/js/jquery-2.1.3.js"></script>
-    <script src="../../static/js/modernizr.custom.js"></script>
-    <script type="text/javascript" src="../../static/js/charter_form_handler.js"></script>
+<script type="text/javascript" src="../../static/js/charter_form_handler.js"></script>
 
+    <script src="../../static/js/jquery-2.1.3.js"></script>
+      <script src="../../static/js/waypoints.min.js"></script>
+   
+    
 
 <script>
     var $head = $('#ha-header');
@@ -103,3 +107,4 @@
         }, {offset: '100%'});
     });
 </script>
+</html>

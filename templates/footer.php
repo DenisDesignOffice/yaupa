@@ -56,7 +56,13 @@
     
     
     
-    <div class="copyright"><i class="fa fa-copyright"></i>&nbsp; 2016 Yaupa</div>
+    <div class="copyright">
+    <span class="payment"> <img src="../static/images/interswitch.png" /></span>
+    <span class="payment"> <img src="../static/images/verve.png" /></span>
+    <span class="payment"> <img src="../static/images/mastercard.png" /></span>
+    <span class="payment"> <img src="../static/images/visa.png" /></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span><i class="fa fa-copyright"></i>&nbsp; 2016 Yaupa</span>
+    </div>
 </section>
 
 
