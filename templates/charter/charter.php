@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="../../static/font-awesome-4.3.0/css/font-awesome.css"/>
     <link rel="stylesheet" type="text/css" href="../../static/css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="../../static/css/form.css"/>
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
      <script src="../../static/js/modernizr.custom.js"></script>
 
     

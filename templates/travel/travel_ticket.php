@@ -5,17 +5,18 @@
         <title>Ticket</title>
 
         <link rel="stylesheet" type="text/css" href="../../static/css/ticketcss.css"/>
-        
         <link rel="shortcut icon" href="/static/images/favicon.ico">
 
     </head>
 
     <body>
 
-        <i>Congratulations!</i> &nbsp; Please print or write down your ticket details.<br/>
-        Note: All passengers are adviced to be at the terminal 30mins before departure time.
+        <div class="trans_success"><i>Congratulations!</i> Please print or write down your ticket details.</div>
 
+
+            <div class="trans_failure">Sorry! Your transaction was not successful. Please try again</div>
         </p>
+        
         <div>
 
             <!--Display Company Name Here -->
@@ -56,8 +57,10 @@
             </table>
 
             <!--Display Contact Number Here For Complaints -->
-            <br />
-            For Complaints Please Call: 08137004275
+            
+            <br class="footer"> Note: You are adviced to be at the terminal 30mins before departure time.<br/>
+            For Complaints Call:+234 7035 277 717<br />
+            
         </div>
 
     </body>

@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Ticket</title>
@@ -12,10 +12,11 @@
 
     <body>
 
-        <i>Congratulations!</i> &nbsp; Please print or write down your ticket details.<br/>
-        Note: All passengers are adviced to be at the terminal 30mins before departure time.
+       
+        <div class="trans_success"><i>Congratulations!</i> Please print or write down your ticket details.</div>
 
-        </p>
+
+            <div class="trans_failure">Sorry! Your transaction was not successful. Please try again</div> <p>
         <div>
 
             <!--Display Company Name Here -->
@@ -57,7 +58,7 @@
 
             <!--Display Contact Number Here For Complaints -->
             <br />
-            For Complaints Please Call: 08137004275
+            For Complaints Call: +234 7035 277 717
         </div>
 
     </body>
