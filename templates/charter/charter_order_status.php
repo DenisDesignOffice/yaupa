@@ -52,6 +52,7 @@
 
             include '../../util/sms_handler.php';
             include './charter_ticket.php';
+            
         } else {
             echo "<h4>Your transaction was not succesful.</h4>"
             . "<h4> Reason: " . (string) $xml->ResponseDescription . "</h4>"

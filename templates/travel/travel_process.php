@@ -23,10 +23,10 @@ $lastname = $_SESSION['lastname'];
 $phone = $_SESSION['phone'];
 $email = $_SESSION['email'];
 $address = $_SESSION['address'];
-$date = $_SESSION['date'];
+$traveling_date = $_SESSION['date'];
+$payment_date = $_SESSION['date'];
 $payment_option = $_SESSION['payment_option'];
-$charter_option = $_SESSION['charter_option'];
-$company_name = $_SESSION['company_name'];
+$service_provider = $_SESSION['company_name'];
 $type = $_SESSION['type'];
 $processing_fee = $_SESSION['processing_fee'];
 //$to_and_fro_cost = $_SESSION['to_and_fro_cost'];
@@ -34,23 +34,25 @@ $processing_fee = $_SESSION['processing_fee'];
 $amount = $_SESSION['amount_to_pay'];
 $location_state = $_SESSION['from_state'];
 $destination_state = $_SESSION['to_state'];
+$next_of_kin = $_SESSION['next_of_kin'];
+$to_state = $_SESSION['to_state'];
+$from_state = $_SESSION['from_state'];
 
     
-//$put="INSERT INTO charter_booking_records (firstname,lastname, email, phone,"
-//        . " address, vehicle_type, location, location_state, destination, "
-//        . "destination_state, to_cost, to_and_fro_cost, processing_fee, "
-//        . "amount_paid, payment_date, bank_deposit_no, debit_no, name_of_depositor,"
-//        . " company_name, reg_pin, serial)"
-//        . " VALUES('$firstname','$lastname', '$email', '$phone', '$address', "
-//        . " '$type', '$location','$location_state', '$destination', '$destination_state',"
-//        . " '$to_cost', '$to_and_fro_cost', '$processing_fee', '$amount', '$date', "
-//        . " '', '','',  '$company_name', '$generate_random_trans_ref', '$generate_random_cust_id')";
-//
-//
-//$results = mysql_query($put);
-//if(! $results )   {
-//      die('Could not enter data: ' . mysql_error());
-//   }
+$put="INSERT INTO travel_bookings (firstname,lastname, email, phone, address, "
+        . "payment_date, traveling_date, next_of_kin, payment_type, reg_pin, "
+        . " serial, service_provider, amount_paid, status, to_state, from_state, "
+        . "bank_slip_no, bank_of_payment, debit_trans_no, name_of_depositor, date_of_deposition,  source ) "
+        . " VALUES('$firstname', '$lastname', '$email', '$phone', '$address', '$payment_date', "
+        . " '$traveling_date', '$next_of_kin',  '$payment_option', '$generate_random_trans_ref', '$generate_random_cust_id', "
+        . " '$service_provider', '$amount', 'pending', "
+        . " '$to_state', '$from_state', '', '', '', '', '', '' )";
+
+
+$results = mysql_query($put);
+if(! $results )   {
+      die('Could not enter data: ' . mysql_error());
+   }
    
    
 mysql_close($connect);

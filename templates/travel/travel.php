@@ -58,6 +58,7 @@
    <script src="../../static/js/jquery-2.1.3.js"></script>
     <script type="text/javascript" src="../../static/js/travel_form_handler.js"></script>
 <script src="../../static/js/waypoints.min.js"></script>
+
 <script>
     var $head = $('#ha-header');
     $('.ha-waypoint').each(function (i) {

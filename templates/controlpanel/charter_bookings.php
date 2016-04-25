@@ -98,7 +98,7 @@
                                                     <td>" . $row['amount_paid'] . "</td>
                                                     <td>" . $row['reg_pin'] . "</td>
                                                     <td>" . $row['serial'] . '</td>
-                                                    <td><a href="?view=add_charterbookings&purpose=status&id=' . $row["id"] . '"> <span class="f-button">change status</span></a> </td>
+                                                    <td><a href="?view=add_charterbookings&purpose=status&id=' . $row["id"] . '"> <span class="f-button">verify status</span></a> </td>
                                                     <td><a onclick="delete_Travel('. "this" .');" href="?view=add_charterbookings&purpose=delete&id=' . $row["id"] . '"> <span class="f-button">delete</span> </a></td> 
                                                   </tr>';
                     }

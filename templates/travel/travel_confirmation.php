@@ -19,7 +19,10 @@ $date = strtolower(htmlspecialchars($_POST['date']));
 $payment_option = strtolower(htmlspecialchars($_POST['payment_option']));
 $charter_option = strtolower(htmlspecialchars($_POST['charter_option']));
 $selected_option_id = strtolower(htmlspecialchars($_POST['selected_option_id']));
+$sms_reminder = strtolower(htmlspecialchars($_POST['sms_reminder']));
+$next_of_kin = strtolower(htmlspecialchars($_POST['next_of_kin']));
 
+$_SESSION['sms_reminder'] = $sms_reminder;
 $_SESSION['firstname'] = $firstname;
 $_SESSION['lastname'] = $lastname;
 $_SESSION['phone'] = $phone;
@@ -29,6 +32,7 @@ $_SESSION['date'] = $date;
 $_SESSION['payment_option'] = $payment_option;
 $_SESSION['charter_option'] = $charter_option;
 $_SESSION['selected_option_id'] = $selected_option_id;
+$_SESSION['next_of_kin'] = $next_of_kin;
 
 
 if($charter_option == 'to alone'){
@@ -80,32 +84,43 @@ if($payment_option == 'bank_deposit'){
 
 
     <section class="confirm">
-        
-    <h1>Review your order</h1>
-    <div>
-    <h3>Copy or print your Ref Number, then click on proceed to payment</h3>
-    </div>
-    
-    <div>
-    
-     <table>
-  <tr>
-    <td class="name">Name</td>
-    <td class="value">Christian Okpakpo</td>
-    </tr>
-    <tr>
-    <td class="name">Ref Number</td>
-    <td class="value">67890987654</td>
-  </tr>
-  <tr>
-    <td class="name">Amount N</td>
-    <td class="value"> 098767893</td>
-  </tr>
+
+        <h1>Review your order</h1>
+        <div>
+            <h3>Copy or print your Ref Number, then click on proceed to payment</h3>
+        </div>
+
+        <div>
+
+            <form name="form1" method="post" action="./travel_process.php"/>
+            <table>
+                <tr>
+                    <td class="name">Name</td>
+                    <td class="value"><?php echo $firstname . " " . $lastname; ?></td>
+                </tr>
+                <tr>
+                    <td class="name">Ref Number</td>
+                    <td class="value"><?php $_SESSION['transaction_ref'] = uniqid();
+                                        echo $_SESSION['transaction_ref'];
+                                        ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="name">Amount N</td>
+                    <td class="value"> <?php echo $price; ?></td>
+                </tr>
+
+            </table>
+
+            <input type="submit" value="Proceed to Payment" class="submit">
+            </form>
+        </div>
+
+    </section>
+
+    <p>
   
 </table>
-<form>
-<input type="submit" value="Proceed to Payment" class="submit">
-</form>
     </div>
     </section>
     
