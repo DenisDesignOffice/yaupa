@@ -1,5 +1,4 @@
-<?php session_unset() 
-?>
+<?php session_unset() ?>
 <!DOCTYPE html> 
 
 <head>
@@ -76,4 +75,4 @@
         }, {offset: '100%'});
     });
 </script>
-
+</html>

@@ -23,17 +23,8 @@ require_once "../../util/connection.php";
 
         <link rel="shortcut icon" href="/static/images/favicon.ico">
 
-        <script src="/static/js/jquery-2.1.3.js"></script>
-        <!--<script src="/static/js/charter_form_handler.js"></script>-->
-
-        <script type="text/javascript">
-            // function : show_confirm()
-            function delete_Charter() {
-                // build the confirm box
-                var c = confirm("Are you sure you wish to delete?");
-                return c;
-            }
-        </script>
+        
+       
     </head>
 
     <body>
@@ -144,6 +135,18 @@ require_once "../../util/connection.php";
 
             <h5 id="appendage"></h5>
         </div>
+        
+         <script type="text/javascript">
+            // function : show_confirm()
+            function delete_Charter() {
+                // build the confirm box
+                var c = confirm("Are you sure you wish to delete?");
+                return c;
+            }
+        </script>
         <script src="/static/js/modalform.js"></script>
     </body>
+    <script src="/static/js/jquery-2.1.3.js"></script>
+        <!--<script src="/static/js/charter_form_handler.js"></script>-->
+
 </html>
