@@ -38,16 +38,17 @@ $destination = $_SESSION['to'];
 $location = $_SESSION['from'];
 $destination_state = $_SESSION['to_state'];
 $service_provider = $_SESSION['service_provider'];
+$pin = $_SESSION['pin'];
 
 
 $put = "INSERT INTO charter_bookings (firstname,lastname, email, phone,"
         . " address, vehicle_type, from_town, from_state, to_town, "
         . "to_state, cost, service_option, service_providers, payment_type, "
-        . "amount_paid, payment_date, reg_pin, serial, bank_deposit_no, depositor)"
+        . "amount_paid, payment_date, reg_pin, serial, bank_deposit_no, depositor, status, transaction_ref )"
         . " VALUES('$firstname','$lastname', '$email', '$phone', '$address', "
         . " '$type', '$location','$location_state', '$destination', '$destination_state', "
         . " '$amount2', '$charter_option', '$service_provider', '$payment_option', '$amount2', '$date', "
-        . " '$generate_random_trans_ref', '$generate_random_cust_id', '', '')";
+        . " '$pin', '$generate_random_cust_id', '', '', 'pending', $generate_random_trans_ref  )";
 
 
 $results = mysql_query($put);
