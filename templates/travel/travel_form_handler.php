@@ -10,6 +10,9 @@ require_once "../../util/connection.php";
 
 $response = '';
 
+if(isset($_POST['from1']) || isset($_POST['to1']){
+	header(location: /index.php);
+}
 
 $from_home = strtolower(htmlspecialchars($_POST['from1']));
 $to_home = strtolower(htmlspecialchars($_POST['to1']));

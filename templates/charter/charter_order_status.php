@@ -12,7 +12,7 @@
 
 <?php
     if(!isset($_SESSION['trans_ref']) || !isset($_SESSION['amount_to_pay']) || !isset($_SESSION['type'])){
-    header("location: /yaupa.com/index.php");
+    header("location: /index.php");
 }
 
     include_once "../../util/connection.php";

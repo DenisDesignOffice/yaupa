@@ -2,7 +2,7 @@
 
 <?php
 If (!isset($_POST['stoppage']) || !isset($_POST['address']) || !isset($_POST['type'])) {
-    header("location: /yaupa.com/index.php");
+    header("location: /index.php");
 }
 
 $_SESSION['stoppage'] = strtolower(htmlspecialchars($_POST['stoppage']));

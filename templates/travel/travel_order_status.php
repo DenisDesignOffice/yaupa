@@ -11,6 +11,10 @@
 
 <?php
     include_once "../../util/connection.php";
+    
+    If(!isset($_SESSION['trans_ref']) || !isset($_SESSION['amount_to_pay'])){
+    header("location: /index.php");
+}
 
     $param = array();
     $param['productid'] = 6205;
