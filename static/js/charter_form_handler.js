@@ -8,7 +8,6 @@
 $(document).ready(function () {
 
     $('#charter_form').submit(function (event) {
-
         var data = $('#charter_form').serialize();//get all the form the data
 
         $.post('./charter_form_handler.php', data, processResponce);

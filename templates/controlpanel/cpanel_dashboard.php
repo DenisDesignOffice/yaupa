@@ -18,21 +18,13 @@ require_once "../../util/connection.php";
         <link rel="stylesheet" type="text/css" href="/static/css/dashboard.css" />
         <link rel="stylesheet" type="text/css" href="/static/css/modalform.css"/>
         <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" type="text/css" href="font-awesome-4.3.0/css/font-awesome.min.css"/>
+        <link rel="stylesheet" type="text/css" href="/static/font-awesome-4.3.0/css/font-awesome.min.css"/>
+        
 
         <link rel="shortcut icon" href="/static/images/favicon.ico">
 
-        <script src="/static/js/jquery-2.1.3.js"></script>
-        <!--<script src="/static/js/charter_form_handler.js"></script>-->
-
-        <script type="text/javascript">
-            // function : show_confirm()
-            function delete_Charter() {
-                // build the confirm box
-                var c = confirm("Are you sure you wish to delete?");
-                return c;
-            }
-        </script>
+        
+       
     </head>
 
     <body>
@@ -54,7 +46,7 @@ require_once "../../util/connection.php";
 
                     <span id="username">hi <?php echo $_SESSION['user']; ?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-                    <span id="logout">Logout</span>
+                    <a href="./cpanel_login.php" ><span id="logout">Logout</span></a>
                 </div>
 
             </div>
@@ -125,6 +117,14 @@ require_once "../../util/connection.php";
                         include './cpanel_modify_travelbookings.php';
                     }else if ($view == 'add_taxibookings') {
                         include './cpanel_modify_taxibookings.php';
+                    }else if($view == 'addplus_terminals') {
+                        include './cpanel_add_terminal.php';
+                    }else if($view == 'addplus_charter') {
+                        include './cpanel_add_charter.php';
+                    }else if($view == 'addplus_travel') {
+                        include './cpanel_add_travel.php';
+                    }else if($view == 'addplus_taxi') {
+                        include './cpanel_add_taxi.php';
                     }
                 } else {
                     include './transport_companies.php';
@@ -135,6 +135,18 @@ require_once "../../util/connection.php";
 
             <h5 id="appendage"></h5>
         </div>
+        
+         <script type="text/javascript">
+            // function : show_confirm()
+            function delete_Charter() {
+                // build the confirm box
+                var c = confirm("Are you sure you wish to delete?");
+                return c;
+            }
+        </script>
         <script src="/static/js/modalform.js"></script>
     </body>
+    <script src="/static/js/jquery-2.1.3.js"></script>
+        <!--<script src="/static/js/charter_form_handler.js"></script>-->
+
 </html>

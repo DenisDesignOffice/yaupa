@@ -100,86 +100,9 @@
                 echo "Edited Successfully";
                 header("location: /templates/controlpanel/cpanel_dashboard.php?view=charter_services");
             }
-        } else if ($view == 'addnew') {
-
-            $service_provider =  strtolower(htmlspecialchars($_GET{'service_provider'}));
-            $vehicle_type =  strtolower(htmlspecialchars($_GET{'vehicle_type'}));
-            $from_state =  strtolower(htmlspecialchars($_GET{'from_state'}));
-            $to_state =  strtolower(htmlspecialchars($_GET{'to_state'}));
-            $from_town =  strtolower(htmlspecialchars($_GET{'from_town'}));
-            $to_town =  strtolower(htmlspecialchars($_GET{'to_town'}));
-            $to_cost =  strtolower(htmlspecialchars($_GET{'to_cost'}));
-            $to_and_fro_cost =  strtolower(htmlspecialchars($_GET{'to_and_fro_cost'}));
-            $processing_fee =  strtolower(htmlspecialchars($_GET{'processing_fee'}));
-            $duration =  strtolower(htmlspecialchars($_GET{'duration'}));
-
-            $sql = "INSERT INTO charter_services(service_provider, vehicle_type, from_state, to_state, "
-                    . "to_town, from_town, to_cost, to_and_fro_cost, processing_fee, duration) "
-                    . "VALUES ('$service_provider','$vehicle_type', '$from_state', '$to_state', "
-                    . "'$to_town', '$from_town', '$to_cost', '$to_and_fro_cost', '$processing_fee', '$duration')";
-
-            $query = mysql_query($sql);
-
-            if (!$query) {
-                die("connection failed" . mysql_error());
-                header("location: /templates/controlpanel/cpanel_dashboard.php?view=add_charter&purpose=add&message=failure");
-            } else {
-                header("location: /templates/controlpanel/cpanel_dashboard.php?view=add_charter&purpose=add&message=success");
-            }
-        } else {
-            echo '<form style="margin-bottom: 10px;" name="addTcForm" method="get" action="./cpanel_dashboard.php"  >
-            <i class="fa fa-search">
-                <input name="service_provider" style="width:20%; height: 30px" type="text"  classname="search"  Placeholder="Service provider">
-               
-                <input name="vehicle_type"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Vehicle Type">
-               
-                <input name="from_state" style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="From State">
-                <br/>
-                <input name="to_state"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="To State">
-                
-                <input name="from_town"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="From Town">
-               
-                <input name="to_town"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="To Town">
-                <br/>
-                <input name="to_cost"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="To Cost">
-                
-
-                <input name="to_and_fro_cost"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="To and fro cost">
-                
-                <input name="processing_fee"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Processing fee">
-                <br/>
-                <input name="duration"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Duration">
-                <br/>
-                
-                <input value="Add" style="width:20%; margin-top: 30px; height: 30px; margin-top: 2dp " type="submit" classname="search"  Placeholder="Search">
-
-                <input name="purpose"  value="addnew"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
-                <input name="view"  value="add_charter"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
-
-                </i>
-
-            
-        </form>';
-            if (isset($_GET{'message'})) {
-                $message = strtolower(htmlspecialchars($_GET{'message'}));
-
-                if ($message == 'success') {
-                    echo '<h5>Added successfully</h5>';
-                }
-
-                if ($message == 'failure') {
-                    echo '<h5>Failed</h5>';
-                }
-            }
-        }
-        ?>
+        } 
 
 
-
-
-
-
-
-    </div>
+?>
 
 </div>

@@ -1,20 +1,25 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Home</title>
 
 
+<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Careers</title>
+		<meta name="description" content="find a Job, share our colaborative workspace" />
+		<meta name="keywords" content=" Mobile, Marketing, sales, Web Developer, Java, PHP " />
+		<meta name="author" content="Yaupa" />
 
 
+<link rel="stylesheet" type="text/css" href="../static/css/career.css"/>
 <link rel="stylesheet" type="text/css" href="../static/css/normalize.css" />
-<link rel="stylesheet" type="text/css" href="../static/css/form.css"/>
-
+<link rel="stylesheet" type="text/css" href="../../static/font-awesome-4.3.0/css/font-awesome.css"/>
 <link rel="shortcut icon" href="/static/images/favicon.ico">
 
 
 <script src="../static/js/modernizr.custom.js"></script>
-<link rel="stylesheet" type="text/css" href="../static/css/career.css"/>
+
 
 </head>
 
@@ -33,12 +38,11 @@
  
 <section class="career">
 <h1>Career</h1>
-<div>
-We are committed to adding value to the life of every individual through our product. Our team is small, which makes it easy to know ourselves. We also share a unique culture of love and happiness; we strive for excellence, innovation and creativity. And as such we do not really care about qualification or working experience but keen in developing and making our members become the best in any choosen field. If you feel talented enough, passionate and enthusiastic about making an impact or proving yourself, please don't hesitate to send your resume to christian@yaupa.com
-</div>
-<p><br/>
+We are committed to adding value to the life of every individual through our product. Our team is small, which makes it easy to know ourselves. We share a culture of love and happiness; we strive for excellence, innovation and creativity. And as such we do not really care about qualification or working experience but keen in developing and making our members become the best in any choosen field. If you feel talented enough, passionate and enthusiastic about making an impact or proving yourself, please don't hesitate to send your resume to careers@yaupa.com
+
+<br/></p><br/>
 <h2>Vacancies</h2>
-</p>
+
 
 <div class="vacancy">
 
@@ -48,6 +52,7 @@ We are committed to adding value to the life of every individual through our pro
 <li>Web Developer</li>
 <li>Mobile Developer</li>
 <li>Java Programmer</li>
+</ul>
 </div>
 </section>
  

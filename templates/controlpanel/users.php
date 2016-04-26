@@ -7,13 +7,16 @@
             <h5>Users</h5>
 
         </div>
-        <form style="margin-bottom: 10px;" name="myform1" method="get" action="./cpanel_dashboard.php"  >
+       <div class="searchform">
+        <form class="searchbox" name="myform1" method="get" action="./cpanel_dashboard.php"  >
             <i class="fa fa-search">
-                <input name="search"  style="width:20%; height: 30px" type="text"  classname="search"  Placeholder="Search by username">
-                <input value="search" style="width:5%; height: 30px; margin-top: 2dp " type="submit" classname="search"  Placeholder="Search"></i>
-            <i class="fa fa-search"><input name="view" value="users" style="width:20%; height: 30px; visibility: hidden" type="text" classname="search"  Placeholder="Search"></i>
-            <i class="fa fa-search"></i>
+                <input  type="text"  name="search"  classname="search"  Placeholder="Search by tag">
+                 </i>
+                <input class="submit" type="submit" value="Search"  classname="search">
+           
+            
         </form>
+        </div>
         <div class="modal-body">
 
             <div>

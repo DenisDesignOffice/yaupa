@@ -23,14 +23,14 @@ $_SESSION['to'] = $to;
 $_SESSION['from'] = $from;
 
 
-if ($vehicle_type == "select vehicle type" || $from_state == "current state") {
+if ($to_state == "destination state" || $from_state == "current state") {
     $response = "<h1>Please fill all relevant fields</h1>";
     echo $response;
     exit();
 } else {
 
 //all fields were filled, lets process
-    $result = mysql_query("SELECT DISTINCT * FROM charter_services, terminals  WHERE vehicle_type='$vehicle_type' AND from_state='$from_state' AND service_provider=tag ");
+    $result = mysql_query("SELECT DISTINCT * FROM charter_services, terminals  WHERE to_state='$to_state' AND from_state='$from_state' AND service_provider=tag ");
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (mysql_num_rows($result) == 0) {

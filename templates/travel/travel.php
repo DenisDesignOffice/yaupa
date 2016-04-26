@@ -1,22 +1,21 @@
-<?php session_unset() 
-?>
+<?php session_unset() ?>
 <!DOCTYPE html> 
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Available Companies</title>
-
+    
+     <link rel="stylesheet" type="text/css" media="all" href="../../static/css/travellist.css"/>
     <link rel="stylesheet" type="text/css" href="../../static/css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="../../static/font-awesome-4.3.0/css/font-awesome.min.css"/>
+   <link rel="stylesheet" type="text/css" href="../../static/font-awesome-4.3.0/css/font-awesome.css"/>
     <link rel="stylesheet" type="text/css" media="all" href="../../static/css/form.css">
-    <link rel="stylesheet" type="text/css" media="all" href="../../static/css/travellist.css"/>
+
     
     <link rel="shortcut icon" href="/static/images/favicon.ico">
     
     <script src="../../static/js/modernizr.custom.js"></script>
-    <script src="../../static/js/jquery-2.1.3.js"></script>
-    <!-- call the travel form processor -->
-    <script type="text/javascript" src="../../static/js/travel_form_handler.js"></script>
+  
+  
 
 </head>
 
@@ -54,8 +53,12 @@
 
 </body>
 
- <script src="../../static/js/jquery-2.1.3.js"></script>
+
+  <!-- call the travel form processor -->
+   <script src="../../static/js/jquery-2.1.3.js"></script>
+    <script type="text/javascript" src="../../static/js/travel_form_handler.js"></script>
 <script src="../../static/js/waypoints.min.js"></script>
+
 <script>
     var $head = $('#ha-header');
     $('.ha-waypoint').each(function (i) {
@@ -73,4 +76,4 @@
         }, {offset: '100%'});
     });
 </script>
-
+</html>

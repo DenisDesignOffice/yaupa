@@ -1,12 +1,31 @@
 div 
 {
 width:18em;
-padding:25px;
+padding:20px;
 border: 3px solid black;
 margin-left:30%;
 font-size:0.8em;
 text-align:center;
 }
+
+
+div .footer
+{
+padding:0;
+border: 0 solid black;
+font-size:0.8em;
+text-align:center;
+}
+.trans_success
+{
+color:green;
+}
+
+.trans_failure
+{
+color:red;
+}
+
 
 h1
 {

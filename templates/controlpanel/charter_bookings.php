@@ -7,12 +7,18 @@
                             <h5>Charter Bookings</h5>
                             
                         </div>
-                        <form style="margin-bottom: 10px;" name="myform1" method="get" action="./cpanel_dashboard.php"  >
-            <i class="fa fa-search"><input name="search"  style="width:20%; height: 30px" type="text"  classname="search"  Placeholder="Search by service provider">
-            <input value="search" style="width:5%; height: 30px; margin-top: 2dp " type="submit" classname="search"  Placeholder="Search"></i>
-                                <i class="fa fa-search"><input name="view" value="charter_bookings" style="width:20%; height: 30px; visibility: hidden" type="text" classname="search"  Placeholder="Search"></i>
-                                <i class="fa fa-search"></i>
-                        </form>
+                        <div class="searchform">
+        <form class="searchbox" name="myform1" method="get" action="./cpanel_dashboard.php"  >
+            <i class="fa fa-search">
+                <input  type="text"  name="search"  classname="search"  Placeholder="Search by tag">
+                 </i>
+                <input class="submit" type="submit" value="Search"  classname="search">
+           
+            
+        </form>
+        </div>
+        
+        
                         <div class="modal-body">
                             
                             <div>
@@ -92,7 +98,7 @@
                                                     <td>" . $row['amount_paid'] . "</td>
                                                     <td>" . $row['reg_pin'] . "</td>
                                                     <td>" . $row['serial'] . '</td>
-                                                    <td><a href="?view=add_charterbookings&purpose=status&id=' . $row["id"] . '"> <span class="f-button">change status</span></a> </td>
+                                                    <td><a href="?view=add_charterbookings&purpose=status&id=' . $row["id"] . '"> <span class="f-button">verify status</span></a> </td>
                                                     <td><a onclick="delete_Travel('. "this" .');" href="?view=add_charterbookings&purpose=delete&id=' . $row["id"] . '"> <span class="f-button">delete</span> </a></td> 
                                                   </tr>';
                     }
