@@ -48,7 +48,7 @@ $put = "INSERT INTO charter_bookings (firstname,lastname, email, phone,"
         . " VALUES('$firstname','$lastname', '$email', '$phone', '$address', "
         . " '$type', '$location','$location_state', '$destination', '$destination_state', "
         . " '$amount2', '$charter_option', '$service_provider', '$payment_option', '$amount2', '$date', "
-        . " '$pin', '$generate_random_cust_id', '', '', 'pending', $generate_random_trans_ref  )";
+        . " '$pin', '$generate_random_cust_id', '', '', 'pending', '$generate_random_trans_ref'  )";
 
 
 $results = mysql_query($put);
