@@ -26,7 +26,7 @@
     
     <div class="row_1">
     <h2> Product</h2>
-    <div class="text"><a href="#">Courier</a></div>
+    <div class="text">Courier</div>
     </div>
     
     
@@ -37,7 +37,7 @@
     <div class="text"><a href="/templates/howitworks.php">How it works</a></div>
      <div class="text"><a href="/templates/whyyaupa.php">Why Yaupa</a></div>
     <div class="text"><a href="/templates/career.php">Careers</a></div>
-    <div class="text"><a href="#">Our Blog</a></div>
+    <div class="text">Our Blog</div>
     </div>
     
     <div class="row_1">
