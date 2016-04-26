@@ -38,9 +38,9 @@
         
             <video autoplay loop mute poster="static/vids/capture.png" id="video-bg"> 
                 
-                 <source src="static/vids/front2.ogv" type="video/ogv">
-                <source src="static/vids/front2.webm" type="video/webm">
-                <source src="static/vids/front2.mp4" type="video/mp4">
+                <source src="static/vids/yaupatraffic.webm" type="video/webm">
+                 <source src="static/vids/yaupatraffic.ogv" type="video/ogv">
+                <source src="static/vids/yaupatraffic.mp4" type="video/mp4">
                
                 
                         <p>does not support this browser</p>
