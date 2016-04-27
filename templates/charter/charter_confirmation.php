@@ -23,7 +23,7 @@ $sms_reminder = strtolower(htmlspecialchars($_POST['sms_reminder']));
 
 $_SESSION['firstname'] = $firstname;
 $_SESSION['sms_reminder'] = $sms_reminder;
-$_SESSION['lastname'] = $lasttname;
+$_SESSION['lastname'] = $lastname;
 $_SESSION['phone'] = $phone;
 $_SESSION['email'] = $email;
 $_SESSION['address'] = $address;
