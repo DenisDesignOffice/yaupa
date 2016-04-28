@@ -23,3 +23,39 @@
 [07-Mar-2016 20:01:06 America/New_York] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/yaupbhei/public_html/templates/charter/charter_form_handler.php on line 30
 [07-Mar-2016 20:01:06 America/New_York] PHP Warning:  mysql_query(): A link to the server could not be established in /home/yaupbhei/public_html/templates/charter/charter_form_handler.php on line 30
 [07-Mar-2016 20:01:06 America/New_York] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/yaupbhei/public_html/templates/charter/charter_form_handler.php on line 33
+[15-Mar-2016 07:04:33 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[15-Mar-2016 07:04:33 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
+[15-Mar-2016 07:04:36 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[15-Mar-2016 07:04:36 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
+[15-Mar-2016 07:05:34 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[15-Mar-2016 07:05:34 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
+[15-Mar-2016 18:47:40 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[15-Mar-2016 18:47:40 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
+[15-Mar-2016 18:47:57 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[15-Mar-2016 18:47:57 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
+[17-Mar-2016 06:54:59 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[17-Mar-2016 06:54:59 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
+[17-Mar-2016 06:55:14 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[17-Mar-2016 06:55:14 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
+[17-Mar-2016 06:55:14 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[17-Mar-2016 06:55:14 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
+[17-Mar-2016 06:55:15 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[17-Mar-2016 06:55:15 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
+[17-Mar-2016 06:55:15 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[17-Mar-2016 06:55:15 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
+[17-Mar-2016 06:55:16 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[17-Mar-2016 06:55:16 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
+[18-Mar-2016 19:35:20 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[18-Mar-2016 19:35:20 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
+[18-Mar-2016 19:35:27 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[18-Mar-2016 19:35:27 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
+[26-Apr-2016 15:38:45 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/yaupbhei/public_html/templates/charter/charter_book.php:3) in /home/yaupbhei/public_html/templates/charter/charter_book.php on line 6
+[27-Apr-2016 01:49:46 America/New_York] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/yaupbhei/public_html/util/email_handler.php on line 25
+[27-Apr-2016 01:52:11 America/New_York] PHP Parse error:  syntax error, unexpected '"', expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/yaupbhei/public_html/util/email_handler.php on line 25
+[27-Apr-2016 01:53:44 America/New_York] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/yaupbhei/public_html/util/email_handler.php on line 25
+[27-Apr-2016 01:54:02 America/New_York] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/yaupbhei/public_html/util/email_handler.php on line 25
+[27-Apr-2016 01:56:52 America/New_York] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/yaupbhei/public_html/util/email_handler.php on line 51
+[27-Apr-2016 02:34:06 America/New_York] PHP Parse error:  syntax error, unexpected '-', expecting :: (T_PAAMAYIM_NEKUDOTAYIM) in /home/yaupbhei/public_html/util/email_handler.php on line 97
+[27-Apr-2016 02:42:01 America/New_York] PHP Parse error:  syntax error, unexpected '-', expecting :: (T_PAAMAYIM_NEKUDOTAYIM) in /home/yaupbhei/public_html/util/email_handler.php on line 97
+[27-Apr-2016 03:00:24 America/New_York] PHP Parse error:  syntax error, unexpected '-', expecting :: (T_PAAMAYIM_NEKUDOTAYIM) in /home/yaupbhei/public_html/util/email_handler.php on line 97
+[27-Apr-2016 04:34:05 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/yaupbhei/public_html/templates/charter/charter_order_status.php:13) in /home/yaupbhei/public_html/templates/charter/charter_order_status.php on line 15

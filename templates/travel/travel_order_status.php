@@ -45,12 +45,15 @@
 
         $sql = "UPDATE travel_bookings SET status='success' WHERE reg_pin='" . $_SESSION['trans_ref'] ."'";
         mysql_query($sql);
-
+            
+            include '../../util/email_handler.php';
+            include '../..//util/sms_handler.php';
             include './travel_ticket.php';
+            
         } else  {
-            echo "<h4>Your transaction was not succesful.</h4>"
+            echo "<div class='trans_failure'><h4>Your transaction was not succesful.</h4>"
             . "<h4> Reason: " . (string) $xml->ResponseDescription . "</h4>"
-            . "<h4>Transaction reference:" . $param['transactionreference'] . "</h4>";
+            . "<h4>Transaction reference:" . $param['transactionreference'] . "</h4></div>";
         }
         ?>
         <a href="/index.php"><h4>return to home page</h4></a>

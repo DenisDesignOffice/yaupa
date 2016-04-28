@@ -3,7 +3,7 @@
 <?php
 
 if(!isset($_POST['company_name']) || !isset($_POST['address']) || !isset($_POST['type'])){
-    header("location: /yaupa.com/index.php");
+    header("location: /index.php");
 }
 
 $_SESSION['company_name'] = strtolower(htmlspecialchars($_POST['company_name']));

@@ -1,10 +1,9 @@
-
 <?php session_start();?>
 
 <?php
 if(!isset($_GET['selected_option_id']))
 {
-header("location:index.php");
+ header("location: /index.php");
 }
 
 require_once "connection.php";
@@ -128,7 +127,6 @@ $pending="transaction not yet verified. please try again later";
 
 
 ?>
-
 
 
 

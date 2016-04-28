@@ -1,1 +1,49 @@
 [08-Mar-2016 02:23:04 America/New_York] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/yaupbhei/public_html/templates/travel/travel_bank_deposit.php:2) in /home/yaupbhei/public_html/templates/travel/travel_bank_deposit.php on line 3
+[18-Mar-2016 19:35:49 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[18-Mar-2016 19:35:49 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
+[20-Mar-2016 09:01:44 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[20-Mar-2016 09:01:44 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
+[20-Mar-2016 17:54:08 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[20-Mar-2016 17:54:08 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
+[20-Mar-2016 17:54:46 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[20-Mar-2016 17:54:46 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
+[20-Mar-2016 17:55:21 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[20-Mar-2016 17:55:21 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
+[20-Mar-2016 17:55:49 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[20-Mar-2016 17:55:49 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
+[21-Mar-2016 14:55:26 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[21-Mar-2016 14:55:26 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
+[21-Mar-2016 14:56:05 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[21-Mar-2016 14:56:05 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
+[21-Mar-2016 14:56:14 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[21-Mar-2016 14:56:14 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
+[22-Mar-2016 19:34:49 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[22-Mar-2016 19:34:49 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
+[22-Mar-2016 19:35:01 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[22-Mar-2016 19:35:01 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
+[22-Apr-2016 18:11:50 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/yaupbhei/public_html/templates/travel/travel_order_status.php:12) in /home/yaupbhei/public_html/templates/travel/travel_order_status.php on line 16
+[22-Apr-2016 18:16:52 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/yaupbhei/public_html/templates/travel/travel_order_status.php:12) in /home/yaupbhei/public_html/templates/travel/travel_order_status.php on line 16
+[23-Apr-2016 13:12:05 America/New_York] PHP Parse error:  syntax error, unexpected '{' in /home/yaupbhei/public_html/templates/travel/travel_form_handler.php on line 13
+[25-Apr-2016 13:46:46 America/New_York] PHP Parse error:  syntax error, unexpected '{' in /home/yaupbhei/public_html/templates/travel/travel_form_handler.php on line 13
+[25-Apr-2016 14:41:57 America/New_York] PHP Parse error:  syntax error, unexpected '{' in /home/yaupbhei/public_html/templates/travel/travel_form_handler.php on line 13
+[25-Apr-2016 14:42:08 America/New_York] PHP Parse error:  syntax error, unexpected '{' in /home/yaupbhei/public_html/templates/travel/travel_form_handler.php on line 13
+[26-Apr-2016 14:50:27 America/New_York] PHP Parse error:  syntax error, unexpected '{' in /home/yaupbhei/public_html/templates/travel/travel_form_handler.php on line 13
+[26-Apr-2016 14:52:58 America/New_York] PHP Parse error:  syntax error, unexpected '{' in /home/yaupbhei/public_html/templates/travel/travel_form_handler.php on line 13
+[26-Apr-2016 15:10:50 America/New_York] PHP Parse error:  syntax error, unexpected '{' in /home/yaupbhei/public_html/templates/travel/travel_form_handler.php on line 13
+[26-Apr-2016 16:28:01 America/New_York] PHP Parse error:  syntax error, unexpected '{' in /home/yaupbhei/public_html/templates/travel/travel_form_handler.php on line 13
+[26-Apr-2016 16:28:15 America/New_York] PHP Parse error:  syntax error, unexpected '{' in /home/yaupbhei/public_html/templates/travel/travel_form_handler.php on line 13
+[27-Apr-2016 04:00:38 America/New_York] PHP Parse error:  syntax error, unexpected '{' in /home/yaupbhei/public_html/templates/travel/travel_form_handler.php on line 13
+[27-Apr-2016 04:01:07 America/New_York] PHP Parse error:  syntax error, unexpected '{' in /home/yaupbhei/public_html/templates/travel/travel_form_handler.php on line 13
+[27-Apr-2016 04:38:12 America/New_York] PHP Parse error:  syntax error, unexpected '{' in /home/yaupbhei/public_html/templates/travel/travel_form_handler.php on line 13
+[27-Apr-2016 04:41:23 America/New_York] PHP Parse error:  syntax error, unexpected '{' in /home/yaupbhei/public_html/templates/travel/travel_form_handler.php on line 13
+[27-Apr-2016 04:41:37 America/New_York] PHP Parse error:  syntax error, unexpected '{' in /home/yaupbhei/public_html/templates/travel/travel_form_handler.php on line 13
+[27-Apr-2016 04:43:19 America/New_York] PHP Parse error:  syntax error, unexpected ':' in /home/yaupbhei/public_html/templates/travel/travel_form_handler.php on line 14
+[27-Apr-2016 04:43:26 America/New_York] PHP Parse error:  syntax error, unexpected ':' in /home/yaupbhei/public_html/templates/travel/travel_form_handler.php on line 14
+[27-Apr-2016 05:03:52 America/New_York] PHP Warning:  include(/util/email_handler.php): failed to open stream: No such file or directory in /home/yaupbhei/public_html/templates/travel/travel_order_status.php on line 49
+[27-Apr-2016 05:03:52 America/New_York] PHP Warning:  include(): Failed opening '/util/email_handler.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/yaupbhei/public_html/templates/travel/travel_order_status.php on line 49
+[27-Apr-2016 05:03:52 America/New_York] PHP Warning:  include(/util/sms_handler.php): failed to open stream: No such file or directory in /home/yaupbhei/public_html/templates/travel/travel_order_status.php on line 50
+[27-Apr-2016 05:03:52 America/New_York] PHP Warning:  include(): Failed opening '/util/sms_handler.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/yaupbhei/public_html/templates/travel/travel_order_status.php on line 50
+[27-Apr-2016 05:07:21 America/New_York] PHP Warning:  include(/util/email_handler.php): failed to open stream: No such file or directory in /home/yaupbhei/public_html/templates/travel/travel_order_status.php on line 49
+[27-Apr-2016 05:07:21 America/New_York] PHP Warning:  include(): Failed opening '/util/email_handler.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/yaupbhei/public_html/templates/travel/travel_order_status.php on line 49
+[27-Apr-2016 05:07:21 America/New_York] PHP Warning:  include(/util/sms_handler.php): failed to open stream: No such file or directory in /home/yaupbhei/public_html/templates/travel/travel_order_status.php on line 50
+[27-Apr-2016 05:07:21 America/New_York] PHP Warning:  include(): Failed opening '/util/sms_handler.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/yaupbhei/public_html/templates/travel/travel_order_status.php on line 50

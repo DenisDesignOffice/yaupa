@@ -4,6 +4,10 @@ session_start();
 
 include_once "../../util/connection.php";
 
+If(!isset($_POST['vehicle_type']) || !isset($_POST['from_state']) || !isset($_POST['to_state'])){
+    header("location: /index.php");
+}
+
 $response = '';
 
 $vehicle_type = strtolower(htmlspecialchars($_POST['vehicle_type']));
@@ -99,5 +103,3 @@ if ($to_state == "destination state" || $from_state == "current state") {
     }
 }
 ?>
-
-

@@ -9,7 +9,7 @@ If (!isset($_SESSION['company_name']) || !isset($_SESSION['address']) || !isset(
 $generate_random_cust_id = mt_rand(1111, 9999);
 $generate_random_trans_ref = $_SESSION['transaction_ref'];
 $mac_key = "D3D1D05AFE42AD50818167EAC73C109168A0F108F32645C8B59E897FA930DA44F9230910DAC9E20641823799A107A02068F7BC0F4CC41D2952E249552255710F";
-$url = "http://localhost/templates/charter/charter_order_status.php";
+$url = "http://www.yaupa.com/templates/charter/charter_order_status.php";
 $product_id = "6205";
 $pay_item_id = "101";
 
@@ -38,16 +38,17 @@ $destination = $_SESSION['to'];
 $location = $_SESSION['from'];
 $destination_state = $_SESSION['to_state'];
 $service_provider = $_SESSION['service_provider'];
+$pin = $_SESSION['pin'];
 
 
 $put = "INSERT INTO charter_bookings (firstname,lastname, email, phone,"
         . " address, vehicle_type, from_town, from_state, to_town, "
         . "to_state, cost, service_option, service_providers, payment_type, "
-        . "amount_paid, payment_date, reg_pin, serial, bank_deposit_no, depositor)"
+        . "amount_paid, payment_date, reg_pin, serial, bank_deposit_no, depositor, status, transaction_ref )"
         . " VALUES('$firstname','$lastname', '$email', '$phone', '$address', "
         . " '$type', '$location','$location_state', '$destination', '$destination_state', "
         . " '$amount2', '$charter_option', '$service_provider', '$payment_option', '$amount2', '$date', "
-        . " '$generate_random_trans_ref', '$generate_random_cust_id', '', '')";
+        . " '$pin', '$generate_random_cust_id', '', '', 'pending', '$generate_random_trans_ref'  )";
 
 
 $results = mysql_query($put);
