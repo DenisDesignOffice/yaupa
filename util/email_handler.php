@@ -1,97 +1,89 @@
-<?php
+<?php 
+    //change this to your email. 
+    $firstname = $_SESSION['firstname'] ;
+    $lastname = $_SESSION['lastname'] ;
+    $date = $_SESSION['date'] ;
+    $trnx_ref = $_SESSION['trans_ref'] ;
+    $amount = $_SESSION['amount_to_pay2'] ;
+    
+    $to =  $_SESSION['email'] ;
+    $from = "info@yaupa.com";
+    $subject = "TRANSACTION REPORT";
 
-$to = $_SESSION['email'];
-$subject = 'TRANSACTION INFO';
-$message = '<!DOCTYPE html ">
-<html">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Yaupa</title>
-<style>
+    //begin of HTML message 
+    $message ="
+<html> 
+	
+  <body style=\"background:white;\">
 
-body
-{
-background:white;
-}
-
-
-.container
-{
-width:50%;
+<div style=\"width:50%;
 height:60%;
 padding:3em;
-font-size:14px;
-}
+font-size:14px;\">
 
-
-#date
-{
-position:absolute;
-left:45%;
-}
-
-.transaction
-{
-padding:2em;
-background:#CCCCCC;
-line-height:1.8em;
-font-weight:bold;
-padding-top:0.5em;
-font-size:13px;
-}
-
-.title
-{
-display:inline-block;
-position:relative;
-padding-right:5em;
-width:150px;
-}
-
-
-
-.value
-{
-display:inline-block;
-position:relative;
-left:0;
-}
-
-.greeting
-{
-padding:3em;
-line-height:1.4em;
-padding-left:0;
-}
-
-.logo
-{position:relative;
+<div style=\"position:relative;
 left:65%;
-padding-bottom:0.5em;
-}
-</style>
-</head>
+padding-bottom:0.5em;\"><img src=\"http://www.yaupa.com/static/images/full_logo.png\"/></div>                                                                  
+<div style=\"padding:3em;
+line-height:1.4em;
+padding-left:0;\">
 
-<body>
-
-<div class="container">
-
-<div class="logo"><img src="../static/images/full_logo.png"/></div>                                                                  
-<div class="greeting">
-<span>Dear Passenger/Client </span>                               <span id="date"> 25-April-2016</span><br />
+<span>Dear  $firstname </span>                              
 <p><br />
 Thanks for booking with Yaupa.<br />
 Below are your transaction details
 </div>
 
 
-<div class="transaction">
+<div style=\"padding:2em;
+background:#CCCCCC;
+line-height:1.8em;
+font-weight:bold;
+padding-top:0.5em;
+font-size:13px;\">
+
 <h3>Transaction Notification</h3>
 
-<div>        <span class="title"> Name: </span>                    <span class="value">Christian Okpakpo</span></div>
-<div>  <span class="title">Reference Number: </span>                   <span class="value">  34456567545454</span></div>
-        <div><span class="title">  Total Amount:  </span>                 <span class="value">  10,000.00</span></div>
+<div>       
+
+<span style=\"display:inline-block;
+position:relative;
+padding-right:5em;
+width:150px;\"> Name: </span>   
+
+<span style=\"display:inline-block;
+position:relative;
+left:0;\"> $lastname  $firstname </span></div>
+
+<div>  <span style=\"display:inline-block;
+position:relative;
+padding-right:5em;
+width:150px;\">Reference Number: </span> 
+
+<span style=\"display:inline-block;
+position:relative;
+left:0;\">  $trnx_ref </span></div>
+                  
+<div><span style=\"display:inline-block;
+position:relative;
+padding-right:5em;
+width:150px;\">  Total Amount:  </span>  
+        
+<span style=\"display:inline-block;
+position:relative;
+left:0;\">   $amount </span></div>
 </div>
+
+<div><span style=\"display:inline-block;
+position:relative;
+padding-right:5em;
+width:150px;\">  Date:  </span>  
+        
+<span style=\"display:inline-block;
+position:relative;
+left:0;\">   $date </span></div>
+</div>
+
 
 
 <div>
@@ -101,16 +93,18 @@ For more details or support call +234 7035 277 717<br />
 or visit www.yaupa.com 
 </div>
   
-  </div>                                     
+  </div>
+  </body>
+</html>";
+   //end of message 
+    
 
-</body>
-</html>
-';
-$headers = 'From: info@yaupa.com' . "\r\n" .
-        'Reply-To: noreply' . "\r\n" .
-        'X-Mailer: PHP/' . phpversion() .
-        'MIME-Version: 1.0\r\n' .
-        'Content-Type: text/html; charset=ISO-8859-1\r\n';
+    
+    $headers  = "From: $from\r\n"; 
+    $headers .= "Content-type: text/html\r\n";
 
-mail($to, $subject, $message, $headers);
+    // now lets send the email. 
+    mail($to, $subject, $message, $headers); 
+
+    echo "<center><h5>an email of your transaction details has been sent to your inbox</h5></center>"; 
 ?>

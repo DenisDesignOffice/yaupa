@@ -10,17 +10,14 @@ require_once "../../util/connection.php";
 
 $response = '';
 
-if(isset($_POST['from1']) || isset($_POST['to1']){
-	header(location: /index.php);
-}
 
 $from_home = strtolower(htmlspecialchars($_POST['from1']));
 $to_home = strtolower(htmlspecialchars($_POST['to1']));
 
 if (isset($_POST['from1'])){
-    $result = mysql_query("SELECT * FROM travel_services, terminals WHERE from_state='$from_home'  AND to_state='$to_home' ");
+    $result = mysql_query("SELECT DISTINCT * FROM travel_services, terminals WHERE from_state='$from_home'  AND to_state='$to_home' AND service_provider=tag ");
 }else{
-    $result = mysql_query("SELECT * FROM travel_services, terminals WHERE from_state='$from'  AND to_state='$to' AND service_provider=tag");
+    $result = mysql_query("SELECT DISTINCT * FROM travel_services, terminals WHERE from_state='$from'  AND to_state='$to' AND service_provider=tag ");
 }
 
 if (!$result) {

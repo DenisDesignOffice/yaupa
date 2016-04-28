@@ -46,8 +46,8 @@
         $sql = "UPDATE travel_bookings SET status='success' WHERE reg_pin='" . $_SESSION['trans_ref'] ."'";
         mysql_query($sql);
             
-            include '/util/email_handler.php';
-            include '/util/sms_handler.php';
+            include '../../util/email_handler.php';
+            include '../..//util/sms_handler.php';
             include './travel_ticket.php';
             
         } else  {

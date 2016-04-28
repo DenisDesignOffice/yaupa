@@ -32,3 +32,18 @@
 [26-Apr-2016 15:10:50 America/New_York] PHP Parse error:  syntax error, unexpected '{' in /home/yaupbhei/public_html/templates/travel/travel_form_handler.php on line 13
 [26-Apr-2016 16:28:01 America/New_York] PHP Parse error:  syntax error, unexpected '{' in /home/yaupbhei/public_html/templates/travel/travel_form_handler.php on line 13
 [26-Apr-2016 16:28:15 America/New_York] PHP Parse error:  syntax error, unexpected '{' in /home/yaupbhei/public_html/templates/travel/travel_form_handler.php on line 13
+[27-Apr-2016 04:00:38 America/New_York] PHP Parse error:  syntax error, unexpected '{' in /home/yaupbhei/public_html/templates/travel/travel_form_handler.php on line 13
+[27-Apr-2016 04:01:07 America/New_York] PHP Parse error:  syntax error, unexpected '{' in /home/yaupbhei/public_html/templates/travel/travel_form_handler.php on line 13
+[27-Apr-2016 04:38:12 America/New_York] PHP Parse error:  syntax error, unexpected '{' in /home/yaupbhei/public_html/templates/travel/travel_form_handler.php on line 13
+[27-Apr-2016 04:41:23 America/New_York] PHP Parse error:  syntax error, unexpected '{' in /home/yaupbhei/public_html/templates/travel/travel_form_handler.php on line 13
+[27-Apr-2016 04:41:37 America/New_York] PHP Parse error:  syntax error, unexpected '{' in /home/yaupbhei/public_html/templates/travel/travel_form_handler.php on line 13
+[27-Apr-2016 04:43:19 America/New_York] PHP Parse error:  syntax error, unexpected ':' in /home/yaupbhei/public_html/templates/travel/travel_form_handler.php on line 14
+[27-Apr-2016 04:43:26 America/New_York] PHP Parse error:  syntax error, unexpected ':' in /home/yaupbhei/public_html/templates/travel/travel_form_handler.php on line 14
+[27-Apr-2016 05:03:52 America/New_York] PHP Warning:  include(/util/email_handler.php): failed to open stream: No such file or directory in /home/yaupbhei/public_html/templates/travel/travel_order_status.php on line 49
+[27-Apr-2016 05:03:52 America/New_York] PHP Warning:  include(): Failed opening '/util/email_handler.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/yaupbhei/public_html/templates/travel/travel_order_status.php on line 49
+[27-Apr-2016 05:03:52 America/New_York] PHP Warning:  include(/util/sms_handler.php): failed to open stream: No such file or directory in /home/yaupbhei/public_html/templates/travel/travel_order_status.php on line 50
+[27-Apr-2016 05:03:52 America/New_York] PHP Warning:  include(): Failed opening '/util/sms_handler.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/yaupbhei/public_html/templates/travel/travel_order_status.php on line 50
+[27-Apr-2016 05:07:21 America/New_York] PHP Warning:  include(/util/email_handler.php): failed to open stream: No such file or directory in /home/yaupbhei/public_html/templates/travel/travel_order_status.php on line 49
+[27-Apr-2016 05:07:21 America/New_York] PHP Warning:  include(): Failed opening '/util/email_handler.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/yaupbhei/public_html/templates/travel/travel_order_status.php on line 49
+[27-Apr-2016 05:07:21 America/New_York] PHP Warning:  include(/util/sms_handler.php): failed to open stream: No such file or directory in /home/yaupbhei/public_html/templates/travel/travel_order_status.php on line 50
+[27-Apr-2016 05:07:21 America/New_York] PHP Warning:  include(): Failed opening '/util/sms_handler.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/yaupbhei/public_html/templates/travel/travel_order_status.php on line 50

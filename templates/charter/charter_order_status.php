@@ -51,6 +51,7 @@
             mysql_query($sql);
 
             include '../../util/sms_handler.php';
+            include '../../util/email_handler.php';
             include './charter_ticket.php';
             
         } else {
