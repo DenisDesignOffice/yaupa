@@ -5,6 +5,7 @@ If (!isset($_POST['stoppage']) || !isset($_POST['address']) || !isset($_POST['ty
     header("location: /index.php");
 }
 
+
 $_SESSION['stoppage'] = strtolower(htmlspecialchars($_POST['stoppage']));
 $_SESSION['address'] = strtolower(htmlspecialchars($_POST['address']));
 $_SESSION['type'] = strtolower(htmlspecialchars($_POST['type']));
@@ -100,7 +101,7 @@ $_SESSION['to_state'] = strtolower(htmlspecialchars($_POST['to_state']));
             <div class="col-4">
                 <label>
                     Travel Date
-                    <input placeholder="dd-mm-yy" id="date" name="date" tabindex="6"  />
+                    <input type="date" placeholder="dd-mm-yy" id="date" name="date" tabindex="6"  />
                 </label>
             </div>
 
@@ -209,7 +210,24 @@ $_SESSION['to_state'] = strtolower(htmlspecialchars($_POST['to_state']));
 
     <script src="../../static/js/jquery.simplemodal.js"></script>
     <script src="../../static/js/jquery.js"></script>
+    
     <?php require_once "../../templates/footer.php";
     ?>
-
+<script>
+    var datefield=document.createElement("input")
+    datefield.setAttribute("type", "date")
+    if (datefield.type!="date"){ //if browser doesn't support input type="date", load files for jQuery UI Date Picker
+        document.write('<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />\n')
+        document.write('<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"><\/script>\n')
+        document.write('<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"><\/script>\n')
+    }
+</script>
+ 
+<script>
+if (datefield.type!="date"){ //if browser doesn't support input type="date", initialize date picker widget:
+    jQuery(function($){ //on document.ready
+        $('#birthday').datepicker();
+    })
+}
+</script>
 
