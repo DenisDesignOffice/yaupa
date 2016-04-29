@@ -1,0 +1,6 @@
+[15-Mar-2016 07:07:43 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[15-Mar-2016 07:07:43 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
+[15-Mar-2016 07:07:59 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[15-Mar-2016 07:07:59 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
+[15-Mar-2016 18:48:18 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/yaupbhei/public_html/util/connection.php on line 9
+[15-Mar-2016 18:48:18 America/New_York] PHP Fatal error:  Call to undefined function mysql_connect_error() in /home/yaupbhei/public_html/util/connection.php on line 13
