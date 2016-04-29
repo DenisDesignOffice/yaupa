@@ -31,11 +31,14 @@
                 $duration = strtolower(htmlspecialchars($_GET{'duration'}));
                 $id = strtolower(htmlspecialchars($_GET{'id'}));
                 $stoppage_point = strtolower(htmlspecialchars($_GET{'stoppage_point'}));
+                $aircondition = strtolower(htmlspecialchars($_GET{'aircondition'}));
+                $luggage_limit = strtolower(htmlspecialchars($_GET{'luggage_limit '}));
+                $person_per_seat = strtolower(htmlspecialchars($_GET{'person_per_seat '}));
 
                 $sql = "INSERT INTO travel_services(service_provider, vehicle_type, from_state, to_state, "
-                        . "departure_time, speed_limit, cost, last_bus_stop, processing_fee, duration, stoppage_point) "
+                        . "departure_time, speed_limit, cost, last_bus_stop, processing_fee, duration, stoppage_point, aircondition, luggage_limit, person_per_seat) "
                         . "VALUES ('$service_provider','$vehicle_type', '$from_state', '$to_state', "
-                        . "'$departure_time', '$speed_limit', '$cost', '$last_bus_stop', '$processing_fee', '$duration', '$stoppage_point')";
+                        . "'$departure_time', '$speed_limit', '$cost', '$last_bus_stop', '$processing_fee', '$duration', '$stoppage_point', '$aircondition', '$luggage_limit', '$person_per_seat' )";
 
                 $query = mysql_query($sql);
 
@@ -79,6 +82,11 @@
                     <br/>
                     <input name="departure_time"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Departure time">
                     <input name="processing_fee"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Processing fee">
+                    <br/>
+                    
+                    <input name="aircondition"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="aircondition">
+                    <input name="luggage_limit"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="luggage_limit">
+                    <input name="person_per_seat"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="person_per_seat">
                     <br/>
 
                     <input value="Add" style="width:20%; margin-top: 30px; height: 30px; margin-top: 2dp " type="submit" classname="search"  >

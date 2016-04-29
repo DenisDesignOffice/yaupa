@@ -59,3 +59,4 @@
 [27-Apr-2016 02:42:01 America/New_York] PHP Parse error:  syntax error, unexpected '-', expecting :: (T_PAAMAYIM_NEKUDOTAYIM) in /home/yaupbhei/public_html/util/email_handler.php on line 97
 [27-Apr-2016 03:00:24 America/New_York] PHP Parse error:  syntax error, unexpected '-', expecting :: (T_PAAMAYIM_NEKUDOTAYIM) in /home/yaupbhei/public_html/util/email_handler.php on line 97
 [27-Apr-2016 04:34:05 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/yaupbhei/public_html/templates/charter/charter_order_status.php:13) in /home/yaupbhei/public_html/templates/charter/charter_order_status.php on line 15
+[28-Apr-2016 15:47:20 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/yaupbhei/public_html/templates/charter/charter_order_status.php:13) in /home/yaupbhei/public_html/templates/charter/charter_order_status.php on line 15

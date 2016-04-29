@@ -72,7 +72,7 @@ width:150px;\">  Total Amount:  </span>
 <span style=\"display:inline-block;
 position:relative;
 left:0;\">   $amount </span></div>
-</div>
+
 
 <div><span style=\"display:inline-block;
 position:relative;
@@ -83,6 +83,9 @@ width:150px;\">  Date:  </span>
 position:relative;
 left:0;\">   $date </span></div>
 </div>
+
+</div>
+
 
 
 
