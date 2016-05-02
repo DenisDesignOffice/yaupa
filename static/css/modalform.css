@@ -189,11 +189,25 @@ border:none;
 padding:10px;
 font-size:13px;
 display:inline-block;
+margin-right:10px;
 }
 
 div .searchform
 {padding:10px;
 }
+
+form select 
+{
+width:220px;
+height:42px;
+border:none;
+padding:10px;
+font-size:13px;
+margin-right:10px;
+}
+
+
+
 .submit
 {
 cursor:pointer;
@@ -210,4 +224,5 @@ opacity:0.9;
 .submit:hover
 {
 opacity:1;
+border:1px solid #FFFFFF;
 }

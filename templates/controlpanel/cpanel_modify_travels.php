@@ -30,28 +30,28 @@
             if ($row = mysql_fetch_array($retval, MYSQL_ASSOC)) {
                 echo '<form style="margin-bottom: 10px;" name="
                     editTsForm" id="editTsForm" method="get" action="./cpanel_dashboard.php"  >
-            <i class="fa fa-search">
-                <input name="service_provider" value="' . $row["service_provider"] . '" style="width:20%; height: 30px" type="text"  classname="search"  Placeholder="Service provider">
+           
+                <input name="service_provider" value="' . $row["service_provider"] . '"  type="text"  classname="search"  Placeholder="Service provider">
                
-                <input name="vehicle_type" value="' . $row["vehicle_type"] . '" style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Vehicle Type">
+                <input name="vehicle_type" value="' . $row["vehicle_type"] . '"  type="text"  classname="search"  Placeholder="Vehicle Type">
                 
-                <input name="from_state" value="' . $row["from_state"] . '" style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="From State">
-                <br/>
-                <input name="to_state" value="' . $row["to_state"] . '" style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="To State">
+                <input name="from_state" value="' . $row["from_state"] . '"  type="text"  classname="search"  Placeholder="From State">
+                </p>
+                <input name="to_state" value="' . $row["to_state"] . '"  type="text"  classname="search"  Placeholder="To State">
                
-                <input name="cost" value="' . $row["cost"] . '"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Cost">
+                <input name="cost" value="' . $row["cost"] . '"   type="text"  classname="search"  Placeholder="Cost">
                
-                <input name="stoppage_point" value="' . $row["stoppage_point"] . '"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Stoppage point">
-                <br/>
-                <input name="speed_limit" value="' . $row["speed_limit"] . '"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="speed limit">
-                <input name="duration" value="' . $row["duration"] . '"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Duration">
-                <input name="last_bus_top" value="' . $row["last_bus_stop"] . '"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Last bus stop">
-                <br/>
-                <input name="departure_time" value="' . $row["departure_time"] . '"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Departure time">
-                <input name="processing_fee" value="' . $row["processing_fee"] . '"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Processing fee">
-                <br/>
+                <input name="stoppage_point" value="' . $row["stoppage_point"] . '"   type="text"  classname="search"  Placeholder="Stoppage point">
+                </p>
+                <input name="speed_limit" value="' . $row["speed_limit"] . '"   type="text"  classname="search"  Placeholder="speed limit">
+                <input name="duration" value="' . $row["duration"] . '"   type="text"  classname="search"  Placeholder="Duration">
+                <input name="last_bus_top" value="' . $row["last_bus_stop"] . '"   type="text"  classname="search"  Placeholder="Last bus stop">
+                </p>
+                <input name="departure_time" value="' . $row["departure_time"] . '"   type="text"  classname="search"  Placeholder="Departure time">
+                <input name="processing_fee" value="' . $row["processing_fee"] . '"   type="text"  classname="search"  Placeholder="Processing fee">
+                </p>
                 
-                <input value="Update" style="width:20%; margin-top: 30px; height: 30px; margin-top: 2dp " type="submit" classname="search"  >
+                <input value="Update" class="submit" type="submit" classname="search"  >
                 <br/>
                 <input name="purpose"  value="update"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
                 <input name="id"  value="' . $row["id"] . '"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">

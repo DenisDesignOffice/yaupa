@@ -62,11 +62,10 @@
                 }
             }
             ?>
-            <form style="margin-bottom: 10px;" name="
-                  editTxsForm" id="editTxsForm" method="get" action="./cpanel_dashboard.php"  >
-                <i class="fa fa-search">
+            <form  name="editTxsForm" id="editTxsForm" method="get" action="./cpanel_dashboard.php"  >
+               
 
-                    <select  name="company" style="width:20%; height: 30px" class="input-state" >
+                    <select  name="company"  class="input-state" >
                         <option>--transport company--</option>
                         <?php
                         $query = 'SELECT * FROM transport_companies order by name';
@@ -80,20 +79,20 @@
                         ?>
                     </select>
 
-                    <input name="tag" style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag">
+                    <input name="tag"  type="text"  classname="search"  Placeholder="Tag">
 
-                    <input name="phone"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Phone">
-                    <br/>
-                    <input name="address"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Address">
+                    <input name="phone"   type="text"  classname="search"  Placeholder="Phone">
+                    </p>
+                    <input name="address"   type="text"  classname="search"  Placeholder="Address">
 
-                    <input name="email"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Email">
+                    <input name="email"    type="text"  classname="search"  Placeholder="Email">
 
-                    <input name="town"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Town">
-                    <br/>
-                    <input name="state"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="State">
-                    <br/>
+                    <input name="town"    type="text"  classname="search"  Placeholder="Town">
+                    </p>
+                    <input name="state"    type="text"  classname="search"  Placeholder="State">
+                    </p>
 
-                    <input value="Add" style="width:20%; margin-top: 30px; height: 30px; margin-top: 2dp " type="submit" classname="search"  >
+                    <input value="Add" class="submit" type="submit" classname="search"  >
                     <br/>
                     <input name="purpose"  value="addnew"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
                     <input name="view"  value="addplus_terminals"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">

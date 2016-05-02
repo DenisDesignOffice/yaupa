@@ -50,10 +50,9 @@
 
 
 
-        <form style="margin-bottom: 10px;" name="
-              editTxsForm" id="editTxsForm" method="get" action="./cpanel_dashboard.php"  >
-            <i class="fa fa-search">
-                <select  name="service_provider" style="width:20%; height: 30px" class="input-state" >
+        <form  name="editTxsForm" id="editTxsForm" method="get" action="./cpanel_dashboard.php"  >
+            
+                <select name="service_provider"  class="input-state" >
                         <option>--select service provider--</option>
                         <?php
                         $query = 'SELECT * FROM terminals ORDER BY tag';
@@ -66,25 +65,25 @@
                         }
                         ?>
                     </select>
-                <input name="vehicle_type"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Vehicle Type">
+                <input name="vehicle_type"   type="text"  classname="search"  Placeholder="Vehicle Type">
 
-                <input name="coverage_state"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Coverage State">
-                <br/>
-                <input name="coverage_area"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Coverage Area">
+                <input name="coverage_state"   type="text"  classname="search"  Placeholder="Coverage State">
+                </p>
+                <input name="coverage_area"   type="text"  classname="search"  Placeholder="Coverage Area">
 
-                <input name="amount_per_hour"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Amount per hour">
+                <input name="amount_per_hour"   type="text"  classname="search"  Placeholder="Amount per hour">
 
-                <input name="amount_half_day"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Amount half day">
-                <br/>
-                <input name="amount_full_day"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Amount full day">
-                <input name="processing_fee"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Processing fee">
-                <input name="location"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Location">
-                <br/>
-                <input name="coverage_distance"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Coverage distance">
-                <input name="vehicle_picture"   style="width:20%; margin-top: 30px; height: 30px" type="file"  classname="search"  Placeholder="Vehicle Picture">
-                <br/>
+                <input name="amount_half_day"   type="text"  classname="search"  Placeholder="Amount half day">
+                </p>
+                <input name="amount_full_day"   type="text"  classname="search"  Placeholder="Amount full day">
+                <input name="processing_fee"   type="text"  classname="search"  Placeholder="Processing fee">
+                <input name="location"    classname="search"  Placeholder="Location">
+                </p>
+                <input name="coverage_distance"   type="text"  classname="search"  Placeholder="Coverage distance">
+                <input name="vehicle_picture"    type="file"  classname="search"  Placeholder="Vehicle Picture">
+                </p>
 
-                <input value="Add" style="width:20%; margin-top: 30px; height: 30px; margin-top: 2dp " type="submit" classname="search"  >
+                <input value="Add" class="submit" type="submit" classname="search"  >
                 <br/>
                 <input name="purpose"  value="addnew"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
                 <input name="view"  value="addplus_taxi"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">

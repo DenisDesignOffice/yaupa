@@ -29,8 +29,8 @@
             if ($row = mysql_fetch_array($retval, MYSQL_ASSOC)) {
                 echo '<form style="margin-bottom: 10px;" name="
                     editTcForm" id="editTcForm" method="get" action="./cpanel_dashboard.php"  >
-            <i class="fa fa-search">
-                <input name="name" value="' . $row["name"] . '" style="width:20%; height: 30px" type="text"  classname="search"  Placeholder="Company name">
+            
+                <input name="name" value="' . $row["name"] . '"   classname="search"  Placeholder="Company name">
                 <br/>
                 <input name="tag" value="' . $row["tag"] . '" style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
                 <br/>
@@ -41,8 +41,8 @@
                 <input name="head_office" value="' . $row["head_office"] . '"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Head office">
                 <br/>
                 <input name="logo"  style="width:20%; margin-top: 30px; height: 30px" type="file"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
-                <br/>
-                <input value="search" style="width:20%; margin-top: 30px; height: 30px; margin-top: 2dp " type="submit" classname="search"  Placeholder="Update">
+                </p>
+                <input value="Update" class="submit" type="submit" classname="search"  Placeholder="Update">
                 <br/>
                 <input name="purpose"  value="update"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
                 <input name="id"  value="' . $row["id"] . '"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">

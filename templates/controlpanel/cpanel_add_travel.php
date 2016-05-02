@@ -50,12 +50,11 @@
                     }
             }
             ?>
+  </div>
 
-
-            <form style="margin-bottom: 10px;" name="
-                  editTsForm" id="editTsForm" method="get" action="./cpanel_dashboard.php"  >
-                <i class="fa fa-search">
-                    <select  name="service_provider" style="width:20%; height: 30px" placeholder="dfad" class="input-state" >
+            <form name="editTsForm" id="editTsForm" method="get" action="./cpanel_dashboard.php"  >
+                
+                    <select  name="service_provider"   placeholder="dfad" class="input-state" >
                         <option>--select service provider--</option>
                         <?php
                         $query = 'SELECT * FROM terminals ORDER BY tag';
@@ -68,28 +67,28 @@
                         }
                         ?>
                     </select>
-                    <input name="vehicle_type"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Vehicle Type">
-
-                    <input name="from_state"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="From State">
-                    <br/>
-                    <input name="to_state"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="To State">
-                    <input name="cost"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Cost">
-                    <input name="stoppage_point"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Stoppage point">
-                    <br/>
-                    <input name="speed_limit"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="speed limit">
-                    <input name="duration"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Duration">
-                    <input name="last_bus_top"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Last bus stop">
-                    <br/>
-                    <input name="departure_time"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Departure time">
-                    <input name="processing_fee"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Processing fee">
-                    <br/>
                     
-                    <input name="aircondition"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="aircondition">
-                    <input name="luggage_limit"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="luggage_limit">
-                    <input name="person_per_seat"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="person_per_seat">
-                    <br/>
+                    <input name="vehicle_type"   type="text"  classname="search"  Placeholder="Vehicle Type">
 
-                    <input value="Add" style="width:20%; margin-top: 30px; height: 30px; margin-top: 2dp " type="submit" classname="search"  >
+                    <input name="from_state"   type="text"  classname="search"  Placeholder="From State"></p>
+                   
+                    <input name="to_state"   type="text"  classname="search"  Placeholder="To State">
+                    <input name="cost"    type="text"  classname="search"  Placeholder="Cost">
+                    <input name="stoppage_point"    type="text"  classname="search"  Placeholder="Stoppage point">
+                    </p>
+                    <input name="speed_limit"   type="text"  classname="search"  Placeholder="speed limit">
+                    <input name="duration"    type="text"  classname="search"  Placeholder="Duration">
+                    <input name="last_bus_top"    type="text"  classname="search"  Placeholder="Last bus stop">
+                    </p>
+                    <input name="departure_time"    type="text"  classname="search"  Placeholder="Departure time">
+                    <input name="processing_fee"  type="text"  classname="search"  Placeholder="Processing fee">
+                    <input name="aircondition"   type="text"  classname="search"  Placeholder="aircondition"> 
+                    </p>
+                    <input name="luggage_limit"    type="text"  classname="search"  Placeholder="luggage_limit">
+                    <input name="person_per_seat"   type="text"  classname="search"  Placeholder="person_per_seat">
+                    <p/>
+
+                    <input value="Add" class="submit" type="submit" classname="search"  >
                     <br/>
                     <input name="purpose"  value="addnew"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
                     <input name="view"  value="addplus_travel"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
@@ -100,7 +99,7 @@
             </form>
 
 
-        </div>
+      
         <?php
         if (isset($_GET{'message'})) {
             $message = strtolower(htmlspecialchars($_GET{'message'}));
