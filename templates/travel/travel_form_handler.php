@@ -15,7 +15,7 @@ $from_home = strtolower(htmlspecialchars($_POST['from1']));
 $to_home = strtolower(htmlspecialchars($_POST['to1']));
 
 if (isset($_POST['from1'])){
-    $result = mysql_query("SELECT DISTINCT * FROM travel_services, terminals WHERE from_state='$from_home'  AND to_state='$to_home' AND service_provider=tag ");
+    $result = mysql_query("SELECT DISTINCT * FROM travel_services, terminals WHERE from_state='$from_home'  AND to_state='$to_home' AND service_provider=tag");
 }else{
     $result = mysql_query("SELECT DISTINCT * FROM travel_services, terminals WHERE from_state='$from'  AND to_state='$to' AND service_provider=tag ");
 }
@@ -26,7 +26,9 @@ if (!$result) {
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (mysql_num_rows($result) == 0) {
-        $response = "Sorry there is no available transport company for your destination currently. please check back soon";
+        $result = mysql_query("SELECT DISTINCT * FROM travel_services, terminals WHERE from_state='$from_home'  AND to_state='$to_home' AND service_provider=tag ");
+        
+        $response = "<h1>Sorry there is no available transport company for your destination currently. please check back soon</h1>";
     } else {
         while ($row = mysql_fetch_assoc($result)) {
             $value = $row["id"];
@@ -85,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <input hidden="true" type="text" id="type" name="type" value='.$vehicle_type.'  />    
                             <input hidden="true" type="text" id="cost" name="cost" value='.$cost.' />
                             <input hidden="true" type="text" id="stoppage" name="stoppage" value='.$stoppage_point.'  />
-                            <input hidden="true" type="text" id="address" name="address" value='.$address. ' />
+                            <input hidden="true" type="text" id="address" name="address" value=' .$address. ' />
                             <input hidden="true" type="text" id="processing_fee" name="processing_fee" value='.$processing_fee.'  />
                             <input hidden="true" type="text" id="from_state" name="from_state" value='.$from_state.'  />
                             <input hidden="true" type="text" id="to_state" name="to_state" value='.$to_state.'  />       

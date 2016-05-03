@@ -5,7 +5,7 @@ $xml_url = "http://api.ebulksms.com:8080/sendsms.xml";
 $username = '';
 $apikey = '';
 
-
+echo $_SESSION['phone'];
 
 if (isset($_SESSION['sms_reminder'])) {
 
@@ -19,7 +19,7 @@ if (isset($_SESSION['sms_reminder'])) {
         $message = stripslashes($_POST['message']);
     }
     $message = substr($message, 0, 160);
-#Use the next line for HTTP POST with JSON
+    #Use the next line for HTTP POST with JSON
     $result = useJSON($json_url, $username, $apikey, $flash, $sendername, $message, $recipients);
 
 //    echo $result;
@@ -90,5 +90,7 @@ function doPostRequest2($url, $data, $headers) {
 // Print the date from the response
     echo $responseData;
 }
+
+echo $result;
 ?>
 

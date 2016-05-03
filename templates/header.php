@@ -10,7 +10,7 @@
             <nav>
                 <a href="/templates/charter/charter.php">Charter</a>
                 <a href="/templates/travel/travel.php">Travel</a>
-                <a href="/templates/taxi/taxi.php">Taxi</a>
+                <!--<a href="/templates/taxi/taxi.php">Taxi</a>-->
             </nav>
 
         </div>

@@ -5,23 +5,36 @@
 
 $(document).ready(function () {
 
-    $('#travel_form').submit(function (event) {
+    var modal = document.getElementById('myModal');
+    var btn = document.getElementById("myBtn");
+    var span = document.getElementsByClassName("close")[0];
 
-        var data = $('#travel_form').serialize();//get all the form the data
+    $('#travel_form').submit(function (event) {
+        modal.style.display = "block";
+        var data = $('#travel_form').serialize();
         $.ajax({
             type: 'POST',
             url: './travel_form_handler.php',
             dataType: 'html',
             data: data,
             success: function (data) {
-                $("#appendage").html(data);
+                modal.style.display = "none";
+                if (data.toString() == "<h1>Please fill all relevant fields</h1>") {
+                    noresult.style.display = "block";
+                    $("#noresult").html(data);
+                } else if (data.toString() == "<h1>Sorry there is no available transport company for your destination currently. please check back soon</h1>") {
+                    noresult.style.display = "block";
+                    $("#noresult").html("<h1>0 results found for your destination</h1>");
+                } else {
+                    $("#appendage").html(data);
+                }
             }
         });
-        
+
         return false;
     });
-    
-    
+
+
     $('#travel_form_home').submit(function (event) {
 
         var data = $('#travel_form_home').serialize();//get all the form the data
@@ -37,9 +50,9 @@ $(document).ready(function () {
                 alert(data);
             }
         });
-        
+
         return false;
     });
-    
+
 });
 

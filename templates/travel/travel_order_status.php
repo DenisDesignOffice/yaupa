@@ -51,6 +51,7 @@
             include './travel_ticket.php';
             
         } else  {
+            include '../../util/email_handler.php';
             echo "<div class='trans_failure'><h4>Your transaction was not succesful.</h4>"
             . "<h4> Reason: " . (string) $xml->ResponseDescription . "</h4>"
             . "<h4>Transaction reference:" . $param['transactionreference'] . "</h4></div>";
