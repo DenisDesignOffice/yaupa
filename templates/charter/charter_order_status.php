@@ -51,10 +51,13 @@
             mysql_query($sql);
 
             include '../../util/sms_handler.php';
+            include '../../util/success_email_handler.php';
             include '../../util/email_handler.php';
             include './charter_ticket.php';
             
         } else {
+            include '../../util/failure_email_handler.php';
+            include '../../util/email_handler.php';
             echo "<div class='trans_failure'><h4>Your transaction was not succesful.</h4>"
             . "<h4> Reason: " . (string) $xml->ResponseDescription . "</h4>"
             . "<h4>Transaction reference:" . $param['transactionreference'] . "</h4></div>";
