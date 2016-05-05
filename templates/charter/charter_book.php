@@ -1,10 +1,10 @@
-<?php session_start(); ?>
+//<?php session_start(); ?>
 
-<?php
+//<?php
 
-if(!isset($_POST['company_name']) || !isset($_POST['address']) || !isset($_POST['type'])){
-    header("location: /index.php");
-}
+//if(!isset($_POST['company_name']) || !isset($_POST['address']) || !isset($_POST['type'])){
+   // header("location: /index.php");
+//}
 
 $_SESSION['company_name'] = strtolower(htmlspecialchars($_POST['company_name']));
 $_SESSION['company_address'] = strtolower(htmlspecialchars($_POST['address']));
@@ -14,18 +14,18 @@ $_SESSION['to_and_fro_cost'] = strtolower(htmlspecialchars($_POST['to_and_fro_co
 $_SESSION['to_cost'] = strtolower(htmlspecialchars($_POST['to_cost']));
 $_SESSION['service_provider'] = strtolower(htmlspecialchars($_POST['tag']));
 
-?>
+//?>
 
 <!DOCTYPE html> 
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Booking Form</title>
+    <title>Charter Booking Form</title>
 
-
+      <link rel="stylesheet" type="text/css" href="../../static/css/book.css"/>
     <link rel="stylesheet" type="text/css" href="../../static/css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="../../static/font-awesome-4.3.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" type="text/css" href="../../static/css/book.css"/>
+   
     <link rel="stylesheet" type="text/css" media="all" href="../../static/css/switchery.min.css">
     <script type="text/javascript" src="../../static/js/switchery.min.js"></script>
     
@@ -69,19 +69,19 @@ $_SESSION['service_provider'] = strtolower(htmlspecialchars($_POST['tag']));
 
         <form method="post" id="charter_book" action="./charter_confirmation.php">
             <div class="col-2">
-                <label>Firstname
-                    <input placeholder="Enter your  complete names" id="firstname" name="firstname" tabindex="1" />
+                <label>* Firstname
+                    <input placeholder="Enter your  complete names" id="firstname" name="firstname" tabindex="1" required />
                 </label>
             </div>
             <div class="col-2">
-                <label>Lastname
-                    <input placeholder="Enter your surname" id="lastname" name="lastname" tabindex="2"  />
+                <label>* Lastname
+                    <input placeholder="Enter your surname" id="lastname" name="lastname" tabindex="2" required  />
                 </label>
             </div>
             <div class="col-2">
                 <label>
-                    Phone Number
-                    <input placeholder="What's the best way to call your" id="phone" name="phone" tabindex="3" />
+                    * Phone Number
+                    <input placeholder="What's the best way to call your" id="phone" name="phone" tabindex="3" required />
                 </label>
             </div>
             <div class="col-3">
@@ -92,22 +92,22 @@ $_SESSION['service_provider'] = strtolower(htmlspecialchars($_POST['tag']));
             </div>
             <div class="col-3">
                 <label>
-                    Address
-                    <input placeholder="Residential address" id="address" name="address" tabindex="5" />
+                    * Pickup Address
+                    <input placeholder="Residential address" id="address" name="address" tabindex="5" required />
                 </label>
             </div>
 
             <div class="col-4">
                 <label>
-                    Yaupag Date
-                    <input placeholder="dd-mm-yy" id="date" name="date" tabindex="6"  />
+                    * Date
+                    <input placeholder="dd-mm-yy" id="date" name="date" tabindex="6" required />
                 </label>
             </div>
 
             <div class="col-4">
                 <label>
                     Payment Option
-                    <select tabindex="7" id="payment_option" name="payment_option" />
+                    <select tabindex="7" id="payment_option" name="payment_option" required />
                     <option> - </option>
                     <option>Bank_Deposit</option>
                     <option>Debit Card</option>
@@ -128,7 +128,7 @@ $_SESSION['service_provider'] = strtolower(htmlspecialchars($_POST['tag']));
             <div class="col-4">
                 <label>
                     How do You want to Charter?
-                    <select tabindex="7" id="charter_option" name="charter_option" >
+                    <select tabindex="7" id="charter_option" name="charter_option" required  />
                         <option> - </option>
                         <option>To and Fro</option>
                         <option>To alone</option>
