@@ -38,7 +38,8 @@
                 $sql = "INSERT INTO travel_services(service_provider, vehicle_type, from_state, to_state, "
                         . "departure_time, speed_limit, cost, last_bus_stop, processing_fee, duration, stoppage_point, aircondition, luggage_limit, person_per_seat) "
                         . "VALUES ('$service_provider','$vehicle_type', '$from_state', '$to_state', "
-                        . "'$departure_time', '$speed_limit', '$cost', '$last_bus_stop', '$processing_fee', '$duration', '$stoppage_point', '$aircondition', '$luggage_limit', '$person_per_seat' )";
+                        . "'$departure_time', '$speed_limit', '$cost', '$last_bus_stop', '$processing_fee', "
+                        . "'$duration', '$stoppage_point', '$aircondition', '$luggage_limit', '$person_per_seat' )";
 
                 $query = mysql_query($sql);
 
@@ -68,11 +69,18 @@
                         ?>
                     </select>
                     
-                    <input name="vehicle_type"   type="text"  classname="search"  Placeholder="Vehicle Type">
+                    <select  name="vehicle_type" s class="input-state" >
+                        <option>--Select Vehicle Type--</option>
+                        <?php
+                        include_once '../../util/constants/vehicles.html';
+                        
+                        ?>
+                    </select>
 
-                    <input name="from_state"   type="text"  classname="search"  Placeholder="From State"></p>
+                    <input name="from_state"   type="text"  classname="search"  Placeholder="From Town"></p>
                    
-                    <input name="to_state"   type="text"  classname="search"  Placeholder="To State">
+                    <input name="to_state"   type="text"  classname="search"  Placeholder="To Town">
+                    
                     <input name="cost"    type="text"  classname="search"  Placeholder="Cost">
                     <input name="stoppage_point"    type="text"  classname="search"  Placeholder="Stoppage point">
                     </p>

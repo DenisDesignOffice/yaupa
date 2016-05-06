@@ -19,20 +19,39 @@ $(document).ready(function () {
             url: './travel_form_handler.php',
             dataType: 'html',
             data: data,
-            success: function (data) {
+            success: function (dat) {
                 modal.style.display = "none";
-                if (data.toString() == "<h1>Please fill all relevant fields</h1>") {
+                if (dat.toString() == "<h1>Please fill all relevant fields</h1>") {
                     noresult.style.display = "block";
                     appendage.style.display = "none";
-                    $("#noresult").html(data);
-                } else if (data.toString() == "<h1>Sorry there is no available transport company for your destination currently. please check back soon</h1>") {
+                    $("#noresult").html(dat);
+                } else if (dat.toString() == "<h1>Sorry there is no available transport company for your destination currently. please check back soon</h1>") {
                     noresult.style.display = "block";
                     appendage.style.display = "none";
                     $("#noresult").html("<h1>0 results found for your destination</h1>");
+                } else if (dat.toString() == "check nearby towns") {
+                    $.ajax({
+                        type: 'POST',
+                        url: './nearby_search.php',
+                        dataType: 'html',
+                        data: data,
+                        success: function (dat2) {
+                            if (dat2.toString() == "no nearby towns") {
+                                noresult.style.display = "block";
+                                appendage.style.display = "none";
+                                $("#noresult").html("<h1>0 results found for your destination</h1>");
+                            } else {
+                                noresult.style.display = "block";
+                                appendage.style.display = "block";
+                                $("#noresult").html("<h1>0 results found for your destination, but check out these nearby towns</h1>");
+                                $("#appendage").html(dat2);
+                            }
+                        }
+                    });
                 } else {
                     noresult.style.display = "none";
                     appendage.style.display = "block";
-                    $("#appendage").html(data);
+                    $("#appendage").html(dat);
                 }
             }
         });

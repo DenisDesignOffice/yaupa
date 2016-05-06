@@ -63,7 +63,7 @@ require_once "../../util/connection.php";
                     <li id="myBtn"><i class="fa fa-cab"></i> <a href="?view=taxi_services">Taxi Service</a></li>
                     <li id="myBtn"><i class="fa fa-book"> </i> <a href="?view=taxi_bookings">Taxi Bookings</a></li>
                     <li id="myBtn"><i class="fa fa-home"> </i> <a href="?view=terminals">Terminals</a></li>
-                    <li id="myBtn"> <i class="fa fa-database"></i><a href="#"> Statistics </a></li>
+                    <li id="myBtn"> <i class="fa fa-database"></i><a href="?view=cities"> Cities </a></li>
                     <li id="myBtn"><i class="fa fa-user"></i><a href="?view=users"> Users</a></li>
                 </ul>
             </div>
@@ -85,7 +85,9 @@ require_once "../../util/connection.php";
                         include './transport_companies.php';
                     } else if ($view == 'charter_services') {
                         include './charter_services.php';
-                    } else if ($view == 'charter_bookings') {
+                    } else if ($view == 'cities') {
+                        include './cities.php';
+                    }else if ($view == 'charter_bookings') {
                         include './charter_bookings.php';
                     } else if ($view == 'travel_services') {
                         include './travel_services.php';
@@ -107,6 +109,8 @@ require_once "../../util/connection.php";
                         include './cpanel_modify_travels.php';
                     }else if ($view == 'add_taxi') {
                         include './cpanel_modify_taxi.php';
+                    }else if ($view == 'add_city') {
+                        include './cpanel_modify_city.php';
                     }else if ($view == 'add_terminals') {
                         include './cpanel_modify_terminals.php';
                     }else if ($view == 'add_users') {
@@ -125,6 +129,8 @@ require_once "../../util/connection.php";
                         include './cpanel_add_travel.php';
                     }else if($view == 'addplus_taxi') {
                         include './cpanel_add_taxi.php';
+                    }else if($view == 'addplus_city') {
+                        include './cpanel_add_city.php';
                     }
                 } else {
                     include './transport_companies.php';

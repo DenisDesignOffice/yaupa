@@ -45,6 +45,9 @@ switch ($_SERVER['REDIRECT_URL']) {
                         <tr>
                             <td><i class="fa fa-bus"></i>&nbsp;&nbsp;Type:</td><td id="type" name="type" style="text-align:right">' . $vehicle_type . '</td>
                         </tr>
+                         <tr>
+                            <td><i class="fa fa-bus"></i>&nbsp;&nbsp;Destination:</td><td id="type" name="type" style="text-align:right; font-weight: bold;">' . $to_state . '</td>
+                        </tr>
                         <tr>
                             <td><i class="fa fa-money"></i>&nbsp;&nbsp;Price:</td><td id="cost" name="cost" style="text-align:right">' . $cost . '</td>
                         </tr>

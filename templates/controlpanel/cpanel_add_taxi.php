@@ -67,7 +67,15 @@
                     </select>
                 <input name="vehicle_type"   type="text"  classname="search"  Placeholder="Vehicle Type">
 
-                <input name="coverage_state"   type="text"  classname="search"  Placeholder="Coverage State">
+                <!--<input name="coverage_state"   type="text"  classname="search"  Placeholder="Coverage State">-->
+                <select  name="coverage_state"  class="input-state" >
+                        <option>--Select From State--</option>
+                        <?php
+                        include '../../util/constants/states.html';
+                        
+                        ?>
+                    </select>
+                    
                 </p>
                 <input name="coverage_area"   type="text"  classname="search"  Placeholder="Coverage Area">
 
