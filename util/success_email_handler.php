@@ -7,7 +7,7 @@
     $amount = $_SESSION['amount_to_pay2'] ;
     
     $to =  $_SESSION['email'] ;
-    $from = "info@yaupa.com";
+    $from = "YAUPA";
     $subject = "TRANSACTION STATUS";
 
     //begin of HTML message 
