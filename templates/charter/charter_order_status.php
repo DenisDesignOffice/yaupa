@@ -71,7 +71,7 @@
             include '../../util/email_handler.php';
             echo "<div class='trans_failure'><h4>Your transaction was not succesful.</h4>"
             . "<h4> Reason: " . (string) $xml->ResponseDescription . "</h4>"
-            . "<h4> Date: " . (string) $xml-> . "</h4>"
+//            . "<h4> Date: " . (string) $xml-> . "</h4>"
             . "<h4>Transaction reference:" . $_POST['txnRef'] . "</h4></div>";
         }
         ?>
