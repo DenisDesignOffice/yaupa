@@ -47,3 +47,6 @@
 [27-Apr-2016 05:07:21 America/New_York] PHP Warning:  include(): Failed opening '/util/email_handler.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/yaupbhei/public_html/templates/travel/travel_order_status.php on line 49
 [27-Apr-2016 05:07:21 America/New_York] PHP Warning:  include(/util/sms_handler.php): failed to open stream: No such file or directory in /home/yaupbhei/public_html/templates/travel/travel_order_status.php on line 50
 [27-Apr-2016 05:07:21 America/New_York] PHP Warning:  include(): Failed opening '/util/sms_handler.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/yaupbhei/public_html/templates/travel/travel_order_status.php on line 50
+[06-May-2016 06:47:17 America/New_York] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/yaupbhei/public_html/templates/travel/travel_book.php on line 8
+[06-May-2016 06:49:24 America/New_York] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/yaupbhei/public_html/templates/travel/travel_book.php on line 8
+[06-May-2016 06:55:57 America/New_York] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/yaupbhei/public_html/templates/travel/travel_book.php on line 8

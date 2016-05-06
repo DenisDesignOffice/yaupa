@@ -16,7 +16,7 @@
         }
 
         include_once "../../util/connection.php";
-        $param = array();
+        //$param = array();
         $param['productid'] = 6205;
         $param['transactionreference'] = $_SESSION['trans_ref'];
         $param['amount'] = $_SESSION['amount_to_pay'];

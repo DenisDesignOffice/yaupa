@@ -10,6 +10,10 @@
     <body>
 
         <?php
+        if (!isset($_SESSION['trans_ref']) ) {
+            header("location: /index.php");
+        }
+        
         include_once "../../util/connection.php";
 
         $param = array();

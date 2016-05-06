@@ -109,5 +109,5 @@ or visit www.yaupa.com
     // now lets send the email. 
     mail($to, $subject, $message, $headers); 
 
-    echo "<center><h5>an email of your transaction details has been sent to your inbox</h5></center>"; 
+    
 ?>
