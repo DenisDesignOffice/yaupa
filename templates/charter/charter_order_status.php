@@ -12,7 +12,7 @@
 
         <?php
         if (!isset($_SESSION['trans_ref']) || !isset($_SESSION['amount_to_pay']) || !isset($_SESSION['type'])) {
-            header("location: /yaupa.com/index.php");
+            header("location: /index.php");
         }
 
         include_once "../../util/connection.php";
@@ -55,6 +55,7 @@
             include './charter_ticket.php';
             
         } else {
+       		include '../../util/email_handler.php';
             echo "<div class='trans_failure'><h4>Your transaction was not succesful.</h4>"
             . "<h4> Reason: " . (string) $xml->ResponseDescription . "</h4>"
             . "<h4>Transaction reference:" . $param['transactionreference'] . "</h4></div>";

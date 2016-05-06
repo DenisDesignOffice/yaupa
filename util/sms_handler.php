@@ -10,7 +10,7 @@ $apikey = '';
 if (isset($_SESSION['sms_reminder'])) {
 
     $username = 'kenneth.ngedo@gmail.com';
-    $apikey = '02ebc31144db44211b4b15a7a3761cb5f6bae53f';
+    $apikey = 'ad581d548f884e1b571e213e169838064337ccbe';
     $sendername = substr('YAUPA', 0, 11);
     $recipients = $_SESSION['phone'];
     $message = 'Hello ' . $_SESSION['firstname'] . ' your transaction was successful with reference number ' . $_SESSION['trans_ref'] ;
@@ -91,4 +91,3 @@ function doPostRequest2($url, $data, $headers) {
     echo $responseData;
 }
 ?>
-
