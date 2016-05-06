@@ -28,7 +28,7 @@
         <div>
 
             <!--Display Company Name Here -->
-            <h1>' . ucfirst($company) . '</h1>
+            <h1>' . ucwords($company) . '</h1>
 
             <table>
 
