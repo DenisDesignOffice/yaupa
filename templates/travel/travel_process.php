@@ -1,8 +1,8 @@
-<?php 
+<?php
 session_start();
 require_once "../../util/pin_generator.php";
 
-If(!isset($_SESSION['company_name']) || !isset($_SESSION['address']) || !isset($_SESSION['type'])){
+If (!isset($_SESSION['company_name']) || !isset($_SESSION['address']) || !isset($_SESSION['type'])) {
     header("location: /index.php");
 }
 
@@ -10,8 +10,8 @@ $generate_random_cust_id = mt_rand(111, 999);
 $generate_random_trans_ref = $_SESSION['transaction_ref'];
 $mac_key = "D3D1D05AFE42AD50818167EAC73C109168A0F108F32645C8B59E897FA930DA44F9230910DAC9E20641823799A107A02068F7BC0F4CC41D2952E249552255710F";
 $url = "http://www.yaupa.com/templates/travel/travel_order_status.php";
-$product_id = "6205";
-$pay_item_id = "101";
+$product_id = 6205;
+$pay_item_id = 101;
 
 $_SESSION['trans_ref'] = $generate_random_trans_ref;
 $_SESSION['pin'] = mt_rand(1111111111, 9999999999);
@@ -38,8 +38,8 @@ $next_of_kin = $_SESSION['next_of_kin'];
 $to_state = $_SESSION['to_state'];
 $from_state = $_SESSION['from_state'];
 
-    
-$put="INSERT INTO travel_bookings (firstname,lastname, email, phone, address, "
+
+$put = "INSERT INTO travel_bookings (firstname,lastname, email, phone, address, "
         . "payment_date, traveling_date, next_of_kin, payment_type, reg_pin, "
         . " serial, service_provider, amount_paid, status, to_state, from_state, "
         . "bank_slip_no, bank_of_payment, debit_trans_no, name_of_depositor, date_of_deposition,  source ) "
@@ -50,13 +50,12 @@ $put="INSERT INTO travel_bookings (firstname,lastname, email, phone, address, "
 
 
 $results = mysql_query($put);
-if(! $results )   {
-      die('Could not enter data: ' . mysql_error());
-   }
-   
-   
-mysql_close($connect);
+if (!$results) {
+    die('Could not enter data: ' . mysql_error());
+}
 
+
+mysql_close($connect);
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -64,7 +63,7 @@ mysql_close($connect);
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link rel="shortcut icon" href="/static/images/favicon.ico">
-        <title>booking</title>
+            <title>booking</title>
     </head>
 
     <body onload="document.travel_form.submit()">
@@ -74,12 +73,16 @@ mysql_close($connect);
 
             <td colspan="4"><div align="center">
                     <input name="product_id" type="hidden" value="<?php echo $product_id; ?>" />
-                    <input name="cust_id" type="hidden" value="<?php echo $generate_random_cust_id; ?>" />
-                    <input name="cust_name" type="hidden" value="<?php echo $_SESSION['lastname']; ?>" />
-                    <input name="pay_item_id" type="hidden" value="<?php echo $pay_item_id; ?>" />
                     <input name="amount" type="hidden" value="<?php echo $_SESSION['amount_to_pay']; ?>" />
                     <input name="currency" type="hidden" value="566" />
+                    <input name="payment_params" type="hidden" value="0" />
                     <input name="site_redirect_url" type="hidden" value="<?php echo $url; ?>"/>
+                    <input name="site_name" type="hidden" value="www.yaupa.com"/>
+                    <input name="cust_id" type="hidden" value="<?php echo $generate_random_cust_id; ?>" />
+                    <input name="cust_name" type="hidden" value="<?php echo $_SESSION['lastname']; ?>" />
+                    <input name="cust_name_desc" type="hidden" value="customer name" />
+                    <input name="pay_item_id" type="hidden" value="<?php echo $pay_item_id; ?>" />
+                    <input name="pay_item_name" type="hidden" value="payment name" />
                     <input name="txn_ref" type="hidden" value="<?php echo $generate_random_trans_ref; ?>" />
                     <?php
                     $raw_value = $generate_random_trans_ref . $product_id . $pay_item_id . $_SESSION['amount_to_pay'] . $url . $mac_key;

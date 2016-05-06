@@ -22,10 +22,17 @@
 <body >
 
     <?php require_once "../header.php"; ?>
+    <section style="height:10px"class="ha-waypoint" data-animate-down="ha-header-small" data-animate-up="ha-header-large">     
+    </section>
+    
+    
 
     <br/><br/>
     <!--search form-->
-    <section class="form">
+    <section class="form" style="padding-top: 2px">
+        <div class="charter">
+            <h1>Search and Travel</h1>
+        </div>
         <form method="post" name="travel_form" id="travel_form" action="./travel.php">
 
             <input type="text" name="from1" value="<?php if (isset($_POST['from_home'])) echo $_POST['from_home']; ?>" placeholder="From ?  e.g Ibadan, Warri" class="input"></td>

@@ -17,7 +17,7 @@ $email = strtolower(htmlspecialchars($_POST['email']));
 $address = strtolower(htmlspecialchars($_POST['address']));
 $date = strtolower(htmlspecialchars($_POST['date']));
 $payment_option = strtolower(htmlspecialchars($_POST['payment_option']));
-$charter_option = strtolower(htmlspecialchars($_POST['charter_option']));
+//$charter_option = strtolower(htmlspecialchars($_POST['charter_option']));
 $selected_option_id = strtolower(htmlspecialchars($_POST['selected_option_id']));
 $sms_reminder = strtolower(htmlspecialchars($_POST['sms_reminder']));
 $next_of_kin = strtolower(htmlspecialchars($_POST['next_of_kin']));
@@ -30,7 +30,7 @@ $_SESSION['email'] = $email;
 $_SESSION['address'] = $address;
 $_SESSION['date'] = $date;
 $_SESSION['payment_option'] = $payment_option;
-$_SESSION['charter_option'] = $charter_option;
+//$_SESSION['charter_option'] = $charter_option;
 $_SESSION['selected_option_id'] = $selected_option_id;
 $_SESSION['next_of_kin'] = $next_of_kin;
 

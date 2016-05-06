@@ -1,4 +1,7 @@
-<?php ob_start(); session_start(); ?>
+<?php
+ob_start();
+session_start();
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -10,15 +13,15 @@
     <body>
 
         <?php
-        if (!isset($_SESSION['trans_ref']) ) {
+        if (!isset($_SESSION['trans_ref'])) {
             header("location: /index.php");
         }
-        
+
         include_once "../../util/connection.php";
 
         $param = array();
         $param['productid'] = 6205;
-        $param['transactionreference'] = $_SESSION['trans_ref'];
+        $param['transactionreference'] = $_POST['txnref'];
         $param['amount'] = $_SESSION['amount_to_pay'];
 
 
@@ -45,31 +48,36 @@
         <h1>Response</h1>
 
         <?php
-        if ((string) $xml->ResponseCode == 00) {
+        if ((string) $xml->ResponseCode == '00') {
 
-        $sql = "UPDATE travel_bookings SET status='success' WHERE reg_pin='" . $_SESSION['trans_ref'] ."'";
-        mysql_query($sql);
-            
-            include '../../util/email_handler.php';
-            include '../..//util/success_email_handler.php';
-            include '../..//util/sms_handler.php';
-            echo "<div class='trans_success'><h4>Your transaction was not succesful.</h4>"
+            $sql = "UPDATE travel_bookings SET status='success' WHERE reg_pin='" . $_SESSION['trans_ref'] . "'";
+            mysql_query($sql);
+
+//            include '../../util/email_handler.php';
+//            include '../..//util/success_email_handler.php';
+//            include '../..//util/sms_handler.php';
+            echo "<div class='trans_success' style='color:red' >"
+            . "<h4> Status: " . (string) $xml->ResponseDescription . "</h4>"
             . "<h4> Response Code: " . (string) $xml->ResponseCode . "</h4>"
             . "<h4> Amount: " . (string) $xml->Amount . "</h4>"
             . "<h4> Merchant Reference: " . (string) $xml->MerchantReference . "</h4>"
             . "<h4> Payment Reference: " . (string) $xml->PaymentReference . "</h4>"
             . "<h4> Retrieval Reference Number: " . (string) $xml->RetrievalReferenceNumber . "</h4>"
-            . "<h4> Reason: " . (string) $xml->ResponseDescription . "</h4>"
-            . "<h4>Transaction reference:" . $param['transactionreference'] . "</h4></div>";
-            include './travel_ticket.php';
-            
-        } else  {
-            include '../..//util/failure_email_handler.php';
-            include '../../util/email_handler.php';
-            echo "<div class='trans_failure'><h4>Your transaction was not succesful.</h4>"
-            . "<h4> Reason: " . (string) $xml->ResponseDescription . "</h4>"
-            . "<h4>Transaction reference:" . $param['transactionreference'] . "</h4></div>";
+            . "</div>";
+//            include './travel_ticket.php';
+        } else {
+//            include '../..//util/failure_email_handler.php';
+//            include '../../util/email_handler.php';
+            echo "<div class='trans_failure' style='color:red'>"
+            . "<h4> Status: " . (string) $xml->ResponseDescription . "</h4>"
+            . "<h4> Response Code: " . (string) $xml->ResponseCode . "</h4>"
+            . "<h4> Amount: " . (string) $xml->Amount . "</h4>"
+            . "<h4> Merchant Reference: " . (string) $xml->MerchantReference . "</h4>"
+            . "<h4> Payment Reference: " . (string) $xml->PaymentReference . "</h4>"
+            . "<h4> Retrieval Reference Number: " . (string) $xml->RetrievalReferenceNumber . "</h4>"
+            . "</div>";
         }
+        
         ?>
         <a href="/index.php"><h4>return to home page</h4></a>
     </body>
