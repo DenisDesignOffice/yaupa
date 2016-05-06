@@ -31,7 +31,7 @@
                 echo '<form style="margin-bottom: 10px;" name="
                     editTsForm" id="editTsForm" method="get" action="./cpanel_dashboard.php"  >
            
-                <input name="service_provider" value="' . $row["service_provider"] . '"  type="text"  classname="search"  Placeholder="Service provider">
+                <input name="service_provider" value="' . $row["service_provider"] . '"  type="text"  classname="search"  Placeholder="Service Provider">
                
                 <input name="vehicle_type" value="' . $row["vehicle_type"] . '"  type="text"  classname="search"  Placeholder="Vehicle Type">
                 
@@ -41,21 +41,21 @@
                
                 <input name="cost" value="' . $row["cost"] . '"   type="text"  classname="search"  Placeholder="Cost">
                
-                <input name="stoppage_point" value="' . $row["stoppage_point"] . '"   type="text"  classname="search"  Placeholder="Stoppage point">
+                <input name="stoppage_point" value="' . $row["stoppage_point"] . '"   type="text"  classname="search"  Placeholder="Stoppage Point">
                 </p>
-                <input name="speed_limit" value="' . $row["speed_limit"] . '"   type="text"  classname="search"  Placeholder="speed limit">
+                <input name="speed_limit" value="' . $row["speed_limit"] . '"   type="text"  classname="search"  Placeholder="Speed Limit">
                 <input name="duration" value="' . $row["duration"] . '"   type="text"  classname="search"  Placeholder="Duration">
-                <input name="last_bus_top" value="' . $row["last_bus_stop"] . '"   type="text"  classname="search"  Placeholder="Last bus stop">
+                <input name="last_bus_top" value="' . $row["last_bus_stop"] . '"   type="text"  classname="search"  Placeholder="Last Bus Stop">
                 </p>
-                <input name="departure_time" value="' . $row["departure_time"] . '"   type="text"  classname="search"  Placeholder="Departure time">
-                <input name="processing_fee" value="' . $row["processing_fee"] . '"   type="text"  classname="search"  Placeholder="Processing fee">
+                <input name="departure_time" value="' . $row["departure_time"] . '"   type="text"  classname="search"  Placeholder="Departure Time">
+                <input name="processing_fee" value="' . $row["processing_fee"] . '"   type="text"  classname="search"  Placeholder="Processing Fee">
                 </p>
                 
                 <input value="Update" class="submit" type="submit" classname="search"  >
                 <br/>
-                <input name="purpose"  value="update"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
-                <input name="id"  value="' . $row["id"] . '"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
-                <input name="view"  value="add_travels"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
+                <input name="purpose"  value="update"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure Motors">
+                <input name="id"  value="' . $row["id"] . '"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure Motors">
+                <input name="view"  value="add_travels"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure Motors">
 
 </i>
 

@@ -76,22 +76,22 @@
                     <input name="cost"    type="text"  classname="search"  Placeholder="Cost">
                     <input name="stoppage_point"    type="text"  classname="search"  Placeholder="Stoppage point">
                     </p>
-                    <input name="speed_limit"   type="text"  classname="search"  Placeholder="speed limit">
+                    <input name="speed_limit"   type="text"  classname="search"  Placeholder="Speed Limit">
                     <input name="duration"    type="text"  classname="search"  Placeholder="Duration">
-                    <input name="last_bus_top"    type="text"  classname="search"  Placeholder="Last bus stop">
+                    <input name="last_bus_top"    type="text"  classname="search"  Placeholder="Last Bus Stop">
                     </p>
                     <input name="departure_time"    type="text"  classname="search"  Placeholder="Departure time">
-                    <input name="processing_fee"  type="text"  classname="search"  Placeholder="Processing fee">
-                    <input name="aircondition"   type="text"  classname="search"  Placeholder="aircondition"> 
+                    <input name="processing_fee"  type="text"  classname="search"  Placeholder="Processing Fee">
+                    <input name="aircondition"   type="text"  classname="search"  Placeholder="Aircondition"> 
                     </p>
-                    <input name="luggage_limit"    type="text"  classname="search"  Placeholder="luggage_limit">
+                    <input name="luggage_limit"    type="text"  classname="search"  Placeholder="Luggage_Limit">
                     <input name="person_per_seat"   type="text"  classname="search"  Placeholder="person_per_seat">
                     <p/>
 
                     <input value="Add" class="submit" type="submit" classname="search"  >
                     <br/>
-                    <input name="purpose"  value="addnew"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
-                    <input name="view"  value="addplus_travel"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
+                    <input name="purpose"  value="addnew"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure Motors">
+                    <input name="view"  value="addplus_travel"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure Motors">
 
                 </i>
 

@@ -31,7 +31,7 @@
                 echo '<form style="margin-bottom: 10px;" name="
                     editCsForm" id="editCsForm" method="get" action="./cpanel_dashboard.php"  >
             
-                <input name="service_provider" value="' . $row["service_provider"] . '"  type="text"  classname="search"  Placeholder="Service provider">
+                <input name="service_provider" value="' . $row["service_provider"] . '"  type="text"  classname="search"  Placeholder="Service Provider">
                
                 <input name="vehicle_type" value="' . $row["vehicle_type"] . '"  type="text"  classname="search"  Placeholder="Vehicle Type">
                 
@@ -46,18 +46,18 @@
                 <input name="to_cost" value="' . $row["to_cost"] . '"   type="text"  classname="search"  Placeholder="To Cost">
                
 
-                <input name="to_and_fro_cost" value="' . $row["to_and_fro_cost"] . '"   type="text"  classname="search"  Placeholder="To and fro cost">
+                <input name="to_and_fro_cost" value="' . $row["to_and_fro_cost"] . '"   type="text"  classname="search"  Placeholder="To and Fro Cost">
                 
-                <input name="processing_fee" value="' . $row["processing_fee"] . '"  type="text"  classname="search"  Placeholder="Processing fee">
+                <input name="processing_fee" value="' . $row["processing_fee"] . '"  type="text"  classname="search"  Placeholder="Processing Fee">
                 </p>
                 <input name="duration" value="' . $row["duration"] . '"   type="text"  classname="search"  Placeholder="Duration">
                 </p>
                 
                 <input value="Update" class="submit" type="submit" classname="search"  >
                 <br/>
-                <input name="purpose"  value="update"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
-                <input name="id"  value="' . $row["id"] . '"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
-                <input name="view"  value="add_charter"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
+                <input name="purpose"  value="update"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure Motors">
+                <input name="id"  value="' . $row["id"] . '"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure Motors">
+                <input name="view"  value="add_charter"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure Motors">
 
 </i>
 

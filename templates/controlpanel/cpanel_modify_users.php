@@ -121,7 +121,7 @@
                 
                 <input name="lastname"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Lastname">
                 <br/>
-                <input name="access_level"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Acess level e.g 1, 2 or 3">
+                <input name="access_level"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Acess Level e.g 1, 2 or 3">
                
                 <input name="email"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Email">
                
@@ -132,8 +132,8 @@
                 
                 <input value="Add" style="width:20%; margin-top: 30px; height: 30px; margin-top: 2dp " type="submit" classname="search"  >
                 <br/>
-                <input name="purpose"  value="addnew"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
-                <input name="view"  value="add_users"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
+                <input name="purpose"  value="addnew"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure Motors">
+                <input name="view"  value="add_users"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure Motors">
 
 </i>
 
