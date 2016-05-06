@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         while ($row = mysql_fetch_assoc($result)) {
             $value = $row["id"];
-            $company_name = $row['company'];
+            $company_name = strtoupper($row['company']);
             $address = $row['address'];
             $cost = $row["cost"];
             $from_state = $row["from_state"];

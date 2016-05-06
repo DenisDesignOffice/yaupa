@@ -7,7 +7,7 @@ If (!isset($_POST['stoppage']) || !isset($_POST['address']) || !isset($_POST['ty
 
 
 $_SESSION['stoppage'] = strtolower(htmlspecialchars($_POST['stoppage']));
-$_SESSION['address'] = strtolower(htmlspecialchars($_POST['address']));
+$_SESSION['company_address'] = strtolower(htmlspecialchars($_POST['address']));
 $_SESSION['type'] = strtolower(htmlspecialchars($_POST['type']));
 $_SESSION['processing_fee'] = strtolower(htmlspecialchars($_POST['processing_fee']));
 $_SESSION['aircondition'] = strtolower(htmlspecialchars($_POST['aircondition']));

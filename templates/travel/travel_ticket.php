@@ -43,7 +43,7 @@
                 </tr>
 
                 <tr>
-                    <td id="label">Time of Departure</td>  <td id="data">' . $_SESSION['date'] . '</td>
+                    <td id="label">Time of Departure</td>  <td id="data">' . $_SESSION['departure'] . '</td>
                 </tr>
 
                 <tr>
