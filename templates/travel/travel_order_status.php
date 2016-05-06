@@ -53,9 +53,9 @@ session_start();
             $sql = "UPDATE travel_bookings SET status='success' WHERE reg_pin='" . $_SESSION['trans_ref'] . "'";
             mysql_query($sql);
 
-//            include '../../util/email_handler.php';
-//            include '../..//util/success_email_handler.php';
-//            include '../..//util/sms_handler.php';
+            include '../../util/email_handler.php';
+            include '../..//util/success_email_handler.php';
+            include '../..//util/sms_handler.php';
             echo "<div class='trans_success' style='color:red' >"
             . "<h4> Status: " . (string) $xml->ResponseDescription . "</h4>"
             . "<h4> Response Code: " . (string) $xml->ResponseCode . "</h4>"
@@ -64,10 +64,10 @@ session_start();
             . "<h4> Payment Reference: " . (string) $xml->PaymentReference . "</h4>"
             . "<h4> Retrieval Reference Number: " . (string) $xml->RetrievalReferenceNumber . "</h4>"
             . "</div>";
-//            include './travel_ticket.php';
+            include './travel_ticket.php';
         } else {
-//            include '../..//util/failure_email_handler.php';
-//            include '../../util/email_handler.php';
+            include '../..//util/failure_email_handler.php';
+            include '../../util/email_handler.php';
             echo "<div class='trans_failure' style='color:red'>"
             . "<h4> Status: " . (string) $xml->ResponseDescription . "</h4>"
             . "<h4> Response Code: " . (string) $xml->ResponseCode . "</h4>"

@@ -18,7 +18,7 @@
         include_once "../../util/connection.php";
         //$param = array();
         $param['productid'] = 6205;
-        $param['transactionreference'] = $_SESSION['trans_ref'];
+        $param['transactionreference'] = $_POST['txnref'];
         $param['amount'] = $_SESSION['amount_to_pay'];
 
 
@@ -53,26 +53,28 @@
             include '../../util/sms_handler.php';
             include '../../util/success_email_handler.php';
             include '../../util/email_handler.php';
-            echo "<div class='trans_success'><h4>Your transaction was succesful.</h4>"
+            echo "<div class='trans_success' style='color:red' >"
+            . "<h4> Status: " . (string) $xml->ResponseDescription . "</h4>"
             . "<h4> Response Code: " . (string) $xml->ResponseCode . "</h4>"
             . "<h4> Amount: " . (string) $xml->Amount . "</h4>"
             . "<h4> Merchant Reference: " . (string) $xml->MerchantReference . "</h4>"
             . "<h4> Payment Reference: " . (string) $xml->PaymentReference . "</h4>"
             . "<h4> Retrieval Reference Number: " . (string) $xml->RetrievalReferenceNumber . "</h4>"
-            . "<h4> Reason: " . (string) $xml->ResponseDescription . "</h4>"
-            . "<h4> Date: " . (string) $xml . "</h4>"
-            
-            . "<h4>Transaction reference:" . $param['transactionreference'] . "</h4></div>";
+            . "</div>";
             include './charter_ticket.php';
             
         } else {
 
             include '../../util/failure_email_handler.php';
             include '../../util/email_handler.php';
-            echo "<div class='trans_failure'><h4>Your transaction was not succesful.</h4>"
-            . "<h4> Reason: " . (string) $xml->ResponseDescription . "</h4>"
-//            . "<h4> Date: " . (string) $xml-> . "</h4>"
-            . "<h4>Transaction reference:" . $_POST['txnRef'] . "</h4></div>";
+            echo "<div class='trans_success' style='color:red' >"
+            . "<h4> Status: " . (string) $xml->ResponseDescription . "</h4>"
+            . "<h4> Response Code: " . (string) $xml->ResponseCode . "</h4>"
+            . "<h4> Amount: " . (string) $xml->Amount . "</h4>"
+            . "<h4> Merchant Reference: " . (string) $xml->MerchantReference . "</h4>"
+            . "<h4> Payment Reference: " . (string) $xml->PaymentReference . "</h4>"
+            . "<h4> Retrieval Reference Number: " . (string) $xml->RetrievalReferenceNumber . "</h4>"
+            . "</div>";
         }
         ?>
         <a href="/index.php"><h4>return to home page</h4></a>
