@@ -38,7 +38,7 @@ if ($to_state == "destination state" || $from_state == "current state") {
             echo $response;
         } else {
             while ($row = mysql_fetch_assoc($result)) {
-                $company_name = $row['company'];
+                $company_name = strtoupper($row['company']);
                 $address = $row['address'];
                 $to_cost = $row["to_cost"];
                 $to_state = $row["to_state"];
@@ -60,22 +60,22 @@ if ($to_state == "destination state" || $from_state == "current state") {
                         <table>
 
                         <tr>
-                        <td><i class="fa fa-bus"></i>&nbsp;&nbsp;Type:</td><td>' . $vehicle_type . '</td>
+                        <td><i class="fa fa-bus"></i>&nbsp;&nbsp;Type:</td><td style="text-align:right">' . $vehicle_type . '</td>
                         </tr>
                         <tr>
-                        <td><i class="fa fa-money"></i>&nbsp;&nbsp;Price:</td><td id="to_cost" name="to_cost">' . $to_cost . '</td>
-                        </tr>
-
-                        <tr>
-                        <td><i class="fa fa-money"></i>&nbsp;&nbsp;To & Fro Price:</td><td id="to_and_fro_cost" name="to_and_fro_cost">' . $to_and_fro_cost . '</td>
+                        <td><i class="fa fa-money"></i>&nbsp;&nbsp;Price:</td><td id="to_cost" name="to_cost" style="text-align:right">' . $to_cost . '</td>
                         </tr>
 
                         <tr>
-                        <td><i class="fa fa-money"></i>&nbsp;&nbsp;Processing Fee:</td><td id="processing_fee" name="processing_fee">' . $processing_fee . '</td>
+                        <td><i class="fa fa-money"></i>&nbsp;&nbsp;To & Fro Price:</td><td id="to_and_fro_cost" name="to_and_fro_cost" style="text-align:right">' . $to_and_fro_cost . '</td>
                         </tr>
 
                         <tr>
-                        <td><i class="fa fa-building"></i>&nbsp;&nbsp;Car Park</td><td id="company_address" name="company_address">' . $address . '</td>
+                        <td><i class="fa fa-money"></i>&nbsp;&nbsp;Processing Fee:</td><td id="processing_fee" name="processing_fee" style="text-align:right">' . $processing_fee . '</td>
+                        </tr>
+
+                        <tr>
+                        <td><i class="fa fa-building"></i>&nbsp;&nbsp;Car Park</td><td id="company_address" name="company_address" style="text-align:right">' . $address . '</td>
                         </tr>
 			
                             <input hidden="true" type="text" id="company_name" name="company_name" value=' . $company_name . ' />
@@ -87,7 +87,7 @@ if ($to_state == "destination state" || $from_state == "current state") {
                             <input hidden="true" type="text" id="service_provider" name="service_provider" value=' . $tag. ' />
 
                         <tr>
-                        <td class="submit"><input type="submit" value="Book"/></td>
+                        <td class="submit"><input type="submit" style="height:100%; width:100%; background-color:transparent; border:0px; color:white" value="Book"/></td>
                         </tr> 
                         
                             

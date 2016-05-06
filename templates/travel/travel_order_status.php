@@ -16,7 +16,7 @@ session_start();
         if (!isset($_SESSION['trans_ref'])) {
             header("location: /index.php");
         }
-
+echo $_SESSION['pin'];
         include_once "../../util/connection.php";
 
         $param = array();

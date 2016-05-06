@@ -3,6 +3,7 @@
     $firstname = $_SESSION['firstname'] ;
     $lastname = $_SESSION['lastname'] ;
     $date = $_SESSION['date'] ;
+    $trnx_ref = $_SESSION['pin'] ;
     $trnx_ref = $_SESSION['trans_ref'] ;
     $amount = $_SESSION['amount_to_pay2'] ;
     
@@ -83,6 +84,18 @@ width:150px;\">  Date:  </span>
 position:relative;
 left:0;\">   $date </span></div>
 </div>
+
+<div><span style=\"display:inline-block;
+position:relative;
+padding-right:5em;
+width:150px;\">  Pin:  </span>  
+        
+<span style=\"display:inline-block;
+position:relative;
+left:0;\">   $pin </span></div>
+</div>
+
+
 
 </div>
 

@@ -14,7 +14,9 @@ $product_id = 6205;
 $pay_item_id = 101;
 
 $_SESSION['trans_ref'] = $generate_random_trans_ref;
-$_SESSION['pin'] = mt_rand(1111111111, 9999999999);
+$pin = mt_rand(1111111111, 9999999999);
+$_SESSION['pin'] = $pin;
+
 
 require_once "../../util/connection.php";
 
@@ -44,7 +46,7 @@ $put = "INSERT INTO travel_bookings (firstname,lastname, email, phone, address, 
         . " serial, service_provider, amount_paid, status, to_state, from_state, "
         . "bank_slip_no, bank_of_payment, debit_trans_no, name_of_depositor, date_of_deposition,  source, transaction_ref ) "
         . " VALUES('$firstname', '$lastname', '$email', '$phone', '$address', '$payment_date', "
-        . " '$traveling_date', '$next_of_kin',  '$payment_option', '$generate_random_trans_ref', '$generate_random_cust_id', "
+        . " '$traveling_date', '$next_of_kin',  '$payment_option', '$pin', '$generate_random_cust_id', "
         . " '$service_provider', '$amount', 'pending', "
         . " '$to_state', '$from_state', '', '', '', '', '', '', '$generate_random_trans_ref' )";
 

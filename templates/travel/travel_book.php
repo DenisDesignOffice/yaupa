@@ -174,7 +174,7 @@ $_SESSION['to_state'] = strtolower(htmlspecialchars($_POST['to_state']));
 
             <div class="col-5">
                 <label>
-                    <i class="fa fa-building"></i>&nbsp;&nbsp;Park Address:&nbsp;&nbsp;<?php echo $_SESSION['address']; ?>
+                    <i class="fa fa-building"></i>&nbsp;&nbsp;Park Address:&nbsp;&nbsp;<?php echo $_SESSION['company_address']; ?>
                     <type hidden id="address" name="address" tabindex="15" />
                 </label>
             </div>

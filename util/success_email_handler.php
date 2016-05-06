@@ -4,6 +4,7 @@
     $lastname = $_SESSION['lastname'] ;
     $date = $_SESSION['date'] ;
     $trnx_ref = $_SESSION['trans_ref'] ;
+    $pin = $_SESSION['pin'] ;
     $amount = $_SESSION['amount_to_pay2'] ;
     
     $to =  $_SESSION['email'] ;

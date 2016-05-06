@@ -13,7 +13,7 @@ if (isset($_SESSION['sms_reminder'])) {
     $apikey = 'ad581d548f884e1b571e213e169838064337ccbe';
     $sendername = substr('YAUPA', 0, 11);
     $recipients = $_SESSION['phone'];
-    $message = 'Hello ' . $_SESSION['firstname'] . ', your transaction to travel with ' . $_SESSION['company_name'] .
+    $message = 'Hello ' . ucfirst($_SESSION['firstname']) . ', your transaction to travel with ' . ucfirst($_SESSION['company_name']) .
             ' transport company was successful with ticket number ' . $_SESSION['pin'] .
             '. You are adviced to arive at the terminal 30 mins before ' . $_SESSION['departure'] . ' on ' . $_SESSION['date'] . '. Thanks.'   ;
     $flash = 0;

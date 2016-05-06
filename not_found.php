@@ -20,7 +20,7 @@ switch ($_SERVER['REDIRECT_URL']) {
         if (mysql_num_rows($result)) {
             while ($row = mysql_fetch_assoc($result)) {
                 $value = $row["id"];
-                $company_name = ucwords($row['company']);
+                $company_name = strtoupper($row['company']);
                 $address = $row['address'];
                 $cost = $row["cost"];
                 $from_state = $row["from_state"];
@@ -43,25 +43,25 @@ switch ($_SERVER['REDIRECT_URL']) {
   
                     <table>
                         <tr>
-                            <td><i class="fa fa-bus"></i>&nbsp;&nbsp;Type:</td><td id="type" name="type">' . $vehicle_type . '</td>
+                            <td><i class="fa fa-bus"></i>&nbsp;&nbsp;Type:</td><td id="type" name="type" style="text-align:right">' . $vehicle_type . '</td>
                         </tr>
                         <tr>
-                            <td><i class="fa fa-money"></i>&nbsp;&nbsp;Price:</td><td id="cost" name="cost">' . $cost . '</td>
+                            <td><i class="fa fa-money"></i>&nbsp;&nbsp;Price:</td><td id="cost" name="cost" style="text-align:right">' . $cost . '</td>
                         </tr>
                         <tr>
-                            <td><i class="fa fa-building"></i>&nbsp;&nbsp;Park Address:</td><td id="company_address" name="company_address">' . $address . '</td>
+                            <td><i class="fa fa-building"></i>&nbsp;&nbsp;Park Address:</td><td id="company_address" name="company_address" style="text-align:right">' . $address . '</td>
                         </tr>
                         <tr>
-                            <td><i class="fa fa-user"></i>&nbsp;&nbsp;Airconditioning:</td><td id="aircondition" name="aircondition">' . $aircondition . '</td>
+                            <td><i class="fa fa-user"></i>&nbsp;&nbsp;Airconditioning:</td><td id="aircondition" name="aircondition" style="text-align:right">' . $aircondition . '</td>
                         </tr>
                         <tr>
-                            <td><i class="fa fa-building"></i>&nbsp;&nbsp;Stoppage Points:</td><td id="stoppage" name="stoppage">' . $stoppage_point . '</td>
+                            <td><i class="fa fa-building"></i>&nbsp;&nbsp;Stoppage Points:</td><td id="stoppage" name="stoppage" style="text-align:right">' . $stoppage_point . '</td>
                         </tr>
                         <tr>
-                            <td><i class="fa fa-clock-o"></i>&nbsp;&nbsp;Time of Departure:</td><td id="departure" name="departure">' . $departure_time . '</td>
+                            <td><i class="fa fa-clock-o"></i>&nbsp;&nbsp;Time of Departure:</td><td id="departure" name="departure" style="text-align:right">' . $departure_time . '</td>
                         </tr>
                         <tr>
-                            <td><i class="fa fa-money"></i>&nbsp;&nbsp;Processing fee</td><td id="processing" name="processing">' . $processing_fee . '</td>
+                            <td><i class="fa fa-money"></i>&nbsp;&nbsp;Processing fee</td><td id="processing" name="processing" style="text-align:right">' . $processing_fee . '</td>
                         </tr>
 						
 						<!--
@@ -80,7 +80,7 @@ switch ($_SERVER['REDIRECT_URL']) {
                             <input hidden="true" type="text" id="from_state" name="from_state" value=' . $from_state . '  />
                             <input hidden="true" type="text" id="to_state" name="to_state" value=' . $to_state . '  />       
                              <tr>
-                        <td class="submit"><input type="submit" value="Book Now"/></td>
+                        <td class="submit"><input type="submit" style="height:100%; width:100%; background-color:transparent; border:0px; color:white" value="Book Now"/></td>
                         </tr> 
                     </table>
                     </form>
@@ -123,7 +123,7 @@ session_unset()
     </section>
 
     <div class="charter">
-        <h1>Travel with <?php echo $search_string; ?></h1>
+        <h1>Travel With <?php echo ucfirst($search_string); ?></h1>
     </div>
 
 
