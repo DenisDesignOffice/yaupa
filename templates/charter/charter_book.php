@@ -1,10 +1,10 @@
-//<?php session_start(); ?>
+<?php session_start(); ?>
 
-//<?php
+<?php
 
-//if(!isset($_POST['company_name']) || !isset($_POST['address']) || !isset($_POST['type'])){
-   // header("location: /index.php");
-//}
+if(!isset($_POST['company_name']) || !isset($_POST['address']) || !isset($_POST['type'])){
+    header("location: /index.php");
+}
 
 $_SESSION['company_name'] = strtolower(htmlspecialchars($_POST['company_name']));
 $_SESSION['company_address'] = strtolower(htmlspecialchars($_POST['address']));

@@ -8,7 +8,7 @@
     
     $to =  $_SESSION['email'] ;
     $from = "info@yaupa.com";
-    $subject = "TRANSACTION REPORT";
+    $subject = "TRANSACTION STATUS";
 
     //begin of HTML message 
     $message ="
@@ -29,67 +29,12 @@ line-height:1.4em;
 padding-left:0;\">
 
 <span>Dear  $firstname </span>                              
-<p><br />
+<p><br />Your transaction was successful<br />
 Thanks for booking with Yaupa.<br />
-Below are your transaction details
-</div>
-
-
-<div style=\"padding:2em;
-background:#CCCCCC;
-line-height:1.8em;
-font-weight:bold;
-padding-top:0.5em;
-font-size:13px;\">
-
-<h3>Transaction Notification</h3>
-
-<div>       
-
-<span style=\"display:inline-block;
-position:relative;
-padding-right:5em;
-width:150px;\"> Name: </span>   
-
-<span style=\"display:inline-block;
-position:relative;
-left:0;\"> $lastname  $firstname </span></div>
-
-<div>  <span style=\"display:inline-block;
-position:relative;
-padding-right:5em;
-width:150px;\">Reference Number: </span> 
-
-<span style=\"display:inline-block;
-position:relative;
-left:0;\">  $trnx_ref </span></div>
-                  
-<div><span style=\"display:inline-block;
-position:relative;
-padding-right:5em;
-width:150px;\">  Total Amount:  </span>  
-        
-<span style=\"display:inline-block;
-position:relative;
-left:0;\">   $amount </span></div>
-
-
-<div><span style=\"display:inline-block;
-position:relative;
-padding-right:5em;
-width:150px;\">  Date:  </span>  
-        
-<span style=\"display:inline-block;
-position:relative;
-left:0;\">   $date </span></div>
-</div>
-
 </div>
 
 
 
-
-<div>
 <p>Please do not reply this mail.</p>
                                                                                                      
 For more details or support call +234 7035 277 717<br />
@@ -109,5 +54,5 @@ or visit www.yaupa.com
     // now lets send the email. 
     mail($to, $subject, $message, $headers); 
 
-    
+    echo "<center><h5>an email of your transaction details has been sent to your inbox</h5></center>"; 
 ?>

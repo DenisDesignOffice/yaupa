@@ -5,10 +5,7 @@ If (!isset($_POST['stoppage']) || !isset($_POST['address']) || !isset($_POST['ty
     header("location: /index.php");
 }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 84ecd2c2de6e00293827049fc744333181381196
 $_SESSION['stoppage'] = strtolower(htmlspecialchars($_POST['stoppage']));
 $_SESSION['address'] = strtolower(htmlspecialchars($_POST['address']));
 $_SESSION['type'] = strtolower(htmlspecialchars($_POST['type']));
@@ -104,11 +101,9 @@ $_SESSION['to_state'] = strtolower(htmlspecialchars($_POST['to_state']));
             <div class="col-4">
                 <label>
                     Travel Date
-<<<<<<< HEAD
+
                     <input type="date" placeholder="dd-mm-yy" id="date" name="date" tabindex="6"  />
-=======
-                    <input placeholder="dd-mm-yy" id="date" name="date" tabindex="6"  />
->>>>>>> 84ecd2c2de6e00293827049fc744333181381196
+
                 </label>
             </div>
 
@@ -217,7 +212,7 @@ $_SESSION['to_state'] = strtolower(htmlspecialchars($_POST['to_state']));
 
     <script src="../../static/js/jquery.simplemodal.js"></script>
     <script src="../../static/js/jquery.js"></script>
-<<<<<<< HEAD
+
     
     <?php require_once "../../templates/footer.php";
     ?>
@@ -238,9 +233,5 @@ if (datefield.type!="date"){ //if browser doesn't support input type="date", ini
     })
 }
 </script>
-=======
-    <?php require_once "../../templates/footer.php";
-    ?>
 
->>>>>>> 84ecd2c2de6e00293827049fc744333181381196
 

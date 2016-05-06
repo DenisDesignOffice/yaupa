@@ -10,7 +10,7 @@ $apikey = '';
 if (isset($_SESSION['sms_reminder'])) {
 
     $username = 'kenneth.ngedo@gmail.com';
-    $apikey = '02ebc31144db44211b4b15a7a3761cb5f6bae53f';
+    $apikey = 'ad581d548f884e1b571e213e169838064337ccbe';
     $sendername = substr('YAUPA', 0, 11);
     $recipients = $_SESSION['phone'];
     $message = 'Hello ' . $_SESSION['firstname'] . ' your transaction was successful with reference number ' . $_SESSION['trans_ref'] ;
@@ -19,7 +19,7 @@ if (isset($_SESSION['sms_reminder'])) {
         $message = stripslashes($_POST['message']);
     }
     $message = substr($message, 0, 160);
-#Use the next line for HTTP POST with JSON
+    #Use the next line for HTTP POST with JSON
     $result = useJSON($json_url, $username, $apikey, $flash, $sendername, $message, $recipients);
 
 //    echo $result;
@@ -88,7 +88,8 @@ function doPostRequest2($url, $data, $headers) {
     $responseData = json_decode($response, TRUE);
 
 // Print the date from the response
-    echo $responseData;
+    
 }
-?>
 
+
+?>
