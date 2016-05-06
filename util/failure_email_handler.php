@@ -29,8 +29,8 @@ line-height:1.4em;
 padding-left:0;\">
 
 <span>Dear  $firstname </span>                              
-<p><br />Your transaction was successful<br />
-Thanks for booking with Yaupa.<br />
+<p><br />Your transaction was not successful<br />
+Please try again or make a complain through our customer care lines.<br />
 </div>
 
 
