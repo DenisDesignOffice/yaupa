@@ -25,6 +25,7 @@
                                 <table>
                                     <tr>
                                         <th>Date</th>
+                                        <th>Transaction Ref</th>
                                         <th>Status</th>
                                         <th>Customer</th>
                                         <th>Service Provider</th>
@@ -88,6 +89,7 @@
                     while ($row = mysql_fetch_array($retval, MYSQL_ASSOC)) {
                         echo "<tr>
                                                     <td>" . $row['payment_date'] . "</td>
+                                                    <td>" . $row['transaction_ref'] . "</td>
                                                     <td>" . $row['status'] . "</td>
                                                     <td>" . $row['lastname'] . " " . $row['firstname']  . "</td>
                                                     <td>" . $row['service_providers'] . "</td>

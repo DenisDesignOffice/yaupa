@@ -81,13 +81,13 @@ $_SESSION['service_provider'] = strtolower(htmlspecialchars($_POST['tag']));
             <div class="col-2">
                 <label>
                     * Phone Number
-                    <input placeholder="What's the best way to call your" id="phone" name="phone" tabindex="3" required />
+                    <input placeholder="What's the best way to call your" id="phone" name="phone" type="number" tabindex="3" required />
                 </label>
             </div>
             <div class="col-3">
                 <label>
                     Email
-                    <input placeholder="Enter email address. e.g travlin@yahoo.com" id="email" name="email" tabindex="4" />
+                    <input placeholder="Enter email address. e.g travlin@yahoo.com" id="email" type="email" name="email" tabindex="4" />
                 </label>
             </div>
             <div class="col-3">
@@ -100,7 +100,7 @@ $_SESSION['service_provider'] = strtolower(htmlspecialchars($_POST['tag']));
             <div class="col-4">
                 <label>
                     * Date
-                    <input placeholder="dd-mm-yy" id="date" name="date" tabindex="6" required />
+                    <input placeholder="dd-mm-yy" id="date" type="date" name="date" tabindex="6" required />
                 </label>
             </div>
 

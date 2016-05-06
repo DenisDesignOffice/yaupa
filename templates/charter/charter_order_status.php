@@ -53,7 +53,7 @@
             include '../../util/sms_handler.php';
             include '../../util/success_email_handler.php';
             include '../../util/email_handler.php';
-            echo "<div class='trans_success' style='color:red' >"
+            echo "<div class='trans_success' style='color:green' >"
             . "<h4> Status: " . (string) $xml->ResponseDescription . "</h4>"
             . "<h4> Response Code: " . (string) $xml->ResponseCode . "</h4>"
             . "<h4> Amount: " . (string) $xml->Amount . "</h4>"

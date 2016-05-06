@@ -42,11 +42,11 @@ $from_state = $_SESSION['from_state'];
 $put = "INSERT INTO travel_bookings (firstname,lastname, email, phone, address, "
         . "payment_date, traveling_date, next_of_kin, payment_type, reg_pin, "
         . " serial, service_provider, amount_paid, status, to_state, from_state, "
-        . "bank_slip_no, bank_of_payment, debit_trans_no, name_of_depositor, date_of_deposition,  source ) "
+        . "bank_slip_no, bank_of_payment, debit_trans_no, name_of_depositor, date_of_deposition,  source, transaction_ref ) "
         . " VALUES('$firstname', '$lastname', '$email', '$phone', '$address', '$payment_date', "
         . " '$traveling_date', '$next_of_kin',  '$payment_option', '$generate_random_trans_ref', '$generate_random_cust_id', "
         . " '$service_provider', '$amount', 'pending', "
-        . " '$to_state', '$from_state', '', '', '', '', '', '' )";
+        . " '$to_state', '$from_state', '', '', '', '', '', '', $generate_random_trans_ref )";
 
 
 $results = mysql_query($put);

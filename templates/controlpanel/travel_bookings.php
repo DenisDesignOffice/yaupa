@@ -23,15 +23,16 @@
                                 <table>
                                     <tr>
                                         <th>Date</th>
+                                        <th>Transaction Ref</th>
                                         <th>Status</th>
                                         <th>Customer</th>
                                         <th>Service Provider</th>
-                                        <th>Vehicle Type</th>
-                                        <th>Service Option</th>
+                                        <!--<th>Vehicle Type</th>-->
+                                        <!--<th>Service Option</th>-->
                                         <th>From</th>
                                         <th>To</th>
                                         <th>Amount Paid</th>
-                                        <th>Reg. Pin</th>
+                                        <th>Payment type</th>
                                         <th>Serial</th>
                                         
                                     </tr>
@@ -86,17 +87,16 @@
                     while ($row = mysql_fetch_array($retval, MYSQL_ASSOC)) {
                         echo "<tr>
                                                     <td>" . $row['payment_date'] . "</td>
+                                                    <td>" . $row['transaction_ref'] . "</td>
                                                     <td>" . $row['status'] . "</td>
                                                     <td>" . $row['lastname'] . " " . $row['firstname']  . "</td>
-                                                    <td>" . $row['service_providers'] . "</td>
-                                                    <td>" . $row['vehicle_type'] . "</td>
-                                                    <td>" . $row['service_option'] . "</td>
+                                                    <td>" . $row['service_provider'] . "</td>
                                                     <td>" . $row['from_state'] . "</td>
                                                     <td>" . $row['to_state'] . "</td>
                                                     <td>" . $row['amount_paid'] . "</td>
-                                                    <td>" . $row['reg_pin'] . "</td>
+                                                    <td>" . $row['payment_type'] . "</td>
                                                     <td>" . $row['serial'] . '</td>
-                                                    <td><a href="?view=add_travelbookings&purpose=status&id=' . $row["id"] . '"> <span class="f-button">Change Status</span></a> </td>
+                                                    <td><a href="?view=add_travelbookings&purpose=status&id=' . $row["id"] . '"> <span class="f-button">Verify Status</span></a> </td>
                                                     <td><a onclick="delete_Travel('. "this" .');" href="?view=add_travelbookings&purpose=delete&id=' . $row["id"] . '"> <span class="f-button">Delete</span> </a></td> 
                                                   </tr>';
                     }

@@ -35,14 +35,14 @@
 
             $id = strtolower(htmlspecialchars($_GET{'id'}));
 
-            $query = 'SELECT id,status FROM charter_bookings where id="' . $id . '"';
+            $query = 'SELECT * FROM charter_bookings where id=' . $id;
             $retval = mysql_query($query);
 
             if ($row = mysql_fetch_array($retval, MYSQL_ASSOC)) {
                 $param = array();
                 $param['productid'] = 6205;
                 $param['transactionreference'] = $row['transaction_ref'];
-                $param['amount'] = $row['amount_paid'];
+                $param['amount'] = $row['amount_paid'] . "00";
 
 
                 $mac_key = "D3D1D05AFE42AD50818167EAC73C109168A0F108F32645C8B59E897FA930DA44F9230910DAC9E20641823799A107A02068F7BC0F4CC41D2952E249552255710F";
@@ -65,7 +65,7 @@
                 $response = file_get_contents($url, true, $context); //done
                 $xml = simplexml_load_string($response);
 
-                if ((string) $xml->ResponseCode == 00) {
+                if ((string) $xml->ResponseCode == '00') {
                     $status = 'success';
                 } else {
                     $status = 'pending';
