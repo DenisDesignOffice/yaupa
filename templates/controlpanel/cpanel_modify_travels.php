@@ -36,9 +36,14 @@
                 <input name="vehicle_type" value="' . $row["vehicle_type"] . '"  type="text"  classname="search"  Placeholder="Vehicle Type">
                 
                 <input name="from_state" value="' . $row["from_state"] . '"  type="text"  classname="search"  Placeholder="From State">
-                </p>
+                
                 <input name="to_state" value="' . $row["to_state"] . '"  type="text"  classname="search"  Placeholder="To State">
-               
+                </p>
+                
+                <input name="from_town" value="' . $row["from_town"] . '"  type="text"  classname="search"  Placeholder="From town">
+                
+                <input name="to_town" value="' . $row["to_town"] . '"  type="text"  classname="search"  Placeholder="To town">
+                
                 <input name="cost" value="' . $row["cost"] . '"   type="text"  classname="search"  Placeholder="Cost">
                
                 <input name="stoppage_point" value="' . $row["stoppage_point"] . '"   type="text"  classname="search"  Placeholder="Stoppage Point">
@@ -77,6 +82,8 @@
             $vehicle_type =  strtolower(htmlspecialchars($_GET{'vehicle_type'}));
             $from_state =  strtolower(htmlspecialchars($_GET{'from_state'}));
             $to_state =  strtolower(htmlspecialchars($_GET{'to_state'}));
+            $from_town =  strtolower(htmlspecialchars($_GET{'from_town'}));
+            $to_town =  strtolower(htmlspecialchars($_GET{'to_town'}));
             $departure_time =  strtolower(htmlspecialchars($_GET{'departure_time'}));
             $speed_limit =  strtolower(htmlspecialchars($_GET{'speed_limit'}));
             $last_bus_stop =  strtolower(htmlspecialchars($_GET{'last_bus_stop'}));
@@ -88,7 +95,7 @@
 
             $action = "UPDATE travel_services SET service_provider='$service_provider', vehicle_type='$vehicle_type', to_state='$to_state', "
                     . "from_state='$from_state', departure_time='$departure_time', speed_limit='$speed_limit', last_bus_stop='$last_bus_stop',"
-                    . "cost='$cost', processing_fee='$processing_fee', duration='$duration', stoppage_point='$stoppage_point' "
+                    . "cost='$cost', processing_fee='$processing_fee', duration='$duration', stoppage_point='$stoppage_point', from_town='$from_town', to_town='$to_town' "
                     . "WHERE id=$id";
 
 
