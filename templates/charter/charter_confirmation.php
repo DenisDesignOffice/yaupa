@@ -16,10 +16,11 @@ $phone = strtolower(htmlspecialchars($_POST['phone']));
 $email = strtolower(htmlspecialchars($_POST['email']));
 $address = strtolower(htmlspecialchars($_POST['address']));
 $date = strtolower(htmlspecialchars($_POST['date']));
-$payment_option = strtolower(htmlspecialchars($_POST['payment_option']));
+//$payment_option = strtolower(htmlspecialchars($_POST['payment_option']));
 $charter_option = strtolower(htmlspecialchars($_POST['charter_option']));
 $selected_option_id = strtolower(htmlspecialchars($_POST['selected_option_id']));
 $sms_reminder = strtolower(htmlspecialchars($_POST['sms_reminder']));
+$number_of_seats = strtolower(htmlspecialchars($_POST['number_of_seats']));
 
 $_SESSION['firstname'] = $firstname;
 $_SESSION['sms_reminder'] = $sms_reminder;
@@ -28,23 +29,23 @@ $_SESSION['phone'] = $phone;
 $_SESSION['email'] = $email;
 $_SESSION['address'] = $address;
 $_SESSION['date'] = $date;
-$_SESSION['payment_option'] = $payment_option;
+//$_SESSION['payment_option'] = $payment_option;
 $_SESSION['charter_option'] = $charter_option;
 $_SESSION['selected_option_id'] = $selected_option_id;
 
 if ($charter_option == 'to alone') {
-    $price = (int) $_SESSION['to_cost'] + (int) $_SESSION['processing_fee'];
+    $price = (int)$number_of_seats * (int) $_SESSION['to_cost'] + (int) $_SESSION['processing_fee'];
     $_SESSION['amount_to_pay'] = $price . '00';
     $_SESSION['amount_to_pay2'] = $price . '';
 } else {
-    $price = (int) $_SESSION['to_and_fro_cost'] + (int) $_SESSION['processing_fee'];
+    $price = (int)$number_of_seats * (int) $_SESSION['to_and_fro_cost'] + (int) $_SESSION['processing_fee'];
     $_SESSION['amount_to_pay'] = $price . '00';
     $_SESSION['amount_to_pay2'] = $price . '';
 }
 
-if ($payment_option == 'bank_deposit') {
-    header("location: ./charter_bank_deposit.php");
-}
+//if ($payment_option == 'bank_deposit') {
+//    header("location: ./charter_bank_deposit.php");
+//}
 ?>
 
 <!DOCTYPE html> 

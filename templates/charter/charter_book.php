@@ -103,8 +103,17 @@ $_SESSION['service_provider'] = strtolower(htmlspecialchars($_POST['service_prov
                     <input placeholder="dd-mm-yy" id="date" type="date" name="date" tabindex="6" required />
                 </label>
             </div>
-
+            
             <div class="col-4">
+                <label>
+                    NUMBER OF SEATS
+
+                    <input type="number" value="1" id="date" name="number_of_seats" tabindex="6"  required/>
+
+                </label>
+            </div>
+
+            <!--<div class="col-4">
                 <label>
                     Payment Option
                     <select tabindex="7" id="payment_option" name="payment_option" required />
@@ -114,7 +123,7 @@ $_SESSION['service_provider'] = strtolower(htmlspecialchars($_POST['service_prov
                     <option>Other</option>
                     </select>
                 </label>
-            </div>
+            </div>-->
 
             <div class="col-4">
                 <label>

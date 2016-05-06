@@ -15,10 +15,13 @@ $response = '';
 $from_home = strtolower(htmlspecialchars($_POST['from1']));
 $to_home = strtolower(htmlspecialchars($_POST['to1']));
 
+$home = substr($from_home, 0,4);
+$dest = substr($to_home, 0,4);
+
 if (isset($_POST['from1'])) {
-    $result = mysql_query("SELECT DISTINCT * FROM travel_services, terminals WHERE from_state='$from_home'  AND to_state='$to_home' AND service_provider=tag");
+    $result = mysql_query("SELECT DISTINCT * FROM travel_services, terminals WHERE (from_state LIKE'%$home%' OR from_town LIKE '%$home%')  AND (to_state LIKE '%$dest%' OR to_town LIKE '%$dest%') AND service_provider=tag");
 } else {
-    $result = mysql_query("SELECT DISTINCT * FROM travel_services, terminals WHERE from_state='$from'  AND to_state='$to' AND service_provider=tag ");
+    $result = mysql_query("SELECT DISTINCT * FROM travel_services, terminals (from_state LIKE'%$home%' OR from_town LIKE '%$home%')  AND (to_state LIKE '%$dest%' OR to_town LIKE '%$dest%') AND service_provider=tag ");
 }
 
 if (!$result) {
@@ -46,7 +49,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $processing_fee = $row["processing_fee"];
             $departure = $row["departure_time"];
             $sp_tag = $row["tag"];
-
+            $from_town = $row["from_town"];
+            $to_town = $row["to_town"];
 
             $response .= '<div class="item">  
                     <img src="/static/images/banner-casa.jpg">
@@ -58,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <td><i class="fa fa-bus"></i>&nbsp;&nbsp;Type:</td><td id="type" name="type" style="text-align:right">' . $vehicle_type . '</td>
                         </tr>
                          <tr>
-                            <td><i class="fa fa-bus"></i>&nbsp;&nbsp;Destination:</td><td id="type" name="type" style="text-align:right; font-weight: bold;">' . $to_state . '</td>
+                            <td><i class="fa fa-bus"></i>&nbsp;&nbsp;Route:</td><td id="type" name="type" style="text-align:right; font-weight: bold;">' . $from_town . " - " . $to_town . '</td>
                         </tr>
                         <tr>
                             <td><i class="fa fa-money"></i>&nbsp;&nbsp;Price:</td><td id="cost" name="cost" style="text-align:right">' . $cost . '</td>

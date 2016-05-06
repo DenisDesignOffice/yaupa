@@ -29,10 +29,18 @@
                 $town1 = strtolower(htmlspecialchars($_GET{'town1'}));
                 $town2 = strtolower(htmlspecialchars($_GET{'town2'}));
                 $town3 = strtolower(htmlspecialchars($_GET{'town3'}));
+                $town4 = strtolower(htmlspecialchars($_GET{'town4'}));
+                $town5 = strtolower(htmlspecialchars($_GET{'town5'}));
+                $town6 = strtolower(htmlspecialchars($_GET{'town6'}));
+                $town7 = strtolower(htmlspecialchars($_GET{'town7'}));
+                $town8 = strtolower(htmlspecialchars($_GET{'town8'}));
+                $town9 = strtolower(htmlspecialchars($_GET{'town9'}));
+                $town10 = strtolower(htmlspecialchars($_GET{'town10'}));
                 
 
-                $sql = "INSERT INTO nearby_towns(destination, nearby_town1, nearby_town2, nearby_town3) "
-                        . " VALUES ('$destination','$town1', '$town2', '$town3' )";
+                $sql = "INSERT INTO nearby_towns(destination, nearby_town1, nearby_town2, nearby_town3, "
+                        . "nearby_town4, nearby_town5, nearby_town6, nearby_town7, nearby_town8, nearby_town9, nearby_town10) "
+                        . " VALUES ('$destination','$town1', '$town2', '$town3', '$town4', '$town5', '$town6', '$town7', '$town8', '$town9', '$town10' )";
 
                 $query = mysql_query($sql);
 
@@ -48,14 +56,34 @@
             <form name="addTcForm" method="get" action="./cpanel_dashboard.php"  >
                 
                     
-                    <input name="destination"  type="text"  classname="search"  Placeholder="From Town">
+                    <select  name="destination"  class="input-state" >
+                        <option>--Select From State--</option>
+                        <?php
+                        include '../../util/constants/states.html';
+                        
+                        ?>
+                    </select>
 
-                    <input name="town1"   type="text"  classname="search"  Placeholder="To Town">
+                    <input name="town1"   type="text"  classname="search"  Placeholder="Town 1" >
                     </p>
-                    <input name="town2"    type="text"  classname="search"  Placeholder="To Cost">
+                    <input name="town2"    type="text"  classname="search"  Placeholder="Town 2" >
 
+                    <input name="town3"    type="text"  classname="search"  Placeholder="Town 3" >
+                    
+                    <input name="town4"    type="text"  classname="search"  Placeholder="Town 4" >
+                    
+                    <input name="town5"    type="text"  classname="search"  Placeholder="Town 5" >
+                                        </p>
 
-                    <input name="town3"    type="text"  classname="search"  Placeholder="To and Fro cost">
+                    <input name="town6"    type="text"  classname="search"  Placeholder="Town 6" >
+                    
+                    <input name="town7"    type="text"  classname="search"  Placeholder="Town 7" >
+                    
+                    <input name="town8"    type="text"  classname="search"  Placeholder="Town 8" >
+                    
+                    <input name="town9"    type="text"  classname="search"  Placeholder="Town 9" >
+                    
+                    <input name="town10"    type="text"  classname="search"  Placeholder="Town 10" >
 
                     </p>
                     <br/>

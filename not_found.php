@@ -9,7 +9,7 @@ switch ($_SERVER['REDIRECT_URL']) {
         $url = $_SERVER['REDIRECT_URL'];
         $array = explode("/", $url);
         $raw_string = strtolower(end($array)); 
-        $search_string = substr($raw_string, 0, 3);
+        $search_string = substr($raw_string, 0, 4);
 
         $result = mysql_query("SELECT * FROM travel_services, terminals"
                 . " WHERE company LIKE '%$search_string%' AND service_provider=tag ");

@@ -1,7 +1,7 @@
 <?php 
     //change this to your email. 
-    $firstname = $_SESSION['firstname'] ;
-    $lastname = $_SESSION['lastname'] ;
+    $firstname = ucfirst($_SESSION['firstname']) ;
+    $lastname = ucfirst($_SESSION['lastname']) ;
     $date = $_SESSION['date'] ;
     $trnx_ref = $_SESSION['pin'] ;
     $trnx_ref = $_SESSION['trans_ref'] ;

@@ -35,8 +35,8 @@
         </div>
         <form method="post" name="travel_form" id="travel_form" action="./travel.php">
 
-            <input type="text" name="from1" value="<?php if (isset($_POST['from_home'])) echo $_POST['from_home']; ?>" placeholder="From ?  e.g aba" class="input"></td>
-            <input type="text" name="to1" value="<?php if (isset($_POST['from_home'])) echo $_POST['to_home']; ?>" placeholder="To ?  e.g ughelli" class="input"></td>
+            <input type="text" name="from1" value="<?php if (isset($_POST['from_home'])) echo $_POST['from_home']; ?>" placeholder="From ?  e.g aba or Abia" class="input"></td>
+            <input type="text" name="to1" value="<?php if (isset($_POST['from_home'])) echo $_POST['to_home']; ?>" placeholder="To ?  e.g ughelli or Delta" class="input"></td>
 
             <input type="submit" value="Search" class="input search-text"></td>
         </form>

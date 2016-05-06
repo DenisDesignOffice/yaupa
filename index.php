@@ -63,9 +63,9 @@
                         
                         
                         
-                                                <section class="ha-waypoint form1" data-animate-down="ha-header-small" data-animate-up="ha-header-large">
+                                                <section style="visibility: hidden" class="ha-waypoint form1" data-animate-down="ha-header-small" data-animate-up="ha-header-large">
 
-                                                    
+                                                    <!--
                                                     <div class="pos">
                                                    
                                                      <h3>Find hundreds of transport companies going you way</h3>
@@ -81,11 +81,11 @@
 
                                                          <input type="submit" value="Search" class="input search-text">
 
-                                                             </form>
+                                                             </form> 
                                                               <p>
                                                                            
                                                                             
-                                                                            </div>
+                                                                            </div>-->
 
                                                                             </section>
                                                                       <section class="campaign">

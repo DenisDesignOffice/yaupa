@@ -12,19 +12,19 @@ $to_home = strtolower(htmlspecialchars($_POST['to1']));
 
 $response = '';
 
-$nby_search = mysql_query("SELECT * FROM nearby_towns where destination LIKE '%$to_home%'");
+$nby_search = mysql_query("SELECT * FROM nearby_towns where destination LIKE '%$to_home%' OR nearby_town1 LIKE '$to_home'"
+        . " OR nearby_town2 LIKE '$to_home' OR nearby_town3 LIKE '$to_home' OR nearby_town4 LIKE '$to_home' "
+        . " OR nearby_town5 LIKE '$to_home' OR nearby_town6 LIKE '$to_home' OR nearby_town7 LIKE '$to_home'"
+        . " OR nearby_town8 LIKE '$to_home' OR nearby_town9 LIKE '$to_home' OR nearby_town10 LIKE '$to_home'");
 
         if (mysql_num_rows($nby_search) == 0) {
             $response = "no nearby towns";
         } else {
             while ($row = mysql_fetch_assoc($nby_search)) {
-                $town1 = $row["nearby_town1"];
-                $town2 = $row["nearby_town2"];
-                $town3 = $row["nearby_town3"];
+                $town1 = $row["destination"];
 
                 $result = mysql_query("SELECT DISTINCT * FROM travel_services, terminals WHERE from_state='$from_home' "
-                        . " AND (to_state='$town1' OR to_state='$town2' OR to_state='$town3') "
-                        . "AND service_provider=tag ");
+                        . " AND to_state='$town1' ");
 
                 while ($row = mysql_fetch_assoc($result)) {
                     $value = $row["id"];
@@ -43,6 +43,8 @@ $nby_search = mysql_query("SELECT * FROM nearby_towns where destination LIKE '%$
                     $processing_fee = $row["processing_fee"];
                     $departure = $row["departure_time"];
                     $sp_tag = $row["tag"];
+                    $from_town = $row["from_town"];
+                    $to_town = $row["to_town"];
 
 
                     $response .= '<div class="item">  
@@ -55,7 +57,7 @@ $nby_search = mysql_query("SELECT * FROM nearby_towns where destination LIKE '%$
                             <td><i class="fa fa-bus"></i>&nbsp;&nbsp;Type:</td><td id="type" name="type" style="text-align:right">' . $vehicle_type . '</td>
                         </tr>
                         <tr>
-                            <td><i class="fa fa-bus"></i>&nbsp;&nbsp;Destination:</td><td id="type" name="type" style="text-align:right; font-weight: bold;">' . $to_state . '</td>
+                            <td><i class="fa fa-bus"></i>&nbsp;&nbsp;Route:</td><td id="type" name="type" style="text-align:right; font-weight: bold;">' . $from_town . " - " . $to_town . '</td>
                         </tr>
                         <tr>
                             <td><i class="fa fa-money"></i>&nbsp;&nbsp;Price:</td><td id="cost" name="cost" style="text-align:right">' . $cost . '</td>

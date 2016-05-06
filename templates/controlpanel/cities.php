@@ -9,24 +9,31 @@
 
         </div>
         <div class="searchform">
-        <form class="searchbox" name="myform1" method="get" action="./cpanel_dashboard.php"  >
-            <i class="fa fa-search">
-                <input  type="text"  name="search"  classname="search"  Placeholder="Search city">
-                 </i>
+            <form class="searchbox" name="myform1" method="get" action="./cpanel_dashboard.php"  >
+                <i class="fa fa-search">
+                    <input  type="text"  name="search"  classname="search"  Placeholder="Search city">
+                </i>
                 <input class="submit" type="submit" value="Search"  classname="search">
-           
-            
-        </form>
+
+
+            </form>
         </div>
-        
+
         <div class="modal-body">
             <div>
                 <table>
                     <tr>
-                        <th>Destination City</th>
-                        <th>Nearby town 1</th>
-                        <th>Nearby town 2</th>
-                        <th>Nearby town 3</th>
+                        <th>State</th>
+                        <th>Town 1</th>
+                        <th>Town 2</th>
+                        <th>Town 3</th>
+                        <th>Town 4</th>
+                        <th>Town 5</th>
+                        <th>Town 6</th>
+                        <th>Town 7</th>
+                        <th>Town 8</th>
+                        <th>Town 9</th>
+                        <th>Town 10</th>
 
                     </tr>
                     <?php
@@ -36,7 +43,7 @@
                         $search = strtolower(htmlspecialchars($_GET{'search'}));
 //                        $sql = "SELECT FROM transport_companies WHERE * LIKE " . '%$search%';
                         $sql = "SELECT * FROM nearby_towns WHERE destination LIKE '%$search%'";
-                    }else{
+                    } else {
                         $sql = "SELECT * FROM nearby_towns";
                     }
                     $retval = mysql_query($sql);
@@ -67,7 +74,7 @@
                     $left_rec = $rec_count - ($page * $rec_limit);
                     if (isset($_GET{'search'})) {
                         $sql = "SELECT * FROM nearby_towns WHERE destination LIKE '%$search%' " . "LIMIT  $rec_limit OFFSET $offset";
-                    }else{
+                    } else {
                         $sql = "SELECT * FROM nearby_towns " . "LIMIT  $rec_limit OFFSET $offset";
                     }
 
@@ -82,9 +89,16 @@
                                                     <td>" . $row['destination'] . "</td>
                                                     <td>" . $row['nearby_town1'] . "</td>
                                                     <td>" . $row['nearby_town2'] . "</td>
-                                                    <td>" . $row['nearby_town3'] . '</td>
+                                                    <td>" . $row['nearby_town3'] . "</td>
+                                                    <td>" . $row['nearby_town4'] . "</td>
+                                                    <td>" . $row['nearby_town5'] . "</td>
+                                                    <td>" . $row['nearby_town6'] . "</td>
+                                                    <td>" . $row['nearby_town7'] . "</td>
+                                                    <td>" . $row['nearby_town8'] . "</td>
+                                                    <td>" . $row['nearby_town9'] . "</td>
+                                                    <td>" . $row['nearby_town10'] . '</td>
                                                     <td><a href="?view=add_city&purpose=edit&id=' . $row["id"] . '"> <span class="f-button">Edit</span></a> </td>
-                                                    <td><a onclick="delete_Charter('. "this" .');" href="?view=add_city&purpose=delete&id=' . $row["id"] . '"> <span class="f-button">Delete</span> </a></td> 
+                                                    <td><a  href="?view=add_city&purpose=delete&id=' . $row["id"] . '"> <span class="f-button">Delete</span> </a></td> 
                                                   </tr>';
                     }
                     ?>
@@ -100,38 +114,39 @@
                     $tempMod = $rec_count % $rec_limit;
                     $prev = $page - 1;
                     $next = $page + 1;
-                    
-                    if($tempMod > 0){
+
+                    if ($tempMod > 0) {
                         $pages = $pages + 1;
                     }
 
                     if ($pages > 1 && $pages > 10) {
-                        if($prev > 0){
-                            echo '<li><a href="?view=cities&page=' . $prev .'"><<</a></li>';
+                        if ($prev > 0) {
+                            echo '<li><a href="?view=cities&page=' . $prev . '"><<</a></li>';
                         }
-                        
+
                         $count = $pages;
                         $i = 1;
 
-                        while ($count > 1 ) {
+                        while ($count > 1) {
                             echo '<li><a href="?view=cities&page=' . $i . '">' . $i . '</a></li>';
                             $count = $count - 1;
                             $i++;
                         }
-                        
-                        if($next < $pages){
-                            echo '<li><a href="?view=cities&page='  . $next  . '">>></a></li>';
+
+                        if ($next < $pages) {
+                            echo '<li><a href="?view=cities&page=' . $next . '">>></a></li>';
                         }
-                    }else  {
+                    } else {
                         $count = $pages;
                         $i = 1;
 
-                        while ($count > 1 ) {
+                        while ($count > 1) {
                             echo '<li><a href="?view=cities&page=' . $i . '">' . $i . '</a></li>';
                             $count = $count - 1;
                             $i++;
                         }
-                    }?>
+                    }
+                    ?>
                 </ul>
             </div> 
 
