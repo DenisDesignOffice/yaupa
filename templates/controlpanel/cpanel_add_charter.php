@@ -52,9 +52,9 @@
             }
             ?>
 
-            <form style="margin-bottom: 10px;" name="addTcForm" method="get" action="./cpanel_dashboard.php"  >
-                <i class="fa fa-search">
-                    <select  name="service_provider" style="width:20%; height: 30px" class="input-state" >
+            <form name="addTcForm" method="get" action="./cpanel_dashboard.php"  >
+                
+                    <select  name="service_provider"  class="input-state" >
                         <option>--select service provider--</option>
                         <?php
                         $query = 'SELECT * FROM terminals ORDER BY tag';
@@ -67,7 +67,7 @@
                         }
                         ?>
                     </select>
-                    <select  name="vehicle_type" style="width:20%; height: 30px" class="input-state" >
+                    <select  name="vehicle_type" s class="input-state" >
                         <option>--select vehicle type--</option>
                         <?php
                         include_once '../../util/constants/vehicles.html';
@@ -75,36 +75,36 @@
                         ?>
                     </select>
                     
-                    <select  name="from_state" style="width:20%; height: 30px" class="input-state" >
+                    <select  name="from_state"  class="input-state" >
                         <option>--select from state--</option>
                         <?php
                         include '../../util/constants/states.html';
                         
                         ?>
                     </select>
-                    <br/>
-                     <select  name="to_state" style="width:20%; height: 30px" class="input-state" >
+                    </p>
+                     <select   class="input-state" >
                         <option>--select to state--</option>
                         <?php
                         include '../../util/constants/states.html';
                         
                         ?>
                     </select>
-                    <input name="from_town"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="From Town">
+                    <input name="from_town"  type="text"  classname="search"  Placeholder="From Town">
 
-                    <input name="to_town"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="To Town">
+                    <input name="to_town"   type="text"  classname="search"  Placeholder="To Town">
+                    </p>
+                    <input name="to_cost"    type="text"  classname="search"  Placeholder="To Cost">
+
+
+                    <input name="to_and_fro_cost"    type="text"  classname="search"  Placeholder="To and fro cost">
+
+                    <input name="processing_fee"    type="text"  classname="search"  Placeholder="Processing fee">
+                    </p>
+                    <input name="duration"    type="text"  classname="search"  Placeholder="Duration">
                     <br/>
-                    <input name="to_cost"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="To Cost">
 
-
-                    <input name="to_and_fro_cost"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="To and fro cost">
-
-                    <input name="processing_fee"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Processing fee">
-                    <br/>
-                    <input name="duration"   style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Duration">
-                    <br/>
-
-                    <input value="Add" style="width:20%; margin-top: 30px; height: 30px; margin-top: 2dp " type="submit" classname="search"  Placeholder="Search">
+                    <input value="Add" class="submit" type="submit" classname="search"  Placeholder="Search">
 
                     <input name="purpose"  value="addnew"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
                     <input name="view"  value="addplus_charter"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">

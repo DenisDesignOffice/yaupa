@@ -28,22 +28,22 @@
             if ($row = mysql_fetch_array($retval, MYSQL_ASSOC)) {
                 echo '<form style="margin-bottom: 10px;" name="
                     editTxsForm" id="editTxsForm" method="get" action="./cpanel_dashboard.php"  >
-            <i class="fa fa-search">
-                <input name="company" value="' . $row["company"] . '" style="width:20%; height: 30px" type="text"  classname="search"  Placeholder="Company">
+            
+                <input name="company" value="' . $row["company"] . '"   classname="search"  Placeholder="Company">
                
                 
-                <input name="phone" value="' . $row["phone"] . '" style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Phone">
-                <br/>
-                <input name="address" value="' . $row["address"] . '" style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Address">
+                <input name="phone" value="' . $row["phone"] . '"   classname="search"  Placeholder="Phone">
+              
+                <input name="address" value="' . $row["address"] . '"   classname="search"  Placeholder="Address">
+                 </p>
+                <input name="email" value="' . $row["email"] . '"  type="text"  classname="search"  Placeholder="Email">
                
-                <input name="email" value="' . $row["email"] . '"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Email">
-               
-                <input name="town" value="' . $row["town"] . '"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Town">
-                <br/>
-                <input name="state" value="' . $row["state"] . '"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="State">
-                <br/>
+                <input name="town" value="' . $row["town"] . '"   type="text"  classname="search"  Placeholder="Town">
                 
-                <input value="Update" style="width:20%; margin-top: 30px; height: 30px; margin-top: 2dp " type="submit" classname="search"  >
+                <input name="state" value="' . $row["state"] . '" type="text"  classname="search"  Placeholder="State">
+                </p>
+                
+                <input value="Update" class="submit" type="submit" classname="search"  >
                 <br/>
                 <input name="purpose"  value="update"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
                 <input name="id"  value="' . $row["id"] . '"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">

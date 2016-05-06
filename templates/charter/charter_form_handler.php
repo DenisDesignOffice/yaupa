@@ -34,7 +34,7 @@ if ($to_state == "destination state" || $from_state == "current state") {
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (mysql_num_rows($result) == 0) {
-            $response = "Sorry there is no available transport company for your destination currently. please check back soon";
+            $response = "<h1>Sorry there is no available transport company for your destination currently. please check back soon</h1>";
             echo $response;
         } else {
             while ($row = mysql_fetch_assoc($result)) {

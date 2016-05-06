@@ -30,23 +30,23 @@
             if ($row = mysql_fetch_array($retval, MYSQL_ASSOC)) {
                 echo '<form style="margin-bottom: 10px;" name="
                     editTxsForm" id="editTxsForm" method="get" action="./cpanel_dashboard.php"  >
-            <i class="fa fa-search">
-                <input name="username" value="' . $row["username"] . '" style="width:20%; height: 30px" type="text"  classname="search"  Placeholder="Username">
+            
+                <input name="username" value="' . $row["username"] . '"   classname="search"  Placeholder="Username">
                
-                <input name="firstname" value="' . $row["firstname"] . '" style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Firstname">
+                <input name="firstname" value="' . $row["firstname"] . '"  type="text"  classname="search"  Placeholder="Firstname">
                 
-                <input name="lastname" value="' . $row["lastname"] . '" style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Lastname">
-                <br/>
-                <input name="access_level" value="' . $row["access_level"] . '" style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Acess level e.g 1, 2 or 3">
+                <input name="lastname" value="' . $row["lastname"] . '"  type="text"  classname="search"  Placeholder="Lastname">
+                </p>
+                <input name="access_level" value="' . $row["access_level"] . '"  type="text"  classname="search"  Placeholder="Acess level e.g 1, 2 or 3">
                
-                <input name="email" value="' . $row["email"] . '"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Email">
+                <input name="email" value="' . $row["email"] . '"   type="text"  classname="search"  Placeholder="Email">
                
-                <input name="phone" value="' . $row["phone"] . '"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Phone">
-                <br/>
-                <input name="status" value="' . $row["status"] . '"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Status">
-                <br/>
+                <input name="phone" value="' . $row["phone"] . '"   type="text"  classname="search"  Placeholder="Phone">
+                </p>
+                <input name="status" value="' . $row["status"] . '"   type="text"  classname="search"  Placeholder="Status">
+                </p>
                 
-                <input value="Update" style="width:20%; margin-top: 30px; height: 30px; margin-top: 2dp " type="submit" classname="search"  >
+                <input value="Update" class="submit" type="submit" classname="search"  >
                 <br/>
                 <input name="purpose"  value="update"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
                 <input name="id"  value="' . $row["id"] . '"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
