@@ -16,7 +16,6 @@ session_start();
         if (!isset($_SESSION['trans_ref'])) {
             header("location: /index.php");
         }
-echo $_SESSION['pin'];
         include_once "../../util/connection.php";
 
         $param = array();
@@ -55,7 +54,7 @@ echo $_SESSION['pin'];
 
             include '../../util/email_handler.php';
             include '../..//util/success_email_handler.php';
-            include '../..//util/sms_handler.php';
+            include '../..//util/travel_sms_handler.php';
             echo "<div class='trans_success' style='color:green' >"
             . "<h4> Status: " . (string) $xml->ResponseDescription . "</h4>"
             . "<h4> Response Code: " . (string) $xml->ResponseCode . "</h4>"

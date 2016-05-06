@@ -13,9 +13,20 @@ if (isset($_SESSION['sms_reminder'])) {
     $apikey = 'ad581d548f884e1b571e213e169838064337ccbe';
     $sendername = substr('YAUPA', 0, 11);
     $recipients = $_SESSION['phone'];
-    $message = 'Hello ' . ucfirst($_SESSION['firstname']) . ', your transaction to travel with ' . ucfirst($_SESSION['company_name']) .
-            ' transport company was successful with ticket number ' . $_SESSION['pin'] .
-            '. You are adviced to arive at the terminal 30 mins before ' . $_SESSION['departure'] . ' on ' . $_SESSION['date'] . '. Thanks.'   ;
+    $company = '';
+    $address = '';
+    
+    $tag = $_SESSION['sp_tag'];
+        $result = mysql_query("SELECT * FROM terminals where tag='$tag'");
+        if ($row = mysql_fetch_assoc($result)) {
+            $company = $row['company'];
+            $address = $row['address'];
+            
+        }
+    $message = 'Transaction success! Service Provider: ' . ucfirst($company) .
+            ',  Ticket No: ' . $_SESSION['pin'] .
+            ', Departure Time: ' . $_SESSION['departure'] . 
+            ', Date:' . $_SESSION['date'] . '. Thanks.'   ;
     $flash = 0;
     if (get_magic_quotes_gpc()) {
         $message = stripslashes($_POST['message']);

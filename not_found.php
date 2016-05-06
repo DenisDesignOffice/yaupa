@@ -8,7 +8,8 @@ switch ($_SERVER['REDIRECT_URL']) {
 
         $url = $_SERVER['REDIRECT_URL'];
         $array = explode("/", $url);
-        $search_string = strtolower(end($array));
+        $raw_string = strtolower(end($array)); 
+        $search_string = substr($raw_string, 0, 3);
 
         $result = mysql_query("SELECT * FROM travel_services, terminals"
                 . " WHERE company LIKE '%$search_string%' AND service_provider=tag ");
@@ -107,7 +108,7 @@ session_unset()
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <title><?php echo "Yaupa- " . $search_string; ?></title>
+    <title><?php echo "Yaupa- " . $raw_string; ?></title>
     <link rel="stylesheet" type="text/css" href="static/css/charter.css"/>
     <link rel="stylesheet" type="text/css" href="static/font-awesome-4.3.0/css/font-awesome.css"/>
     <link rel="stylesheet" type="text/css" href="static/css/normalize.css" />
@@ -126,7 +127,7 @@ session_unset()
     </section>
 
     <div class="charter">
-        <h1>Travel With <?php echo ucfirst($search_string); ?></h1>
+        <h1>Travel With <?php echo ucfirst($raw_string); ?></h1>
     </div>
 
 

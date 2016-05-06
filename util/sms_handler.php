@@ -13,7 +13,7 @@ if (isset($_SESSION['sms_reminder'])) {
     $apikey = 'ad581d548f884e1b571e213e169838064337ccbe';
     $sendername = substr('YAUPA', 0, 11);
     $recipients = $_SESSION['phone'];
-    $message = 'Hello ' . $_SESSION['firstname'] . ' your transaction was successful with reference number ' . $_SESSION['trans_ref'] ;
+    $message = 'Hello ' . ucfirst($_SESSION['firstname']) . ' your transaction was successful with reference number ' . $_SESSION['pin'] ;
     $flash = 0;
     if (get_magic_quotes_gpc()) {
         $message = stripslashes($_POST['message']);

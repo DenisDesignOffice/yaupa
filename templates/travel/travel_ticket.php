@@ -10,48 +10,55 @@
     </head>
 
     <body>
-        
-            <?php
-        if ((string) $xml->ResponseCode == 00) {
 
-            echo '
-        <div class="trans_success"><i>Congratulations!</i> Your transaction was succesful and a text message with reference number <i>' .  $_SESSION['trans_ref'] . 
-        '</i>  has been sent to your phone. 
+        <?php
+        $tag = $_SESSION['sp_tag'];
+        $result = mysql_query("SELECT * FROM terminals where tag='$tag'");
+        if ($row = mysql_fetch_assoc($result)) {
+            $company = $row['company'];
+            $address = $row['address'];
+
+
+            if ((string) $xml->ResponseCode == 00) {
+
+                echo '
+        <div class="trans_success"><i>Congratulations!</i> Your transaction was succesful and a text message with reference number <i>' . $_SESSION['trans_ref'] .
+                '</i>  has been sent to your phone. 
         Please print or write down your ticket details.</div>
         <div>
 
             <!--Display Company Name Here -->
-            <h1>' . $_SESSION["lastname"] . '</h1>
+            <h1>' . ucfirst($company) . '</h1>
 
             <table>
 
                 <tr>
-                    <td id="label">Name</td>  <td id="data">' . $_SESSION["lastname"] . " " . $_SESSION["firstname"] . '</td>
+                    <td id="label">Name</td>  <td id="data">' . ucfirst($_SESSION["lastname"]) . " " . ucfirst($_SESSION["firstname"]) . '</td>
                 </tr>
 
 
                 <tr>
-                    <td id="label">Ticket No</td> <td id="data">' . $_SESSION['pin'] . '</td>
+                    <td id="label">Ticket No</td> <td id="data">' . ucfirst($_SESSION['pin']) . '</td>
                 </tr>
 
                 <tr>
-                    <td id="label">Ref ID</td>  <td id="data">' . $_SESSION['trans_ref'] . '</td>
+                    <td id="label">Ref ID</td>  <td id="data">' . ucfirst($_SESSION['trans_ref']) . '</td>
                 </tr>
 
                 <tr>
-                    <td id="label">Date</td> <td id="data">' . $_SESSION['date'] . '</td>
+                    <td id="label">Date</td> <td id="data">' . ucfirst($_SESSION['date']) . '</td>
                 </tr>
 
                 <tr>
-                    <td id="label">Time of Departure</td>  <td id="data">' . $_SESSION['departure'] . '</td>
+                    <td id="label">Time of Departure</td>  <td id="data">' . ucfirst($_SESSION['departure']) . '</td>
                 </tr>
 
                 <tr>
-                    <td id="label">Destination</td>  <td id="data">' . $_SESSION['to_state'] . '</td>
+                    <td id="label">Destination</td>  <td id="data">' . ucfirst($_SESSION['to_state']) . '</td>
                 </tr>
 
                 <tr>
-                    <td id="label">Park Address</td>  <td id="data">' . $_SESSION['company_address'] . '</td>
+                    <td id="label">Park Address</td>  <td id="data">' . ucfirst($address) . '</td>
                 </tr>
 
 
@@ -61,8 +68,9 @@
             <br />
             For Complaints Call: +234 7035 277 717
         </div>';
-        } else {
-            echo '<div class="trans_failure">Sorry! Your transaction was not successful. Please try again</div> <p>';
+            } else {
+                echo '<div class="trans_failure">Sorry! Your transaction was not successful. Please try again</div> <p>';
+            }
         }
         ?>
     </body>

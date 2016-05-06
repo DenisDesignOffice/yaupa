@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -44,6 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $duration = $row["duration"];
             $processing_fee = $row["processing_fee"];
             $departure = $row["departure_time"];
+            $sp_tag = $row["tag"];
 
 
             $response .= '<div class="item">  
@@ -82,6 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <td class="submit"><a href="book.php?selected_option_id=' . $value . '">Book Now</a></td>
                         </tr>
 						-->
+                            <input hidden="true" type="text" id="sp_tag" name="sp_tag" value=' . $sp_tag . '  />
                             <input hidden="true" type="text" id="company_name" name="company_name" value=' . $company_name . '  />                   
                             <input hidden="true" type="text" id="departure" name="departure" value=' . $departure_time . '  />
                             <input hidden="true" type="text" id="aircondition" name="aircondition" value=' . $aircondition . ' />
@@ -91,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <input hidden="true" type="text" id="address" name="address" value=' . $address . ' />
                             <input hidden="true" type="text" id="processing_fee" name="processing_fee" value=' . $processing_fee . '  />
                             <input hidden="true" type="text" id="from_state" name="from_state" value=' . $from_state . '  />
-                            <input hidden="true" type="text" id="to_state" name="to_state" value=' . $to_state . '  />       
+                            <input hidden="true" type="text" id="to_state" name="to_state" value=' . $to_state . '  /> 
                              <tr>
                         <td class="submit" ><input type="submit" style="height:100%; width:100%; background-color:transparent; border:0px; color:white" value="Book Now"/></td>
                         </tr> 

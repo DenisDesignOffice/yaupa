@@ -87,7 +87,7 @@ if ($payment_option == 'bank_deposit') {
             <table>
                 <tr>
                     <td class="name">Name</td>
-                    <td class="value"><?php echo $firstname . " " . $lastname; ?></td>
+                    <td class="value"><?php echo ucfirst($firstname) . " " . ucfirst($lastname); ?></td>
                 </tr>
                 <tr>
                     <td class="name">Ref Number</td>

@@ -21,6 +21,7 @@ $payment_option = strtolower(htmlspecialchars($_POST['payment_option']));
 $selected_option_id = strtolower(htmlspecialchars($_POST['selected_option_id']));
 $sms_reminder = strtolower(htmlspecialchars($_POST['sms_reminder']));
 $next_of_kin = strtolower(htmlspecialchars($_POST['next_of_kin']));
+$company_name = strtolower(htmlspecialchars($_SESSION['company_name']));
 
 $_SESSION['sms_reminder'] = $sms_reminder;
 $_SESSION['firstname'] = $firstname;
@@ -33,7 +34,6 @@ $_SESSION['payment_option'] = $payment_option;
 //$_SESSION['charter_option'] = $charter_option;
 $_SESSION['selected_option_id'] = $selected_option_id;
 $_SESSION['next_of_kin'] = $next_of_kin;
-
 
 
 $price = (int)$_SESSION['cost'] + (int)$_SESSION['processing_fee'];
@@ -92,7 +92,7 @@ if($payment_option == 'bank_deposit'){
             <table>
                 <tr>
                     <td class="name">Name</td>
-                    <td class="value"><?php echo $firstname . " " . $lastname; ?></td>
+                    <td class="value"><?php echo ucfirst($firstname ). " " . ucfirst($lastname); ?></td>
                 </tr>
                 <tr>
                     <td class="name">Ref Number</td>

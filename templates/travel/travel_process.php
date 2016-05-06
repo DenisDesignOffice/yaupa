@@ -39,7 +39,7 @@ $destination_state = $_SESSION['to_state'];
 $next_of_kin = $_SESSION['next_of_kin'];
 $to_state = $_SESSION['to_state'];
 $from_state = $_SESSION['from_state'];
-
+$tag = $_SESSION['sp_tag'];
 
 $put = "INSERT INTO travel_bookings (firstname,lastname, email, phone, address, "
         . "payment_date, traveling_date, next_of_kin, payment_type, reg_pin, "
@@ -47,7 +47,7 @@ $put = "INSERT INTO travel_bookings (firstname,lastname, email, phone, address, 
         . "bank_slip_no, bank_of_payment, debit_trans_no, name_of_depositor, date_of_deposition,  source, transaction_ref ) "
         . " VALUES('$firstname', '$lastname', '$email', '$phone', '$address', '$payment_date', "
         . " '$traveling_date', '$next_of_kin',  '$payment_option', '$pin', '$generate_random_cust_id', "
-        . " '$service_provider', '$amount', 'pending', "
+        . " '$tag', '$amount', 'pending', "
         . " '$to_state', '$from_state', '', '', '', '', '', '', '$generate_random_trans_ref' )";
 
 

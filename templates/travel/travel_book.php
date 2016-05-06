@@ -16,6 +16,8 @@ $_SESSION['cost'] = strtolower(htmlspecialchars($_POST['cost']));
 $_SESSION['company_name'] = strtolower(htmlspecialchars($_POST['company_name']));
 $_SESSION['from_state'] = strtolower(htmlspecialchars($_POST['from_state']));
 $_SESSION['to_state'] = strtolower(htmlspecialchars($_POST['to_state']));
+$_SESSION['sp_tag'] = strtolower(htmlspecialchars($_POST['sp_tag']));
+
 ?>
 
 <!DOCTYPE html> 
@@ -71,30 +73,30 @@ $_SESSION['to_state'] = strtolower(htmlspecialchars($_POST['to_state']));
         <form method="post" id="travel_book" action="./travel_confirmation.php">
             <div class="col-2">
                 <label>Firstname
-                    <input placeholder="Enter your  complete names" id="firstname" name="firstname" tabindex="1" />
+                    <input placeholder="Enter your  complete names" id="firstname" name="firstname" tabindex="1" required />
                 </label>
             </div>
             <div class="col-2">
                 <label>Lastname
-                    <input placeholder="Enter your surname" id="lastname" name="lastname" tabindex="2"  />
+                    <input placeholder="Enter your surname" id="lastname" name="lastname" tabindex="2"  required />
                 </label>
             </div>
             <div class="col-2">
                 <label>
                     Phone Number
-                    <input placeholder="What's the best way to call your" id="phone" name="phone" tabindex="3" />
+                    <input placeholder="What's the best way to call your" id="phone" name="phone" tabindex="3" required />
                 </label>
             </div>
             <div class="col-3">
                 <label>
                     Email
-                    <input placeholder="Enter email address. e.g travlin@yahoo.com" id="email" name="email" tabindex="4" />
+                    <input placeholder="Enter email address. e.g travlin@yahoo.com" id="email" name="email" tabindex="4" required />
                 </label>
             </div>
             <div class="col-3">
                 <label>
                     Address
-                    <input placeholder="Residential address" id="address" name="address" tabindex="5" />
+                    <input placeholder="Residential address" id="address" name="address" tabindex="5" required />
                 </label>
             </div>
 
@@ -102,7 +104,7 @@ $_SESSION['to_state'] = strtolower(htmlspecialchars($_POST['to_state']));
                 <label>
                     Travel Date
 
-                    <input type="date" placeholder="dd-mm-yy" id="date" name="date" tabindex="6"  />
+                    <input type="date" placeholder="dd-mm-yy" id="date" name="date" tabindex="6"  required/>
 
                 </label>
             </div>
@@ -110,7 +112,7 @@ $_SESSION['to_state'] = strtolower(htmlspecialchars($_POST['to_state']));
             <div class="col-4">
                 <label>
                     Payment Option
-                    <select tabindex="7" id="payment_option" name="payment_option" />
+                    <select tabindex="7" id="payment_option" name="payment_option" required/>
                     <option> - </option>
                     <option>Bank_Deposit</option>
                     <option>Debit Card</option>
@@ -123,7 +125,7 @@ $_SESSION['to_state'] = strtolower(htmlspecialchars($_POST['to_state']));
                 <label>
                     sms reminder
                     <center style="position:relative; margin-bottom:0;">
-                        <input type="checkbox" name="sms_reminder" id="sms_reminder" class="js-switch" tabindex="8">
+                        <input type="checkbox" name="sms_reminder" id="sms_reminder" class="js-switch" tabindex="8" required/>
                     </center>
                 </label>
             </div>
@@ -131,7 +133,7 @@ $_SESSION['to_state'] = strtolower(htmlspecialchars($_POST['to_state']));
             <div class="col-4">
                 <label>
                     Next of Kin
-                    <input placeholder="Name or phone number of next of kin" id="next_of_kin" name="next_of_kin" tabindex="9" />
+                    <input placeholder="Name or phone number of next of kin" id="next_of_kin" name="next_of_kin" tabindex="9" required/>
                 </label>
             </div>
             <div class="col-5">

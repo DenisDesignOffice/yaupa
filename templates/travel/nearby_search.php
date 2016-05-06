@@ -42,6 +42,7 @@ $nby_search = mysql_query("SELECT * FROM nearby_towns where destination LIKE '%$
                     $duration = $row["duration"];
                     $processing_fee = $row["processing_fee"];
                     $departure = $row["departure_time"];
+                    $sp_tag = $row["tag"];
 
 
                     $response .= '<div class="item">  
@@ -80,6 +81,7 @@ $nby_search = mysql_query("SELECT * FROM nearby_towns where destination LIKE '%$
                             <td class="submit"><a href="book.php?selected_option_id=' . $value . '">Book Now</a></td>
                         </tr>
 						-->
+                            <input hidden="true" type="text" id="sp_tag" name="sp_tag" value=' . $sp_tag . '  />
                             <input hidden="true" type="text" id="company_name" name="company_name" value=' . $company_name . '  />                   
                             <input hidden="true" type="text" id="departure" name="departure" value=' . $departure_time . '  />
                             <input hidden="true" type="text" id="aircondition" name="aircondition" value=' . $aircondition . ' />
