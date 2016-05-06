@@ -5,7 +5,7 @@ $xml_url = "http://api.ebulksms.com:8080/sendsms.xml";
 $username = '';
 $apikey = '';
 
-echo $_SESSION['phone'];
+
 
 if (isset($_SESSION['sms_reminder'])) {
 
@@ -88,8 +88,8 @@ function doPostRequest2($url, $data, $headers) {
     $responseData = json_decode($response, TRUE);
 
 // Print the date from the response
-    echo $responseData;
+    
 }
 
-echo $result;
+
 ?>
