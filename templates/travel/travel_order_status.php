@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php ob_start(); session_start(); ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -53,6 +53,14 @@
             include '../../util/email_handler.php';
             include '../..//util/success_email_handler.php';
             include '../..//util/sms_handler.php';
+            echo "<div class='trans_success'><h4>Your transaction was not succesful.</h4>"
+            . "<h4> Response Code: " . (string) $xml->ResponseCode . "</h4>"
+            . "<h4> Amount: " . (string) $xml->Amount . "</h4>"
+            . "<h4> Merchant Reference: " . (string) $xml->MerchantReference . "</h4>"
+            . "<h4> Payment Reference: " . (string) $xml->PaymentReference . "</h4>"
+            . "<h4> Retrieval Reference Number: " . (string) $xml->RetrievalReferenceNumber . "</h4>"
+            . "<h4> Reason: " . (string) $xml->ResponseDescription . "</h4>"
+            . "<h4>Transaction reference:" . $param['transactionreference'] . "</h4></div>";
             include './travel_ticket.php';
             
         } else  {
