@@ -55,7 +55,7 @@
             <form name="addTcForm" method="get" action="./cpanel_dashboard.php"  >
                 
                     <select  name="service_provider"  class="input-state" >
-                        <option>--select service provider--</option>
+                        <option>--Select Service Provider--</option>
                         <?php
                         $query = 'SELECT * FROM terminals ORDER BY tag';
                         $view = strtolower(htmlspecialchars($_GET{'purpose'}));
@@ -68,7 +68,7 @@
                         ?>
                     </select>
                     <select  name="vehicle_type" s class="input-state" >
-                        <option>--select vehicle type--</option>
+                        <option>--Select Vehicle Type--</option>
                         <?php
                         include_once '../../util/constants/vehicles.html';
                         
@@ -76,7 +76,7 @@
                     </select>
                     
                     <select  name="from_state"  class="input-state" >
-                        <option>--select from state--</option>
+                        <option>--Select From State--</option>
                         <?php
                         include '../../util/constants/states.html';
                         
@@ -84,7 +84,7 @@
                     </select>
                     </p>
                      <select   class="input-state" >
-                        <option>--select to state--</option>
+                        <option>--Select To State--</option>
                         <?php
                         include '../../util/constants/states.html';
                         
@@ -97,7 +97,7 @@
                     <input name="to_cost"    type="text"  classname="search"  Placeholder="To Cost">
 
 
-                    <input name="to_and_fro_cost"    type="text"  classname="search"  Placeholder="To and fro cost">
+                    <input name="to_and_fro_cost"    type="text"  classname="search"  Placeholder="To and Fro cost">
 
                     <input name="processing_fee"    type="text"  classname="search"  Placeholder="Processing fee">
                     </p>
@@ -106,8 +106,8 @@
 
                     <input value="Add" class="submit" type="submit" classname="search"  Placeholder="Search">
 
-                    <input name="purpose"  value="addnew"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
-                    <input name="view"  value="addplus_charter"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
+                    <input name="purpose"  value="addnew"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure Motors">
+                    <input name="view"  value="addplus_charter"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure Motors">
 
                 </i>
 

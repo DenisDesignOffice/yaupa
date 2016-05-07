@@ -10,7 +10,7 @@
        <div class="searchform">
         <form class="searchbox" name="myform1" method="get" action="./cpanel_dashboard.php"  >
             <i class="fa fa-search">
-                <input  type="text"  name="search"  classname="search"  Placeholder="Search by tag">
+                <input  type="text"  name="search"  classname="search"  Placeholder="Search by Tag">
                  </i>
                 <input class="submit" type="submit" value="Search"  classname="search">
            
@@ -85,8 +85,8 @@
                                                     <td>" . $row['email'] . "</td>
                                                     <td>" . $row['phone'] . "</td>
                                                     <td>" . $row['status'] . '</td>
-                                                    <td><a href="?view=add_users&purpose=edit&id=' . $row["id"] . '"> <span class="f-button">edit</span></a> </td>
-                                                    <td><a onclick="delete_Travel('. "this" .');" href="?view=add_users&purpose=delete&id=' . $row["id"] . '"> <span class="f-button">delete</span> </a></td> 
+                                                    <td><a href="?view=add_users&purpose=edit&id=' . $row["id"] . '"> <span class="f-button">Edit</span></a> </td>
+                                                    <td><a onclick="delete_Travel('. "this" .');" href="?view=add_users&purpose=delete&id=' . $row["id"] . '"> <span class="f-button">Delete</span> </a></td> 
                                                   </tr>';
                     }
                     ?>

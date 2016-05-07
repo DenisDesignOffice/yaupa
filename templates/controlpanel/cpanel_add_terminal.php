@@ -66,7 +66,7 @@
                
 
                     <select  name="company"  class="input-state" >
-                        <option>--transport company--</option>
+                        <option>--Transport Company--</option>
                         <?php
                         $query = 'SELECT * FROM transport_companies order by name';
                         $view = strtolower(htmlspecialchars($_GET{'purpose'}));
@@ -94,8 +94,8 @@
 
                     <input value="Add" class="submit" type="submit" classname="search"  >
                     <br/>
-                    <input name="purpose"  value="addnew"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
-                    <input name="view"  value="addplus_terminals"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
+                    <input name="purpose"  value="addnew"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure Motors">
+                    <input name="view"  value="addplus_terminals"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure Motors">
 
                 </i>
 

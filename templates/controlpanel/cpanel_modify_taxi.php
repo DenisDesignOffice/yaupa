@@ -31,7 +31,7 @@
                 echo '<form style="margin-bottom: 10px;" name="
                     editTxsForm" id="editTxsForm" method="get" action="./cpanel_dashboard.php"  >
             
-                <input name="service_provider" value="' . $row["service_provider"] . '" type="text"  classname="search"  Placeholder="Service provider">
+                <input name="service_provider" value="' . $row["service_provider"] . '" type="text"  classname="search"  Placeholder="Service Provider">
                
                 <input name="vehicle_type" value="' . $row["vehicle_type"] . '"  type="text"  classname="search"  Placeholder="Vehicle Type">
                 
@@ -39,23 +39,23 @@
                 </p>
                 <input name="coverage_area" value="' . $row["coverage_area"] . '"  type="text"  classname="search"  Placeholder="Coverage Area">
                
-                <input name="amount_per_hour" value="' . $row["amount_per_hour"] . '"   type="text"  classname="search"  Placeholder="Amount per hour">
+                <input name="amount_per_hour" value="' . $row["amount_per_hour"] . '"   type="text"  classname="search"  Placeholder="Amount Per Hour">
                
-                <input name="amount_half_day" value="' . $row["amount_half_day"] . '"   type="text"  classname="search"  Placeholder="Amount half day">
+                <input name="amount_half_day" value="' . $row["amount_half_day"] . '"   type="text"  classname="search"  Placeholder="Amount Half Day">
                 </p>
-                <input name="amount_full_day" value="' . $row["amount_full_day"] . '"   type="text"  classname="search"  Placeholder="Amount full day">
-                <input name="processing_fee" value="' . $row["processing_fee"] . '"   type="text"  classname="search"  Placeholder="Processing fee">
+                <input name="amount_full_day" value="' . $row["amount_full_day"] . '"   type="text"  classname="search"  Placeholder="Amount Full Day">
+                <input name="processing_fee" value="' . $row["processing_fee"] . '"   type="text"  classname="search"  Placeholder="Processing Fee">
                 <input name="location" value="' . $row["location"] . '"   type="text"  classname="search"  Placeholder="Location">
                 </p>
-                <input name="coverage_distance" value="' . $row["coverage_distance"] . '"  type="text"  classname="search"  Placeholder="Coverage distance">
+                <input name="coverage_distance" value="' . $row["coverage_distance"] . '"  type="text"  classname="search"  Placeholder="Coverage Distance">
                 <input name="vehicle_picture" value="' . $row["vehicle_picture"] . '" type="file"  classname="search"  Placeholder="Vehicle Picture">
                 </p>
                 
                 <input value="Update" class="submit" type="submit" classname="search"  >
                 <br/>
-                <input name="purpose"  value="update"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
-                <input name="id"  value="' . $row["id"] . '"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
-                <input name="view"  value="add_taxi"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
+                <input name="purpose"  value="update"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure Motors">
+                <input name="id"  value="' . $row["id"] . '"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure Motors">
+                <input name="view"  value="add_taxi"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure Motors">
 
 </i>
 

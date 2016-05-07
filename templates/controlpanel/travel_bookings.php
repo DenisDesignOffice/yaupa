@@ -10,7 +10,7 @@
                         <div class="searchform">
         <form class="searchbox" name="myform1" method="get" action="./cpanel_dashboard.php"  >
             <i class="fa fa-search">
-                <input  type="text"  name="search"  classname="search"  Placeholder="Search by tag">
+                <input  type="text"  name="search"  classname="search"  Placeholder="Search by Tag">
                  </i>
                 <input class="submit" type="submit" value="Search"  classname="search">
            
@@ -25,13 +25,13 @@
                                         <th>Date</th>
                                         <th>Status</th>
                                         <th>Customer</th>
-                                        <th>Service provider</th>
-                                        <th>Vehicle type</th>
-                                        <th>Service option</th>
+                                        <th>Service Provider</th>
+                                        <th>Vehicle Type</th>
+                                        <th>Service Option</th>
                                         <th>From</th>
                                         <th>To</th>
-                                        <th>Amount paid</th>
-                                        <th>Reg. pin</th>
+                                        <th>Amount Paid</th>
+                                        <th>Reg. Pin</th>
                                         <th>Serial</th>
                                         
                                     </tr>
@@ -96,8 +96,8 @@
                                                     <td>" . $row['amount_paid'] . "</td>
                                                     <td>" . $row['reg_pin'] . "</td>
                                                     <td>" . $row['serial'] . '</td>
-                                                    <td><a href="?view=add_travelbookings&purpose=status&id=' . $row["id"] . '"> <span class="f-button">change status</span></a> </td>
-                                                    <td><a onclick="delete_Travel('. "this" .');" href="?view=add_travelbookings&purpose=delete&id=' . $row["id"] . '"> <span class="f-button">delete</span> </a></td> 
+                                                    <td><a href="?view=add_travelbookings&purpose=status&id=' . $row["id"] . '"> <span class="f-button">Change Status</span></a> </td>
+                                                    <td><a onclick="delete_Travel('. "this" .');" href="?view=add_travelbookings&purpose=delete&id=' . $row["id"] . '"> <span class="f-button">Delete</span> </a></td> 
                                                   </tr>';
                     }
                     ?>

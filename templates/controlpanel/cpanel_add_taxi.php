@@ -53,7 +53,7 @@
         <form  name="editTxsForm" id="editTxsForm" method="get" action="./cpanel_dashboard.php"  >
             
                 <select name="service_provider"  class="input-state" >
-                        <option>--select service provider--</option>
+                        <option>--Select Service Provider--</option>
                         <?php
                         $query = 'SELECT * FROM terminals ORDER BY tag';
                         $view = strtolower(htmlspecialchars($_GET{'purpose'}));
@@ -71,12 +71,12 @@
                 </p>
                 <input name="coverage_area"   type="text"  classname="search"  Placeholder="Coverage Area">
 
-                <input name="amount_per_hour"   type="text"  classname="search"  Placeholder="Amount per hour">
+                <input name="amount_per_hour"   type="text"  classname="search"  Placeholder="Amount Per Hour">
 
-                <input name="amount_half_day"   type="text"  classname="search"  Placeholder="Amount half day">
+                <input name="amount_half_day"   type="text"  classname="search"  Placeholder="Amount Half Day">
                 </p>
-                <input name="amount_full_day"   type="text"  classname="search"  Placeholder="Amount full day">
-                <input name="processing_fee"   type="text"  classname="search"  Placeholder="Processing fee">
+                <input name="amount_full_day"   type="text"  classname="search"  Placeholder="Amount Full Day">
+                <input name="processing_fee"   type="text"  classname="search"  Placeholder="Processing Fee">
                 <input name="location"    classname="search"  Placeholder="Location">
                 </p>
                 <input name="coverage_distance"   type="text"  classname="search"  Placeholder="Coverage distance">
@@ -85,8 +85,8 @@
 
                 <input value="Add" class="submit" type="submit" classname="search"  >
                 <br/>
-                <input name="purpose"  value="addnew"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
-                <input name="view"  value="addplus_taxi"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
+                <input name="purpose"  value="addnew"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure Motors">
+                <input name="view"  value="addplus_taxi"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure Motors">
 
             </i>
 

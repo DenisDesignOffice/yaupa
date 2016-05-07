@@ -30,23 +30,23 @@
                 echo '<form style="margin-bottom: 10px;" name="
                     editTcForm" id="editTcForm" method="get" action="./cpanel_dashboard.php"  >
             
-                <input name="name" value="' . $row["name"] . '"   classname="search"  Placeholder="Company name">
+                <input name="name" value="' . $row["name"] . '"   classname="search"  Placeholder="Company Name">
                 <br/>
-                <input name="tag" value="' . $row["tag"] . '" style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
+                <input name="tag" value="' . $row["tag"] . '" style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure Motors">
                 <br/>
                 <input name="email" value="' . $row["email"] . '" style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Email">
                 <br/>
                 <input name="phone" value="' . $row["phone"] . '" style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Phone">
                 <br/>
-                <input name="head_office" value="' . $row["head_office"] . '"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Head office">
+                <input name="head_office" value="' . $row["head_office"] . '"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Head Office">
                 <br/>
-                <input name="logo"  style="width:20%; margin-top: 30px; height: 30px" type="file"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
+                <input name="logo"  style="width:20%; margin-top: 30px; height: 30px" type="file"  classname="search"  Placeholder="Tag e.g GAM for Agofure Motors">
                 </p>
                 <input value="Update" class="submit" type="submit" classname="search"  Placeholder="Update">
                 <br/>
-                <input name="purpose"  value="update"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
-                <input name="id"  value="' . $row["id"] . '"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
-                <input name="view"  value="add_company"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
+                <input name="purpose"  value="update"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure Motors">
+                <input name="id"  value="' . $row["id"] . '"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure Motors">
+                <input name="view"  value="add_company"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure Motors">
 
 </i>
 
@@ -104,22 +104,22 @@
         } else {
             echo '<form style="margin-bottom: 10px;" name="addTcForm" method="get" action="./cpanel_dashboard.php"  >
             <i class="fa fa-search">
-                <input name="name"  style="width:20%; height: 30px" type="text"  classname="search"  Placeholder="Company name">
+                <input name="name"  style="width:20%; height: 30px" type="text"  classname="search"  Placeholder="Company Name">
                 <br/>
-                <input name="tag"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
+                <input name="tag"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure Motors">
                 <br/>
                 <input name="email"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Email">
                 <br/>
                 <input name="phone"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Phone">
                 <br/>
-                <input name="head_office"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Head office">
+                <input name="head_office"  style="width:20%; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Head Office">
                 <br/>
                 <input name="logo"  style="width:20%; margin-top: 30px; height: 30px" type="file"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
                 <br/>
                 <input value="Add" style="width:20%; margin-top: 30px; height: 30px; margin-top: 2dp " type="submit" classname="search"  Placeholder="Search">
 <br/>
-                <input name="purpose"  value="addnew"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
-                <input name="view"  value="add_company"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure motors">
+                <input name="purpose"  value="addnew"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure Motors">
+                <input name="view"  value="add_company"  style="width:20%; visibility:hidden; margin-top: 30px; height: 30px" type="text"  classname="search"  Placeholder="Tag e.g GAM for Agofure Motors">
 
                 </i>
 
