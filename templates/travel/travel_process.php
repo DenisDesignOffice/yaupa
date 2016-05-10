@@ -46,7 +46,7 @@ $put = "INSERT INTO travel_bookings (firstname,lastname, email, phone, address, 
         . " VALUES('$firstname', '$lastname', '$email', '$phone', '$address', '$payment_date', "
         . " '$traveling_date', '$next_of_kin',  '$payment_option', '$generate_random_trans_ref', '$generate_random_cust_id', "
         . " '$service_provider', '$amount', 'pending', "
-        . " '$to_state', '$from_state', '', '', '', '', '', '', $generate_random_trans_ref )";
+        . " '$to_state', '$from_state', '', '', '', '', '', '', '$generate_random_trans_ref' )";
 
 
 $results = mysql_query($put);
