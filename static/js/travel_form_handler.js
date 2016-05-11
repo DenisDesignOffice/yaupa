@@ -9,6 +9,7 @@ $(document).ready(function () {
     var btn = document.getElementById("myBtn");
     var noresult = document.getElementById("noresult");
     var span = document.getElementsByClassName("close")[0];
+    var appendage = document.getElementById("appendage");
 
     $('#travel_form').submit(function (event) {
         modal.style.display = "block";
@@ -22,11 +23,15 @@ $(document).ready(function () {
                 modal.style.display = "none";
                 if (data.toString() == "<h1>Please fill all relevant fields</h1>") {
                     noresult.style.display = "block";
+                    appendage.style.display = "none";
                     $("#noresult").html(data);
                 } else if (data.toString() == "<h1>Sorry there is no available transport company for your destination currently. please check back soon</h1>") {
                     noresult.style.display = "block";
+                    appendage.style.display = "none";
                     $("#noresult").html("<h1>0 results found for your destination</h1>");
                 } else {
+                    noresult.style.display = "none";
+                    appendage.style.display = "block";
                     $("#appendage").html(data);
                 }
             }

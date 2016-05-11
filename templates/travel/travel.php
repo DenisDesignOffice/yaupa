@@ -40,6 +40,8 @@
 
             <input type="submit" value="Search" class="input search-text"></td>
         </form>
+        
+        <center ><div id="noresult" style=""></div> </center>
 
         <!--search result code-->
         <div  class="wrapper">

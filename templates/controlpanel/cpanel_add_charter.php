@@ -83,7 +83,7 @@
                         ?>
                     </select>
                     </p>
-                     <select   class="input-state" >
+                     <select  name="to_state"  class="input-state" >
                         <option>--Select To State--</option>
                         <?php
                         include '../../util/constants/states.html';
