@@ -7,6 +7,7 @@ $(document).ready(function () {
 
     var modal = document.getElementById('myModal');
     var btn = document.getElementById("myBtn");
+    var noresult = document.getElementById("noresult");
     var span = document.getElementsByClassName("close")[0];
 
     $('#travel_form').submit(function (event) {
@@ -55,4 +56,3 @@ $(document).ready(function () {
     });
 
 });
-
