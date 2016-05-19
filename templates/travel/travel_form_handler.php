@@ -35,22 +35,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         while ($row = mysql_fetch_assoc($result)) {
             $value = $row["id"];
             $company_name = strtoupper($row['company']);
-            $address = $row['address'];
+            $address = ucfirst($row['address']);
             $cost = $row["cost"];
-            $from_state = $row["from_state"];
-            $to_state = $row["to_state"];
-            $aircondition = $row["aircondition"];
-            $stoppage_point = $row["stoppage_point"];
-            $speed_limit = $row["speed_limit"];
-            $departure_time = $row["departure_time"];
-            $vehicle_type = $row["vehicle_type"];
-            $last_bus_stop = $row["last_bus_stop"];
-            $duration = $row["duration"];
-            $processing_fee = $row["processing_fee"];
-            $departure = $row["departure_time"];
+            $from_state = ucfirst($row["from_state"]);
+            $to_state = ucfirst($row["to_state"]);
+            $aircondition = ucfirst($row["aircondition"]);
+            $stoppage_point = ucfirst($row["stoppage_point"]);
+            $speed_limit = ucfirst($row["speed_limit"]);
+            $departure_time = ucfirst($row["departure_time"]);
+            $vehicle_type = ucfirst($row["vehicle_type"]);
+            $last_bus_stop = ucfirst($row["last_bus_stop"]);
+            $duration = ucfirst($row["duration"]);
+            $processing_fee = ucfirst($row["processing_fee"]);
+            $departure = ucfirst($row["departure_time"]);
             $sp_tag = $row["tag"];
-            $from_town = $row["from_town"];
-            $to_town = $row["to_town"];
+            $from_town = ucfirst($row["from_town"]);
+            $to_town = ucfirst($row["to_town"]);
 
             $response .= '<div class="item">  
                     <img src="/static/images/banner-casa.jpg">

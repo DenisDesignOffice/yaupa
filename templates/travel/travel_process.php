@@ -8,9 +8,9 @@ If (!isset($_SESSION['company_name']) || !isset($_SESSION['address']) || !isset(
 
 $generate_random_cust_id = mt_rand(111, 999);
 $generate_random_trans_ref = $_SESSION['transaction_ref'];
-$mac_key = "D3D1D05AFE42AD50818167EAC73C109168A0F108F32645C8B59E897FA930DA44F9230910DAC9E20641823799A107A02068F7BC0F4CC41D2952E249552255710F";
+$mac_key = "E518D6CFEE2A2F4B8665122032FAE1F6CBC6964155CC57B204B4E1E5E911857C1F1BEE738A34D72F178A7187316329DAE6F06F5AB791E887818929A2234477CD";
 $url = "http://127.0.0.1/templates/travel/travel_order_status.php";
-$product_id = 6205;
+$product_id = 6410;
 $pay_item_id = 101;
 
 $_SESSION['trans_ref'] = $generate_random_trans_ref;
@@ -71,7 +71,7 @@ mysql_close($connect);
     <body onload="document.travel_form.submit()">
         <h1>Please wait...Redirecting...</h1>
         <p>Click the proceed button if your browser fails to redirect</p>
-        <form name="travel_form" method="post" action="https://stageserv.interswitchng.com/test_paydirect/pay">
+        <form name="travel_form" method="post" action="https://webpay.interswitchng.com/paydirect/pay">
 
             <td colspan="4"><div align="center">
                     <input name="product_id" type="hidden" value="<?php echo $product_id; ?>" />

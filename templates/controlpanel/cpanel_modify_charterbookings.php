@@ -40,16 +40,16 @@
 
             if ($row = mysql_fetch_array($retval, MYSQL_ASSOC)) {
                 $param = array();
-                $param['productid'] = 6205;
+                $param['productid'] = 6410;
                 $param['transactionreference'] = $row['transaction_ref'];
                 $param['amount'] = $row['amount_paid'] . "00";
 
 
-                $mac_key = "D3D1D05AFE42AD50818167EAC73C109168A0F108F32645C8B59E897FA930DA44F9230910DAC9E20641823799A107A02068F7BC0F4CC41D2952E249552255710F";
+                $mac_key = "E518D6CFEE2A2F4B8665122032FAE1F6CBC6964155CC57B204B4E1E5E911857C1F1BEE738A34D72F178A7187316329DAE6F06F5AB791E887818929A2234477CD";
                 $raw_value = $param['productid'] . $param['transactionreference'] . $mac_key;
                 $hash_value = hash('sha512', $raw_value);
 
-                $url = "https://stageserv.interswitchng.com/test_paydirect/api/v1/gettransaction.xml?productid=" . $param['productid'] . "&transactionreference=" . $param['transactionreference']
+                $url = "https://webpay.interswitchng.com/paydirect/api/v1/gettransaction.xml?productid=" . $param['productid'] . "&transactionreference=" . $param['transactionreference']
                         . "&amount=" . $param['amount'];
 
                 $opts = array(

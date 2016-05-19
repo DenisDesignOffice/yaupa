@@ -39,23 +39,22 @@ if ($to_state == "destination state" || $from_state == "current state") {
         } else {
             while ($row = mysql_fetch_assoc($result)) {
                 $company_name = strtoupper($row['company']);
-                $address = $row['address'];
-                $to_cost = $row["to_cost"];
-                $to_state = $row["to_state"];
-                $from_state = $row["from_state"];
-                $to = $row["to_town"];
-                $from = $row["from_town"];
-                $to_and_fro_cost = $row["to_and_fro_cost"];
-                $vehicle_type = $row["vehicle_type"];
-                $processing_fee = $row["processing_fee"];
-                $duration = $row["duration"];
+                $address = ucfirst($row['address']);
+                $to_cost = ucfirst($row["to_cost"]);
+                $to_state = ucfirst($row["to_state"]);
+                $from_state = ucfirst($row["from_state"]);
+                $to = ucfirst($row["to_town"]);
+                $from = ucfirst($row["from_town"]);
+                $to_and_fro_cost = ucfirst($row["to_and_fro_cost"]);
+                $vehicle_type = ucfirst($row["vehicle_type"]);
+                $processing_fee = ucfirst($row["processing_fee"]);
+                $duration = ucfirst($row["duration"]);
                 $tag = $row["tag"];
 
 
                 $response .= '<form id="book_form" name="book_form" method="post" action="./charter_book.php">
                         <div  class="item">
                         <img src="../../static/images/banner-casa.jpg">
-                        <h2 >' . $company_name . '</h2>
 
                         <table>
 

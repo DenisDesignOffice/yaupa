@@ -15,7 +15,7 @@
     $message ="
 <html> 
 	
-  <body style=\"background:white;\">
+  <body  style=\"background:white;\">
 
 <div style=\"width:50%;
 height:60%;

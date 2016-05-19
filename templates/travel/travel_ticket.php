@@ -6,6 +6,7 @@
 
         <link rel="stylesheet" type="text/css" href="../../static/css/ticketcss.css"/>
         <link rel="shortcut icon" href="/static/images/favicon.ico">
+            
 
     </head>
 
@@ -25,7 +26,7 @@
         <div class="trans_success"><i>Congratulations!</i> Your transaction was succesful and a text message with reference number <i>' . $_SESSION['trans_ref'] .
                 '</i>  has been sent to your phone. 
         Please print or write down your ticket details.</div>
-        <div>
+        <div id="ticket">
 
             <!--Display Company Name Here -->
             <h1>' . ucwords($company) . '</h1>
