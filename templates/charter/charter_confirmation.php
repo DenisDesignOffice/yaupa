@@ -92,7 +92,7 @@ if ($charter_option == 'to alone') {
                 </tr>
                 <tr>
                     <td class="name">Ref Number</td>
-                    <td class="value"><?php $_SESSION['transaction_ref'] = uniqid();
+                    <td class="value"><?php $_SESSION['transaction_ref'] = substr(md5(uniqid()), 7, 18);
                                         echo $_SESSION['transaction_ref'];
                                         ?>
                     </td>

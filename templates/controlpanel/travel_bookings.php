@@ -33,6 +33,7 @@
                                         <th>To</th>
                                         <th>Amount Paid</th>
                                         <th>Payment type</th>
+                                        <th>Pin</th>
                                         <th>Serial</th>
                                         
                                     </tr>
@@ -95,6 +96,7 @@
                                                     <td>" . $row['to_state'] . "</td>
                                                     <td>" . $row['amount_paid'] . "</td>
                                                     <td>" . $row['payment_type'] . "</td>
+                                                    <td>" . $row['reg_pin'] . "</td>
                                                     <td>" . $row['serial'] . '</td>
                                                     <td><a href="?view=add_travelbookings&purpose=status&id=' . $row["id"] . '"> <span class="f-button">Verify Status</span></a> </td>
                                                     <td><a onclick="delete_Travel('. "this" .');" href="?view=add_travelbookings&purpose=delete&id=' . $row["id"] . '"> <span class="f-button">Delete</span> </a></td> 

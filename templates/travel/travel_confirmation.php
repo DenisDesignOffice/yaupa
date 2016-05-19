@@ -97,7 +97,7 @@ $_SESSION['amount_to_pay2'] = $price . '';
                 </tr>
                 <tr>
                     <td class="name">Ref Number</td>
-                    <td class="value"><?php $_SESSION['transaction_ref'] = uniqid();
+                    <td class="value"><?php $_SESSION['transaction_ref'] = substr(md5(uniqid()), 7, 18);
                                         echo $_SESSION['transaction_ref'];
                                         ?>
                     </td>
