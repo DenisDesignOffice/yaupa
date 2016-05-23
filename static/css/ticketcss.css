@@ -1,0 +1,61 @@
+div 
+{
+width:18em;
+padding:20px;
+border: 3px solid black;
+margin-left:30%;
+font-size:0.8em;
+text-align:center;
+}
+
+
+div .footer
+{
+padding:0;
+border: 0 solid black;
+font-size:0.8em;
+text-align:center;
+}
+.trans_success
+{
+color:green;
+}
+
+.trans_failure
+{
+color:red;
+}
+
+
+h1
+{
+text-align:center;
+font-size:2.5em;
+
+}
+
+table, tr
+{
+height:50px;
+}
+
+table ,td
+{
+
+border-bottom:3px solid grey ;
+text-align:left;
+padding:0;
+font-size:14px;
+
+}
+
+#label
+{
+font-weight:bold;
+font-size:1em;
+}
+
+#data
+{
+padding-left:1em;
+}
